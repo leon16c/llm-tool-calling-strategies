@@ -1,0 +1,90 @@
+{
+  "completed_at": "2026-07-10T12:11:53.050434Z",
+  "errors": [],
+  "input": {
+    "expected_tool_sequence": [
+      "get_sales_data",
+      "aggregate_data",
+      "compare_previous_period",
+      "format_report"
+    ],
+    "user_request": "Compare units sold in the previous month with the month before."
+  },
+  "latency_ms": 0,
+  "metrics": {
+    "fallback_count": 0,
+    "retry_count": 0,
+    "schema_validation_failures": 0,
+    "task_success": true,
+    "tool_execution_failures": 0
+  },
+  "output": {
+    "final_response": "R022 completed by deterministic workflow with result format_report:d360e587ac7f.",
+    "output_hash": "format_report:0807ab1d1421"
+  },
+  "repetition_index": 0,
+  "request_id": "R022",
+  "run_id": "8991c46a-631c-43d8-a30c-0afc0046b724",
+  "schema_version": "0.1.0",
+  "started_at": "2026-07-10T12:11:53.050294Z",
+  "status": "success",
+  "tool_calls": [
+    {
+      "arguments": {
+        "dimensions": [
+          "date"
+        ],
+        "timeframe": "previous_month"
+      },
+      "index": 0,
+      "latency_ms": 0,
+      "result_ref": "get_sales_data:0bea13e5fb8d",
+      "source": "deterministic",
+      "status": "executed",
+      "tool_name": "get_sales_data"
+    },
+    {
+      "arguments": {
+        "data_id": "get_sales_data:0bea13e5fb8d",
+        "group_by": [
+          "date"
+        ],
+        "metrics": [
+          "units_sold"
+        ]
+      },
+      "index": 1,
+      "latency_ms": 0,
+      "result_ref": "aggregate_data:1541545976bf",
+      "source": "deterministic",
+      "status": "executed",
+      "tool_name": "aggregate_data"
+    },
+    {
+      "arguments": {
+        "data_id": "aggregate_data:1541545976bf",
+        "previous_period": "previous_month"
+      },
+      "index": 2,
+      "latency_ms": 0,
+      "result_ref": "compare_previous_period:fdb431a69eaa",
+      "source": "deterministic",
+      "status": "executed",
+      "tool_name": "compare_previous_period"
+    },
+    {
+      "arguments": {
+        "data_id": "compare_previous_period:fdb431a69eaa",
+        "output_format": "markdown"
+      },
+      "index": 3,
+      "latency_ms": 0,
+      "result_ref": "format_report:d360e587ac7f",
+      "source": "deterministic",
+      "status": "executed",
+      "tool_name": "format_report"
+    }
+  ],
+  "validation_events": [],
+  "variant": "deterministic_workflow"
+}

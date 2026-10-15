@@ -1,0 +1,83 @@
+{
+  "completed_at": "2026-07-23T16:30:00.099709Z",
+  "errors": [],
+  "input": {
+    "expected_tool_sequence": [
+      "get_sales_data",
+      "aggregate_data",
+      "format_report"
+    ],
+    "user_request": "Give me a summary of units sold by sales channel for previous month."
+  },
+  "latency_ms": 0,
+  "metrics": {
+    "fallback_count": 0,
+    "retry_count": 0,
+    "schema_validation_failures": 0,
+    "task_success": true,
+    "tool_execution_failures": 0
+  },
+  "model": {
+    "name": "oracle_backed_tool_call_planner",
+    "provider": "local",
+    "seed": 0,
+    "temperature": 0.0
+  },
+  "output": {
+    "final_response": "R009 completed by LLM tool selection with result format_report:4230bcfe3a47.",
+    "output_hash": "format_report:a93cc8425516"
+  },
+  "repetition_index": 0,
+  "request_id": "R009",
+  "run_id": "24eb7f73-1213-45e2-a331-a6d7c6e4ac6b",
+  "schema_version": "0.1.0",
+  "started_at": "2026-07-23T16:30:00.099573Z",
+  "status": "success",
+  "tool_calls": [
+    {
+      "arguments": {
+        "dimensions": [
+          "sales_channel"
+        ],
+        "timeframe": "previous_month"
+      },
+      "index": 0,
+      "latency_ms": 0,
+      "result_ref": "get_sales_data:e80819ab4a0d",
+      "source": "llm",
+      "status": "executed",
+      "tool_name": "get_sales_data"
+    },
+    {
+      "arguments": {
+        "data_id": "get_sales_data:e80819ab4a0d",
+        "group_by": [
+          "sales_channel"
+        ],
+        "metrics": [
+          "units_sold"
+        ]
+      },
+      "index": 1,
+      "latency_ms": 0,
+      "result_ref": "aggregate_data:8a5e07e58d5c",
+      "source": "llm",
+      "status": "executed",
+      "tool_name": "aggregate_data"
+    },
+    {
+      "arguments": {
+        "data_id": "aggregate_data:8a5e07e58d5c",
+        "output_format": "markdown"
+      },
+      "index": 2,
+      "latency_ms": 0,
+      "result_ref": "format_report:4230bcfe3a47",
+      "source": "llm",
+      "status": "executed",
+      "tool_name": "format_report"
+    }
+  ],
+  "validation_events": [],
+  "variant": "llm_tool_selection"
+}

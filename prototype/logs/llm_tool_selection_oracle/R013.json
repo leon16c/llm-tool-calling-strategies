@@ -1,0 +1,83 @@
+{
+  "completed_at": "2026-07-23T16:30:00.102662Z",
+  "errors": [],
+  "input": {
+    "expected_tool_sequence": [
+      "get_sales_data",
+      "aggregate_data",
+      "format_report"
+    ],
+    "user_request": "Return last month's revenue by region as JSON."
+  },
+  "latency_ms": 0,
+  "metrics": {
+    "fallback_count": 0,
+    "retry_count": 0,
+    "schema_validation_failures": 0,
+    "task_success": true,
+    "tool_execution_failures": 0
+  },
+  "model": {
+    "name": "oracle_backed_tool_call_planner",
+    "provider": "local",
+    "seed": 0,
+    "temperature": 0.0
+  },
+  "output": {
+    "final_response": "R013 completed by LLM tool selection with result format_report:fe761e8216c2.",
+    "output_hash": "format_report:323f5e331b51"
+  },
+  "repetition_index": 0,
+  "request_id": "R013",
+  "run_id": "a12acc8c-4c96-4b7f-8c62-94d8a69c71b9",
+  "schema_version": "0.1.0",
+  "started_at": "2026-07-23T16:30:00.102544Z",
+  "status": "success",
+  "tool_calls": [
+    {
+      "arguments": {
+        "dimensions": [
+          "region"
+        ],
+        "timeframe": "previous_month"
+      },
+      "index": 0,
+      "latency_ms": 0,
+      "result_ref": "get_sales_data:990a1aaaa813",
+      "source": "llm",
+      "status": "executed",
+      "tool_name": "get_sales_data"
+    },
+    {
+      "arguments": {
+        "data_id": "get_sales_data:990a1aaaa813",
+        "group_by": [
+          "region"
+        ],
+        "metrics": [
+          "revenue"
+        ]
+      },
+      "index": 1,
+      "latency_ms": 0,
+      "result_ref": "aggregate_data:f728620d4c25",
+      "source": "llm",
+      "status": "executed",
+      "tool_name": "aggregate_data"
+    },
+    {
+      "arguments": {
+        "data_id": "aggregate_data:f728620d4c25",
+        "output_format": "json"
+      },
+      "index": 2,
+      "latency_ms": 0,
+      "result_ref": "format_report:fe761e8216c2",
+      "source": "llm",
+      "status": "executed",
+      "tool_name": "format_report"
+    }
+  ],
+  "validation_events": [],
+  "variant": "llm_tool_selection"
+}

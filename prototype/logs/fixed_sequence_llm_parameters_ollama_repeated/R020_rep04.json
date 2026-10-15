@@ -1,0 +1,84 @@
+{
+  "completed_at": "2026-07-21T12:41:52.606907Z",
+  "errors": [],
+  "input": {
+    "expected_tool_sequence": [
+      "get_sales_data",
+      "aggregate_data",
+      "format_report"
+    ],
+    "user_request": "For the current month, report revenue and gross margin by product category."
+  },
+  "latency_ms": 7637,
+  "metrics": {
+    "fallback_count": 0,
+    "retry_count": 0,
+    "schema_validation_failures": 0,
+    "task_success": true,
+    "tool_execution_failures": 0
+  },
+  "model": {
+    "name": "qwen2.5:7b-instruct",
+    "provider": "ollama",
+    "seed": 0,
+    "temperature": 0.0
+  },
+  "output": {
+    "final_response": "R020 completed by fixed-sequence LLM parameter mapping with result format_report:f25766503eb3.",
+    "output_hash": "format_report:cdb9ce7fdcfa"
+  },
+  "repetition_index": 4,
+  "request_id": "R020",
+  "run_id": "44c74660-c757-43fa-9546-0ebea3abf098",
+  "schema_version": "0.1.0",
+  "started_at": "2026-07-21T12:41:44.969142Z",
+  "status": "success",
+  "tool_calls": [
+    {
+      "arguments": {
+        "dimensions": [
+          "category"
+        ],
+        "timeframe": "current_month"
+      },
+      "index": 0,
+      "latency_ms": 0,
+      "result_ref": "get_sales_data:5795b4b1606e",
+      "source": "llm",
+      "status": "executed",
+      "tool_name": "get_sales_data"
+    },
+    {
+      "arguments": {
+        "data_id": "get_sales_data:5795b4b1606e",
+        "group_by": [
+          "category"
+        ],
+        "metrics": [
+          "revenue",
+          "gross_margin"
+        ]
+      },
+      "index": 1,
+      "latency_ms": 0,
+      "result_ref": "aggregate_data:06b325e958c4",
+      "source": "llm",
+      "status": "executed",
+      "tool_name": "aggregate_data"
+    },
+    {
+      "arguments": {
+        "data_id": "aggregate_data:06b325e958c4",
+        "output_format": "json"
+      },
+      "index": 2,
+      "latency_ms": 0,
+      "result_ref": "format_report:f25766503eb3",
+      "source": "llm",
+      "status": "executed",
+      "tool_name": "format_report"
+    }
+  ],
+  "validation_events": [],
+  "variant": "fixed_sequence_llm_parameters"
+}

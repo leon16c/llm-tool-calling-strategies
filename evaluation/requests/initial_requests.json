@@ -1,0 +1,449 @@
+{
+  "schema_version": "0.1.0",
+  "request_set_id": "initial-controlled-requests-v1",
+  "description": "Machine-readable oracle for the 30 controlled evaluation requests.",
+  "requests": [
+    {
+      "id": "R001",
+      "category": "anomaly detection",
+      "user_request": "Create an overview of sales figures from the last 30 days, grouped by region, and highlight unusual deviations.",
+      "expected_tool_sequence": ["get_sales_data", "aggregate_data", "detect_anomalies", "format_report"],
+      "expected_parameters": {
+        "timeframe": "last_30_days",
+        "dimensions": ["region"],
+        "group_by": ["region"],
+        "metrics": ["revenue"],
+        "method": "z_score",
+        "threshold": 3.0,
+        "output_format": "markdown"
+      },
+      "primary_evaluation_focus": "parameter mapping and required anomaly-detection call"
+    },
+    {
+      "id": "R002",
+      "category": "standard aggregation",
+      "user_request": "Summarize revenue and units sold for the previous quarter by product category.",
+      "expected_tool_sequence": ["get_sales_data", "aggregate_data", "format_report"],
+      "expected_parameters": {
+        "timeframe": "previous_quarter",
+        "dimensions": ["category"],
+        "group_by": ["category"],
+        "metrics": ["revenue", "units_sold"],
+        "output_format": "markdown"
+      },
+      "primary_evaluation_focus": "multi-metric aggregation without unnecessary anomaly or comparison calls"
+    },
+    {
+      "id": "R003",
+      "category": "period comparison",
+      "user_request": "Compare this month's sales performance with the previous month and provide a short summary.",
+      "expected_tool_sequence": ["get_sales_data", "aggregate_data", "compare_previous_period", "format_report"],
+      "expected_parameters": {
+        "timeframe": "current_month",
+        "dimensions": ["date"],
+        "group_by": ["date"],
+        "metrics": ["revenue"],
+        "previous_period": "previous_month",
+        "output_format": "markdown"
+      },
+      "primary_evaluation_focus": "comparison call selection and previous-period mapping"
+    },
+    {
+      "id": "R004",
+      "category": "anomaly detection",
+      "user_request": "Show daily revenue trends for the last 30 days and identify anomalies.",
+      "expected_tool_sequence": ["get_sales_data", "aggregate_data", "detect_anomalies", "format_report"],
+      "expected_parameters": {
+        "timeframe": "last_30_days",
+        "dimensions": ["date"],
+        "group_by": ["date"],
+        "metrics": ["revenue"],
+        "method": "z_score",
+        "threshold": 3.0,
+        "output_format": "markdown"
+      },
+      "primary_evaluation_focus": "trend-oriented grouping and anomaly detection"
+    },
+    {
+      "id": "R005",
+      "category": "standard aggregation",
+      "user_request": "Create a compact year-to-date sales report by region.",
+      "expected_tool_sequence": ["get_sales_data", "aggregate_data", "format_report"],
+      "expected_parameters": {
+        "timeframe": "year_to_date",
+        "dimensions": ["region"],
+        "group_by": ["region"],
+        "metrics": ["revenue"],
+        "output_format": "markdown"
+      },
+      "primary_evaluation_focus": "relative timeframe mapping"
+    },
+    {
+      "id": "R006",
+      "category": "anomaly detection",
+      "user_request": "Analyze whether any product categories had unusual revenue changes in the last 7 days.",
+      "expected_tool_sequence": ["get_sales_data", "aggregate_data", "detect_anomalies", "format_report"],
+      "expected_parameters": {
+        "timeframe": "last_7_days",
+        "dimensions": ["category"],
+        "group_by": ["category"],
+        "metrics": ["revenue"],
+        "method": "z_score",
+        "threshold": 3.0,
+        "output_format": "markdown"
+      },
+      "primary_evaluation_focus": "anomaly request recognition and category mapping"
+    },
+    {
+      "id": "R007",
+      "category": "multi-dimension aggregation",
+      "user_request": "Prepare a sales report for the previous quarter grouped by region and product category.",
+      "expected_tool_sequence": ["get_sales_data", "aggregate_data", "format_report"],
+      "expected_parameters": {
+        "timeframe": "previous_quarter",
+        "dimensions": ["region", "category"],
+        "group_by": ["region", "category"],
+        "metrics": ["revenue"],
+        "output_format": "markdown"
+      },
+      "primary_evaluation_focus": "multi-dimension aggregation"
+    },
+    {
+      "id": "R008",
+      "category": "period comparison",
+      "user_request": "Compare revenue from the last 30 days with the same period in the previous year.",
+      "expected_tool_sequence": ["get_sales_data", "aggregate_data", "compare_previous_period", "format_report"],
+      "expected_parameters": {
+        "timeframe": "last_30_days",
+        "dimensions": ["date"],
+        "group_by": ["date"],
+        "metrics": ["revenue"],
+        "previous_period": "same_period_previous_year",
+        "output_format": "markdown"
+      },
+      "primary_evaluation_focus": "semantically correct comparison period"
+    },
+    {
+      "id": "R009",
+      "category": "standard aggregation",
+      "user_request": "Give me a summary of units sold by sales channel for previous month.",
+      "expected_tool_sequence": ["get_sales_data", "aggregate_data", "format_report"],
+      "expected_parameters": {
+        "timeframe": "previous_month",
+        "dimensions": ["sales_channel"],
+        "group_by": ["sales_channel"],
+        "metrics": ["units_sold"],
+        "output_format": "markdown"
+      },
+      "primary_evaluation_focus": "dimension mapping and metric mapping"
+    },
+    {
+      "id": "R010",
+      "category": "anomaly detection",
+      "user_request": "Create a report that highlights unusually high or low gross margin values from the previous quarter.",
+      "expected_tool_sequence": ["get_sales_data", "aggregate_data", "detect_anomalies", "format_report"],
+      "expected_parameters": {
+        "timeframe": "previous_quarter",
+        "dimensions": ["date"],
+        "group_by": ["date"],
+        "metrics": ["gross_margin"],
+        "method": "z_score",
+        "threshold": 3.0,
+        "output_format": "markdown"
+      },
+      "primary_evaluation_focus": "anomaly detection with a non-revenue metric"
+    },
+    {
+      "id": "R011",
+      "category": "standard aggregation",
+      "user_request": "Show current quarter revenue by customer segment.",
+      "expected_tool_sequence": ["get_sales_data", "aggregate_data", "format_report"],
+      "expected_parameters": {
+        "timeframe": "current_quarter",
+        "dimensions": ["customer_segment"],
+        "group_by": ["customer_segment"],
+        "metrics": ["revenue"],
+        "output_format": "markdown"
+      },
+      "primary_evaluation_focus": "customer-segment dimension mapping"
+    },
+    {
+      "id": "R012",
+      "category": "multi-metric aggregation",
+      "user_request": "For the last 7 days, summarize revenue, units sold, and average order value by sales channel.",
+      "expected_tool_sequence": ["get_sales_data", "aggregate_data", "format_report"],
+      "expected_parameters": {
+        "timeframe": "last_7_days",
+        "dimensions": ["sales_channel"],
+        "group_by": ["sales_channel"],
+        "metrics": ["revenue", "units_sold", "average_order_value"],
+        "output_format": "markdown"
+      },
+      "primary_evaluation_focus": "mapping several metrics without adding unnecessary tools"
+    },
+    {
+      "id": "R013",
+      "category": "output-format mapping",
+      "user_request": "Return last month's revenue by region as JSON.",
+      "expected_tool_sequence": ["get_sales_data", "aggregate_data", "format_report"],
+      "expected_parameters": {
+        "timeframe": "previous_month",
+        "dimensions": ["region"],
+        "group_by": ["region"],
+        "metrics": ["revenue"],
+        "output_format": "json"
+      },
+      "primary_evaluation_focus": "explicit output-format mapping"
+    },
+    {
+      "id": "R014",
+      "category": "output-format mapping",
+      "user_request": "Generate an HTML report for year-to-date units sold by product.",
+      "expected_tool_sequence": ["get_sales_data", "aggregate_data", "format_report"],
+      "expected_parameters": {
+        "timeframe": "year_to_date",
+        "dimensions": ["product"],
+        "group_by": ["product"],
+        "metrics": ["units_sold"],
+        "output_format": "html"
+      },
+      "primary_evaluation_focus": "product dimension mapping and HTML output"
+    },
+    {
+      "id": "R015",
+      "category": "period comparison",
+      "user_request": "Compare the previous quarter's gross margin with the quarter before it.",
+      "expected_tool_sequence": ["get_sales_data", "aggregate_data", "compare_previous_period", "format_report"],
+      "expected_parameters": {
+        "timeframe": "previous_quarter",
+        "dimensions": ["date"],
+        "group_by": ["date"],
+        "metrics": ["gross_margin"],
+        "previous_period": "previous_quarter",
+        "output_format": "markdown"
+      },
+      "primary_evaluation_focus": "comparison with a non-revenue metric"
+    },
+    {
+      "id": "R016",
+      "category": "period comparison",
+      "user_request": "Compare this year's sales so far with last year's sales.",
+      "expected_tool_sequence": ["get_sales_data", "aggregate_data", "compare_previous_period", "format_report"],
+      "expected_parameters": {
+        "timeframe": "year_to_date",
+        "dimensions": ["date"],
+        "group_by": ["date"],
+        "metrics": ["revenue"],
+        "previous_period": "previous_year",
+        "output_format": "markdown"
+      },
+      "primary_evaluation_focus": "mapping broad year comparison without changing the timeframe enum"
+    },
+    {
+      "id": "R017",
+      "category": "anomaly detection",
+      "user_request": "Use an IQR-based check to find unusual average order values by sales channel in the last 30 days.",
+      "expected_tool_sequence": ["get_sales_data", "aggregate_data", "detect_anomalies", "format_report"],
+      "expected_parameters": {
+        "timeframe": "last_30_days",
+        "dimensions": ["sales_channel"],
+        "group_by": ["sales_channel"],
+        "metrics": ["average_order_value"],
+        "method": "iqr",
+        "threshold": 1.5,
+        "output_format": "markdown"
+      },
+      "primary_evaluation_focus": "explicit anomaly method mapping"
+    },
+    {
+      "id": "R018",
+      "category": "anomaly detection",
+      "user_request": "Find unusually low or high units sold per product during the previous month.",
+      "expected_tool_sequence": ["get_sales_data", "aggregate_data", "detect_anomalies", "format_report"],
+      "expected_parameters": {
+        "timeframe": "previous_month",
+        "dimensions": ["product"],
+        "group_by": ["product"],
+        "metrics": ["units_sold"],
+        "method": "z_score",
+        "threshold": 3.0,
+        "output_format": "markdown"
+      },
+      "primary_evaluation_focus": "anomaly detection with product-level grouping"
+    },
+    {
+      "id": "R019",
+      "category": "multi-dimension aggregation",
+      "user_request": "Break down year-to-date revenue by region, sales channel, and customer segment.",
+      "expected_tool_sequence": ["get_sales_data", "aggregate_data", "format_report"],
+      "expected_parameters": {
+        "timeframe": "year_to_date",
+        "dimensions": ["region", "sales_channel", "customer_segment"],
+        "group_by": ["region", "sales_channel", "customer_segment"],
+        "metrics": ["revenue"],
+        "output_format": "markdown"
+      },
+      "primary_evaluation_focus": "stable handling of three grouping dimensions"
+    },
+    {
+      "id": "R020",
+      "category": "multi-metric aggregation",
+      "user_request": "For the current month, report revenue and gross margin by product category.",
+      "expected_tool_sequence": ["get_sales_data", "aggregate_data", "format_report"],
+      "expected_parameters": {
+        "timeframe": "current_month",
+        "dimensions": ["category"],
+        "group_by": ["category"],
+        "metrics": ["revenue", "gross_margin"],
+        "output_format": "markdown"
+      },
+      "primary_evaluation_focus": "distinct financial metrics in one aggregation"
+    },
+    {
+      "id": "R021",
+      "category": "standard aggregation",
+      "user_request": "List previous year's revenue by product.",
+      "expected_tool_sequence": ["get_sales_data", "aggregate_data", "format_report"],
+      "expected_parameters": {
+        "timeframe": "previous_year",
+        "dimensions": ["product"],
+        "group_by": ["product"],
+        "metrics": ["revenue"],
+        "output_format": "markdown"
+      },
+      "primary_evaluation_focus": "previous-year timeframe mapping"
+    },
+    {
+      "id": "R022",
+      "category": "period comparison",
+      "user_request": "Compare units sold in the previous month with the month before.",
+      "expected_tool_sequence": ["get_sales_data", "aggregate_data", "compare_previous_period", "format_report"],
+      "expected_parameters": {
+        "timeframe": "previous_month",
+        "dimensions": ["date"],
+        "group_by": ["date"],
+        "metrics": ["units_sold"],
+        "previous_period": "previous_month",
+        "output_format": "markdown"
+      },
+      "primary_evaluation_focus": "repeated previous-month semantics"
+    },
+    {
+      "id": "R023",
+      "category": "no unnecessary tools",
+      "user_request": "Give me only a simple daily revenue summary for the last 7 days.",
+      "expected_tool_sequence": ["get_sales_data", "aggregate_data", "format_report"],
+      "expected_parameters": {
+        "timeframe": "last_7_days",
+        "dimensions": ["date"],
+        "group_by": ["date"],
+        "metrics": ["revenue"],
+        "output_format": "markdown"
+      },
+      "primary_evaluation_focus": "avoiding anomaly and comparison calls despite a compact phrasing"
+    },
+    {
+      "id": "R024",
+      "category": "no unnecessary tools",
+      "user_request": "Summarize current quarter average order value by region without comparisons.",
+      "expected_tool_sequence": ["get_sales_data", "aggregate_data", "format_report"],
+      "expected_parameters": {
+        "timeframe": "current_quarter",
+        "dimensions": ["region"],
+        "group_by": ["region"],
+        "metrics": ["average_order_value"],
+        "output_format": "markdown"
+      },
+      "primary_evaluation_focus": "obeying explicit exclusion of comparison behavior"
+    },
+    {
+      "id": "R025",
+      "category": "output-format mapping",
+      "user_request": "Provide a JSON summary of gross margin by customer segment for the previous quarter.",
+      "expected_tool_sequence": ["get_sales_data", "aggregate_data", "format_report"],
+      "expected_parameters": {
+        "timeframe": "previous_quarter",
+        "dimensions": ["customer_segment"],
+        "group_by": ["customer_segment"],
+        "metrics": ["gross_margin"],
+        "output_format": "json"
+      },
+      "primary_evaluation_focus": "JSON formatting with a non-default dimension and metric"
+    },
+    {
+      "id": "R026",
+      "category": "anomaly detection",
+      "user_request": "Check whether any regions show unusual revenue deviations this month.",
+      "expected_tool_sequence": ["get_sales_data", "aggregate_data", "detect_anomalies", "format_report"],
+      "expected_parameters": {
+        "timeframe": "current_month",
+        "dimensions": ["region"],
+        "group_by": ["region"],
+        "metrics": ["revenue"],
+        "method": "z_score",
+        "threshold": 3.0,
+        "output_format": "markdown"
+      },
+      "primary_evaluation_focus": "current-month anomaly detection"
+    },
+    {
+      "id": "R027",
+      "category": "multi-dimension aggregation",
+      "user_request": "Summarize last 30 days of units sold by region and sales channel.",
+      "expected_tool_sequence": ["get_sales_data", "aggregate_data", "format_report"],
+      "expected_parameters": {
+        "timeframe": "last_30_days",
+        "dimensions": ["region", "sales_channel"],
+        "group_by": ["region", "sales_channel"],
+        "metrics": ["units_sold"],
+        "output_format": "markdown"
+      },
+      "primary_evaluation_focus": "two-dimensional non-revenue aggregation"
+    },
+    {
+      "id": "R028",
+      "category": "period comparison",
+      "user_request": "Compare current quarter revenue by region with the previous quarter.",
+      "expected_tool_sequence": ["get_sales_data", "aggregate_data", "compare_previous_period", "format_report"],
+      "expected_parameters": {
+        "timeframe": "current_quarter",
+        "dimensions": ["region"],
+        "group_by": ["region"],
+        "metrics": ["revenue"],
+        "previous_period": "previous_quarter",
+        "output_format": "markdown"
+      },
+      "primary_evaluation_focus": "preserving grouping dimension through comparison"
+    },
+    {
+      "id": "R029",
+      "category": "anomaly detection and output format",
+      "user_request": "Return an HTML report showing unusual gross margin values by category for the last 30 days.",
+      "expected_tool_sequence": ["get_sales_data", "aggregate_data", "detect_anomalies", "format_report"],
+      "expected_parameters": {
+        "timeframe": "last_30_days",
+        "dimensions": ["category"],
+        "group_by": ["category"],
+        "metrics": ["gross_margin"],
+        "method": "z_score",
+        "threshold": 3.0,
+        "output_format": "html"
+      },
+      "primary_evaluation_focus": "combined anomaly and output-format mapping"
+    },
+    {
+      "id": "R030",
+      "category": "multi-metric aggregation",
+      "user_request": "Create a previous-quarter report by sales channel including revenue, units sold, and gross margin.",
+      "expected_tool_sequence": ["get_sales_data", "aggregate_data", "format_report"],
+      "expected_parameters": {
+        "timeframe": "previous_quarter",
+        "dimensions": ["sales_channel"],
+        "group_by": ["sales_channel"],
+        "metrics": ["revenue", "units_sold", "gross_margin"],
+        "output_format": "markdown"
+      },
+      "primary_evaluation_focus": "three-metric aggregation with no comparison or anomaly call"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+**/.venv/
+**/__pycache__/
+*.py[cod]
+**/.pytest_cache/
+**/.mypy_cache/
+**/.ruff_cache/
+local-output/
+evaluation/experiments/2026-10-09_matched/
+
+evaluation/experiments/2026-10-20_prompt/
+evaluation/experiments/2026-10-20_sampling/
+evaluation/supplementary_protocol.md

@@ -1,0 +1,82 @@
+{
+  "completed_at": "2026-07-23T16:31:33.384892Z",
+  "errors": [
+    {
+      "code": "E2",
+      "description": "The planner omitted at least one required tool call."
+    }
+  ],
+  "input": {
+    "expected_tool_sequence": [
+      "get_sales_data",
+      "aggregate_data",
+      "format_report"
+    ],
+    "user_request": "For the last 7 days, summarize revenue, units sold, and average order value by sales channel."
+  },
+  "latency_ms": 3745,
+  "metrics": {
+    "fallback_count": 0,
+    "retry_count": 0,
+    "schema_validation_failures": 0,
+    "task_success": false,
+    "tool_execution_failures": 0
+  },
+  "model": {
+    "name": "qwen2.5:7b-instruct",
+    "provider": "ollama",
+    "seed": 0,
+    "temperature": 0.0
+  },
+  "output": {
+    "final_response": "R012 completed by LLM tool selection with result None.",
+    "output_hash": "format_report:8bb04bf4e70e"
+  },
+  "repetition_index": 0,
+  "request_id": "R012",
+  "run_id": "b23a33b2-d12d-40e4-ae92-fc4110bcbcb5",
+  "schema_version": "0.1.0",
+  "started_at": "2026-07-23T16:31:29.639652Z",
+  "status": "rejected",
+  "tool_calls": [
+    {
+      "arguments": {
+        "dimensions": [
+          "sales_channel"
+        ],
+        "timeframe": "last_7_days"
+      },
+      "index": 0,
+      "latency_ms": 0,
+      "source": "llm",
+      "status": "proposed",
+      "tool_name": "get_sales_data"
+    },
+    {
+      "arguments": {
+        "data_id": "$previous_result",
+        "group_by": [
+          "sales_channel"
+        ],
+        "metrics": [
+          "revenue",
+          "units_sold",
+          "average_order_value"
+        ]
+      },
+      "index": 1,
+      "latency_ms": 0,
+      "source": "llm",
+      "status": "proposed",
+      "tool_name": "aggregate_data"
+    }
+  ],
+  "validation_events": [
+    {
+      "event_type": "semantic_validation_failed",
+      "index": 0,
+      "message": "Planned tool sequence omits required calls: planned=['get_sales_data', 'aggregate_data'], expected=['get_sales_data', 'aggregate_data', 'format_report']"
+    }
+  ],
+  "variant": "llm_tool_selection"
+}

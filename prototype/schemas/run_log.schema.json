@@ -1,0 +1,311 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/bachelor-thesis/prototype/schemas/run_log.schema.json",
+  "title": "Experiment Run Log",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "run_id",
+    "request_id",
+    "variant",
+    "started_at",
+    "completed_at",
+    "status",
+    "tool_calls",
+    "validation_events",
+    "errors",
+    "metrics"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "0.1.0"
+    },
+    "run_id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Unique identifier for this concrete execution."
+    },
+    "request_id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Identifier of the evaluation request executed in this run."
+    },
+    "repetition_index": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Zero-based repetition index for repeated executions of the same request and variant."
+    },
+    "variant": {
+      "type": "string",
+      "enum": [
+        "deterministic_workflow",
+        "fixed_sequence_llm_parameters",
+        "llm_tool_selection",
+        "llm_multi_step_planning"
+      ]
+    },
+    "model": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "provider",
+        "name"
+      ],
+      "properties": {
+        "provider": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "temperature": {
+          "type": "number",
+          "minimum": 0
+        },
+        "seed": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        }
+      }
+    },
+    "started_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "completed_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "latency_ms": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "success",
+        "failed",
+        "rejected",
+        "timeout"
+      ]
+    },
+    "input": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "user_request"
+      ],
+      "properties": {
+        "user_request": {
+          "type": "string",
+          "minLength": 1
+        },
+        "expected_tool_sequence": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "tool_calls": {
+      "type": "array",
+      "description": "Tool calls proposed or executed during the run, in chronological order.",
+      "items": {
+        "$ref": "#/$defs/tool_call"
+      }
+    },
+    "validation_events": {
+      "type": "array",
+      "description": "Schema validation, retry, fallback, or rejection events triggered during the run.",
+      "items": {
+        "$ref": "#/$defs/validation_event"
+      }
+    },
+    "errors": {
+      "type": "array",
+      "description": "Classified evaluation errors observed in this run.",
+      "items": {
+        "$ref": "#/$defs/classified_error"
+      }
+    },
+    "metrics": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "task_success",
+        "schema_validation_failures",
+        "tool_execution_failures"
+      ],
+      "properties": {
+        "task_success": {
+          "type": "boolean"
+        },
+        "schema_validation_failures": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "tool_execution_failures": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "retry_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "fallback_count": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "output": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "final_response": {
+          "type": "string"
+        },
+        "output_hash": {
+          "type": "string",
+          "description": "Stable hash of the final output for reproducibility analysis."
+        }
+      }
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "$defs": {
+    "tool_call": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "index",
+        "tool_name",
+        "arguments",
+        "source",
+        "status"
+      ],
+      "properties": {
+        "index": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "tool_name": {
+          "type": "string",
+          "enum": [
+            "get_sales_data",
+            "aggregate_data",
+            "detect_anomalies",
+            "compare_previous_period",
+            "format_report"
+          ]
+        },
+        "arguments": {
+          "type": "object"
+        },
+        "source": {
+          "type": "string",
+          "enum": [
+            "deterministic",
+            "llm",
+            "validator",
+            "fallback"
+          ]
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "proposed",
+            "executed",
+            "rejected",
+            "failed"
+          ]
+        },
+        "result_ref": {
+          "type": "string",
+          "description": "Reference to a stored tool result or produced dataset identifier."
+        },
+        "latency_ms": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "validation_event": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "index",
+        "event_type",
+        "message"
+      ],
+      "properties": {
+        "index": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "tool_call_index": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "event_type": {
+          "type": "string",
+          "enum": [
+            "schema_validation_failed",
+            "semantic_validation_failed",
+            "retry_triggered",
+            "fallback_triggered",
+            "tool_call_rejected",
+            "tool_execution_failed"
+          ]
+        },
+        "message": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "classified_error": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "code",
+        "description"
+      ],
+      "properties": {
+        "code": {
+          "type": "string",
+          "enum": [
+            "E1",
+            "E2",
+            "E3",
+            "E4",
+            "E5",
+            "E6",
+            "E7",
+            "E8",
+            "E9",
+            "E10"
+          ]
+        },
+        "tool_call_index": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "completed_at": "2026-07-21T12:43:43.334653Z",
+  "errors": [],
+  "input": {
+    "expected_tool_sequence": [
+      "get_sales_data",
+      "aggregate_data",
+      "format_report"
+    ],
+    "user_request": "Give me only a simple daily revenue summary for the last 7 days."
+  },
+  "latency_ms": 7537,
+  "metrics": {
+    "fallback_count": 0,
+    "retry_count": 0,
+    "schema_validation_failures": 0,
+    "task_success": true,
+    "tool_execution_failures": 0
+  },
+  "model": {
+    "name": "qwen2.5:7b-instruct",
+    "provider": "ollama",
+    "seed": 0,
+    "temperature": 0.0
+  },
+  "output": {
+    "final_response": "R023 completed by fixed-sequence LLM parameter mapping with result format_report:7dd4f96c0795.",
+    "output_hash": "format_report:fa6f3e4d36e2"
+  },
+  "repetition_index": 2,
+  "request_id": "R023",
+  "run_id": "19ccf2a4-00b9-46f4-aab9-c8d4022c49da",
+  "schema_version": "0.1.0",
+  "started_at": "2026-07-21T12:43:35.797433Z",
+  "status": "success",
+  "tool_calls": [
+    {
+      "arguments": {
+        "dimensions": [
+          "date"
+        ],
+        "timeframe": "last_7_days"
+      },
+      "index": 0,
+      "latency_ms": 0,
+      "result_ref": "get_sales_data:932645a6f575",
+      "source": "llm",
+      "status": "executed",
+      "tool_name": "get_sales_data"
+    },
+    {
+      "arguments": {
+        "data_id": "get_sales_data:932645a6f575",
+        "group_by": [
+          "date"
+        ],
+        "metrics": [
+          "revenue"
+        ]
+      },
+      "index": 1,
+      "latency_ms": 0,
+      "result_ref": "aggregate_data:a0a512453704",
+      "source": "llm",
+      "status": "executed",
+      "tool_name": "aggregate_data"
+    },
+    {
+      "arguments": {
+        "data_id": "aggregate_data:a0a512453704",
+        "output_format": "markdown"
+      },
+      "index": 2,
+      "latency_ms": 0,
+      "result_ref": "format_report:7dd4f96c0795",
+      "source": "llm",
+      "status": "executed",
+      "tool_name": "format_report"
+    }
+  ],
+  "validation_events": [],
+  "variant": "fixed_sequence_llm_parameters"
+}

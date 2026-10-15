@@ -1,0 +1,77 @@
+{
+  "completed_at": "2026-07-10T12:11:53.044877Z",
+  "errors": [],
+  "input": {
+    "expected_tool_sequence": [
+      "get_sales_data",
+      "aggregate_data",
+      "format_report"
+    ],
+    "user_request": "Generate an HTML report for year-to-date units sold by product."
+  },
+  "latency_ms": 0,
+  "metrics": {
+    "fallback_count": 0,
+    "retry_count": 0,
+    "schema_validation_failures": 0,
+    "task_success": true,
+    "tool_execution_failures": 0
+  },
+  "output": {
+    "final_response": "R014 completed by deterministic workflow with result format_report:db290a5782fd.",
+    "output_hash": "format_report:ec287b4ca80a"
+  },
+  "repetition_index": 0,
+  "request_id": "R014",
+  "run_id": "4f506efd-c511-4c34-bb37-d9dea1f86f1b",
+  "schema_version": "0.1.0",
+  "started_at": "2026-07-10T12:11:53.044753Z",
+  "status": "success",
+  "tool_calls": [
+    {
+      "arguments": {
+        "dimensions": [
+          "product"
+        ],
+        "timeframe": "year_to_date"
+      },
+      "index": 0,
+      "latency_ms": 0,
+      "result_ref": "get_sales_data:0b7105cdaf95",
+      "source": "deterministic",
+      "status": "executed",
+      "tool_name": "get_sales_data"
+    },
+    {
+      "arguments": {
+        "data_id": "get_sales_data:0b7105cdaf95",
+        "group_by": [
+          "product"
+        ],
+        "metrics": [
+          "units_sold"
+        ]
+      },
+      "index": 1,
+      "latency_ms": 0,
+      "result_ref": "aggregate_data:ad25bbb174a0",
+      "source": "deterministic",
+      "status": "executed",
+      "tool_name": "aggregate_data"
+    },
+    {
+      "arguments": {
+        "data_id": "aggregate_data:ad25bbb174a0",
+        "output_format": "html"
+      },
+      "index": 2,
+      "latency_ms": 0,
+      "result_ref": "format_report:db290a5782fd",
+      "source": "deterministic",
+      "status": "executed",
+      "tool_name": "format_report"
+    }
+  ],
+  "validation_events": [],
+  "variant": "deterministic_workflow"
+}

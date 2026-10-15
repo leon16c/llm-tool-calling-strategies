@@ -1,0 +1,96 @@
+{
+  "completed_at": "2026-07-23T16:30:00.095662Z",
+  "errors": [],
+  "input": {
+    "expected_tool_sequence": [
+      "get_sales_data",
+      "aggregate_data",
+      "compare_previous_period",
+      "format_report"
+    ],
+    "user_request": "Compare this month's sales performance with the previous month and provide a short summary."
+  },
+  "latency_ms": 0,
+  "metrics": {
+    "fallback_count": 0,
+    "retry_count": 0,
+    "schema_validation_failures": 0,
+    "task_success": true,
+    "tool_execution_failures": 0
+  },
+  "model": {
+    "name": "oracle_backed_tool_call_planner",
+    "provider": "local",
+    "seed": 0,
+    "temperature": 0.0
+  },
+  "output": {
+    "final_response": "R003 completed by LLM tool selection with result format_report:6798a4e91159.",
+    "output_hash": "format_report:e97ce6153cca"
+  },
+  "repetition_index": 0,
+  "request_id": "R003",
+  "run_id": "cef6dcfe-bac4-4b18-8601-499d80f936c9",
+  "schema_version": "0.1.0",
+  "started_at": "2026-07-23T16:30:00.095524Z",
+  "status": "success",
+  "tool_calls": [
+    {
+      "arguments": {
+        "dimensions": [
+          "date"
+        ],
+        "timeframe": "current_month"
+      },
+      "index": 0,
+      "latency_ms": 0,
+      "result_ref": "get_sales_data:aa9f826b142e",
+      "source": "llm",
+      "status": "executed",
+      "tool_name": "get_sales_data"
+    },
+    {
+      "arguments": {
+        "data_id": "get_sales_data:aa9f826b142e",
+        "group_by": [
+          "date"
+        ],
+        "metrics": [
+          "revenue"
+        ]
+      },
+      "index": 1,
+      "latency_ms": 0,
+      "result_ref": "aggregate_data:72f4b98a19f8",
+      "source": "llm",
+      "status": "executed",
+      "tool_name": "aggregate_data"
+    },
+    {
+      "arguments": {
+        "data_id": "aggregate_data:72f4b98a19f8",
+        "previous_period": "previous_month"
+      },
+      "index": 2,
+      "latency_ms": 0,
+      "result_ref": "compare_previous_period:2c96c05a8a1b",
+      "source": "llm",
+      "status": "executed",
+      "tool_name": "compare_previous_period"
+    },
+    {
+      "arguments": {
+        "data_id": "compare_previous_period:2c96c05a8a1b",
+        "output_format": "markdown"
+      },
+      "index": 3,
+      "latency_ms": 0,
+      "result_ref": "format_report:6798a4e91159",
+      "source": "llm",
+      "status": "executed",
+      "tool_name": "format_report"
+    }
+  ],
+  "validation_events": [],
+  "variant": "llm_tool_selection"
+}

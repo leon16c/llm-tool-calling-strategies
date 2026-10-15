@@ -1,0 +1,2 @@
+# Preserve recorded byte hashes across checkout on every platform.
+* -text

@@ -1,0 +1,68 @@
+{
+  "completed_at": "2026-07-21T12:29:52.929969Z",
+  "errors": [
+    {
+      "code": "E4",
+      "description": "Invalid mapped parameters for get_sales_data.",
+      "tool_call_index": 0
+    }
+  ],
+  "input": {
+    "expected_tool_sequence": [
+      "get_sales_data",
+      "aggregate_data",
+      "compare_previous_period",
+      "format_report"
+    ],
+    "user_request": "Compare this month's sales performance with the previous month and provide a short summary."
+  },
+  "latency_ms": 2488,
+  "metrics": {
+    "fallback_count": 0,
+    "retry_count": 0,
+    "schema_validation_failures": 1,
+    "task_success": false,
+    "tool_execution_failures": 0
+  },
+  "model": {
+    "name": "qwen2.5:7b-instruct",
+    "provider": "ollama",
+    "seed": 0,
+    "temperature": 0.0
+  },
+  "output": {
+    "final_response": "R003 completed by fixed-sequence LLM parameter mapping with result None.",
+    "output_hash": "format_report:7ddbfe3f06fb"
+  },
+  "repetition_index": 0,
+  "request_id": "R003",
+  "run_id": "18654706-bb1a-48a4-8c72-d757b0a4bda8",
+  "schema_version": "0.1.0",
+  "started_at": "2026-07-21T12:29:50.441062Z",
+  "status": "rejected",
+  "tool_calls": [
+    {
+      "arguments": {
+        "dimensions": [
+          "date",
+          "region"
+        ],
+        "timeframe": "previous_month/current_month"
+      },
+      "index": 0,
+      "latency_ms": 0,
+      "source": "llm",
+      "status": "rejected",
+      "tool_name": "get_sales_data"
+    }
+  ],
+  "validation_events": [
+    {
+      "event_type": "schema_validation_failed",
+      "index": 0,
+      "message": "'previous_month/current_month' is not valid under any of the given schemas",
+      "tool_call_index": 0
+    }
+  ],
+  "variant": "fixed_sequence_llm_parameters"
+}

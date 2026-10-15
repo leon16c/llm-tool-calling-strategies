@@ -1,0 +1,97 @@
+{
+  "completed_at": "2026-07-17T12:59:13.828876Z",
+  "errors": [],
+  "input": {
+    "expected_tool_sequence": [
+      "get_sales_data",
+      "aggregate_data",
+      "detect_anomalies",
+      "format_report"
+    ],
+    "user_request": "Use an IQR-based check to find unusual average order values by sales channel in the last 30 days."
+  },
+  "latency_ms": 0,
+  "metrics": {
+    "fallback_count": 0,
+    "retry_count": 0,
+    "schema_validation_failures": 0,
+    "task_success": true,
+    "tool_execution_failures": 0
+  },
+  "model": {
+    "name": "oracle_backed_parameter_mapper",
+    "provider": "local",
+    "seed": 0,
+    "temperature": 0.0
+  },
+  "output": {
+    "final_response": "R017 completed by fixed-sequence LLM parameter mapping with result format_report:8b17980d5add.",
+    "output_hash": "format_report:cd82cfe5f7eb"
+  },
+  "repetition_index": 0,
+  "request_id": "R017",
+  "run_id": "fe18dfc4-c546-42d2-8684-dedd2c36afa8",
+  "schema_version": "0.1.0",
+  "started_at": "2026-07-17T12:59:13.828749Z",
+  "status": "success",
+  "tool_calls": [
+    {
+      "arguments": {
+        "dimensions": [
+          "sales_channel"
+        ],
+        "timeframe": "last_30_days"
+      },
+      "index": 0,
+      "latency_ms": 0,
+      "result_ref": "get_sales_data:cafe654fee66",
+      "source": "llm",
+      "status": "executed",
+      "tool_name": "get_sales_data"
+    },
+    {
+      "arguments": {
+        "data_id": "get_sales_data:cafe654fee66",
+        "group_by": [
+          "sales_channel"
+        ],
+        "metrics": [
+          "average_order_value"
+        ]
+      },
+      "index": 1,
+      "latency_ms": 0,
+      "result_ref": "aggregate_data:b4f478fa003d",
+      "source": "llm",
+      "status": "executed",
+      "tool_name": "aggregate_data"
+    },
+    {
+      "arguments": {
+        "data_id": "aggregate_data:b4f478fa003d",
+        "method": "iqr",
+        "threshold": 1.5
+      },
+      "index": 2,
+      "latency_ms": 0,
+      "result_ref": "detect_anomalies:47e3737e2db3",
+      "source": "llm",
+      "status": "executed",
+      "tool_name": "detect_anomalies"
+    },
+    {
+      "arguments": {
+        "data_id": "detect_anomalies:47e3737e2db3",
+        "output_format": "markdown"
+      },
+      "index": 3,
+      "latency_ms": 0,
+      "result_ref": "format_report:8b17980d5add",
+      "source": "llm",
+      "status": "executed",
+      "tool_name": "format_report"
+    }
+  ],
+  "validation_events": [],
+  "variant": "fixed_sequence_llm_parameters"
+}

@@ -1,0 +1,97 @@
+{
+  "completed_at": "2026-07-23T16:30:00.113626Z",
+  "errors": [],
+  "input": {
+    "expected_tool_sequence": [
+      "get_sales_data",
+      "aggregate_data",
+      "detect_anomalies",
+      "format_report"
+    ],
+    "user_request": "Return an HTML report showing unusual gross margin values by category for the last 30 days."
+  },
+  "latency_ms": 0,
+  "metrics": {
+    "fallback_count": 0,
+    "retry_count": 0,
+    "schema_validation_failures": 0,
+    "task_success": true,
+    "tool_execution_failures": 0
+  },
+  "model": {
+    "name": "oracle_backed_tool_call_planner",
+    "provider": "local",
+    "seed": 0,
+    "temperature": 0.0
+  },
+  "output": {
+    "final_response": "R029 completed by LLM tool selection with result format_report:5f933686d5ef.",
+    "output_hash": "format_report:d06cfe50a6ab"
+  },
+  "repetition_index": 0,
+  "request_id": "R029",
+  "run_id": "14ed543b-84ad-4465-9d4d-c98d6b47b8b4",
+  "schema_version": "0.1.0",
+  "started_at": "2026-07-23T16:30:00.113475Z",
+  "status": "success",
+  "tool_calls": [
+    {
+      "arguments": {
+        "dimensions": [
+          "category"
+        ],
+        "timeframe": "last_30_days"
+      },
+      "index": 0,
+      "latency_ms": 0,
+      "result_ref": "get_sales_data:11c2c2c08888",
+      "source": "llm",
+      "status": "executed",
+      "tool_name": "get_sales_data"
+    },
+    {
+      "arguments": {
+        "data_id": "get_sales_data:11c2c2c08888",
+        "group_by": [
+          "category"
+        ],
+        "metrics": [
+          "gross_margin"
+        ]
+      },
+      "index": 1,
+      "latency_ms": 0,
+      "result_ref": "aggregate_data:61eef681df6d",
+      "source": "llm",
+      "status": "executed",
+      "tool_name": "aggregate_data"
+    },
+    {
+      "arguments": {
+        "data_id": "aggregate_data:61eef681df6d",
+        "method": "z_score",
+        "threshold": 3.0
+      },
+      "index": 2,
+      "latency_ms": 0,
+      "result_ref": "detect_anomalies:099911b17685",
+      "source": "llm",
+      "status": "executed",
+      "tool_name": "detect_anomalies"
+    },
+    {
+      "arguments": {
+        "data_id": "detect_anomalies:099911b17685",
+        "output_format": "html"
+      },
+      "index": 3,
+      "latency_ms": 0,
+      "result_ref": "format_report:5f933686d5ef",
+      "source": "llm",
+      "status": "executed",
+      "tool_name": "format_report"
+    }
+  ],
+  "validation_events": [],
+  "variant": "llm_tool_selection"
+}

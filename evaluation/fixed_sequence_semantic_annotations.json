@@ -1,0 +1,91 @@
+{
+  "protocol_version": "1.1",
+  "review_date": "2026-10-09",
+  "reviewer": "Thesis author",
+  "ai_role": "Secondary consistency checking only",
+  "attribution_clarification": {
+    "date": "2026-10-11",
+    "source": "Direct clarification by the thesis author in the project conversation",
+    "statement": "The thesis author conducted all semantic reviews; AI was used only as a secondary double check. Recorded AI conversations do not delimit author review coverage."
+  },
+  "scope": "Eleven validated V2 first-pass runs without exact normalized oracle agreement; action specifications, not business outputs",
+  "cases": {
+    "R001": {
+      "verdict": "unresolved",
+      "rules": ["R3", "R5"],
+      "reason": "Retrieval adds date and threshold changes from 3.0 to 2.5. The request specifies neither threshold nor exact detection sensitivity. The baseline default is documented, but absent from the inspected V2 prompt/schema. Extra retrieval dimensions have unspecified business effects.",
+      "oracle_default_deviation": ["threshold"],
+      "resolution_needed": "A disclosed anomaly policy and retrieval/aggregation semantics; do not infer identical detections from hashes."
+    },
+    "R004": {
+      "verdict": "equivalent",
+      "rules": ["R1", "R6"],
+      "reason": "Only threshold representation differs, 3.0 versus 3. The numeric argument is equal and the executed reference chain is valid.",
+      "oracle_default_deviation": [],
+      "resolution_needed": "No remaining deviation to adjudicate at argument level; actual anomaly-output quality is outside this review."
+    },
+    "R005": {
+      "verdict": "non_equivalent_under_grain_rule",
+      "rules": ["R3a"],
+      "reason": "The request asks for a compact year-to-date report by region; group_by becomes region plus date and no later roll-up occurs. Under requested-grain rule R3a this changes the intended aggregation level.",
+      "oracle_default_deviation": [],
+      "resolution_needed": "Human confirmation of the requested-grain reading; if extra temporal detail is allowed, reclassify as unresolved. No actual erroneous totals were observed because tools are mocks."
+    },
+    "R006": {
+      "verdict": "equivalent",
+      "rules": ["R1", "R6"],
+      "reason": "Only threshold representation differs, 3.0 versus 3. The numeric argument is equal and the executed reference chain is valid.",
+      "oracle_default_deviation": [],
+      "resolution_needed": "No remaining deviation to adjudicate at argument level; reference-task assumptions were not independently validated."
+    },
+    "R010": {
+      "verdict": "unresolved",
+      "rules": ["R1", "R3"],
+      "reason": "Retrieval asks for product/category but aggregation uses date. This suggests a missing-input-dimension problem, but the tool contract does not say that only requested dimensions exist in the returned data. The user also did not specify a grouping dimension. Numeric threshold representation is harmless.",
+      "oracle_default_deviation": [],
+      "resolution_needed": "A returned-data contract stating available columns/dimensions and aggregation preconditions. If dimensions exhaustively defines available grouping fields, the trace is non-equivalent."
+    },
+    "R012": {
+      "verdict": "unresolved",
+      "rules": ["R3", "R4a"],
+      "reason": "Requested timeframe, sales-channel grouping and all three metrics are preserved. JSON is supported and no format was requested. Added date retrieval could be harmless, but preservation of average order value under changed retrieval granularity is not defined.",
+      "oracle_default_deviation": ["output_format"],
+      "resolution_needed": "Retrieval/aggregation semantics that preserve metric values, especially average order value; do not classify the format choice alone as a user-instruction violation."
+    },
+    "R018": {
+      "verdict": "unresolved",
+      "rules": ["R1", "R3"],
+      "reason": "Retrieval adds date; subsequent grouping remains product, and timeframe, units_sold, anomaly method and numeric threshold match. The contract does not guarantee that extra retrieval dimensions preserve rows/units totals.",
+      "oracle_default_deviation": [],
+      "resolution_needed": "Define whether retrieval is a projection or pre-aggregation and whether the subsequent product aggregation preserves units sold."
+    },
+    "R020": {
+      "verdict": "equivalent",
+      "rules": ["R4a", "R6"],
+      "reason": "The only deviation is JSON instead of markdown. The request specifies current-month revenue and gross margin by category but no output format; the tool explicitly supports JSON. Equivalent relative to expressed requirements, while violating the oracle-only markdown default.",
+      "oracle_default_deviation": ["output_format"],
+      "resolution_needed": "If markdown is a mandatory application contract, classify separately as nonconformance to that contract and document whether the model was given it."
+    },
+    "R024": {
+      "verdict": "equivalent",
+      "rules": ["R4a", "R6"],
+      "reason": "The only deviation is JSON instead of markdown. Current-quarter average order value, regional grouping and the prohibition on comparisons are preserved; the request does not specify a format. Equivalent relative to expressed requirements, while violating the oracle-only markdown default.",
+      "oracle_default_deviation": ["output_format"],
+      "resolution_needed": "If markdown is a mandatory application contract, classify separately as nonconformance to that contract and document whether the model was given it."
+    },
+    "R026": {
+      "verdict": "unresolved",
+      "rules": ["R1", "R3"],
+      "reason": "Retrieval adds date; aggregation remains by region with revenue and the same anomaly method/numeric threshold. The effect of the extra retrieval dimension is unspecified.",
+      "oracle_default_deviation": [],
+      "resolution_needed": "A retrieval/aggregation contract demonstrating that regional totals and the anomaly input population are preserved."
+    },
+    "R029": {
+      "verdict": "non_equivalent_under_grain_rule",
+      "rules": ["R1", "R3a"],
+      "reason": "The request asks for unusual gross margin values by category. Grouping becomes category plus date before anomaly detection, changing the analysis grain under R3a; there is no subsequent roll-up. Requested HTML, timeframe and metric remain correct.",
+      "oracle_default_deviation": [],
+      "resolution_needed": "Human confirmation of category-level grain. If category/date detail is allowed, reclassify as unresolved; no actual changed anomalies were measured."
+    }
+  }
+}

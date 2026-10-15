@@ -1,0 +1,93 @@
+{
+  "completed_at": "2026-07-23T16:31:02.545255Z",
+  "errors": [
+    {
+      "code": "E2",
+      "description": "The planner omitted at least one required tool call."
+    }
+  ],
+  "input": {
+    "expected_tool_sequence": [
+      "get_sales_data",
+      "aggregate_data",
+      "detect_anomalies",
+      "format_report"
+    ],
+    "user_request": "Show daily revenue trends for the last 30 days and identify anomalies."
+  },
+  "latency_ms": 3982,
+  "metrics": {
+    "fallback_count": 0,
+    "retry_count": 0,
+    "schema_validation_failures": 0,
+    "task_success": false,
+    "tool_execution_failures": 0
+  },
+  "model": {
+    "name": "qwen2.5:7b-instruct",
+    "provider": "ollama",
+    "seed": 0,
+    "temperature": 0.0
+  },
+  "output": {
+    "final_response": "R004 completed by LLM tool selection with result None.",
+    "output_hash": "format_report:3cbce43049ad"
+  },
+  "repetition_index": 0,
+  "request_id": "R004",
+  "run_id": "3633579f-3d19-4da9-bf6e-eb892b615aa1",
+  "schema_version": "0.1.0",
+  "started_at": "2026-07-23T16:30:58.563056Z",
+  "status": "rejected",
+  "tool_calls": [
+    {
+      "arguments": {
+        "dimensions": [
+          "date"
+        ],
+        "timeframe": "last_30_days"
+      },
+      "index": 0,
+      "latency_ms": 0,
+      "source": "llm",
+      "status": "proposed",
+      "tool_name": "get_sales_data"
+    },
+    {
+      "arguments": {
+        "data_id": "$previous_result",
+        "group_by": [
+          "date"
+        ],
+        "metrics": [
+          "revenue"
+        ]
+      },
+      "index": 1,
+      "latency_ms": 0,
+      "source": "llm",
+      "status": "proposed",
+      "tool_name": "aggregate_data"
+    },
+    {
+      "arguments": {
+        "data_id": "$previous_result",
+        "method": "z_score",
+        "threshold": 3
+      },
+      "index": 2,
+      "latency_ms": 0,
+      "source": "llm",
+      "status": "proposed",
+      "tool_name": "detect_anomalies"
+    }
+  ],
+  "validation_events": [
+    {
+      "event_type": "semantic_validation_failed",
+      "index": 0,
+      "message": "Planned tool sequence omits required calls: planned=['get_sales_data', 'aggregate_data', 'detect_anomalies'], expected=['get_sales_data', 'aggregate_data', 'detect_anomalies', 'format_report']"
+    }
+  ],
+  "variant": "llm_tool_selection"
+}

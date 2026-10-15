@@ -1,0 +1,86 @@
+{
+  "completed_at": "2026-07-23T16:32:06.616976Z",
+  "errors": [
+    {
+      "code": "E1",
+      "description": "The planner selected an incorrect tool sequence."
+    }
+  ],
+  "input": {
+    "expected_tool_sequence": [
+      "get_sales_data",
+      "aggregate_data",
+      "format_report"
+    ],
+    "user_request": "List previous year's revenue by product."
+  },
+  "latency_ms": 3857,
+  "metrics": {
+    "fallback_count": 0,
+    "retry_count": 0,
+    "schema_validation_failures": 0,
+    "task_success": false,
+    "tool_execution_failures": 0
+  },
+  "model": {
+    "name": "qwen2.5:7b-instruct",
+    "provider": "ollama",
+    "seed": 0,
+    "temperature": 0.0
+  },
+  "output": {
+    "final_response": "R021 completed by LLM tool selection with result None.",
+    "output_hash": "format_report:362b7b27ae2a"
+  },
+  "repetition_index": 0,
+  "request_id": "R021",
+  "run_id": "c607b25c-d12a-421f-8937-9ec2404e3227",
+  "schema_version": "0.1.0",
+  "started_at": "2026-07-23T16:32:02.759974Z",
+  "status": "rejected",
+  "tool_calls": [
+    {
+      "arguments": {
+        "dimensions": [
+          "product"
+        ],
+        "timeframe": "previous_year"
+      },
+      "index": 0,
+      "latency_ms": 0,
+      "source": "llm",
+      "status": "proposed",
+      "tool_name": "get_sales_data"
+    },
+    {
+      "arguments": {
+        "data_id": "$previous_result",
+        "previous_period": "same_period_previous_year"
+      },
+      "index": 1,
+      "latency_ms": 0,
+      "source": "llm",
+      "status": "proposed",
+      "tool_name": "compare_previous_period"
+    },
+    {
+      "arguments": {
+        "data_id": "$previous_result",
+        "output_format": "markdown"
+      },
+      "index": 2,
+      "latency_ms": 0,
+      "source": "llm",
+      "status": "proposed",
+      "tool_name": "format_report"
+    }
+  ],
+  "validation_events": [
+    {
+      "event_type": "semantic_validation_failed",
+      "index": 0,
+      "message": "Planned tool sequence differs from the expected sequence: planned=['get_sales_data', 'compare_previous_period', 'format_report'], expected=['get_sales_data', 'aggregate_data', 'format_report']"
+    }
+  ],
+  "variant": "llm_tool_selection"
+}

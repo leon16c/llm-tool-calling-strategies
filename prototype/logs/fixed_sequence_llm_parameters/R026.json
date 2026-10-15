@@ -1,0 +1,97 @@
+{
+  "completed_at": "2026-07-17T12:59:13.834847Z",
+  "errors": [],
+  "input": {
+    "expected_tool_sequence": [
+      "get_sales_data",
+      "aggregate_data",
+      "detect_anomalies",
+      "format_report"
+    ],
+    "user_request": "Check whether any regions show unusual revenue deviations this month."
+  },
+  "latency_ms": 0,
+  "metrics": {
+    "fallback_count": 0,
+    "retry_count": 0,
+    "schema_validation_failures": 0,
+    "task_success": true,
+    "tool_execution_failures": 0
+  },
+  "model": {
+    "name": "oracle_backed_parameter_mapper",
+    "provider": "local",
+    "seed": 0,
+    "temperature": 0.0
+  },
+  "output": {
+    "final_response": "R026 completed by fixed-sequence LLM parameter mapping with result format_report:2b5aee5d1089.",
+    "output_hash": "format_report:ad8ed8415630"
+  },
+  "repetition_index": 0,
+  "request_id": "R026",
+  "run_id": "e2b6b41b-663e-4062-9cf0-8d7b4507fc34",
+  "schema_version": "0.1.0",
+  "started_at": "2026-07-17T12:59:13.834671Z",
+  "status": "success",
+  "tool_calls": [
+    {
+      "arguments": {
+        "dimensions": [
+          "region"
+        ],
+        "timeframe": "current_month"
+      },
+      "index": 0,
+      "latency_ms": 0,
+      "result_ref": "get_sales_data:2b79bd7a01e8",
+      "source": "llm",
+      "status": "executed",
+      "tool_name": "get_sales_data"
+    },
+    {
+      "arguments": {
+        "data_id": "get_sales_data:2b79bd7a01e8",
+        "group_by": [
+          "region"
+        ],
+        "metrics": [
+          "revenue"
+        ]
+      },
+      "index": 1,
+      "latency_ms": 0,
+      "result_ref": "aggregate_data:1da283e4c547",
+      "source": "llm",
+      "status": "executed",
+      "tool_name": "aggregate_data"
+    },
+    {
+      "arguments": {
+        "data_id": "aggregate_data:1da283e4c547",
+        "method": "z_score",
+        "threshold": 3.0
+      },
+      "index": 2,
+      "latency_ms": 0,
+      "result_ref": "detect_anomalies:5bbcea41e6c4",
+      "source": "llm",
+      "status": "executed",
+      "tool_name": "detect_anomalies"
+    },
+    {
+      "arguments": {
+        "data_id": "detect_anomalies:5bbcea41e6c4",
+        "output_format": "markdown"
+      },
+      "index": 3,
+      "latency_ms": 0,
+      "result_ref": "format_report:2b5aee5d1089",
+      "source": "llm",
+      "status": "executed",
+      "tool_name": "format_report"
+    }
+  ],
+  "validation_events": [],
+  "variant": "fixed_sequence_llm_parameters"
+}

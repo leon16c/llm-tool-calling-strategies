@@ -1,0 +1,578 @@
+{
+  "review_date": "2026-10-09",
+  "protocol_version": "1.1",
+  "reviewer": "Thesis author",
+  "ai_role": "Secondary consistency checking only",
+  "attribution_clarification": {
+    "date": "2026-10-11",
+    "source": "Direct clarification by the thesis author in the project conversation",
+    "statement": "The thesis author conducted all semantic reviews; AI was used only as a secondary double check. Recorded AI conversations do not delimit author review coverage.",
+    "note": "Metadata-only correction; historical evidence, verdicts and original source hashes retained. The original builder freezes thesis drafts as well as measurement inputs and cannot be rerun after chapter revisions."
+  },
+  "scope": "Eleven validated V2 first-pass runs without exact normalized oracle agreement; action specifications, not business outputs",
+  "reviewed_cases": 11,
+  "verdict_counts": {
+    "unresolved": 5,
+    "equivalent": 4,
+    "non_equivalent_under_grain_rule": 2
+  },
+  "note": "Verdicts are supplied reviewer judgments, not measured business-output correctness.",
+  "source_sha256": {
+    "evaluation/audits/2026-10-09/baseline_manifest.json": "2a72354e0a9629f41a49ce725197139a4cf23b3546c6190294abadb55c9876be",
+    "evaluation/deterministic_baseline.md": "f525af18bfa6a7b193a06995219aadc5b19694ce92bfff8a42c1a2d6e626a052",
+    "evaluation/fixed_sequence_semantic_annotations.json": "43108b73982572b9f2e471189825a5bae163e36db4912e7efed37c57676f4001",
+    "evaluation/requests/initial_requests.json": "d037616c8d9db806dc875dff343eebba0d12c57e63b221419f2b1ae798bd4326",
+    "evaluation/requests/initial_requests.md": "dc112a7c72d4428e9d70ba44c97e0510534fee67578a77d39612111a7f7f5ee8",
+    "evaluation/scripts/audit_measurements.py": "9e96c7afb5efd8e5a89710ba0d102b2ebfa4e6cc6f6764384e8f514e02dfc0bc",
+    "evaluation/scripts/build_semantic_review.py": "3712dd5ef2db04432b36fcf49a7d6587c21b429b4ba2461efbe0c384744f5d3c",
+    "evaluation/semantic_review_protocol.md": "1207fea506627fcbdae4989804a15422888b6231506ba8f9f7571c3065a00486",
+    "prototype/logs/fixed_sequence_llm_parameters/R001.json": "0dce3e2d0576df1025d654e91e4cbbb7f198c558bd9b4f1b750b03c96a44684b",
+    "prototype/logs/fixed_sequence_llm_parameters/R004.json": "052ea5f320a297771da126e84a4696eb38b0fe37166b8cadf5317d9ba830e62a",
+    "prototype/logs/fixed_sequence_llm_parameters/R005.json": "5ae56c74872d69ba881e21b3fa656cf17dd44dccb17ad5a91b54c78156dff31c",
+    "prototype/logs/fixed_sequence_llm_parameters/R006.json": "86023444985c2f7f5968c6226c0ed1f202ac1aa470f956db3f12e9bd4719cbab",
+    "prototype/logs/fixed_sequence_llm_parameters/R010.json": "97b8691a95af8771931114cc7ce013edc8d350382e110b506a3056babab84813",
+    "prototype/logs/fixed_sequence_llm_parameters/R012.json": "6bac3acd22aa22feda588d69fbcecb1b67af66a0321d7a4a9867c94f31243b3e",
+    "prototype/logs/fixed_sequence_llm_parameters/R018.json": "a5f0bc3a818e2dd25cf513237f0d6cef7072e51a14cde3212877964d134fdcaf",
+    "prototype/logs/fixed_sequence_llm_parameters/R020.json": "42ffad0104c1a8c2f9ebcb9a62111d0ee547caf929e758a1690da9013d170453",
+    "prototype/logs/fixed_sequence_llm_parameters/R024.json": "5a380ac14754b32f33f4f3f80eb0da335d6978869f64152d87c6e377c5525761",
+    "prototype/logs/fixed_sequence_llm_parameters/R026.json": "2f5355166926e12d6a7e276f564e520b01e18b6b736fb87c94c86bd7031a024b",
+    "prototype/logs/fixed_sequence_llm_parameters/R029.json": "f2943871c8defef5cff2e1a78e9d88bb1798f4ee4bd248adae04f0e6edb6ca04",
+    "prototype/logs/fixed_sequence_llm_parameters_ollama/R001.json": "a672bb365ebf6f65e334a0a0e09c6bdfa3c40ac970dea3033441d96d879a55a5",
+    "prototype/logs/fixed_sequence_llm_parameters_ollama/R004.json": "0b9fc4acf27711725d7a87579257e88f95103520d0844eda09dad891f7388fbc",
+    "prototype/logs/fixed_sequence_llm_parameters_ollama/R005.json": "2189061cdcbaa4921f2aa37e00c1f278f748cda266f74f54721d22af74277361",
+    "prototype/logs/fixed_sequence_llm_parameters_ollama/R006.json": "9b6531fd3cfb703569fefec8a4428eb6a8f3a478548640f668669aa668251432",
+    "prototype/logs/fixed_sequence_llm_parameters_ollama/R010.json": "137d386ffbf8432274437681e114f51422baa8905b06a240e7f1a4c0bc4730ed",
+    "prototype/logs/fixed_sequence_llm_parameters_ollama/R012.json": "d1a346f33fbf2ad0edb5fc10abd920964bc8729ba240c48421ee4dce9bd2b93a",
+    "prototype/logs/fixed_sequence_llm_parameters_ollama/R018.json": "7dff8901a858e6ef55f28fc3ebc04d8f99bdc1e1f9e4eda97c84ccc0249c1fe5",
+    "prototype/logs/fixed_sequence_llm_parameters_ollama/R020.json": "d47e2f7862bb023efc700563776202e3298f72af64d333df2c02e69c508252d8",
+    "prototype/logs/fixed_sequence_llm_parameters_ollama/R024.json": "82ffdac788e97ce2157ac9207669cba351093b9cba03a8611bb451c81bc1e07c",
+    "prototype/logs/fixed_sequence_llm_parameters_ollama/R026.json": "228ae3b8e4b21459401bd789e9626548a768e48001162638f58ac4b48d9007c8",
+    "prototype/logs/fixed_sequence_llm_parameters_ollama/R029.json": "aa170c9dbe30512aec781346b9101a1b9acb81477b874a75ae520babab821ef2",
+    "prototype/logs/fixed_sequence_llm_parameters_ollama_repeated/R001_rep00.json": "75740f8cca93d241815a4a6f59ea8b11655ad6ea2a344b9eed87cf87a1159288",
+    "prototype/logs/fixed_sequence_llm_parameters_ollama_repeated/R001_rep01.json": "998712b925eb49a42d1ab574cb51755e8be2cdb82222805d230627a5f92a5245",
+    "prototype/logs/fixed_sequence_llm_parameters_ollama_repeated/R001_rep02.json": "2603705b5f0e98b41672ec0a7214d24b8690ea5db909934023df6d437a1200b4",
+    "prototype/logs/fixed_sequence_llm_parameters_ollama_repeated/R001_rep03.json": "10f5d1a30d773eb44387f96163a9c540c68c69dd270169e7bf834bec1f3d4489",
+    "prototype/logs/fixed_sequence_llm_parameters_ollama_repeated/R001_rep04.json": "2b08110875c224b2de70800c508587b519bde41619a5d6ec8adbd82bdcbda96e",
+    "prototype/logs/fixed_sequence_llm_parameters_ollama_repeated/R004_rep00.json": "445a97f8fbcfcf4bb03d066aa2a2a01de1d5a79fc75bf6984e7027bfae06e6b2",
+    "prototype/logs/fixed_sequence_llm_parameters_ollama_repeated/R004_rep01.json": "d985fd959d14bafb385f29551925799513ed600474fdf759dbbca2af7a2ab221",
+    "prototype/logs/fixed_sequence_llm_parameters_ollama_repeated/R004_rep02.json": "401c122f138487445a92c5be67819498e88f46240223561fff34d1b4ddb2bc9a",
+    "prototype/logs/fixed_sequence_llm_parameters_ollama_repeated/R004_rep03.json": "00bf4d5775e1ca524d1c36df61fe0b83739ecf5e8d60e03cc9259690df485554",
+    "prototype/logs/fixed_sequence_llm_parameters_ollama_repeated/R004_rep04.json": "dd7b3f07f569891a690d4ef91994639db1b14c0cd728274ee4ff26310aa23a4a",
+    "prototype/logs/fixed_sequence_llm_parameters_ollama_repeated/R005_rep00.json": "44b72be32e8338ec8c8d0a7e35f3791d0c157b820dd8996407011a041e6dcb57",
+    "prototype/logs/fixed_sequence_llm_parameters_ollama_repeated/R005_rep01.json": "cf05b5430618d9c3eb4849f1e7f3f73ea771edafc38c1501beba5e5be8404011",
+    "prototype/logs/fixed_sequence_llm_parameters_ollama_repeated/R005_rep02.json": "8321c5c9cfebf53b9d43b78f3d6651046ba16df67ab10e49d86fb01781b733f2",
+    "prototype/logs/fixed_sequence_llm_parameters_ollama_repeated/R005_rep03.json": "607cc30f12df041c2f48d78126bd2357eb22b6e5c4ac86026b38a3be5baaef43",
+    "prototype/logs/fixed_sequence_llm_parameters_ollama_repeated/R005_rep04.json": "154ddcbb165b33018050a794619e232ad69bbdd57fd43142eb1742d0643f8fc9",
+    "prototype/logs/fixed_sequence_llm_parameters_ollama_repeated/R006_rep00.json": "04e5e2e2ea402c718a254c86face6312d226128ed1d3acf8a43a259bf106c91d",
+    "prototype/logs/fixed_sequence_llm_parameters_ollama_repeated/R006_rep01.json": "9e369bef4508ef016438a7cb50401d01fa9f6b1c0db209159172e5a4945b3a03",
+    "prototype/logs/fixed_sequence_llm_parameters_ollama_repeated/R006_rep02.json": "4caa5fb261386280b253bf8f4df90cd974ada2e956f817e3a475e89be6c4f791",
+    "prototype/logs/fixed_sequence_llm_parameters_ollama_repeated/R006_rep03.json": "dc5fa2d53871d2ebcb0ddf580d403c5b4b9c864edb097c09b9a932e9c609e53f",
+    "prototype/logs/fixed_sequence_llm_parameters_ollama_repeated/R006_rep04.json": "32569ccc521d1a3084b55068a4c97223dbf8eff4430fd1ba1a4684f2430181be",
+    "prototype/logs/fixed_sequence_llm_parameters_ollama_repeated/R010_rep00.json": "db6e4dfb595ac6de6bd3584833583c4ae177d0f98feb1372b75f8ef68d4d9d10",
+    "prototype/logs/fixed_sequence_llm_parameters_ollama_repeated/R010_rep01.json": "acd9e0b473866971c99d8e0cfc18a655ee8daa22d6e1ddd79e3acb1531307cf4",
+    "prototype/logs/fixed_sequence_llm_parameters_ollama_repeated/R010_rep02.json": "745cf3ec2357d612ac77345570b53f79da38de1286dfd45d1d97a3593b52df20",
+    "prototype/logs/fixed_sequence_llm_parameters_ollama_repeated/R010_rep03.json": "5c9600368cfb489d14302354b62749cced11b54f5cf00d880edb7b730f696c6d",
+    "prototype/logs/fixed_sequence_llm_parameters_ollama_repeated/R010_rep04.json": "78893b1200e1ccc188a61cb2c752cb70717b1d7d1f8b08d1fd3f09a8e21d002d",
+    "prototype/logs/fixed_sequence_llm_parameters_ollama_repeated/R012_rep00.json": "6933f50398799cc466913524fc18b4aa13a49575100622e65ac6f5bf28615260",
+    "prototype/logs/fixed_sequence_llm_parameters_ollama_repeated/R012_rep01.json": "f850b8fa6e910c76e81ed1d3764c6bbbb98646f949d4ed29e245ddfdaf347f8c",
+    "prototype/logs/fixed_sequence_llm_parameters_ollama_repeated/R012_rep02.json": "eb60817230f9993a1eea8cf961bd9cc9dda1fd91237c1ef7f4e5fbea4a3823f8",
+    "prototype/logs/fixed_sequence_llm_parameters_ollama_repeated/R012_rep03.json": "803b23c9dbc18408e94ae7d85d4995d7bff860011ba696d893f26360079e6a15",
+    "prototype/logs/fixed_sequence_llm_parameters_ollama_repeated/R012_rep04.json": "82bd7b2bf58bba4557e772503b3d054f0ccb6a926e35cf8c34f2eeadf28f0beb",
+    "prototype/logs/fixed_sequence_llm_parameters_ollama_repeated/R018_rep00.json": "a707c6e58b3afceb0e0fed0a16c51a21b98f7198335bd5c772660503f44ea61f",
+    "prototype/logs/fixed_sequence_llm_parameters_ollama_repeated/R018_rep01.json": "7bb26dfb2fe553da52922151a29e06ebf900b91a266463dcf49c322242afd76a",
+    "prototype/logs/fixed_sequence_llm_parameters_ollama_repeated/R018_rep02.json": "67cf16e26d801ff57101c5736af0619d324eab3b6f1544831aebf71a3437a154",
+    "prototype/logs/fixed_sequence_llm_parameters_ollama_repeated/R018_rep03.json": "16955e9657bbf2619ab3f6d37883c4f9cd3d4bbd79abd322fc2248d8a02cd104",
+    "prototype/logs/fixed_sequence_llm_parameters_ollama_repeated/R018_rep04.json": "c754d08100186bcd9cd21b1d69d2aff3ac53cafec5a1106d67f79a75533bdd5a",
+    "prototype/logs/fixed_sequence_llm_parameters_ollama_repeated/R020_rep00.json": "70751567fea9f05ee1fee18c0969e5db0c0dcaa4d9b4521a7612a20f05db263e",
+    "prototype/logs/fixed_sequence_llm_parameters_ollama_repeated/R020_rep01.json": "76ee0514a7336142cfa6173eb76ccbcc1e8214fb82bcc7859aef64f7b5259632",
+    "prototype/logs/fixed_sequence_llm_parameters_ollama_repeated/R020_rep02.json": "257a308c0937977e28e46c2e6cd6ea5ed5595614b9f7136464a32116a1c34d70",
+    "prototype/logs/fixed_sequence_llm_parameters_ollama_repeated/R020_rep03.json": "2cd32e20b8451ad69e6ecc8cadc1bdfbbe988e8a02d081b08c22d7200d814afb",
+    "prototype/logs/fixed_sequence_llm_parameters_ollama_repeated/R020_rep04.json": "f221a4524a9aa276c322b40f7ca1e4131ea937cd0f72b774ffd1baa618e9457d",
+    "prototype/logs/fixed_sequence_llm_parameters_ollama_repeated/R024_rep00.json": "caab8002276243093c26ceaccaeaf455f7ff871bcff851859c9770e89bf194b0",
+    "prototype/logs/fixed_sequence_llm_parameters_ollama_repeated/R024_rep01.json": "1e936a93d0ecf830c248f6bd4ac0b0548a011dfd5359c30702d6a8f76eb09f53",
+    "prototype/logs/fixed_sequence_llm_parameters_ollama_repeated/R024_rep02.json": "4e6a39201cd8bd3c8b82f52dd621aa36430f61522c291a6d31a96e04815ddc6a",
+    "prototype/logs/fixed_sequence_llm_parameters_ollama_repeated/R024_rep03.json": "fc4ab92a1bf00327e472df79383870a6bae432408c24d84a97b29b4e27fc96a6",
+    "prototype/logs/fixed_sequence_llm_parameters_ollama_repeated/R024_rep04.json": "5a0c9bf7dd14a3017aac3ea34761d5cbe95443b32039f3cffcfe01e19add30ba",
+    "prototype/logs/fixed_sequence_llm_parameters_ollama_repeated/R026_rep00.json": "864e77160ea9344afe4ee5d891ba6744774b2ebb84ff8c6a9349663ffc666002",
+    "prototype/logs/fixed_sequence_llm_parameters_ollama_repeated/R026_rep01.json": "42b477ebbbe13b396181730cfc46e7c01bb2e8b5efc36782b0ffdb29a2376e98",
+    "prototype/logs/fixed_sequence_llm_parameters_ollama_repeated/R026_rep02.json": "4301d271d62f6c38307d8b47808857fb63111ff2862441f29ad31596ebee387a",
+    "prototype/logs/fixed_sequence_llm_parameters_ollama_repeated/R026_rep03.json": "05fb3baa4b96c87e5f4d0fdd3ff914ba895c3af99b9e70cca130e325ea5e74c0",
+    "prototype/logs/fixed_sequence_llm_parameters_ollama_repeated/R026_rep04.json": "bfa31ca6bd2155574b5d8e3c1d01472c5bf0293872a169d2b0baa411fb6b7ae4",
+    "prototype/logs/fixed_sequence_llm_parameters_ollama_repeated/R029_rep00.json": "43fb302c2b384b14947fed27c6396b525fc069b91e93f09383db9cf84f85a32f",
+    "prototype/logs/fixed_sequence_llm_parameters_ollama_repeated/R029_rep01.json": "6a34ffd8d14d576493b2d1277db923f4c288149f13b914235f174695daa33168",
+    "prototype/logs/fixed_sequence_llm_parameters_ollama_repeated/R029_rep02.json": "17a760a76d954ee3148b91f5e21a48039f1f3058f57dc07ccbf4bffd3d7e95ac",
+    "prototype/logs/fixed_sequence_llm_parameters_ollama_repeated/R029_rep03.json": "6757e4aad84af906b7b0e17e27a8fc52c0d352ed7228d55632d1c3ed855f6be8",
+    "prototype/logs/fixed_sequence_llm_parameters_ollama_repeated/R029_rep04.json": "0a36263b745b633b10725962305c86d9d6e98136e89c8a3292e42c42e911be06",
+    "prototype/schemas/tools.json": "0f74ff753d447359b851b2c0f4aaf061e4f533295533c3013df02caf7efb7add",
+    "prototype/schemas/tools.md": "0d4aed10817610f13636652a520b70765cbcfdfe4ba9b758d5c60318e558bdde",
+    "prototype/src/toolcall_eval/mock_tools.py": "4b66da6b771861a760413f86ba9fe4b45e54317f8bd3cda7836ba2f26f1db165",
+    "prototype/src/toolcall_eval/ollama_mapper.py": "2b25f7705297f5541d666e22b84a8bfd83eac5f99160a6a73cf06a7a61ef631a"
+  },
+  "cases": [
+    {
+      "request_id": "R001",
+      "user_request": "Create an overview of sales figures from the last 30 days, grouped by region, and highlight unusual deviations.",
+      "log_path": "prototype/logs/fixed_sequence_llm_parameters_ollama/R001.json",
+      "reference_path": "prototype/logs/fixed_sequence_llm_parameters/R001.json",
+      "validated_success": true,
+      "exact_projection_match": false,
+      "dependency_findings": [],
+      "matching_repetitions": 5,
+      "differences": [
+        {
+          "call_index": 0,
+          "tool_name": "get_sales_data",
+          "field": "dimensions",
+          "expected_present": true,
+          "actual_present": true,
+          "expected": [
+            "region"
+          ],
+          "actual": [
+            "date",
+            "region"
+          ]
+        },
+        {
+          "call_index": 2,
+          "tool_name": "detect_anomalies",
+          "field": "threshold",
+          "expected_present": true,
+          "actual_present": true,
+          "expected": 3.0,
+          "actual": 2.5
+        }
+      ],
+      "review": {
+        "verdict": "unresolved",
+        "rules": [
+          "R3",
+          "R5"
+        ],
+        "reason": "Retrieval adds date and threshold changes from 3.0 to 2.5. The request specifies neither threshold nor exact detection sensitivity. The baseline default is documented, but absent from the inspected V2 prompt/schema. Extra retrieval dimensions have unspecified business effects.",
+        "oracle_default_deviation": [
+          "threshold"
+        ],
+        "resolution_needed": "A disclosed anomaly policy and retrieval/aggregation semantics; do not infer identical detections from hashes."
+      }
+    },
+    {
+      "request_id": "R004",
+      "user_request": "Show daily revenue trends for the last 30 days and identify anomalies.",
+      "log_path": "prototype/logs/fixed_sequence_llm_parameters_ollama/R004.json",
+      "reference_path": "prototype/logs/fixed_sequence_llm_parameters/R004.json",
+      "validated_success": true,
+      "exact_projection_match": false,
+      "dependency_findings": [],
+      "matching_repetitions": 5,
+      "differences": [
+        {
+          "call_index": 2,
+          "tool_name": "detect_anomalies",
+          "field": "threshold",
+          "expected_present": true,
+          "actual_present": true,
+          "expected": 3.0,
+          "actual": 3
+        }
+      ],
+      "review": {
+        "verdict": "equivalent",
+        "rules": [
+          "R1",
+          "R6"
+        ],
+        "reason": "Only threshold representation differs, 3.0 versus 3. The numeric argument is equal and the executed reference chain is valid.",
+        "oracle_default_deviation": [],
+        "resolution_needed": "No remaining deviation to adjudicate at argument level; actual anomaly-output quality is outside this review."
+      }
+    },
+    {
+      "request_id": "R005",
+      "user_request": "Create a compact year-to-date sales report by region.",
+      "log_path": "prototype/logs/fixed_sequence_llm_parameters_ollama/R005.json",
+      "reference_path": "prototype/logs/fixed_sequence_llm_parameters/R005.json",
+      "validated_success": true,
+      "exact_projection_match": false,
+      "dependency_findings": [],
+      "matching_repetitions": 5,
+      "differences": [
+        {
+          "call_index": 0,
+          "tool_name": "get_sales_data",
+          "field": "dimensions",
+          "expected_present": true,
+          "actual_present": true,
+          "expected": [
+            "region"
+          ],
+          "actual": [
+            "date",
+            "region"
+          ]
+        },
+        {
+          "call_index": 1,
+          "tool_name": "aggregate_data",
+          "field": "group_by",
+          "expected_present": true,
+          "actual_present": true,
+          "expected": [
+            "region"
+          ],
+          "actual": [
+            "region",
+            "date"
+          ]
+        }
+      ],
+      "review": {
+        "verdict": "non_equivalent_under_grain_rule",
+        "rules": [
+          "R3a"
+        ],
+        "reason": "The request asks for a compact year-to-date report by region; group_by becomes region plus date and no later roll-up occurs. Under requested-grain rule R3a this changes the intended aggregation level.",
+        "oracle_default_deviation": [],
+        "resolution_needed": "Human confirmation of the requested-grain reading; if extra temporal detail is allowed, reclassify as unresolved. No actual erroneous totals were observed because tools are mocks."
+      }
+    },
+    {
+      "request_id": "R006",
+      "user_request": "Analyze whether any product categories had unusual revenue changes in the last 7 days.",
+      "log_path": "prototype/logs/fixed_sequence_llm_parameters_ollama/R006.json",
+      "reference_path": "prototype/logs/fixed_sequence_llm_parameters/R006.json",
+      "validated_success": true,
+      "exact_projection_match": false,
+      "dependency_findings": [],
+      "matching_repetitions": 5,
+      "differences": [
+        {
+          "call_index": 2,
+          "tool_name": "detect_anomalies",
+          "field": "threshold",
+          "expected_present": true,
+          "actual_present": true,
+          "expected": 3.0,
+          "actual": 3
+        }
+      ],
+      "review": {
+        "verdict": "equivalent",
+        "rules": [
+          "R1",
+          "R6"
+        ],
+        "reason": "Only threshold representation differs, 3.0 versus 3. The numeric argument is equal and the executed reference chain is valid.",
+        "oracle_default_deviation": [],
+        "resolution_needed": "No remaining deviation to adjudicate at argument level; reference-task assumptions were not independently validated."
+      }
+    },
+    {
+      "request_id": "R010",
+      "user_request": "Create a report that highlights unusually high or low gross margin values from the previous quarter.",
+      "log_path": "prototype/logs/fixed_sequence_llm_parameters_ollama/R010.json",
+      "reference_path": "prototype/logs/fixed_sequence_llm_parameters/R010.json",
+      "validated_success": true,
+      "exact_projection_match": false,
+      "dependency_findings": [],
+      "matching_repetitions": 5,
+      "differences": [
+        {
+          "call_index": 0,
+          "tool_name": "get_sales_data",
+          "field": "dimensions",
+          "expected_present": true,
+          "actual_present": true,
+          "expected": [
+            "date"
+          ],
+          "actual": [
+            "product",
+            "category"
+          ]
+        },
+        {
+          "call_index": 2,
+          "tool_name": "detect_anomalies",
+          "field": "threshold",
+          "expected_present": true,
+          "actual_present": true,
+          "expected": 3.0,
+          "actual": 3
+        }
+      ],
+      "review": {
+        "verdict": "unresolved",
+        "rules": [
+          "R1",
+          "R3"
+        ],
+        "reason": "Retrieval asks for product/category but aggregation uses date. This suggests a missing-input-dimension problem, but the tool contract does not say that only requested dimensions exist in the returned data. The user also did not specify a grouping dimension. Numeric threshold representation is harmless.",
+        "oracle_default_deviation": [],
+        "resolution_needed": "A returned-data contract stating available columns/dimensions and aggregation preconditions. If dimensions exhaustively defines available grouping fields, the trace is non-equivalent."
+      }
+    },
+    {
+      "request_id": "R012",
+      "user_request": "For the last 7 days, summarize revenue, units sold, and average order value by sales channel.",
+      "log_path": "prototype/logs/fixed_sequence_llm_parameters_ollama/R012.json",
+      "reference_path": "prototype/logs/fixed_sequence_llm_parameters/R012.json",
+      "validated_success": true,
+      "exact_projection_match": false,
+      "dependency_findings": [],
+      "matching_repetitions": 5,
+      "differences": [
+        {
+          "call_index": 0,
+          "tool_name": "get_sales_data",
+          "field": "dimensions",
+          "expected_present": true,
+          "actual_present": true,
+          "expected": [
+            "sales_channel"
+          ],
+          "actual": [
+            "date",
+            "sales_channel"
+          ]
+        },
+        {
+          "call_index": 2,
+          "tool_name": "format_report",
+          "field": "output_format",
+          "expected_present": true,
+          "actual_present": true,
+          "expected": "markdown",
+          "actual": "json"
+        }
+      ],
+      "review": {
+        "verdict": "unresolved",
+        "rules": [
+          "R3",
+          "R4a"
+        ],
+        "reason": "Requested timeframe, sales-channel grouping and all three metrics are preserved. JSON is supported and no format was requested. Added date retrieval could be harmless, but preservation of average order value under changed retrieval granularity is not defined.",
+        "oracle_default_deviation": [
+          "output_format"
+        ],
+        "resolution_needed": "Retrieval/aggregation semantics that preserve metric values, especially average order value; do not classify the format choice alone as a user-instruction violation."
+      }
+    },
+    {
+      "request_id": "R018",
+      "user_request": "Find unusually low or high units sold per product during the previous month.",
+      "log_path": "prototype/logs/fixed_sequence_llm_parameters_ollama/R018.json",
+      "reference_path": "prototype/logs/fixed_sequence_llm_parameters/R018.json",
+      "validated_success": true,
+      "exact_projection_match": false,
+      "dependency_findings": [],
+      "matching_repetitions": 5,
+      "differences": [
+        {
+          "call_index": 0,
+          "tool_name": "get_sales_data",
+          "field": "dimensions",
+          "expected_present": true,
+          "actual_present": true,
+          "expected": [
+            "product"
+          ],
+          "actual": [
+            "product",
+            "date"
+          ]
+        },
+        {
+          "call_index": 2,
+          "tool_name": "detect_anomalies",
+          "field": "threshold",
+          "expected_present": true,
+          "actual_present": true,
+          "expected": 3.0,
+          "actual": 3
+        }
+      ],
+      "review": {
+        "verdict": "unresolved",
+        "rules": [
+          "R1",
+          "R3"
+        ],
+        "reason": "Retrieval adds date; subsequent grouping remains product, and timeframe, units_sold, anomaly method and numeric threshold match. The contract does not guarantee that extra retrieval dimensions preserve rows/units totals.",
+        "oracle_default_deviation": [],
+        "resolution_needed": "Define whether retrieval is a projection or pre-aggregation and whether the subsequent product aggregation preserves units sold."
+      }
+    },
+    {
+      "request_id": "R020",
+      "user_request": "For the current month, report revenue and gross margin by product category.",
+      "log_path": "prototype/logs/fixed_sequence_llm_parameters_ollama/R020.json",
+      "reference_path": "prototype/logs/fixed_sequence_llm_parameters/R020.json",
+      "validated_success": true,
+      "exact_projection_match": false,
+      "dependency_findings": [],
+      "matching_repetitions": 5,
+      "differences": [
+        {
+          "call_index": 2,
+          "tool_name": "format_report",
+          "field": "output_format",
+          "expected_present": true,
+          "actual_present": true,
+          "expected": "markdown",
+          "actual": "json"
+        }
+      ],
+      "review": {
+        "verdict": "equivalent",
+        "rules": [
+          "R4a",
+          "R6"
+        ],
+        "reason": "The only deviation is JSON instead of markdown. The request specifies current-month revenue and gross margin by category but no output format; the tool explicitly supports JSON. Equivalent relative to expressed requirements, while violating the oracle-only markdown default.",
+        "oracle_default_deviation": [
+          "output_format"
+        ],
+        "resolution_needed": "If markdown is a mandatory application contract, classify separately as nonconformance to that contract and document whether the model was given it."
+      }
+    },
+    {
+      "request_id": "R024",
+      "user_request": "Summarize current quarter average order value by region without comparisons.",
+      "log_path": "prototype/logs/fixed_sequence_llm_parameters_ollama/R024.json",
+      "reference_path": "prototype/logs/fixed_sequence_llm_parameters/R024.json",
+      "validated_success": true,
+      "exact_projection_match": false,
+      "dependency_findings": [],
+      "matching_repetitions": 5,
+      "differences": [
+        {
+          "call_index": 2,
+          "tool_name": "format_report",
+          "field": "output_format",
+          "expected_present": true,
+          "actual_present": true,
+          "expected": "markdown",
+          "actual": "json"
+        }
+      ],
+      "review": {
+        "verdict": "equivalent",
+        "rules": [
+          "R4a",
+          "R6"
+        ],
+        "reason": "The only deviation is JSON instead of markdown. Current-quarter average order value, regional grouping and the prohibition on comparisons are preserved; the request does not specify a format. Equivalent relative to expressed requirements, while violating the oracle-only markdown default.",
+        "oracle_default_deviation": [
+          "output_format"
+        ],
+        "resolution_needed": "If markdown is a mandatory application contract, classify separately as nonconformance to that contract and document whether the model was given it."
+      }
+    },
+    {
+      "request_id": "R026",
+      "user_request": "Check whether any regions show unusual revenue deviations this month.",
+      "log_path": "prototype/logs/fixed_sequence_llm_parameters_ollama/R026.json",
+      "reference_path": "prototype/logs/fixed_sequence_llm_parameters/R026.json",
+      "validated_success": true,
+      "exact_projection_match": false,
+      "dependency_findings": [],
+      "matching_repetitions": 5,
+      "differences": [
+        {
+          "call_index": 0,
+          "tool_name": "get_sales_data",
+          "field": "dimensions",
+          "expected_present": true,
+          "actual_present": true,
+          "expected": [
+            "region"
+          ],
+          "actual": [
+            "region",
+            "date"
+          ]
+        },
+        {
+          "call_index": 2,
+          "tool_name": "detect_anomalies",
+          "field": "threshold",
+          "expected_present": true,
+          "actual_present": true,
+          "expected": 3.0,
+          "actual": 3
+        }
+      ],
+      "review": {
+        "verdict": "unresolved",
+        "rules": [
+          "R1",
+          "R3"
+        ],
+        "reason": "Retrieval adds date; aggregation remains by region with revenue and the same anomaly method/numeric threshold. The effect of the extra retrieval dimension is unspecified.",
+        "oracle_default_deviation": [],
+        "resolution_needed": "A retrieval/aggregation contract demonstrating that regional totals and the anomaly input population are preserved."
+      }
+    },
+    {
+      "request_id": "R029",
+      "user_request": "Return an HTML report showing unusual gross margin values by category for the last 30 days.",
+      "log_path": "prototype/logs/fixed_sequence_llm_parameters_ollama/R029.json",
+      "reference_path": "prototype/logs/fixed_sequence_llm_parameters/R029.json",
+      "validated_success": true,
+      "exact_projection_match": false,
+      "dependency_findings": [],
+      "matching_repetitions": 5,
+      "differences": [
+        {
+          "call_index": 0,
+          "tool_name": "get_sales_data",
+          "field": "dimensions",
+          "expected_present": true,
+          "actual_present": true,
+          "expected": [
+            "category"
+          ],
+          "actual": [
+            "date",
+            "category"
+          ]
+        },
+        {
+          "call_index": 1,
+          "tool_name": "aggregate_data",
+          "field": "group_by",
+          "expected_present": true,
+          "actual_present": true,
+          "expected": [
+            "category"
+          ],
+          "actual": [
+            "category",
+            "date"
+          ]
+        },
+        {
+          "call_index": 2,
+          "tool_name": "detect_anomalies",
+          "field": "threshold",
+          "expected_present": true,
+          "actual_present": true,
+          "expected": 3.0,
+          "actual": 3
+        }
+      ],
+      "review": {
+        "verdict": "non_equivalent_under_grain_rule",
+        "rules": [
+          "R1",
+          "R3a"
+        ],
+        "reason": "The request asks for unusual gross margin values by category. Grouping becomes category plus date before anomaly detection, changing the analysis grain under R3a; there is no subsequent roll-up. Requested HTML, timeframe and metric remain correct.",
+        "oracle_default_deviation": [],
+        "resolution_needed": "Human confirmation of category-level grain. If category/date detail is allowed, reclassify as unresolved; no actual changed anomalies were measured."
+      }
+    }
+  ]
+}

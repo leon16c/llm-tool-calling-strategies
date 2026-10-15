@@ -1,0 +1,8 @@
+{
+  "session": "evaluation/experiments/2026-10-20_sampling",
+  "replayed_runs": 300,
+  "model_calls": 953,
+  "all_outcomes_reproduced": true,
+  "manifest_sha256": "273715d4cb31018ac0d9a5a693c1e304f01a7592853b1601b4fcf8156b06b383",
+  "verification_source_sha256": "ab50ca28daed7a25ff4ae6fb755fd742d84c00e4350c2ed7fb92f00f0dedb7e5"
+}

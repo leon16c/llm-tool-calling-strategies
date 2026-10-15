@@ -1,0 +1,85 @@
+{
+  "completed_at": "2026-07-26T07:19:43.772466Z",
+  "errors": [],
+  "input": {
+    "expected_tool_sequence": [
+      "get_sales_data",
+      "aggregate_data",
+      "format_report"
+    ],
+    "user_request": "Summarize last 30 days of units sold by region and sales channel."
+  },
+  "latency_ms": 0,
+  "metrics": {
+    "fallback_count": 0,
+    "retry_count": 0,
+    "schema_validation_failures": 0,
+    "task_success": true,
+    "tool_execution_failures": 0
+  },
+  "model": {
+    "name": "oracle_backed_multi_step_planner",
+    "provider": "local",
+    "seed": 0,
+    "temperature": 0.0
+  },
+  "output": {
+    "final_response": "R027 completed by LLM multi-step planning with result format_report:55fa22cef010.",
+    "output_hash": "format_report:04834970899a"
+  },
+  "repetition_index": 0,
+  "request_id": "R027",
+  "run_id": "d86b1db4-429e-4da3-be29-dc599b4547d3",
+  "schema_version": "0.1.0",
+  "started_at": "2026-07-26T07:19:43.772330Z",
+  "status": "success",
+  "tool_calls": [
+    {
+      "arguments": {
+        "dimensions": [
+          "region",
+          "sales_channel"
+        ],
+        "timeframe": "last_30_days"
+      },
+      "index": 0,
+      "latency_ms": 0,
+      "result_ref": "get_sales_data:a79b3d37229a",
+      "source": "llm",
+      "status": "executed",
+      "tool_name": "get_sales_data"
+    },
+    {
+      "arguments": {
+        "data_id": "get_sales_data:a79b3d37229a",
+        "group_by": [
+          "region",
+          "sales_channel"
+        ],
+        "metrics": [
+          "units_sold"
+        ]
+      },
+      "index": 1,
+      "latency_ms": 0,
+      "result_ref": "aggregate_data:777bb6cf8ea9",
+      "source": "llm",
+      "status": "executed",
+      "tool_name": "aggregate_data"
+    },
+    {
+      "arguments": {
+        "data_id": "aggregate_data:777bb6cf8ea9",
+        "output_format": "markdown"
+      },
+      "index": 2,
+      "latency_ms": 0,
+      "result_ref": "format_report:55fa22cef010",
+      "source": "llm",
+      "status": "executed",
+      "tool_name": "format_report"
+    }
+  ],
+  "validation_events": [],
+  "variant": "llm_multi_step_planning"
+}

@@ -1,0 +1,80 @@
+{
+  "completed_at": "2026-07-23T16:31:36.960335Z",
+  "errors": [
+    {
+      "code": "E2",
+      "description": "The planner omitted at least one required tool call."
+    }
+  ],
+  "input": {
+    "expected_tool_sequence": [
+      "get_sales_data",
+      "aggregate_data",
+      "format_report"
+    ],
+    "user_request": "Return last month's revenue by region as JSON."
+  },
+  "latency_ms": 3574,
+  "metrics": {
+    "fallback_count": 0,
+    "retry_count": 0,
+    "schema_validation_failures": 0,
+    "task_success": false,
+    "tool_execution_failures": 0
+  },
+  "model": {
+    "name": "qwen2.5:7b-instruct",
+    "provider": "ollama",
+    "seed": 0,
+    "temperature": 0.0
+  },
+  "output": {
+    "final_response": "R013 completed by LLM tool selection with result None.",
+    "output_hash": "format_report:c3e9e1d56d3c"
+  },
+  "repetition_index": 0,
+  "request_id": "R013",
+  "run_id": "664eae4d-cddd-469a-9c80-c5a5fcd88d84",
+  "schema_version": "0.1.0",
+  "started_at": "2026-07-23T16:31:33.385872Z",
+  "status": "rejected",
+  "tool_calls": [
+    {
+      "arguments": {
+        "dimensions": [
+          "region"
+        ],
+        "timeframe": "previous_month"
+      },
+      "index": 0,
+      "latency_ms": 0,
+      "source": "llm",
+      "status": "proposed",
+      "tool_name": "get_sales_data"
+    },
+    {
+      "arguments": {
+        "data_id": "$previous_result",
+        "group_by": [
+          "region"
+        ],
+        "metrics": [
+          "revenue"
+        ]
+      },
+      "index": 1,
+      "latency_ms": 0,
+      "source": "llm",
+      "status": "proposed",
+      "tool_name": "aggregate_data"
+    }
+  ],
+  "validation_events": [
+    {
+      "event_type": "semantic_validation_failed",
+      "index": 0,
+      "message": "Planned tool sequence omits required calls: planned=['get_sales_data', 'aggregate_data'], expected=['get_sales_data', 'aggregate_data', 'format_report']"
+    }
+  ],
+  "variant": "llm_tool_selection"
+}

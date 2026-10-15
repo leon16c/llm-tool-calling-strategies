@@ -1,0 +1,81 @@
+{
+  "completed_at": "2026-07-23T16:30:54.734225Z",
+  "errors": [
+    {
+      "code": "E2",
+      "description": "The planner omitted at least one required tool call."
+    }
+  ],
+  "input": {
+    "expected_tool_sequence": [
+      "get_sales_data",
+      "aggregate_data",
+      "format_report"
+    ],
+    "user_request": "Summarize revenue and units sold for the previous quarter by product category."
+  },
+  "latency_ms": 3376,
+  "metrics": {
+    "fallback_count": 0,
+    "retry_count": 0,
+    "schema_validation_failures": 0,
+    "task_success": false,
+    "tool_execution_failures": 0
+  },
+  "model": {
+    "name": "qwen2.5:7b-instruct",
+    "provider": "ollama",
+    "seed": 0,
+    "temperature": 0.0
+  },
+  "output": {
+    "final_response": "R002 completed by LLM tool selection with result None.",
+    "output_hash": "format_report:e370c5a6a319"
+  },
+  "repetition_index": 0,
+  "request_id": "R002",
+  "run_id": "ee3b6792-2e75-487e-bbb9-f156cf707f3c",
+  "schema_version": "0.1.0",
+  "started_at": "2026-07-23T16:30:51.357656Z",
+  "status": "rejected",
+  "tool_calls": [
+    {
+      "arguments": {
+        "dimensions": [
+          "category"
+        ],
+        "timeframe": "previous_quarter"
+      },
+      "index": 0,
+      "latency_ms": 0,
+      "source": "llm",
+      "status": "proposed",
+      "tool_name": "get_sales_data"
+    },
+    {
+      "arguments": {
+        "data_id": "$previous_result",
+        "group_by": [
+          "category"
+        ],
+        "metrics": [
+          "revenue",
+          "units_sold"
+        ]
+      },
+      "index": 1,
+      "latency_ms": 0,
+      "source": "llm",
+      "status": "proposed",
+      "tool_name": "aggregate_data"
+    }
+  ],
+  "validation_events": [
+    {
+      "event_type": "semantic_validation_failed",
+      "index": 0,
+      "message": "Planned tool sequence omits required calls: planned=['get_sales_data', 'aggregate_data'], expected=['get_sales_data', 'aggregate_data', 'format_report']"
+    }
+  ],
+  "variant": "llm_tool_selection"
+}

@@ -1,0 +1,76 @@
+{
+  "completed_at": "2026-07-23T16:31:13.915093Z",
+  "errors": [
+    {
+      "code": "E2",
+      "description": "The planner omitted at least one required tool call."
+    }
+  ],
+  "input": {
+    "expected_tool_sequence": [
+      "get_sales_data",
+      "aggregate_data",
+      "format_report"
+    ],
+    "user_request": "Prepare a sales report for the previous quarter grouped by region and product category."
+  },
+  "latency_ms": 3477,
+  "metrics": {
+    "fallback_count": 0,
+    "retry_count": 0,
+    "schema_validation_failures": 0,
+    "task_success": false,
+    "tool_execution_failures": 0
+  },
+  "model": {
+    "name": "qwen2.5:7b-instruct",
+    "provider": "ollama",
+    "seed": 0,
+    "temperature": 0.0
+  },
+  "output": {
+    "final_response": "R007 completed by LLM tool selection with result None.",
+    "output_hash": "format_report:fb121b437200"
+  },
+  "repetition_index": 0,
+  "request_id": "R007",
+  "run_id": "a5bc6012-ed99-424e-8b53-5ed1b3a9947e",
+  "schema_version": "0.1.0",
+  "started_at": "2026-07-23T16:31:10.437730Z",
+  "status": "rejected",
+  "tool_calls": [
+    {
+      "arguments": {
+        "dimensions": [
+          "region",
+          "category"
+        ],
+        "timeframe": "previous_quarter"
+      },
+      "index": 0,
+      "latency_ms": 0,
+      "source": "llm",
+      "status": "proposed",
+      "tool_name": "get_sales_data"
+    },
+    {
+      "arguments": {
+        "data_id": "$previous_result",
+        "output_format": "markdown"
+      },
+      "index": 1,
+      "latency_ms": 0,
+      "source": "llm",
+      "status": "proposed",
+      "tool_name": "format_report"
+    }
+  ],
+  "validation_events": [
+    {
+      "event_type": "semantic_validation_failed",
+      "index": 0,
+      "message": "Planned tool sequence omits required calls: planned=['get_sales_data', 'format_report'], expected=['get_sales_data', 'aggregate_data', 'format_report']"
+    }
+  ],
+  "variant": "llm_tool_selection"
+}

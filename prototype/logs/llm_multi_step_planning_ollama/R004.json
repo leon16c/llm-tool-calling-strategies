@@ -1,0 +1,109 @@
+{
+  "completed_at": "2026-07-26T07:28:42.067986Z",
+  "errors": [
+    {
+      "code": "E1",
+      "description": "The planner selected an incorrect tool.",
+      "tool_call_index": 3
+    }
+  ],
+  "input": {
+    "expected_tool_sequence": [
+      "get_sales_data",
+      "aggregate_data",
+      "detect_anomalies",
+      "format_report"
+    ],
+    "user_request": "Show daily revenue trends for the last 30 days and identify anomalies."
+  },
+  "latency_ms": 12275,
+  "metrics": {
+    "fallback_count": 0,
+    "retry_count": 0,
+    "schema_validation_failures": 0,
+    "task_success": false,
+    "tool_execution_failures": 0
+  },
+  "model": {
+    "name": "qwen2.5:7b-instruct",
+    "provider": "ollama",
+    "seed": 0,
+    "temperature": 0.0
+  },
+  "output": {
+    "final_response": "R004 completed by LLM multi-step planning with result detect_anomalies:fb979ff6be7e.",
+    "output_hash": "format_report:111696cdb1ad"
+  },
+  "repetition_index": 0,
+  "request_id": "R004",
+  "run_id": "3d877911-15b8-48ee-8488-197c8e4bae15",
+  "schema_version": "0.1.0",
+  "started_at": "2026-07-26T07:28:29.792253Z",
+  "status": "rejected",
+  "tool_calls": [
+    {
+      "arguments": {
+        "dimensions": [
+          "date"
+        ],
+        "timeframe": "last_30_days"
+      },
+      "index": 0,
+      "latency_ms": 0,
+      "result_ref": "get_sales_data:213db408ff98",
+      "source": "llm",
+      "status": "executed",
+      "tool_name": "get_sales_data"
+    },
+    {
+      "arguments": {
+        "data_id": "get_sales_data:213db408ff98",
+        "group_by": [
+          "date"
+        ],
+        "metrics": [
+          "revenue"
+        ]
+      },
+      "index": 1,
+      "latency_ms": 0,
+      "result_ref": "aggregate_data:8bfde736ec4b",
+      "source": "llm",
+      "status": "executed",
+      "tool_name": "aggregate_data"
+    },
+    {
+      "arguments": {
+        "data_id": "aggregate_data:8bfde736ec4b",
+        "method": "z_score",
+        "threshold": 3
+      },
+      "index": 2,
+      "latency_ms": 0,
+      "result_ref": "detect_anomalies:fb979ff6be7e",
+      "source": "llm",
+      "status": "executed",
+      "tool_name": "detect_anomalies"
+    },
+    {
+      "arguments": {
+        "data_id": "$previous_result",
+        "previous_period": "previous_month"
+      },
+      "index": 3,
+      "latency_ms": 0,
+      "source": "llm",
+      "status": "proposed",
+      "tool_name": "compare_previous_period"
+    }
+  ],
+  "validation_events": [
+    {
+      "event_type": "tool_call_rejected",
+      "index": 0,
+      "message": "Planner selected a tool that is not required for the request: planned=compare_previous_period, expected=format_report",
+      "tool_call_index": 3
+    }
+  ],
+  "variant": "llm_multi_step_planning"
+}

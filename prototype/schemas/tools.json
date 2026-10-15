@@ -1,0 +1,201 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "schema_version": "0.1.0",
+  "tool_set_id": "reporting-tools-v1",
+  "description": "Stable tool definitions for the reporting workflow prototype.",
+  "tools": [
+    {
+      "name": "get_sales_data",
+      "description": "Retrieves sales data for a requested timeframe and dimensions.",
+      "parameters_schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "timeframe",
+          "dimensions"
+        ],
+        "properties": {
+          "timeframe": {
+            "type": "string",
+            "description": "Requested reporting period. Use ISO date ranges or predefined relative periods.",
+            "oneOf": [
+              {
+                "pattern": "^\\d{4}-\\d{2}-\\d{2}/\\d{4}-\\d{2}-\\d{2}$"
+              },
+              {
+                "enum": [
+                  "last_7_days",
+                  "last_30_days",
+                  "current_month",
+                  "previous_month",
+                  "current_quarter",
+                  "previous_quarter",
+                  "year_to_date",
+                  "previous_year"
+                ]
+              }
+            ]
+          },
+          "dimensions": {
+            "type": "array",
+            "description": "Dimensions by which the retrieved sales data should be available.",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "enum": [
+                "date",
+                "region",
+                "product",
+                "category",
+                "sales_channel",
+                "customer_segment"
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "aggregate_data",
+      "description": "Aggregates a dataset by selected dimensions and metrics.",
+      "parameters_schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "data_id",
+          "group_by",
+          "metrics"
+        ],
+        "properties": {
+          "data_id": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Identifier of a dataset produced by a previous tool call."
+          },
+          "group_by": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "enum": [
+                "date",
+                "region",
+                "product",
+                "category",
+                "sales_channel",
+                "customer_segment"
+              ]
+            }
+          },
+          "metrics": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "enum": [
+                "revenue",
+                "units_sold",
+                "average_order_value",
+                "gross_margin"
+              ]
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "detect_anomalies",
+      "description": "Detects unusual deviations in a dataset.",
+      "parameters_schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "data_id",
+          "method",
+          "threshold"
+        ],
+        "properties": {
+          "data_id": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Identifier of a dataset produced by a previous tool call."
+          },
+          "method": {
+            "type": "string",
+            "enum": [
+              "z_score",
+              "iqr"
+            ],
+            "description": "Anomaly detection method."
+          },
+          "threshold": {
+            "type": "number",
+            "minimum": 0,
+            "exclusiveMaximum": 10,
+            "description": "Sensitivity threshold for the selected anomaly detection method."
+          }
+        }
+      }
+    },
+    {
+      "name": "compare_previous_period",
+      "description": "Compares a dataset with a previous period.",
+      "parameters_schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "data_id",
+          "previous_period"
+        ],
+        "properties": {
+          "data_id": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Identifier of a dataset produced by a previous tool call."
+          },
+          "previous_period": {
+            "type": "string",
+            "enum": [
+              "previous_month",
+              "previous_quarter",
+              "previous_year",
+              "same_period_previous_year"
+            ],
+            "description": "Reference period for comparison."
+          }
+        }
+      }
+    },
+    {
+      "name": "format_report",
+      "description": "Formats a processed dataset as a report.",
+      "parameters_schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "data_id",
+          "output_format"
+        ],
+        "properties": {
+          "data_id": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Identifier of a dataset produced by a previous tool call."
+          },
+          "output_format": {
+            "type": "string",
+            "enum": [
+              "markdown",
+              "json",
+              "html"
+            ],
+            "description": "Requested final report format."
+          }
+        }
+      }
+    }
+  ]
+}

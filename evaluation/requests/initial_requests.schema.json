@@ -1,0 +1,200 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "schema_version": "0.1.0",
+  "description": "Schema for the controlled evaluation request oracle.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "request_set_id",
+    "description",
+    "requests"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "0.1.0"
+    },
+    "request_set_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1
+    },
+    "requests": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "$ref": "#/$defs/request"
+      }
+    }
+  },
+  "$defs": {
+    "request": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "category",
+        "user_request",
+        "expected_tool_sequence",
+        "expected_parameters",
+        "primary_evaluation_focus"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^R\\d{3}$"
+        },
+        "category": {
+          "type": "string",
+          "enum": [
+            "anomaly detection",
+            "anomaly detection and output format",
+            "multi-dimension aggregation",
+            "multi-metric aggregation",
+            "no unnecessary tools",
+            "output-format mapping",
+            "period comparison",
+            "standard aggregation"
+          ]
+        },
+        "user_request": {
+          "type": "string",
+          "minLength": 1
+        },
+        "expected_tool_sequence": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/tool_name"
+          }
+        },
+        "expected_parameters": {
+          "$ref": "#/$defs/expected_parameters"
+        },
+        "primary_evaluation_focus": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "expected_parameters": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "timeframe",
+        "dimensions",
+        "group_by",
+        "metrics",
+        "output_format"
+      ],
+      "properties": {
+        "timeframe": {
+          "$ref": "#/$defs/timeframe"
+        },
+        "dimensions": {
+          "$ref": "#/$defs/dimensions"
+        },
+        "group_by": {
+          "$ref": "#/$defs/dimensions"
+        },
+        "metrics": {
+          "$ref": "#/$defs/metrics"
+        },
+        "method": {
+          "type": "string",
+          "enum": [
+            "z_score",
+            "iqr"
+          ]
+        },
+        "threshold": {
+          "type": "number",
+          "minimum": 0,
+          "exclusiveMaximum": 10
+        },
+        "previous_period": {
+          "type": "string",
+          "enum": [
+            "previous_month",
+            "previous_quarter",
+            "previous_year",
+            "same_period_previous_year"
+          ]
+        },
+        "output_format": {
+          "type": "string",
+          "enum": [
+            "markdown",
+            "json",
+            "html"
+          ]
+        }
+      }
+    },
+    "tool_name": {
+      "type": "string",
+      "enum": [
+        "get_sales_data",
+        "aggregate_data",
+        "detect_anomalies",
+        "compare_previous_period",
+        "format_report"
+      ]
+    },
+    "timeframe": {
+      "type": "string",
+      "oneOf": [
+        {
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}/\\d{4}-\\d{2}-\\d{2}$"
+        },
+        {
+          "enum": [
+            "last_7_days",
+            "last_30_days",
+            "current_month",
+            "previous_month",
+            "current_quarter",
+            "previous_quarter",
+            "year_to_date",
+            "previous_year"
+          ]
+        }
+      ]
+    },
+    "dimensions": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "enum": [
+          "date",
+          "region",
+          "product",
+          "category",
+          "sales_channel",
+          "customer_segment"
+        ]
+      }
+    },
+    "metrics": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "enum": [
+          "revenue",
+          "units_sold",
+          "average_order_value",
+          "gross_margin"
+        ]
+      }
+    }
+  }
+}

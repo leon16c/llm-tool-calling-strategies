@@ -1,0 +1,3022 @@
+{
+  "definition": "Tool-name comparison of complete retained V3 plans. Only missing report means the plan equals the prescribed sequence without its final format_report. Argument validity and task correctness are not assessed.",
+  "session": "evaluation/experiments/2026-10-09_matched",
+  "analysis_source_sha256": "f2c7b8b0877392d8bed850bc8a5c420f76e6fd33ed97ddb293aa4ff62849c483",
+  "runs_summary": {
+    "total": 150,
+    "status": {
+      "rejected": 135,
+      "success": 15
+    },
+    "report_absent": 110,
+    "only_missing_report_in_sequence": 65
+  },
+  "requests_summary": {
+    "total": 30,
+    "status": {
+      "rejected": 27,
+      "success": 3
+    },
+    "report_absent": 22,
+    "only_missing_report_in_sequence": 13
+  },
+  "input_sha256": {
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R001_rep00/run_log.json": "d84ac8e5a8f398794723c46f741fcd3ea7f0be03e9ef33d2fcf5ada4c1edf18c",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R001_rep00/model_calls/0000.response.txt": "43ee4b76c83929ffb97685091618d18d6b8b1ef755c6762ea3e039c88a1ba295",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R001_rep01/run_log.json": "8f52b23595cefe692ab96d0f63497afae5b3000d723c85753634512ee9cbf364",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R001_rep01/model_calls/0000.response.txt": "5c115fec5c2d08280fb44b4054cc1b94658965d7f977b2ca12ab017b8168e0a2",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R001_rep02/run_log.json": "7f3c3b67739f150e8b75cded18b5fc031e99eea73b81833fc0d9184ae24d69f9",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R001_rep02/model_calls/0000.response.txt": "0afa45c82080f2244d8ab367120ce3fca76b3f7b430d3cee7bcb52bdaa13bda6",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R001_rep03/run_log.json": "01d13a12d7d07775d31643c635bd50f0de6a608e65fa8191f27f2d2380aced98",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R001_rep03/model_calls/0000.response.txt": "fb9e84da937c9321145f529ffbe6d56bfbaed9850c9e988ed199900ddd13b747",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R001_rep04/run_log.json": "96f2c8b7808b94df3bf295aca7b410a0fbf0d3b5918be1a132b4082c3f6d0be4",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R001_rep04/model_calls/0000.response.txt": "088c80e888e316fcd00f61fa09a97af5399ae7c5e2d76827574059ce9e6cabda",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R002_rep00/run_log.json": "5d24bfa5b958d5a3cec6c5a1116c02d62fccc703dc04589e50808079a38f48af",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R002_rep00/model_calls/0000.response.txt": "3652e334e1ccc7834de0399adb77fdd770543828c443f3aef8d4db847d71e6c1",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R002_rep01/run_log.json": "4ad3bec56da324cea89f44170a0dcbc9a1ba2bf40d25658505faa2c3bb248726",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R002_rep01/model_calls/0000.response.txt": "1375dbc04f953799715aec8e7a96e00d1ecf66c2f99b8ae7aa4af595385181f4",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R002_rep02/run_log.json": "270b5059219602996aae9000518f8d8499b9b6f925cfa36a34141f641b6836c9",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R002_rep02/model_calls/0000.response.txt": "03e4445f101b3f70b8835fea708d9a052254f57efa14931aac4316b0b8811a8a",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R002_rep03/run_log.json": "8a7f2c88ec67db9617033137145ddcf0a089087fdd8823c0ea9c00b0af4205fd",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R002_rep03/model_calls/0000.response.txt": "2fb13fe1cb84f69c231f9420ade61bc7e22e9513d6f846107e2736064ecb90af",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R002_rep04/run_log.json": "9d2c27cd512379c75655e773ea02e379eba6531af890682b5158386d2dd6a0eb",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R002_rep04/model_calls/0000.response.txt": "a3157d9fc9e5e7db98c7a21eae35360ef1c8b04d235e67616638df9b596afef2",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R003_rep00/run_log.json": "c2b94440a24a55097efe29eb2dd9c47403635e54c904d18bfcc663d1b3baaa98",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R003_rep00/model_calls/0000.response.txt": "3d981f9d1f6a9f102d20b2677845e46d36ce3f06f92ef72255b6bbb8e878a0ac",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R003_rep01/run_log.json": "613a809f0b61cc135ef7fb0da9019a1d527805e40370e73bec973cb352429d2d",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R003_rep01/model_calls/0000.response.txt": "ee8370130b67880ddae96f4b1e880e775d895d5a13898e6123b37b65c8c004a1",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R003_rep02/run_log.json": "9e41201a6c61b9e13d9b680d99d536f2dc953487f754e69b5e87d2a799203977",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R003_rep02/model_calls/0000.response.txt": "15c8db957c0051356a9d9a84a04f850dc66a7ac906e18bf96af258dcbf973c2f",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R003_rep03/run_log.json": "b8ed92d9ecc3f279b740017757b8b4179bb8f5eceb7b290030f71d9e35bcd228",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R003_rep03/model_calls/0000.response.txt": "5730a119796ca5e11be55f927b7ca90e69984c821367f03c69cfd7cdc4b6b1e8",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R003_rep04/run_log.json": "43a75c799bac20ed850a08cfd693bd22a4a8bbf111eb167443fbab9df9cad3e6",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R003_rep04/model_calls/0000.response.txt": "1d5385b0c26e0265660d63fa068065330c5486ebe818328f14fb8777e15c7fe5",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R004_rep00/run_log.json": "24ed1edaf41bfbf53391f3b76726fc05fa7a835448d053107fd3b6e7867931ff",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R004_rep00/model_calls/0000.response.txt": "a5b72518d78cde46b08d513ac672978f914cbe9217d17020229d38723a402445",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R004_rep01/run_log.json": "50373e5b0c5f9ebd04f9c881641589e79bdae96e2019b4912418fe437f8fa114",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R004_rep01/model_calls/0000.response.txt": "432b63daf1cf5074d27f9fd9d8f6294a54d0d302c976fe8d8faf2dcb566bc18b",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R004_rep02/run_log.json": "2f1ff2b9569dda007413da9190ebfa00f4ad97d943d4e9aa0d22e0b7d74144b8",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R004_rep02/model_calls/0000.response.txt": "0d8e26210c1f3f12496bd4ba4dce0934a8472521165c10782467428239d810a2",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R004_rep03/run_log.json": "246d88e0cef017f478e731e389a7d33320f0fd585ae30be2c134f6d1cd0b618f",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R004_rep03/model_calls/0000.response.txt": "84eea13eed3a60f5c96aff30974b6e23db63750dc794bcda5d47c56ade3d3771",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R004_rep04/run_log.json": "e9a739c37c4e3ecbc2de8350f56d274e0a01d3c3275e3721f5f2cfea3f526a2c",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R004_rep04/model_calls/0000.response.txt": "ed3f0b2186e47f73a5f16b4f1f8f5380ce85eaf8c685ef19188b6e0e0368ff03",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R005_rep00/run_log.json": "ea46c6f0759094bc14bda238d24b2ee350799d65e623dad6b00f5a625af59cd8",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R005_rep00/model_calls/0000.response.txt": "6053b1e4527686347b93087be4c3b8e95092a0a4eef3d2a977e9deb0c89f185f",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R005_rep01/run_log.json": "ef32d92d6e02703ca363211e615ee7f02cf02c61a6b048053409ec54f1b31f19",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R005_rep01/model_calls/0000.response.txt": "389f550684c30f510255fd06c6966f464bf77046b234472a45743572eb75c4b0",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R005_rep02/run_log.json": "44b85b495d92b9ac5d5a5c33ac5475e3206849040d215ebf80e36337bcad82ba",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R005_rep02/model_calls/0000.response.txt": "9810d4c08fa4715ab38831366a9a174056fa27afb41186c0b8222c43e0ac62cf",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R005_rep03/run_log.json": "01a8b7fd55a5f6946dfa193ecd41ed53caeba79b530e1f8cf917b650604380d3",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R005_rep03/model_calls/0000.response.txt": "06b06cdbb8c8a2fa3642ee4860fa6ec50e1f8cc673ce5de332815af3d15d855f",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R005_rep04/run_log.json": "1ea9251fdd18cc32b2522e7c29128c64854dcf490975d44ce0518b2208fa84db",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R005_rep04/model_calls/0000.response.txt": "6aed7718072eaba52831274660d14ed092d1aa7a6acc4df5554b301da5883d5b",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R006_rep00/run_log.json": "407157f4ff043a50116d3f55b8e80f074125d3ee4aa0c874ce4ccfd6b577f795",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R006_rep00/model_calls/0000.response.txt": "55ac36eff1e27eb0b8fa162536f88cb1446d98937821141f3ec7cad0aaa1fd17",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R006_rep01/run_log.json": "c8f222984097c3fc6c8545060207f1928e14fa0bc58070b4baac5a53aa408edd",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R006_rep01/model_calls/0000.response.txt": "86700e809a9f6e686f6ae815b884a42f1d8f7eb05178189126073bc07dfa0fcf",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R006_rep02/run_log.json": "6e35d421272f5dd5b5ac6b576e95bab0c70632e8f294718a9f658e25cf14df4e",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R006_rep02/model_calls/0000.response.txt": "287ef2776566b7a5b6bee4929878e4b68b2060e0295b4f52e17a484a022bf75b",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R006_rep03/run_log.json": "9d9309ad25434838160c6ceab33374d7320603b783c9e4dddb18fa375bcc2017",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R006_rep03/model_calls/0000.response.txt": "c0f854176e57f703df036fd219fa3c63f73810b7eca1dde2efa8226fe637a9bb",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R006_rep04/run_log.json": "d56070a10978cee08bc816b5b57caabd5433066f2f221c42eaa79c3a8e845dcc",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R006_rep04/model_calls/0000.response.txt": "def3c92f59ccc5c81c5ac66415c98b3633245de0b6ed7008b3b081db737affe0",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R007_rep00/run_log.json": "16488590f9453f434878845908385f318b57c86daca452a5f1bf91171e5ebc61",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R007_rep00/model_calls/0000.response.txt": "6dcdf054f5847aa20284347b1c00701a6ebf79d0a5f64b59a359557014a55035",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R007_rep01/run_log.json": "5bccac338d399b73203e8c6985d729fd0040b641ec15f37ce51751340f142223",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R007_rep01/model_calls/0000.response.txt": "e365814ce04f8fa241220a294d98615f5e9abb7bd3b78efe5b498898f5ea4bed",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R007_rep02/run_log.json": "8278376a4e938d6a215b904f29034a6b55cdb5de85a2d8f8d2869e3e0160abd6",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R007_rep02/model_calls/0000.response.txt": "4feca0d9cd9126e3dd2434387701c7605c59587c569e9c715a0c6ca5019bdd4e",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R007_rep03/run_log.json": "bc1ae21772436d22e58ecf651b2de8501d498cbb91f08730bf92e4f87a17944a",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R007_rep03/model_calls/0000.response.txt": "bcd8fd22e9389c938398d547150e5a95656b682a14aa8bca3edd67143c86996d",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R007_rep04/run_log.json": "94c38b810458e45f084c0c16744bf9808111e6d6db7fd00e58cf926b1b1e6a0e",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R007_rep04/model_calls/0000.response.txt": "350eaa080980471114a883d1facaa4080f011fbfba0445efcc96fad20df55a12",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R008_rep00/run_log.json": "07e6e8f84d2872e6008eb7e40b9919b9f3074e7efeec7d4a620a3f62c26a4d2e",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R008_rep00/model_calls/0000.response.txt": "bcc95db15fd990517b0a10ae0d362ce97a14db3faeb5458dbf4d266eba7102c4",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R008_rep01/run_log.json": "1e3e75e8ad313b45438075bb81abdc3a4d0c3f71c5f1562b8d9e1729139d1211",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R008_rep01/model_calls/0000.response.txt": "4caa3852a768f1f3de87baa2e323c3429de8923e571ef7e29789ca531e802a79",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R008_rep02/run_log.json": "fd3f86749bac3aa4e30e75949b6026e1f330e325848e6a631e7a4374458ae928",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R008_rep02/model_calls/0000.response.txt": "ee3b99fa870a49c40efe9b534d0e1651fd49f77112631eea15556d4a93b4a367",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R008_rep03/run_log.json": "8bbaeab4600c83d33aec620fdd3ea520421fa539cbafc238828b0913f99b3a75",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R008_rep03/model_calls/0000.response.txt": "3b1eae1bfd8cfc017bdbf74491dd03c65a1554fe9710c6c91227ad014f563e1a",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R008_rep04/run_log.json": "22579babffe7d5b948e181579c0b03166fd5897fc92a1e7954855d4ac13ef9a6",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R008_rep04/model_calls/0000.response.txt": "65c1bec333db48ab54306c9637f8234828eab6fb4a35bdfab1efe259e7f713a0",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R009_rep00/run_log.json": "7e3cca863dcd518b0a9d72c94ea0136d2617d1ee7c4878ebaec559540955d4cf",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R009_rep00/model_calls/0000.response.txt": "21b03be3eb3640517202b82c136a41a1e2a6a644c3cd7ae16be167f79cc38d73",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R009_rep01/run_log.json": "f7f55f8615ad81afdf4214eafc0bc37de8c4ce4486fced38be7ceb650bd779e2",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R009_rep01/model_calls/0000.response.txt": "8741763aba869376201355273766fe03f6628e06bf86bd23e48eb86abe56b9ac",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R009_rep02/run_log.json": "d6149f558d6472662642982e11ff65fd66b6fe3bc3c0d32708874820fbab4074",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R009_rep02/model_calls/0000.response.txt": "f3d2cb0d327defc8ac71ffa10967421430c377d12a623d58ddcc3f882c9a5cf5",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R009_rep03/run_log.json": "595eed40b84dc9c32f88b8a927f5f286eb30decac01a8a68edb2fa0e4edbf6e1",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R009_rep03/model_calls/0000.response.txt": "171791bd8e480ad2255d4571cb544ef5819de60e78468a774e597355107bcb09",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R009_rep04/run_log.json": "d4c694693b3b5d1151b4b4ca160522a3bc8e165baff830052856d284c150c3d9",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R009_rep04/model_calls/0000.response.txt": "f67d2ae2e7757d974c4b418058a729197db1b06427fe364d29703f28fc0b7f5e",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R010_rep00/run_log.json": "b8cf3e29b383d452a52ff3c1cf9d0c6142ed81cc97a47079900fb3ce590c6372",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R010_rep00/model_calls/0000.response.txt": "76a542623f3da80c61f65e1f3d4cec67caa445429b7035bb81bceca2a611e06e",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R010_rep01/run_log.json": "c3ccf8bf57ec980dbcf778016b4a20ab34ecb88c201489e43f1e338e40dd9b66",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R010_rep01/model_calls/0000.response.txt": "ee0ca889a289108d36738445aa50fe7a492383f63d1bd21146dc7e7f63cacf6e",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R010_rep02/run_log.json": "e738911b8a4972f6adf82f89964c65e3510abe4893f5c5bcf81462145986b222",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R010_rep02/model_calls/0000.response.txt": "d47ffff04ab01321cd1614c155a8e7c6a4bc9cb8bd65f820af401cc06f2328f2",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R010_rep03/run_log.json": "ed7e63f61a0c0d898ac56296ec5c21d2225973a806fc8ffe3039ce450df97cd6",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R010_rep03/model_calls/0000.response.txt": "df9c29ada43ebdaad895320ed8ebf016927164ba70ffc92f7a5f720a712b8307",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R010_rep04/run_log.json": "085bf848d74ff12ac377390347a9af3e033c7e77467fba64e64c2f359e45c3dc",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R010_rep04/model_calls/0000.response.txt": "bb35e94e67b7025a35128b4d7fe3525fbdba7ffc4bbdf3f0e50365241dcc45ab",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R011_rep00/run_log.json": "c92ab1d1a8ce92efd3e41ab82cfc698e9df9f3ad11549031d2e09f3d642e7593",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R011_rep00/model_calls/0000.response.txt": "17f0d79d47b1b77ed0bb7239913903218209f5e1742c0e71087488d0c79cc3df",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R011_rep01/run_log.json": "b52ecde746360dcd33eeb73083f87d794134b0c1d65f48400a50f1cb2f4fe82f",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R011_rep01/model_calls/0000.response.txt": "0f1ff00e139d154e5ce1ace6e637e0263ba594124779a42d7cb562e8c08f32ef",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R011_rep02/run_log.json": "24f4784c98cb50e49b3444c3176a33e1dc4a497a98bcf3a909b3bc08fb7a4c10",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R011_rep02/model_calls/0000.response.txt": "00f9068a2b215a8fd8528f3b36b257b32b649b26a03d5919846260c3bcce6a21",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R011_rep03/run_log.json": "6dc8c5b5413c666ed8368d5ce22f199c4ad530af5445f99306cb16cda9723f34",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R011_rep03/model_calls/0000.response.txt": "d74caaa6514b300837aeb051da6c2653b976c5751d9abbed612735420a70b5be",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R011_rep04/run_log.json": "17d4edcb3cb7a2bfef789d27e53a04116f4fa584c436f709ac844d4b66581f71",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R011_rep04/model_calls/0000.response.txt": "f2e920324b102f365542f973be05303b1217377c3e358192dab29ec38d291b3e",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R012_rep00/run_log.json": "3177970be4602ddbdcfea879ef71d43e754a3ec893b55b6e70cf3b19cfcd3dfe",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R012_rep00/model_calls/0000.response.txt": "8534c9aa0909c14bdae92549fc6ff8ec9725536641e89642f1b89a04278aa58b",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R012_rep01/run_log.json": "7a9a621d17c8d107b8777078a54e113b7129b6090ac68e5afafa3d7189d5e10a",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R012_rep01/model_calls/0000.response.txt": "0e164166b89d125fa8434c7c91af836f415ac7846bd0e84fc8287ec74ad6f11a",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R012_rep02/run_log.json": "091159cc31cc7437d2fc8c93d36a213e754d7befcdb0cb0fc6197ed8b51f82fd",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R012_rep02/model_calls/0000.response.txt": "1173b12e45aaeadd7e41e26eb164696fe5497a9c7efc3771c3227f455b193532",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R012_rep03/run_log.json": "1eaef28dae9960109674f63eb3126e29e8183d708cb502cc51f5826f9fa2f180",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R012_rep03/model_calls/0000.response.txt": "fe4928b3c45c9866946e22163c27c13eb98144e522c8b4c2f4d601309aac901d",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R012_rep04/run_log.json": "daab865b177e9fcb8a1b7fd4a4c97d2d4a2ea69074235ef5cb30e22ba4ecc46c",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R012_rep04/model_calls/0000.response.txt": "b1bdd50708bd4af83c2ad90668e69c2f90f1d786f9ccb46f87421ccf3e3ea1a0",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R013_rep00/run_log.json": "00ce36d7fa0d8e2b6b5918bdda1e0fa685cba95f3161c4e418a6d4e18c99eebe",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R013_rep00/model_calls/0000.response.txt": "cb52ae10f6ec4f89b0965af2cc3dfdd5d62327f411e6c3598bbcb0e55468e9da",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R013_rep01/run_log.json": "d4fc755a0b20bd36d93aed6d82dda12da94b7658d23861d6b05972c3cb5d9210",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R013_rep01/model_calls/0000.response.txt": "6939136dc4b676b2e19068e3c3a187336344fc4094c6cc2a9f902aa34723e4e1",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R013_rep02/run_log.json": "172421ec5b819e7d6443cdedbd961b767d74e3224595e4510c13dca137e083cf",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R013_rep02/model_calls/0000.response.txt": "85c2f38e1f5852463e59d1e58e47c2c658fcfc98f9bf80489498c8a227d02b21",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R013_rep03/run_log.json": "e492bae7177ef5c734572425963a5329fdc18fb40b7fe40ce595837a751fe74f",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R013_rep03/model_calls/0000.response.txt": "5aa754a939fe0776b9dfc974cbaf3c021c4848876d112aa0067b81f5b2581dbe",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R013_rep04/run_log.json": "acc1dbaf7d218798bd091b6cc411d00fe43f96bdb2f931cabbdf764339b979e2",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R013_rep04/model_calls/0000.response.txt": "7a6618124e049ad122aa601e56093cc7b9ffd111b0bb7ec70fd7471d9fa600ed",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R014_rep00/run_log.json": "a2aae9fd0ea72f3ffb6dac991958f4aa5e74af79412a15515a2d26d935fa2cb3",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R014_rep00/model_calls/0000.response.txt": "3119fae755013f86dc8c5ccc247dafd7e8c6defa709d470495ae64ea31cdf942",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R014_rep01/run_log.json": "96e9283584349cad2c64b5b6bf6ad70438ff0cfc9afca2cb291d76b47aaba0c3",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R014_rep01/model_calls/0000.response.txt": "a38e19adb5b2e1392d2ce939d62e38d42abcc100c4b95bba9f60724232c00324",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R014_rep02/run_log.json": "979c13ab950f6f052ff7552132a2987febe6414a68287575171f77008e7ac49b",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R014_rep02/model_calls/0000.response.txt": "a2b3f81478644f191fcc76662f2024baf0ec459f3e16c478035f0fdcafcd82eb",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R014_rep03/run_log.json": "5f6a5f63d34c36dfc11d31d99f67cbcb5230e2065c41f4d337d24344de92f7f2",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R014_rep03/model_calls/0000.response.txt": "3b0101b77fb63161649ca7ca89df58ce870cc354dc5bcf35fd223519403b9ff4",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R014_rep04/run_log.json": "917c862a7df0a02d7044c027033bbe0650ccc6d4aa8e4c1084b450be29902b78",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R014_rep04/model_calls/0000.response.txt": "ae553626f48f03ddef835b947eaa2c08d359bc63b824467c3aa6ceb6fa1c0dae",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R015_rep00/run_log.json": "2f46afbc08e393f448a761b97dfd337a0969e74eec4cfea06dadbf6e0b138a69",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R015_rep00/model_calls/0000.response.txt": "15841b5e883a065a740acc2db1aec101edb825bbc1a699e3cc244094aa6d0f3f",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R015_rep01/run_log.json": "4b702fe380a36d19a885f7b5074ac56c7f440e16005a981dacb632361843666f",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R015_rep01/model_calls/0000.response.txt": "a3dfb59ad30459d8a098afddf4ad2c86d50131789a74afb9b619badc5196eadb",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R015_rep02/run_log.json": "a77bd13dfd04e7f62606d3cf6a7ea174ad5830915eeeff350deb249fb4cda688",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R015_rep02/model_calls/0000.response.txt": "2d4d1f57dbebd18ecb474fb786349270ea5c6226337cc9a8fd44de760024b1ca",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R015_rep03/run_log.json": "6a27d082e843c76fe4794436387d16709d610e0e98732802e8319182475abc22",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R015_rep03/model_calls/0000.response.txt": "74c9359b9900ae668d75bafd4b43d915ea04a464a58e6a7138805b1d12e6bff4",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R015_rep04/run_log.json": "ea04852b773f34f0c904d9f16c5563c28080932824cc11c9addee57884212546",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R015_rep04/model_calls/0000.response.txt": "2ee202324037d67bdccaa4fd882a954e1b1ff930514cb19068c9f0c68285fafe",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R016_rep00/run_log.json": "32e054f98a41faf88cc8f0d4b49091ed716372f8d646021b690a868ac2d52aa1",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R016_rep00/model_calls/0000.response.txt": "89510e3d6d32d7fc54950c1aec10384110c19062d8dc2b99607967aca9ff9601",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R016_rep01/run_log.json": "847fb24756784b152921fcc5b7cb2a0ca4d34b35c513261917bbfa6d62418ef6",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R016_rep01/model_calls/0000.response.txt": "f874119198d744bac954184059e25925414984a8ffdd8e5587f5bcd2cc1c3143",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R016_rep02/run_log.json": "6a61ea9ce89cdfe2799c618d4f65931c3fd956560d2d8862cb708d1c0979eda8",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R016_rep02/model_calls/0000.response.txt": "79c9d1137c60d058e534eb2bdf21eb0dbe0636faf972d7f6a3868a8e4a1f71ff",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R016_rep03/run_log.json": "a7d078566d0c583b484c613f08b918984dc545f3f9e6e578efcfa6e2395cc07b",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R016_rep03/model_calls/0000.response.txt": "d3e9ccdc6f0ca9c8c30b007759e1aa855675d1bcc6bb848f28132ab4d68aa8e8",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R016_rep04/run_log.json": "c8a8b22682a206668e407191e75b78b53a258860192902084bb74254b542fc1d",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R016_rep04/model_calls/0000.response.txt": "cc719463f54f9fa10835d1568d17cc97e6bab4b35c8dbfa17ac240cd000a2020",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R017_rep00/run_log.json": "d205c72ceaa123b00ba35b2b3ffdd3f80aac6d298e482de5f241b790047513ff",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R017_rep00/model_calls/0000.response.txt": "c0728035ba7c32a333c805c21a08b7b64be715e562a810358ffbaecb8b037c02",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R017_rep01/run_log.json": "b20d118e497fa038501f2cd23d8204bbf1a19c26b88d65a4bd1d057ab035c2bf",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R017_rep01/model_calls/0000.response.txt": "b53a2c977b239bf2e3a69dd8485880129751b3a8e9b54226d0558198d381abd8",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R017_rep02/run_log.json": "ab193d7f5679132e28dae823100e835529de074cf154d525f9e1dad42142946b",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R017_rep02/model_calls/0000.response.txt": "3569573e0cf71d287075372109f18104fdcba0bda0effa58177ecea98ec11c5f",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R017_rep03/run_log.json": "a910236fa226ec5945daa388fe6c06b97c318dda2bbb00f3e9398eea50ad2aa0",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R017_rep03/model_calls/0000.response.txt": "3b26563ddde5981a3698cbb71ac455164b4eb071e36042626a98fcd9f98a8b6c",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R017_rep04/run_log.json": "8b69ab68b1be4e10efa23645f02cb06d25bb7c811e21715a6bfecad9fde1f5b7",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R017_rep04/model_calls/0000.response.txt": "cacca26f389197e1b8befcdd626e9b6d024d17a92a9a2909d8a6b4a5f53caca4",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R018_rep00/run_log.json": "c29c4d0b68699cb2ceaaffd0198456f67a8cd68e8eefebe3f0a9f5c92eeb9f80",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R018_rep00/model_calls/0000.response.txt": "1e3539e749387707e1a3ffd9ba8227c650307579378f14c1263f37569122cc08",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R018_rep01/run_log.json": "fe85c1f3ed9287e534591d005bf960c179706d430ec069feb326f2b246348967",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R018_rep01/model_calls/0000.response.txt": "23f6308a6c569a1d0997f08400c0d0a4a385c4357393f43955ef1a1276945dea",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R018_rep02/run_log.json": "8a5f60d3fc76138c6a8431f3b6472c19bab4f0fd694257d516e02c822f361661",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R018_rep02/model_calls/0000.response.txt": "531cd6485df100b48a946de1fd42da26b3b82c32c08d0820c1c23c29ab4aeb61",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R018_rep03/run_log.json": "d2c0605938124b420e28b38b09def0d718a5eb8d0cb7a8062096cef31b5749e0",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R018_rep03/model_calls/0000.response.txt": "4e8c373219bb96514d48f1ca188697c546fedddcc5850113f7c2f9219f12130e",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R018_rep04/run_log.json": "ad2fb24e8bd3c1cf2aa2e631889ffe0555305355b14883b5990b76e85268dec9",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R018_rep04/model_calls/0000.response.txt": "98483fe11dd4fb4a42d51b731d29f7653fa3e272f908ea1ce3ed7615bd040861",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R019_rep00/run_log.json": "1c88e47f64d461391ff70f02ab6246d54c06031986c80275ae05dda0b67180d6",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R019_rep00/model_calls/0000.response.txt": "1c0f9cf6adbb368767f408f0f37a6644b099e6583ab30351728cfe05921207ce",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R019_rep01/run_log.json": "39df911226077bfe69c03bdbef23e403c91d9045d29b09a5f315803428d858db",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R019_rep01/model_calls/0000.response.txt": "f3c41d87dfec3982bca47d7407d7a3a03b2d4b1a553cc7a9e1ddaf91ab0c41bd",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R019_rep02/run_log.json": "6e29ccceb5c3d1b6f1bd25741e6e302d959167c72b9acdb011f651d4de4558b5",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R019_rep02/model_calls/0000.response.txt": "0c05dec254a2e8fb4652be4202f39746d7181fae64c6cfdcfcefd70d5c1cebc7",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R019_rep03/run_log.json": "9a7b31fd3db9214a411e5806cec3591c24ebfe16135c00a6b41ccfbe33ee65e4",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R019_rep03/model_calls/0000.response.txt": "1255dab33856758f1f89122f4e7784e46994c71a21d141fdf6022411bbe09eee",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R019_rep04/run_log.json": "06b79d071bf11c89b0da093f10c1a450f89691ceb42cf07278fdfdd987111a16",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R019_rep04/model_calls/0000.response.txt": "70c17d29c7d132092a819e733be4e489db51e5136421a0a3e638c2172e905957",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R020_rep00/run_log.json": "f9599078e21f4b5b4f979baaf88793382ae49952a7c950d747cf6fac0995ed03",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R020_rep00/model_calls/0000.response.txt": "064abc262382f3b3463224e1ff759ee96a8d0c1ea83c5df458ee1139dab12737",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R020_rep01/run_log.json": "5c86d17bc604ffb44b0e1f52e3829105b0e23eefbc8f6e266b47a70066d609b7",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R020_rep01/model_calls/0000.response.txt": "12f3271c4f83b0b3fc3ba8c961aa16d46a11c002cb61dbc554b89594507efa08",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R020_rep02/run_log.json": "e8214daa92d1f226add4c2fcb06d2292bf8ba2696a88eb50fb8e8f41822058d3",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R020_rep02/model_calls/0000.response.txt": "93572deb4e602de839e2bcb9a01c528598db380f13384fef088789e93875b072",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R020_rep03/run_log.json": "fc684898126ba04f3de5c3ea29f66b038f5a55c0b9cff5bd612dc4b9e7535389",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R020_rep03/model_calls/0000.response.txt": "d946a5deede87baf23caf93e14e793d820ef163280d618d8edb7c588a2b33dcd",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R020_rep04/run_log.json": "23d84d859745abbea4f1cead878f0c3c8625e9a2412363cd432ee5003ded8cc3",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R020_rep04/model_calls/0000.response.txt": "fcca95017302b26d11fc66183e142d57e4499cc9a64df9567218620f3481bb47",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R021_rep00/run_log.json": "b5a5a61170e1fd877ad44dad193446085bfc02e4ae4aea8d079fa9cd3120b5d4",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R021_rep00/model_calls/0000.response.txt": "d8f9c2abdd41a40e17f51981d23c7160682ea00a07eca44fdd0f0452cbc3aec2",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R021_rep01/run_log.json": "1aa603643955b80e32f31c64b243a901a5c6fa46589aab17b64ee94ea66e0ead",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R021_rep01/model_calls/0000.response.txt": "17f16a756325954e3f85d1dfb5eb11255f3a01b76a9afd29ceeb539c01a26c95",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R021_rep02/run_log.json": "4dfe89c19cccf04c5d14e81c77b9ef70ce9f2d1e202b564a3fcbb3261fb8de1f",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R021_rep02/model_calls/0000.response.txt": "2a086f8b5e3c6667e4fb5949b4e2bdbc3cf36c24689f866a008e09d390e674a7",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R021_rep03/run_log.json": "2fa9e692c561b55e29bebe7b2ce0d55acb9aedbbbdb026fb367ca7d63aed10ca",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R021_rep03/model_calls/0000.response.txt": "f416264e4544db5faa9198a29fb4ccce71d8d14242d5fb64c18f8dbbb4405f30",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R021_rep04/run_log.json": "231f610c86c04deab054bddd6ca08bc0cbc9e4c4987c3248f743dd66c53d5f75",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R021_rep04/model_calls/0000.response.txt": "ee375fb768f36c5643bea1e30a8f2a2426c7a0aafa670cb46ae73041d56154c7",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R022_rep00/run_log.json": "5fd8b74a4764993ecd72db0753adf7df3d14cc8ce75a5f13105de374faacf95c",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R022_rep00/model_calls/0000.response.txt": "39dd0b9a15503b490e7d605724343973ec14939b3abedcc126da8b2bb5a3d55a",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R022_rep01/run_log.json": "d8566071f5ca18840cd534d0f186e22f435adb3f7b12fbcc73193c2d89ca3a71",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R022_rep01/model_calls/0000.response.txt": "0d05856bc6127b86b65b6b4b521ce9b5de5fbfee2897d4227c08b94c14192cde",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R022_rep02/run_log.json": "8633c64e43f906558844954dcb299b69c70c779c905f36c8451b37a67b8354b2",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R022_rep02/model_calls/0000.response.txt": "7abd002d108c300e57075d4f5e45ad5aeaff9cc8de24f55116b4dd60738747d6",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R022_rep03/run_log.json": "9dc8a8ccd618d1abfdfeb5288222abd9bfe626ab122e374cbb0d334c19ddcfee",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R022_rep03/model_calls/0000.response.txt": "ed84bbf01f5c5ce3528a6a3fe97d9ce6ebfc6f29356014e591f8acba16a80090",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R022_rep04/run_log.json": "41acf56ba5e5efbeb55e3a7924ef425bb1885ba831feded6ae5e159c6e33c501",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R022_rep04/model_calls/0000.response.txt": "56b1b34af1b824d37ed899e2effd37bf5150493e9fbf0f5bb961602735b40452",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R023_rep00/run_log.json": "e10db5f63b3756ead57935f90d3eb79fed4474fd8d1481a5d7eff422080d9bc8",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R023_rep00/model_calls/0000.response.txt": "48af1ed1eec172cd68bc96024ff152ecfb0cca92cd784fa0d161bc0a6b52975d",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R023_rep01/run_log.json": "dcf06754d6bd00cc196364afe7853afd30ec650b45b80cc9c4758ce75b59db58",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R023_rep01/model_calls/0000.response.txt": "6a5ab9678d15f96e07b3b87ec65bd7c416a1b57d96b6c6a841bfd2b85b80372c",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R023_rep02/run_log.json": "56e698ce2038c36100d5a3cfd37d7b0d26ba223db3778f172c0281984c0b3703",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R023_rep02/model_calls/0000.response.txt": "700c935a16338f8ca2529485db5c1937cb7cc8663bf65e4ce490979c15aacc0b",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R023_rep03/run_log.json": "a7600249ac4d0e068ebab0281fb396ac4b764f218e45445629ec388935c7be35",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R023_rep03/model_calls/0000.response.txt": "64e0256c31add131f8035dfa062f480ac22530e81397c09e04e9c21635fc7270",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R023_rep04/run_log.json": "38f313a86203740f2848cac32358c28f874b56b2f9cd2a48dc5f9d820db51a0f",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R023_rep04/model_calls/0000.response.txt": "19306eacf753cdb67b73fd2a2c89c10e338fdbe4a04872fff2469ecc1c6fe466",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R024_rep00/run_log.json": "235df1f255fdaf17b64bc5bc04546efa20495c63291f74952fe708a087d7f35e",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R024_rep00/model_calls/0000.response.txt": "6f7b15ad46ab835d7defc4981bbb2935878fb1479750495c4e9306159523b081",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R024_rep01/run_log.json": "30e9f6a194c0ba9d83ffd3a9261bf4d97d413880c9fcd1230266d2ae76e994c8",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R024_rep01/model_calls/0000.response.txt": "97cdbcc1ce1c70ef37d97a9e2151c524d6507a8dd1cb44b0baeaeaa9f501305d",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R024_rep02/run_log.json": "9c1995c431eca64ccb94f7786ca03d0f46d157c4cb25e6370f2deba68cdc7566",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R024_rep02/model_calls/0000.response.txt": "41f3a7c681464a666d43ef6a36090a6500d60c08e0f00d6dae7af32721da5af9",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R024_rep03/run_log.json": "f4ee31bad68018bbe22dcde4955982501d0000c2cab7f8c92007a19696eeef2f",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R024_rep03/model_calls/0000.response.txt": "56a12f08817e17bbf29700d480830eebe0aaa65f63d7395e3d800cf6881ce281",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R024_rep04/run_log.json": "175047daf17e1613628795ab084a06d7de2ae0944de75ff64dd81fe2a296a237",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R024_rep04/model_calls/0000.response.txt": "2e937fabb6f527bcce7405cc0ce612ab16605ec3b7cf6e4872afa5ce52c3dbdf",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R025_rep00/run_log.json": "9ec2acf4177a9ff28cd19a0fd5c7ea7278b16b8835d85d8b552f3418e1209996",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R025_rep00/model_calls/0000.response.txt": "edd65d924a88815adb9d0478c3dd4d8df07b10c98a7ce37e5580eaae7e71719a",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R025_rep01/run_log.json": "df65a016b76fb06d8d4a099786226cb6dd4a25e9668dc62bd0279618194e76cc",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R025_rep01/model_calls/0000.response.txt": "fd4f8de94b7928381cb29b118cc1305e7740ce4e99e33b20ec0073eee702c29c",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R025_rep02/run_log.json": "c4e1ed677da5e914014e62318449a7bebac1f757cc77ceb03d911992592750f3",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R025_rep02/model_calls/0000.response.txt": "b75cc3fa376e1baf6e2d903be29e9f9d10cd0ebb78ee3554ff7f0090176e7dbe",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R025_rep03/run_log.json": "c794f267f5f986873509ec56e872b11788335325e853aff998f3a8aa5113c141",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R025_rep03/model_calls/0000.response.txt": "19986c853d5886dda4848dc99faaf71338d5c3ff14a947e4000d62e419a6dca4",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R025_rep04/run_log.json": "09e281568ab9d90e3c7daebe85096a5989953d2323b9f00ad439ba108a22e183",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R025_rep04/model_calls/0000.response.txt": "4bf07d3b2aba8618ab9330fa02601b62f1b9e89ce5a1f7155ac87f9db87c6e0e",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R026_rep00/run_log.json": "d302aa079637d5461ff094a80d84a54c3b9a2814ff964935ba0dd873b18a0b8d",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R026_rep00/model_calls/0000.response.txt": "7f444e146a7779fa74c45a5545ecc3aca23598a53f09ad041ec12dadf61fc4f0",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R026_rep01/run_log.json": "b0f746f99cfbe76df3bf5ec99786eb161cabab91658207686332511cc38eb230",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R026_rep01/model_calls/0000.response.txt": "01234d616ca21ff198f9d07763aa19a87f7bf9ac826f8a441fd3de5c9a3bae94",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R026_rep02/run_log.json": "45716a0048670275809b81bb84406c5a952e1de07aa590f81382353692728a92",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R026_rep02/model_calls/0000.response.txt": "64b62ce9e322daec66b7dda9ca961528dbb2e95cc5cf3ec2aa974756da0114a1",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R026_rep03/run_log.json": "309e0d50ec1112ced1ccd2d6bba935b74077e970137c35ccdf6cd498aefd261d",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R026_rep03/model_calls/0000.response.txt": "7e39389cde6d3a8de85bec2b5d6cc2179d220b0542201d8db4f94b179b5eac13",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R026_rep04/run_log.json": "b68246471497e643ff9e322b745f3a9011a3069e560e4a47a7480c722410eabd",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R026_rep04/model_calls/0000.response.txt": "0162439b2af9372d7fa3775f9574c276c821523b48e79f08ae6f1e39de35c4e3",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R027_rep00/run_log.json": "27966bb2df6db5383d411a0d1ed09731bd7b31c62fc46317516414083c685a6d",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R027_rep00/model_calls/0000.response.txt": "b988681de0781a2801043b2818621eae5bec19011326e1202776f2f117ce84f5",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R027_rep01/run_log.json": "f73ed4995cedc33f8fb6413b13313b6d35f61723164ec482d2562d78b0f8c0d7",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R027_rep01/model_calls/0000.response.txt": "fbd3ba6a59b2d1d6b1b805cde5003dcb9f58c6faa7592feb1a233caa4aa8dc65",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R027_rep02/run_log.json": "1e587652890a33c3023a8127f414f09009203d795b90084aae3b3a591664c743",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R027_rep02/model_calls/0000.response.txt": "07388d3adfbc14ca40d060efbba20b6aff2248ef17edf9a66e9c0fe9c1b48f2f",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R027_rep03/run_log.json": "7c0921e562f4905919c32db782359f4cb81c36db782912a77d3b249d24a69a5d",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R027_rep03/model_calls/0000.response.txt": "a6039c3798e3470ced47331545538ccea5dee244d00147ef60ff55b08a6fcd96",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R027_rep04/run_log.json": "00edfa7c235923fe5aebad9726c182866f2eaaf676c4198e956d5ebf6d8fda7a",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R027_rep04/model_calls/0000.response.txt": "b2e8df76a3f3e0a78acd129f7a55d837345b6c9a7f4252256d9d63b7b4e7f4ec",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R028_rep00/run_log.json": "f02a40d2148280e38754100959177aa962155a612ff49a3adedc2e7402d650e8",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R028_rep00/model_calls/0000.response.txt": "e3837cf87060db6f941dac7541b5e591f52744c7abe8693818f83220aef65edc",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R028_rep01/run_log.json": "bb27ac9e9dfe1d30a15caca169da1a1668f96951cb68ccb9c97b25c85d5cadac",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R028_rep01/model_calls/0000.response.txt": "ca6b1778f5c8fb3b3f398cf9005b4f8fdc419437fa2cfda83a5a0d4f5eff09b8",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R028_rep02/run_log.json": "573015148d06b69f59c89ad11bd5fe92443e728e16a5c3fc129535c7b5cceda1",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R028_rep02/model_calls/0000.response.txt": "432bec774b3a73e15762a685a9b3851b9055fe659d4e3db040f9af4484dc6053",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R028_rep03/run_log.json": "10c4b822eb22a4e4f2219d61d30b0ed5a517037456bb5ec3eb38ae2c42f50e36",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R028_rep03/model_calls/0000.response.txt": "7fc5225e384620f78f8f9048f60b6c30d0122f09d5ca03dabfbc65a143d11235",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R028_rep04/run_log.json": "453489bc81487fc1a235b0da9630be3b3d2fa553bdec17fff99887da5f68a78a",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R028_rep04/model_calls/0000.response.txt": "e9dd37b697f946de49cbe4fdf4f63c8bf7cd8a6b938ead05e041c43ece24751c",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R029_rep00/run_log.json": "777d746d65a2a88e948818db248913c831cfa0dae6e11ff03f1c65087f6124ce",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R029_rep00/model_calls/0000.response.txt": "94fc7f3eb801c23e984bf60b44d2a47d83cebec0927c1b13ef5ad51ff34c78be",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R029_rep01/run_log.json": "51da57eb6096e2327eb9a605806b9716e9958757bcb2c2dbeae8a67fa1595bc4",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R029_rep01/model_calls/0000.response.txt": "ef897b57aa63a47fae1c3e53ad4dc89db2ac873de397574728d0cd24d05ac26b",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R029_rep02/run_log.json": "c6560f02e6f6930177a33b49bfa860b42b0b18fa10b07b85ee0fca0e45ceae8f",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R029_rep02/model_calls/0000.response.txt": "e9a971e200cfb573c5062183c39e1d3a2fcc64ea061cb532664ebdffc8e492a1",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R029_rep03/run_log.json": "b2ddc87174eb240a6dac5c7ef2a82f93b771c790583126e27d13bcd245992ad1",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R029_rep03/model_calls/0000.response.txt": "331eb1bfa99d139a9b5efb23beb549af9751a1c3893459232de37945af84f6bc",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R029_rep04/run_log.json": "b372130e39fbb5545a1e1bcb281d38c0d0aacb9b4d806374f122155497a64724",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R029_rep04/model_calls/0000.response.txt": "80dfa23ce141a143e2a30cb4f3eefcf6efc2e60d4a88f899af38c89a8e8989d9",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R030_rep00/run_log.json": "aa33603840be0aeee2ad5890393971ecdc9e5ffdd4e3fafe27cd73bcdba333a2",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R030_rep00/model_calls/0000.response.txt": "1f67a0add2a50af6500771ed6a4a52b35bd5851caeaf385318dd5176c48e0c67",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R030_rep01/run_log.json": "3c5f5bd249919373d6482eb451cf236953f2394afaf1a1df1000dca4f900501b",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R030_rep01/model_calls/0000.response.txt": "c91d4cb5e6711f710f889d2348f85b69e3cfb64dff8846a93b452aa58bd96c02",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R030_rep02/run_log.json": "96b0a6dd5f2c43f5175c67bc88a64768e81dc4190ab9349ee13f6f47d6bd72ca",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R030_rep02/model_calls/0000.response.txt": "d1a648829c63a687ccbbb8b7bd3efa146c048e2ab71891c3d44dd08a8ddbe2e9",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R030_rep03/run_log.json": "06d2ff366225917f01840632fceffffaaffa06bd47b9db18ee4d6b2614cbe71b",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R030_rep03/model_calls/0000.response.txt": "ab971f03cb87fb24df699ef571e469b945f4d9e6f6e92c12fda5263b03db1740",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R030_rep04/run_log.json": "48a82804a2e3a3a91bc4a54a0453c4f310d4da3c83957c48296aecfd927cfc47",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R030_rep04/model_calls/0000.response.txt": "2310f76280669816bd3c57bf8f872f9f34243fcd23e64f6d092038d8e62268c9"
+  },
+  "runs": [
+    {
+      "task_id": "V3_R001_rep00",
+      "request_id": "R001",
+      "repetition_index": 0,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "detect_anomalies"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "detect_anomalies",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": true
+    },
+    {
+      "task_id": "V3_R001_rep01",
+      "request_id": "R001",
+      "repetition_index": 1,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "detect_anomalies"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "detect_anomalies",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": true
+    },
+    {
+      "task_id": "V3_R001_rep02",
+      "request_id": "R001",
+      "repetition_index": 2,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "detect_anomalies"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "detect_anomalies",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": true
+    },
+    {
+      "task_id": "V3_R001_rep03",
+      "request_id": "R001",
+      "repetition_index": 3,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "detect_anomalies"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "detect_anomalies",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": true
+    },
+    {
+      "task_id": "V3_R001_rep04",
+      "request_id": "R001",
+      "repetition_index": 4,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "detect_anomalies"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "detect_anomalies",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": true
+    },
+    {
+      "task_id": "V3_R002_rep00",
+      "request_id": "R002",
+      "repetition_index": 0,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": true
+    },
+    {
+      "task_id": "V3_R002_rep01",
+      "request_id": "R002",
+      "repetition_index": 1,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": true
+    },
+    {
+      "task_id": "V3_R002_rep02",
+      "request_id": "R002",
+      "repetition_index": 2,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": true
+    },
+    {
+      "task_id": "V3_R002_rep03",
+      "request_id": "R002",
+      "repetition_index": 3,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": true
+    },
+    {
+      "task_id": "V3_R002_rep04",
+      "request_id": "R002",
+      "repetition_index": 4,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": true
+    },
+    {
+      "task_id": "V3_R003_rep00",
+      "request_id": "R003",
+      "repetition_index": 0,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "get_sales_data",
+        "compare_previous_period",
+        "format_report"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "compare_previous_period",
+        "format_report"
+      ],
+      "report_absent": false,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R003_rep01",
+      "request_id": "R003",
+      "repetition_index": 1,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "get_sales_data",
+        "compare_previous_period",
+        "format_report"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "compare_previous_period",
+        "format_report"
+      ],
+      "report_absent": false,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R003_rep02",
+      "request_id": "R003",
+      "repetition_index": 2,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "get_sales_data",
+        "compare_previous_period",
+        "format_report"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "compare_previous_period",
+        "format_report"
+      ],
+      "report_absent": false,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R003_rep03",
+      "request_id": "R003",
+      "repetition_index": 3,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "get_sales_data",
+        "compare_previous_period",
+        "format_report"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "compare_previous_period",
+        "format_report"
+      ],
+      "report_absent": false,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R003_rep04",
+      "request_id": "R003",
+      "repetition_index": 4,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "get_sales_data",
+        "compare_previous_period",
+        "format_report"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "compare_previous_period",
+        "format_report"
+      ],
+      "report_absent": false,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R004_rep00",
+      "request_id": "R004",
+      "repetition_index": 0,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "detect_anomalies"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "detect_anomalies",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": true
+    },
+    {
+      "task_id": "V3_R004_rep01",
+      "request_id": "R004",
+      "repetition_index": 1,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "detect_anomalies"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "detect_anomalies",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": true
+    },
+    {
+      "task_id": "V3_R004_rep02",
+      "request_id": "R004",
+      "repetition_index": 2,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "detect_anomalies"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "detect_anomalies",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": true
+    },
+    {
+      "task_id": "V3_R004_rep03",
+      "request_id": "R004",
+      "repetition_index": 3,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "detect_anomalies"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "detect_anomalies",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": true
+    },
+    {
+      "task_id": "V3_R004_rep04",
+      "request_id": "R004",
+      "repetition_index": 4,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "detect_anomalies"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "detect_anomalies",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": true
+    },
+    {
+      "task_id": "V3_R005_rep00",
+      "request_id": "R005",
+      "repetition_index": 0,
+      "status": "success",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "report_absent": false,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R005_rep01",
+      "request_id": "R005",
+      "repetition_index": 1,
+      "status": "success",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "report_absent": false,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R005_rep02",
+      "request_id": "R005",
+      "repetition_index": 2,
+      "status": "success",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "report_absent": false,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R005_rep03",
+      "request_id": "R005",
+      "repetition_index": 3,
+      "status": "success",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "report_absent": false,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R005_rep04",
+      "request_id": "R005",
+      "repetition_index": 4,
+      "status": "success",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "report_absent": false,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R006_rep00",
+      "request_id": "R006",
+      "repetition_index": 0,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "detect_anomalies"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "detect_anomalies",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R006_rep01",
+      "request_id": "R006",
+      "repetition_index": 1,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "detect_anomalies"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "detect_anomalies",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R006_rep02",
+      "request_id": "R006",
+      "repetition_index": 2,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "detect_anomalies"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "detect_anomalies",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R006_rep03",
+      "request_id": "R006",
+      "repetition_index": 3,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "detect_anomalies"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "detect_anomalies",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R006_rep04",
+      "request_id": "R006",
+      "repetition_index": 4,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "detect_anomalies"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "detect_anomalies",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R007_rep00",
+      "request_id": "R007",
+      "repetition_index": 0,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "format_report"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "report_absent": false,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R007_rep01",
+      "request_id": "R007",
+      "repetition_index": 1,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "format_report"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "report_absent": false,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R007_rep02",
+      "request_id": "R007",
+      "repetition_index": 2,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "format_report"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "report_absent": false,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R007_rep03",
+      "request_id": "R007",
+      "repetition_index": 3,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "format_report"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "report_absent": false,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R007_rep04",
+      "request_id": "R007",
+      "repetition_index": 4,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "format_report"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "report_absent": false,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R008_rep00",
+      "request_id": "R008",
+      "repetition_index": 0,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "compare_previous_period"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "compare_previous_period",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R008_rep01",
+      "request_id": "R008",
+      "repetition_index": 1,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "compare_previous_period"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "compare_previous_period",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R008_rep02",
+      "request_id": "R008",
+      "repetition_index": 2,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "compare_previous_period"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "compare_previous_period",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R008_rep03",
+      "request_id": "R008",
+      "repetition_index": 3,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "compare_previous_period"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "compare_previous_period",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R008_rep04",
+      "request_id": "R008",
+      "repetition_index": 4,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "compare_previous_period"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "compare_previous_period",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R009_rep00",
+      "request_id": "R009",
+      "repetition_index": 0,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": true
+    },
+    {
+      "task_id": "V3_R009_rep01",
+      "request_id": "R009",
+      "repetition_index": 1,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": true
+    },
+    {
+      "task_id": "V3_R009_rep02",
+      "request_id": "R009",
+      "repetition_index": 2,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": true
+    },
+    {
+      "task_id": "V3_R009_rep03",
+      "request_id": "R009",
+      "repetition_index": 3,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": true
+    },
+    {
+      "task_id": "V3_R009_rep04",
+      "request_id": "R009",
+      "repetition_index": 4,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": true
+    },
+    {
+      "task_id": "V3_R010_rep00",
+      "request_id": "R010",
+      "repetition_index": 0,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "compare_previous_period",
+        "detect_anomalies",
+        "format_report"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "detect_anomalies",
+        "format_report"
+      ],
+      "report_absent": false,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R010_rep01",
+      "request_id": "R010",
+      "repetition_index": 1,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "compare_previous_period",
+        "detect_anomalies",
+        "format_report"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "detect_anomalies",
+        "format_report"
+      ],
+      "report_absent": false,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R010_rep02",
+      "request_id": "R010",
+      "repetition_index": 2,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "compare_previous_period",
+        "detect_anomalies",
+        "format_report"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "detect_anomalies",
+        "format_report"
+      ],
+      "report_absent": false,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R010_rep03",
+      "request_id": "R010",
+      "repetition_index": 3,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "compare_previous_period",
+        "detect_anomalies",
+        "format_report"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "detect_anomalies",
+        "format_report"
+      ],
+      "report_absent": false,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R010_rep04",
+      "request_id": "R010",
+      "repetition_index": 4,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "compare_previous_period",
+        "detect_anomalies",
+        "format_report"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "detect_anomalies",
+        "format_report"
+      ],
+      "report_absent": false,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R011_rep00",
+      "request_id": "R011",
+      "repetition_index": 0,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": true
+    },
+    {
+      "task_id": "V3_R011_rep01",
+      "request_id": "R011",
+      "repetition_index": 1,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": true
+    },
+    {
+      "task_id": "V3_R011_rep02",
+      "request_id": "R011",
+      "repetition_index": 2,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": true
+    },
+    {
+      "task_id": "V3_R011_rep03",
+      "request_id": "R011",
+      "repetition_index": 3,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": true
+    },
+    {
+      "task_id": "V3_R011_rep04",
+      "request_id": "R011",
+      "repetition_index": 4,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": true
+    },
+    {
+      "task_id": "V3_R012_rep00",
+      "request_id": "R012",
+      "repetition_index": 0,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": true
+    },
+    {
+      "task_id": "V3_R012_rep01",
+      "request_id": "R012",
+      "repetition_index": 1,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": true
+    },
+    {
+      "task_id": "V3_R012_rep02",
+      "request_id": "R012",
+      "repetition_index": 2,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": true
+    },
+    {
+      "task_id": "V3_R012_rep03",
+      "request_id": "R012",
+      "repetition_index": 3,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": true
+    },
+    {
+      "task_id": "V3_R012_rep04",
+      "request_id": "R012",
+      "repetition_index": 4,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": true
+    },
+    {
+      "task_id": "V3_R013_rep00",
+      "request_id": "R013",
+      "repetition_index": 0,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": true
+    },
+    {
+      "task_id": "V3_R013_rep01",
+      "request_id": "R013",
+      "repetition_index": 1,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": true
+    },
+    {
+      "task_id": "V3_R013_rep02",
+      "request_id": "R013",
+      "repetition_index": 2,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": true
+    },
+    {
+      "task_id": "V3_R013_rep03",
+      "request_id": "R013",
+      "repetition_index": 3,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": true
+    },
+    {
+      "task_id": "V3_R013_rep04",
+      "request_id": "R013",
+      "repetition_index": 4,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": true
+    },
+    {
+      "task_id": "V3_R014_rep00",
+      "request_id": "R014",
+      "repetition_index": 0,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "format_report"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "report_absent": false,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R014_rep01",
+      "request_id": "R014",
+      "repetition_index": 1,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "format_report"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "report_absent": false,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R014_rep02",
+      "request_id": "R014",
+      "repetition_index": 2,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "format_report"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "report_absent": false,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R014_rep03",
+      "request_id": "R014",
+      "repetition_index": 3,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "format_report"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "report_absent": false,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R014_rep04",
+      "request_id": "R014",
+      "repetition_index": 4,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "format_report"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "report_absent": false,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R015_rep00",
+      "request_id": "R015",
+      "repetition_index": 0,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "compare_previous_period"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "compare_previous_period",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R015_rep01",
+      "request_id": "R015",
+      "repetition_index": 1,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "compare_previous_period"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "compare_previous_period",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R015_rep02",
+      "request_id": "R015",
+      "repetition_index": 2,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "compare_previous_period"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "compare_previous_period",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R015_rep03",
+      "request_id": "R015",
+      "repetition_index": 3,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "compare_previous_period"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "compare_previous_period",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R015_rep04",
+      "request_id": "R015",
+      "repetition_index": 4,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "compare_previous_period"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "compare_previous_period",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R016_rep00",
+      "request_id": "R016",
+      "repetition_index": 0,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "get_sales_data",
+        "compare_previous_period"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "compare_previous_period",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R016_rep01",
+      "request_id": "R016",
+      "repetition_index": 1,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "get_sales_data",
+        "compare_previous_period"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "compare_previous_period",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R016_rep02",
+      "request_id": "R016",
+      "repetition_index": 2,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "get_sales_data",
+        "compare_previous_period"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "compare_previous_period",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R016_rep03",
+      "request_id": "R016",
+      "repetition_index": 3,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "get_sales_data",
+        "compare_previous_period"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "compare_previous_period",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R016_rep04",
+      "request_id": "R016",
+      "repetition_index": 4,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "get_sales_data",
+        "compare_previous_period"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "compare_previous_period",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R017_rep00",
+      "request_id": "R017",
+      "repetition_index": 0,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "detect_anomalies"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "detect_anomalies",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": true
+    },
+    {
+      "task_id": "V3_R017_rep01",
+      "request_id": "R017",
+      "repetition_index": 1,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "detect_anomalies"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "detect_anomalies",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": true
+    },
+    {
+      "task_id": "V3_R017_rep02",
+      "request_id": "R017",
+      "repetition_index": 2,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "detect_anomalies"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "detect_anomalies",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": true
+    },
+    {
+      "task_id": "V3_R017_rep03",
+      "request_id": "R017",
+      "repetition_index": 3,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "detect_anomalies"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "detect_anomalies",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": true
+    },
+    {
+      "task_id": "V3_R017_rep04",
+      "request_id": "R017",
+      "repetition_index": 4,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "detect_anomalies"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "detect_anomalies",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": true
+    },
+    {
+      "task_id": "V3_R018_rep00",
+      "request_id": "R018",
+      "repetition_index": 0,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "detect_anomalies"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "detect_anomalies",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R018_rep01",
+      "request_id": "R018",
+      "repetition_index": 1,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "detect_anomalies"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "detect_anomalies",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R018_rep02",
+      "request_id": "R018",
+      "repetition_index": 2,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "detect_anomalies"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "detect_anomalies",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R018_rep03",
+      "request_id": "R018",
+      "repetition_index": 3,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "detect_anomalies"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "detect_anomalies",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R018_rep04",
+      "request_id": "R018",
+      "repetition_index": 4,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "detect_anomalies"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "detect_anomalies",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R019_rep00",
+      "request_id": "R019",
+      "repetition_index": 0,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": true
+    },
+    {
+      "task_id": "V3_R019_rep01",
+      "request_id": "R019",
+      "repetition_index": 1,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": true
+    },
+    {
+      "task_id": "V3_R019_rep02",
+      "request_id": "R019",
+      "repetition_index": 2,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": true
+    },
+    {
+      "task_id": "V3_R019_rep03",
+      "request_id": "R019",
+      "repetition_index": 3,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": true
+    },
+    {
+      "task_id": "V3_R019_rep04",
+      "request_id": "R019",
+      "repetition_index": 4,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": true
+    },
+    {
+      "task_id": "V3_R020_rep00",
+      "request_id": "R020",
+      "repetition_index": 0,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": true
+    },
+    {
+      "task_id": "V3_R020_rep01",
+      "request_id": "R020",
+      "repetition_index": 1,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": true
+    },
+    {
+      "task_id": "V3_R020_rep02",
+      "request_id": "R020",
+      "repetition_index": 2,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": true
+    },
+    {
+      "task_id": "V3_R020_rep03",
+      "request_id": "R020",
+      "repetition_index": 3,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": true
+    },
+    {
+      "task_id": "V3_R020_rep04",
+      "request_id": "R020",
+      "repetition_index": 4,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": true
+    },
+    {
+      "task_id": "V3_R021_rep00",
+      "request_id": "R021",
+      "repetition_index": 0,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "compare_previous_period"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R021_rep01",
+      "request_id": "R021",
+      "repetition_index": 1,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "compare_previous_period"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R021_rep02",
+      "request_id": "R021",
+      "repetition_index": 2,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "compare_previous_period"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R021_rep03",
+      "request_id": "R021",
+      "repetition_index": 3,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "compare_previous_period"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R021_rep04",
+      "request_id": "R021",
+      "repetition_index": 4,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "compare_previous_period"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R022_rep00",
+      "request_id": "R022",
+      "repetition_index": 0,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "get_sales_data",
+        "compare_previous_period"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "compare_previous_period",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R022_rep01",
+      "request_id": "R022",
+      "repetition_index": 1,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "get_sales_data",
+        "compare_previous_period"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "compare_previous_period",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R022_rep02",
+      "request_id": "R022",
+      "repetition_index": 2,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "get_sales_data",
+        "compare_previous_period"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "compare_previous_period",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R022_rep03",
+      "request_id": "R022",
+      "repetition_index": 3,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "get_sales_data",
+        "compare_previous_period"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "compare_previous_period",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R022_rep04",
+      "request_id": "R022",
+      "repetition_index": 4,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "get_sales_data",
+        "compare_previous_period"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "compare_previous_period",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R023_rep00",
+      "request_id": "R023",
+      "repetition_index": 0,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "report_absent": false,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R023_rep01",
+      "request_id": "R023",
+      "repetition_index": 1,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "report_absent": false,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R023_rep02",
+      "request_id": "R023",
+      "repetition_index": 2,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "report_absent": false,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R023_rep03",
+      "request_id": "R023",
+      "repetition_index": 3,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "report_absent": false,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R023_rep04",
+      "request_id": "R023",
+      "repetition_index": 4,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "report_absent": false,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R024_rep00",
+      "request_id": "R024",
+      "repetition_index": 0,
+      "status": "success",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "report_absent": false,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R024_rep01",
+      "request_id": "R024",
+      "repetition_index": 1,
+      "status": "success",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "report_absent": false,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R024_rep02",
+      "request_id": "R024",
+      "repetition_index": 2,
+      "status": "success",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "report_absent": false,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R024_rep03",
+      "request_id": "R024",
+      "repetition_index": 3,
+      "status": "success",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "report_absent": false,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R024_rep04",
+      "request_id": "R024",
+      "repetition_index": 4,
+      "status": "success",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "report_absent": false,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R025_rep00",
+      "request_id": "R025",
+      "repetition_index": 0,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": true
+    },
+    {
+      "task_id": "V3_R025_rep01",
+      "request_id": "R025",
+      "repetition_index": 1,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": true
+    },
+    {
+      "task_id": "V3_R025_rep02",
+      "request_id": "R025",
+      "repetition_index": 2,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": true
+    },
+    {
+      "task_id": "V3_R025_rep03",
+      "request_id": "R025",
+      "repetition_index": 3,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": true
+    },
+    {
+      "task_id": "V3_R025_rep04",
+      "request_id": "R025",
+      "repetition_index": 4,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": true
+    },
+    {
+      "task_id": "V3_R026_rep00",
+      "request_id": "R026",
+      "repetition_index": 0,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "detect_anomalies"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "detect_anomalies",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R026_rep01",
+      "request_id": "R026",
+      "repetition_index": 1,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "detect_anomalies"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "detect_anomalies",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R026_rep02",
+      "request_id": "R026",
+      "repetition_index": 2,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "detect_anomalies"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "detect_anomalies",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R026_rep03",
+      "request_id": "R026",
+      "repetition_index": 3,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "detect_anomalies"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "detect_anomalies",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R026_rep04",
+      "request_id": "R026",
+      "repetition_index": 4,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "detect_anomalies"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "detect_anomalies",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R027_rep00",
+      "request_id": "R027",
+      "repetition_index": 0,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": true
+    },
+    {
+      "task_id": "V3_R027_rep01",
+      "request_id": "R027",
+      "repetition_index": 1,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": true
+    },
+    {
+      "task_id": "V3_R027_rep02",
+      "request_id": "R027",
+      "repetition_index": 2,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": true
+    },
+    {
+      "task_id": "V3_R027_rep03",
+      "request_id": "R027",
+      "repetition_index": 3,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": true
+    },
+    {
+      "task_id": "V3_R027_rep04",
+      "request_id": "R027",
+      "repetition_index": 4,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": true
+    },
+    {
+      "task_id": "V3_R028_rep00",
+      "request_id": "R028",
+      "repetition_index": 0,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "get_sales_data",
+        "compare_previous_period"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "compare_previous_period",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R028_rep01",
+      "request_id": "R028",
+      "repetition_index": 1,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "get_sales_data",
+        "compare_previous_period"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "compare_previous_period",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R028_rep02",
+      "request_id": "R028",
+      "repetition_index": 2,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "get_sales_data",
+        "compare_previous_period"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "compare_previous_period",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R028_rep03",
+      "request_id": "R028",
+      "repetition_index": 3,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "get_sales_data",
+        "compare_previous_period"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "compare_previous_period",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R028_rep04",
+      "request_id": "R028",
+      "repetition_index": 4,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "get_sales_data",
+        "compare_previous_period"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "compare_previous_period",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R029_rep00",
+      "request_id": "R029",
+      "repetition_index": 0,
+      "status": "success",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "detect_anomalies",
+        "format_report"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "detect_anomalies",
+        "format_report"
+      ],
+      "report_absent": false,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R029_rep01",
+      "request_id": "R029",
+      "repetition_index": 1,
+      "status": "success",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "detect_anomalies",
+        "format_report"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "detect_anomalies",
+        "format_report"
+      ],
+      "report_absent": false,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R029_rep02",
+      "request_id": "R029",
+      "repetition_index": 2,
+      "status": "success",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "detect_anomalies",
+        "format_report"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "detect_anomalies",
+        "format_report"
+      ],
+      "report_absent": false,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R029_rep03",
+      "request_id": "R029",
+      "repetition_index": 3,
+      "status": "success",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "detect_anomalies",
+        "format_report"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "detect_anomalies",
+        "format_report"
+      ],
+      "report_absent": false,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R029_rep04",
+      "request_id": "R029",
+      "repetition_index": 4,
+      "status": "success",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "detect_anomalies",
+        "format_report"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "detect_anomalies",
+        "format_report"
+      ],
+      "report_absent": false,
+      "only_missing_report_in_sequence": false
+    },
+    {
+      "task_id": "V3_R030_rep00",
+      "request_id": "R030",
+      "repetition_index": 0,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": true
+    },
+    {
+      "task_id": "V3_R030_rep01",
+      "request_id": "R030",
+      "repetition_index": 1,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": true
+    },
+    {
+      "task_id": "V3_R030_rep02",
+      "request_id": "R030",
+      "repetition_index": 2,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": true
+    },
+    {
+      "task_id": "V3_R030_rep03",
+      "request_id": "R030",
+      "repetition_index": 3,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": true
+    },
+    {
+      "task_id": "V3_R030_rep04",
+      "request_id": "R030",
+      "repetition_index": 4,
+      "status": "rejected",
+      "planned_sequence": [
+        "get_sales_data",
+        "aggregate_data"
+      ],
+      "expected_sequence": [
+        "get_sales_data",
+        "aggregate_data",
+        "format_report"
+      ],
+      "report_absent": true,
+      "only_missing_report_in_sequence": true
+    }
+  ]
+}

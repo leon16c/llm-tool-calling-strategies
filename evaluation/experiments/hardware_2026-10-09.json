@@ -1,0 +1,12 @@
+{
+  "captured_date": "2026-10-09",
+  "method": "Read-only Windows CIM query; observed locally, not historical-run metadata",
+  "cpu": [{"Name": "AMD Ryzen 7 9800X3D 8-Core Processor", "NumberOfCores": 8, "NumberOfLogicalProcessors": 16}],
+  "memory": [{"TotalPhysicalMemory": 66095271936}],
+  "gpu": [
+    {"Name": "AMD Radeon(TM) Graphics", "DriverVersion": "32.0.21045.5002"},
+    {"Name": "AMD Radeon RX 9070 XT", "DriverVersion": "32.0.31041.1004"}
+  ],
+  "os": [{"Caption": "Microsoft Windows 11 Pro", "Version": "10.0.26200", "BuildNumber": "26200"}],
+  "caveat": "Installed adapters do not prove GPU use; runtime residency is captured separately through /api/ps."
+}

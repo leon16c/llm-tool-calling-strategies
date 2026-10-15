@@ -1,0 +1,1818 @@
+{
+  "summary": {
+    "runs": 70,
+    "requests": 14,
+    "tools": {
+      "aggregate_data": 30,
+      "format_report": 35,
+      "compare_previous_period": 5
+    },
+    "reference_kind": {
+      "placeholder": 30,
+      "earlier_result": 40
+    },
+    "same_tool_seen_before": 65,
+    "same_non_reference_arguments_seen_before": 65,
+    "max_prompt_eval_plus_eval_count": 1962
+  },
+  "source_sha256": "b42fcc95dc7c67cac071d52ddc828773f2c3d841f2f72f7566a9f111b5de5fdf",
+  "input_sha256": {
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R002_rep00/run_log.json": "374690723244e2baa2e58a7f3da6c55276896da7f49bf51d25ac73e5efd90163",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R002_rep00/model_calls/0003.request.json": "6db1964ee3bfb0eb2ed7b5662a101622b300dc96c54f6b81924b6627fbc273c8",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R002_rep00/model_calls/0003.response.txt": "1b5b4e01583ea71ff813a3a58ae50bfea0b93f33e2c2cc4822cf7b14cce9346a",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R002_rep01/run_log.json": "21ac6640ac523333e43bf705c4bb9f2664c446777c15a0499e2ab7ee0a78c449",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R002_rep01/model_calls/0003.request.json": "6db1964ee3bfb0eb2ed7b5662a101622b300dc96c54f6b81924b6627fbc273c8",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R002_rep01/model_calls/0003.response.txt": "c91f3a4a7d92080bdda9567fbf5f4e9b1554ab65bbfaef324a7f4fcdcb948dc3",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R002_rep02/run_log.json": "4e73663fdfc525505fc0290e6d264626150b2a6dfc6d8d7971c9d9268d376891",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R002_rep02/model_calls/0003.request.json": "6db1964ee3bfb0eb2ed7b5662a101622b300dc96c54f6b81924b6627fbc273c8",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R002_rep02/model_calls/0003.response.txt": "1b0dea22d294e88cebf1258f407f6d9e344464d8df2e3625c2b6721740ead35f",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R002_rep03/run_log.json": "d6124bb4f0fd2f04ec3534b0c62d57cbe5ca1c979b5641caeb672a0f97c53014",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R002_rep03/model_calls/0003.request.json": "6db1964ee3bfb0eb2ed7b5662a101622b300dc96c54f6b81924b6627fbc273c8",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R002_rep03/model_calls/0003.response.txt": "cbdccc2260f285d288fba26419213cdd7bb508bad8ef25ba108a47ea4acdb0ef",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R002_rep04/run_log.json": "8e3cef0871611d4e6baee1ef2960b54aa620db01416d360a7479083a6e74c8ca",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R002_rep04/model_calls/0003.request.json": "6db1964ee3bfb0eb2ed7b5662a101622b300dc96c54f6b81924b6627fbc273c8",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R002_rep04/model_calls/0003.response.txt": "b8f6418cf79d677e42bfd7a39b8e81b1514256af13901c55d42b3d4c4aff783d",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R007_rep00/run_log.json": "0df915e07184266356f21ab61147d7b95524e6153cbdb8f9a040621a624725ce",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R007_rep00/model_calls/0003.request.json": "78b5612b02ab9bb53b088a663b25ae94e039ba500ce6f1b4177c2a20d8361391",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R007_rep00/model_calls/0003.response.txt": "8643ad200796a1c9a23fea0162985c0c3ed8b27ba16b3a551740b20c8e3af56a",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R007_rep01/run_log.json": "832e40204c2d94b7fbc217f34c900a7b0e458f8eb9738c91882b43caea41a405",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R007_rep01/model_calls/0003.request.json": "78b5612b02ab9bb53b088a663b25ae94e039ba500ce6f1b4177c2a20d8361391",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R007_rep01/model_calls/0003.response.txt": "e4ecd10f5b168c71761cbeb61753c099fa28c04c5e77f86e246166dee534ecbe",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R007_rep02/run_log.json": "e210d32afc5133344fe858f7d4c39a5bb7cd2799abd92bbe18c391f1ab41b087",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R007_rep02/model_calls/0003.request.json": "78b5612b02ab9bb53b088a663b25ae94e039ba500ce6f1b4177c2a20d8361391",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R007_rep02/model_calls/0003.response.txt": "96de0225824a77848ad2eb6303975fef5e7c7e6b04218c2d992de4aebf8db380",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R007_rep03/run_log.json": "b3c5fb510ed2720c70910649363fd6837d7b374e694cf557bbde6d3e43cee1ed",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R007_rep03/model_calls/0003.request.json": "78b5612b02ab9bb53b088a663b25ae94e039ba500ce6f1b4177c2a20d8361391",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R007_rep03/model_calls/0003.response.txt": "e3c39113994f27cd13aa9fe4bd57c73644398c97018265bb72ce48c440425b34",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R007_rep04/run_log.json": "ec96a7038f588a0831f12654d0c88fe64ae8fdfa169f79537ceb51a585b6f9e3",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R007_rep04/model_calls/0003.request.json": "78b5612b02ab9bb53b088a663b25ae94e039ba500ce6f1b4177c2a20d8361391",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R007_rep04/model_calls/0003.response.txt": "14f190eabe7bf5aeac743f8cd8de8d6fdb3f17b9099f8fd72d5d68ab34a5c567",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R009_rep00/run_log.json": "560c2ddc8bc8ed4af5847bdf1b773f2c13e29b41c891dbed4f80971223b51888",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R009_rep00/model_calls/0003.request.json": "94362d9ef85c76109218c9c5521076d0652ab8e132bd3bb97bb4b342c13f1bae",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R009_rep00/model_calls/0003.response.txt": "c1ef99821d1a133d436dcbe91720c4004419045c900d9e23b1619b1c938d80c2",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R009_rep01/run_log.json": "ff06145a1af3f3321bb738f2135b50564bf8762e37e6b8d1f5d936a4e1f4839d",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R009_rep01/model_calls/0003.request.json": "94362d9ef85c76109218c9c5521076d0652ab8e132bd3bb97bb4b342c13f1bae",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R009_rep01/model_calls/0003.response.txt": "e11fd795ca5fa2a29e17eaf37b98e91a66bd20e0fcd7a18bf6716c824fba8100",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R009_rep02/run_log.json": "7c8f22c5cc0d6f2a3c432a58199832d30d523fddc7e10006ad131b7761532d50",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R009_rep02/model_calls/0003.request.json": "94362d9ef85c76109218c9c5521076d0652ab8e132bd3bb97bb4b342c13f1bae",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R009_rep02/model_calls/0003.response.txt": "51a863ff832787891faddbe06980700e27d60b3583bd2eceb16a5d44471b98b2",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R009_rep03/run_log.json": "35fa77dc77b34f5611e1862d91da7a03c8ca82bd69fe844869e3575b382cf3d6",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R009_rep03/model_calls/0003.request.json": "94362d9ef85c76109218c9c5521076d0652ab8e132bd3bb97bb4b342c13f1bae",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R009_rep03/model_calls/0003.response.txt": "18855dc95ef4ab51aeeb5434f2ee48ad6f929f1e3fd31454bb3248aba4aadc0b",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R009_rep04/run_log.json": "d1f255794254a407871da4467f2c03f4184a73813aa87c9f82be9e26ef985a1e",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R009_rep04/model_calls/0003.request.json": "94362d9ef85c76109218c9c5521076d0652ab8e132bd3bb97bb4b342c13f1bae",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R009_rep04/model_calls/0003.response.txt": "85678264574fbed873b05b30b3c45aabe8b06e184e854e9875942014cd10a8a8",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R011_rep00/run_log.json": "81275af5fa59e181deb72459e7a070f5cf742f24b316554fa2a3ec716b19ae9a",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R011_rep00/model_calls/0003.request.json": "d651c3b641c124f160a5e2ba8883176e106c648875458f5c218ce6d7eb927906",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R011_rep00/model_calls/0003.response.txt": "0d3d8e7c1ced80230afa3e2bd9665e9ff1eeca5d74b56ccd7f8840a4c894c5dc",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R011_rep01/run_log.json": "707f999aebdc2c6ea637ae36b0bebc6dd38391e1b47e13d01d4e5f78e0e3daa0",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R011_rep01/model_calls/0003.request.json": "d651c3b641c124f160a5e2ba8883176e106c648875458f5c218ce6d7eb927906",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R011_rep01/model_calls/0003.response.txt": "a812cc1fd8f0524dc41aff4eff548a59fc76f2e0cc2688907481828fa6773db8",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R011_rep02/run_log.json": "3a2c6f02bb7244b8e61ae87a563ebac3193520ed6cb9e3ec4724cb6079467c80",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R011_rep02/model_calls/0003.request.json": "d651c3b641c124f160a5e2ba8883176e106c648875458f5c218ce6d7eb927906",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R011_rep02/model_calls/0003.response.txt": "d26832be16fdf327ef9ab16d2e247e3ca44158174fb9121cec1b552f9626e318",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R011_rep03/run_log.json": "c7f06cfe2f445358c5f13718266574382f1247d81788ba847c01c39f87c26488",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R011_rep03/model_calls/0003.request.json": "d651c3b641c124f160a5e2ba8883176e106c648875458f5c218ce6d7eb927906",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R011_rep03/model_calls/0003.response.txt": "f2ef41a72b043d7dc96a1773c10b72f5ecb7030d6d11c1f6d6861d3845e653fa",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R011_rep04/run_log.json": "75a9b5c24f50fb627b6002b6994265b82395ce94776bbe46d99186888808bae2",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R011_rep04/model_calls/0003.request.json": "d651c3b641c124f160a5e2ba8883176e106c648875458f5c218ce6d7eb927906",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R011_rep04/model_calls/0003.response.txt": "8ceb873793828e1ac82b286fa3c10364ae971f297e062b280a66199dbf867869",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R012_rep00/run_log.json": "a2b870e43882b407564303cf6af55fb6d4a17fca24f01c354227d26a863e048d",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R012_rep00/model_calls/0003.request.json": "714e17e646b2d2be0a132530a3506ffbb020d50384dbbf799cc71e9206e11557",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R012_rep00/model_calls/0003.response.txt": "c994c89468d774aa01f19e5e17669ca840241c23fbe73a7aefdf6cf883104335",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R012_rep01/run_log.json": "bd2d6c254b8f79d6a16a7f39b2a1512239cd64c2464418c29591788bd1c86321",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R012_rep01/model_calls/0003.request.json": "714e17e646b2d2be0a132530a3506ffbb020d50384dbbf799cc71e9206e11557",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R012_rep01/model_calls/0003.response.txt": "178dda25baa673b1e5dfabc9da42013a19a193411756f1282a8e12d03021b642",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R012_rep02/run_log.json": "622819a3bcb350b05fdce47398b9f12d54908143de0679e755623b66605a43f5",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R012_rep02/model_calls/0003.request.json": "714e17e646b2d2be0a132530a3506ffbb020d50384dbbf799cc71e9206e11557",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R012_rep02/model_calls/0003.response.txt": "8e78a69aab662eb232a1bd988c4d06ab6f114af16e281259cb29953f593d1c61",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R012_rep03/run_log.json": "d0dcf0134611721cc696195e976f48d3daf920c061d4fd68acdbfb7060081c2e",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R012_rep03/model_calls/0003.request.json": "714e17e646b2d2be0a132530a3506ffbb020d50384dbbf799cc71e9206e11557",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R012_rep03/model_calls/0003.response.txt": "d2b0771a056065e97faaf70db1dba5dd1ac4234955e3a59ba76828c6a7b6d2d8",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R012_rep04/run_log.json": "83e11011df2f029c3bb87779ee62f90d44819b2d6a82349d091f3b0b23edb1c1",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R012_rep04/model_calls/0003.request.json": "714e17e646b2d2be0a132530a3506ffbb020d50384dbbf799cc71e9206e11557",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R012_rep04/model_calls/0003.response.txt": "223c5338731b8b030a340e7898d069bc83e674b4a175ae0bcd5732b12bc124f0",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R013_rep00/run_log.json": "ed2eeba584983dbf341f3b6b37b5f8e95058a8c1d403e27048a1899bde0067ec",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R013_rep00/model_calls/0003.request.json": "ec454d61a0f5a16febe43b10ee3e8f9a950491817d0bdc6753045ab9c79abec5",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R013_rep00/model_calls/0003.response.txt": "1731e9858e4507bfb1077327fc7b07b16c228e9b0b6eea7db9c7b91958aed10c",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R013_rep01/run_log.json": "a7d172af5b27e252013268fc1976aff2f18a7fe81ab2555ebc1dac5f564cd128",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R013_rep01/model_calls/0003.request.json": "ec454d61a0f5a16febe43b10ee3e8f9a950491817d0bdc6753045ab9c79abec5",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R013_rep01/model_calls/0003.response.txt": "a414bd1023d0aecd7a555c1423bc120022611d953cf96d9ff62649e135fb4b9a",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R013_rep02/run_log.json": "72a6b75eaf58d11207c4b1ac0039ff1985fa995b4d24606583b802f7192c5f49",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R013_rep02/model_calls/0003.request.json": "ec454d61a0f5a16febe43b10ee3e8f9a950491817d0bdc6753045ab9c79abec5",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R013_rep02/model_calls/0003.response.txt": "6c1a697fcce76978e6ea7eeb211fe5022863ff36a2dc0d81e84cb5c6b071dc43",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R013_rep03/run_log.json": "553f4e7b0d7feb77722f21a4349d254a47c69b324bcd334a8c515c8b7b6265fe",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R013_rep03/model_calls/0003.request.json": "ec454d61a0f5a16febe43b10ee3e8f9a950491817d0bdc6753045ab9c79abec5",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R013_rep03/model_calls/0003.response.txt": "8adb314d135416276b33276029a960f8ef7a9b9ca81a7a5017cf7296e0744e55",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R013_rep04/run_log.json": "503c096261d88b4c96670982320bf1875ec6966e6177e590f07c7dd762b97452",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R013_rep04/model_calls/0003.request.json": "ec454d61a0f5a16febe43b10ee3e8f9a950491817d0bdc6753045ab9c79abec5",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R013_rep04/model_calls/0003.response.txt": "9e0b3a6aca05242e51bec3a358681f3c0dd639398120be960edd8d4aaad1e618",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R014_rep00/run_log.json": "b0c7c5d68f4b7e3ae4f8392208f2e069bac24e67a4542aeddd35535c3e09df7b",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R014_rep00/model_calls/0003.request.json": "1d58673b10a2102687fd0739df724e52aed9457177ee1691704fd3eac0f76042",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R014_rep00/model_calls/0003.response.txt": "debd3305a32374ee2bed0d39571bd98788cdb8e323d3d303072505d543ce90d0",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R014_rep01/run_log.json": "0bfd7718557533dffa16753b2d138e8cd222b1db20167e59cfcfb568a2473f75",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R014_rep01/model_calls/0003.request.json": "1d58673b10a2102687fd0739df724e52aed9457177ee1691704fd3eac0f76042",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R014_rep01/model_calls/0003.response.txt": "64d81f602dbc79ba5335561255e96c46b2c05e41140fe1f77406f6e8753f61e0",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R014_rep02/run_log.json": "e1d80b8ff4ff9ed9985a5dbbc5c2fea46e94cabdf45b427aa57a01ec59bc5073",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R014_rep02/model_calls/0003.request.json": "1d58673b10a2102687fd0739df724e52aed9457177ee1691704fd3eac0f76042",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R014_rep02/model_calls/0003.response.txt": "91ffd2388c7ffc21d0fb58e989b15d290bd59afd398b25dee79e656ac4c1f980",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R014_rep03/run_log.json": "78766a23c10d9bf40fe67281d3a93f1a2964b2a290cc34aa8216ae52436dd3af",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R014_rep03/model_calls/0003.request.json": "1d58673b10a2102687fd0739df724e52aed9457177ee1691704fd3eac0f76042",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R014_rep03/model_calls/0003.response.txt": "b2feb1542cded918a756c4a3abfcd2ddd43bbed7a0a45e05f2c8350203afd23c",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R014_rep04/run_log.json": "ac9ed3aaa3792d34d57f625a684455f244289ed75baa0080d6f1e788ce4feebc",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R014_rep04/model_calls/0003.request.json": "1d58673b10a2102687fd0739df724e52aed9457177ee1691704fd3eac0f76042",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R014_rep04/model_calls/0003.response.txt": "0eb2c20aea8ae9eaaf25012ce316ef9505fc9423fe51deef3d9f764bb2304db5",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R019_rep00/run_log.json": "23ea1292b35326c7e30eeb1d63439c509c1d47f1dbd9a17e613f53e849a13a95",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R019_rep00/model_calls/0003.request.json": "4a107cfc46b1afbdc653e27d42ef09ceb43b66432ab0837485d2fd886a345097",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R019_rep00/model_calls/0003.response.txt": "0a5b2a9b7de27f160784bf4f3bd98b2cadc894bc661ee6ad837af2664e42204a",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R019_rep01/run_log.json": "7a2f1fdc7f50b03713b5a3e2d731d0bc597e60762e5a1e4d53795ab809ebd355",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R019_rep01/model_calls/0003.request.json": "4a107cfc46b1afbdc653e27d42ef09ceb43b66432ab0837485d2fd886a345097",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R019_rep01/model_calls/0003.response.txt": "c42005d3f34bc7b2185e66391f30576a8d688da120ba0536e5c2fd9c5df59f06",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R019_rep02/run_log.json": "8fbfe9cf4afd0ba8e68941bcb12a843b562ef44a030db558d002daec3e85e7e7",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R019_rep02/model_calls/0003.request.json": "4a107cfc46b1afbdc653e27d42ef09ceb43b66432ab0837485d2fd886a345097",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R019_rep02/model_calls/0003.response.txt": "766d91a684f055b310bb51bc8cd51d1a0d0669994e49985b4835dc19e1e734e8",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R019_rep03/run_log.json": "3adf1408e7c48153d3c990b4f06256916fa4c4a38b84a3f5fd092b2962d6977b",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R019_rep03/model_calls/0003.request.json": "4a107cfc46b1afbdc653e27d42ef09ceb43b66432ab0837485d2fd886a345097",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R019_rep03/model_calls/0003.response.txt": "bd5f76a274a22fd02be97418a0f6ddeab45e103c3527c64b007c3127c3c544f0",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R019_rep04/run_log.json": "735b7f47ba0ac75e13738b73430a8bba722d90eb54b86bcc97a85e4b37d86998",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R019_rep04/model_calls/0003.request.json": "4a107cfc46b1afbdc653e27d42ef09ceb43b66432ab0837485d2fd886a345097",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R019_rep04/model_calls/0003.response.txt": "d8f3fc49142a8bfd39cd95024fa1535df9d72c11bd31b21796c498509f4f3e53",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R020_rep00/run_log.json": "824a8aa13a9892b372fc6937c5097699d2f451f5bd2932e69b9419aaaef7190a",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R020_rep00/model_calls/0003.request.json": "f1a85eadd4a2664fe9485d099b3ef0bd48ca85a5d0146d297ca36ab6ab039203",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R020_rep00/model_calls/0003.response.txt": "672ba967e8429158df4497cf79184d7a60c6dd103db61e9413096dfee98b99a8",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R020_rep01/run_log.json": "19ea83ff92fa6d8b880a8074c91f24b66fed28581022b4322efc5036dedfb60c",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R020_rep01/model_calls/0003.request.json": "f1a85eadd4a2664fe9485d099b3ef0bd48ca85a5d0146d297ca36ab6ab039203",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R020_rep01/model_calls/0003.response.txt": "3e6eaa262ec178acfc462d953f154b3d466779b24d57e7e402e240f6e7054516",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R020_rep02/run_log.json": "69737d415456b7d7675f81012f8a97a44d2542a5118353b251b0df1e658305ef",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R020_rep02/model_calls/0003.request.json": "f1a85eadd4a2664fe9485d099b3ef0bd48ca85a5d0146d297ca36ab6ab039203",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R020_rep02/model_calls/0003.response.txt": "c942ac349753132fed15f254c0ba5216daf780ff59ad0fdd3df252de5d78bc04",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R020_rep03/run_log.json": "768920056e8695182a2eed379e443dd05f5243e0267dd47d4db79c103f50b091",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R020_rep03/model_calls/0003.request.json": "f1a85eadd4a2664fe9485d099b3ef0bd48ca85a5d0146d297ca36ab6ab039203",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R020_rep03/model_calls/0003.response.txt": "1805c7ad9deba375630ee4e7c14f01e94a66df9a5e98746d597101999ec7132c",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R020_rep04/run_log.json": "8892e2c9da9922826a000ddc352be94ae14d5d06059e4905f8a8d480b2e3978b",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R020_rep04/model_calls/0003.request.json": "f1a85eadd4a2664fe9485d099b3ef0bd48ca85a5d0146d297ca36ab6ab039203",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R020_rep04/model_calls/0003.response.txt": "08517c52273d67f2cdb008e8515dc93e2fe9adb5e9cd355a6b5ca4dc44034817",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R024_rep00/run_log.json": "1e36aff114f520ba80165bacfa73756fa4134b41d1f3ded5ad4896bdc192f8ec",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R024_rep00/model_calls/0003.request.json": "80d17345c9f76a620b01594a908291b994cbf26ad61a301541b7e708c35eb64a",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R024_rep00/model_calls/0003.response.txt": "b4a2404335d60b854dc85f42758ede5778a048c9f9fff720804bad051242bd84",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R024_rep01/run_log.json": "dc34a648291d177e62d3c07dd169b27bde46d0e985c79530d73d1bd98bfb61b6",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R024_rep01/model_calls/0003.request.json": "80d17345c9f76a620b01594a908291b994cbf26ad61a301541b7e708c35eb64a",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R024_rep01/model_calls/0003.response.txt": "2e834b2d955f53ba6646f149dfac9579d726455893c9bf85f35d0c5044eb86a6",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R024_rep02/run_log.json": "1a925dead65c79ab847be8ec2bc9b66dfb0dc455fb73a451a358299d0ecb6718",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R024_rep02/model_calls/0003.request.json": "80d17345c9f76a620b01594a908291b994cbf26ad61a301541b7e708c35eb64a",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R024_rep02/model_calls/0003.response.txt": "b30afc8a651b12b675fc6dea1481710663bfbe8c497af07028972645256bdf66",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R024_rep03/run_log.json": "64fba80e1e67ff222cdce009d14655a6461e3cf2f4dc06db5104f3dbf04420ea",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R024_rep03/model_calls/0003.request.json": "80d17345c9f76a620b01594a908291b994cbf26ad61a301541b7e708c35eb64a",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R024_rep03/model_calls/0003.response.txt": "bb34500adf7180ae831a4cf96d55f1ab1b088feba0846cc12337c0d76e8d7a81",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R024_rep04/run_log.json": "2a944db6b78700be083394d52651e3069243ed432e338a12c5a956a98a4dbc63",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R024_rep04/model_calls/0003.request.json": "80d17345c9f76a620b01594a908291b994cbf26ad61a301541b7e708c35eb64a",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R024_rep04/model_calls/0003.response.txt": "d787b9f163dae5f48b307138469c6287d1a940dc2ccc941f29b9312083fe8844",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R025_rep00/run_log.json": "daf54b7127ce089a4eba5d5cbad8c3a1801d8f8582908860611e084efff5700a",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R025_rep00/model_calls/0003.request.json": "f7f15c7324176a0f407feadd0d0f5575dbb6d5582c3f9d4a414826ca97de4dc5",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R025_rep00/model_calls/0003.response.txt": "e272dd5d847234e21ed64588ebf03989145bfbb21fce81d1e10d4ce73a9fa8ae",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R025_rep01/run_log.json": "a30f9730948a218f7de4394b36bcbafee2ce90cc932a7c8359b5cdfc70af1f8f",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R025_rep01/model_calls/0003.request.json": "f7f15c7324176a0f407feadd0d0f5575dbb6d5582c3f9d4a414826ca97de4dc5",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R025_rep01/model_calls/0003.response.txt": "dd4ae64e68a2ba29b29cb1457de84e7ee60f77280b0d8535624a5af5af39df9b",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R025_rep02/run_log.json": "8bbcc542d636c52cc31a58bdc162c646de37f6087b3ea9833bdb8527b83cef1c",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R025_rep02/model_calls/0003.request.json": "f7f15c7324176a0f407feadd0d0f5575dbb6d5582c3f9d4a414826ca97de4dc5",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R025_rep02/model_calls/0003.response.txt": "3fefc30dcb048a7cc7b90e73de9ea43a4f1f4e6ce19b1e9ca08cf0f527ca63db",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R025_rep03/run_log.json": "314f9228175a364218c30eb4fa0a25611b19db9c9a15b1c8dcad5d46317bf257",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R025_rep03/model_calls/0003.request.json": "f7f15c7324176a0f407feadd0d0f5575dbb6d5582c3f9d4a414826ca97de4dc5",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R025_rep03/model_calls/0003.response.txt": "72f31b23b7f93ba7fdf33671b58d2dd84e732ce0f57735724b49ecd31df075fe",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R025_rep04/run_log.json": "aa1ed1b1a2960a781bf933615ee71e130fec56df71fe02ba81bd1e2e5a0c3283",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R025_rep04/model_calls/0003.request.json": "f7f15c7324176a0f407feadd0d0f5575dbb6d5582c3f9d4a414826ca97de4dc5",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R025_rep04/model_calls/0003.response.txt": "a0e7b5d9f727394c1302fc1ca771d35d82c8753fb69415f45e64fb75fe844e16",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R027_rep00/run_log.json": "043280d0e0748618b58bc3abe6e69e45250252b9fc6c05eba61035ebf3197497",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R027_rep00/model_calls/0003.request.json": "d5bbd296961688e069ab8949a17ef390c8abdf86723372344bbd14c73a69a524",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R027_rep00/model_calls/0003.response.txt": "1293ac8a7fff5733b70de3f4d35c4532cba79b3510ba61ff692e1abb1359b4ca",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R027_rep01/run_log.json": "155485b026fa15f8ccf2d963c6666c1eac5448ae24e99caed498a703a0fd1133",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R027_rep01/model_calls/0003.request.json": "d5bbd296961688e069ab8949a17ef390c8abdf86723372344bbd14c73a69a524",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R027_rep01/model_calls/0003.response.txt": "2e2407c394475e1c44e23c017d7caefb0004b0e443d2f14cba9c4abb73849057",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R027_rep02/run_log.json": "92b9b1bdd831a54afcb64714ac33100e3ef0a2c21bd853a417d1274cb37d9152",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R027_rep02/model_calls/0003.request.json": "d5bbd296961688e069ab8949a17ef390c8abdf86723372344bbd14c73a69a524",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R027_rep02/model_calls/0003.response.txt": "e6cdeebaaab99d4cfeb082026b9dfb5cd20a0115bd00abc465b28f039af4d9b5",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R027_rep03/run_log.json": "dc6def87136156636d0fe8db1fa63236b0d2626b378081aecd4d84ebfed5e2a2",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R027_rep03/model_calls/0003.request.json": "d5bbd296961688e069ab8949a17ef390c8abdf86723372344bbd14c73a69a524",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R027_rep03/model_calls/0003.response.txt": "1c3855ea8873d893c84265ef4024f6e1108b011ed008a16cab29ee8fea2d6f79",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R027_rep04/run_log.json": "4717ca6ed7865a5e2e280f611b4a9025776333cb6a36c4afa324a2effad7d08e",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R027_rep04/model_calls/0003.request.json": "d5bbd296961688e069ab8949a17ef390c8abdf86723372344bbd14c73a69a524",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R027_rep04/model_calls/0003.response.txt": "381bf3ea8c2cf3a05f76065884b976ec33e41550661d6c09493e8042d70e8e47",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R029_rep00/run_log.json": "e1e6fabecd708366e55d5b9096d6a140d817132cd858afde06541bfaa1b2b9fe",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R029_rep00/model_calls/0004.request.json": "809259f4a1893899d5e26ae030766626b059b618477d990e26d0e2b17366990d",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R029_rep00/model_calls/0004.response.txt": "bf4da914e8853bac04faf8890213e0af46ddb86e112ca8155ee60f6eaa3da85a",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R029_rep01/run_log.json": "163528aa3047045fc57baa05c68ba26df98af924f6883516897d955324ca3edc",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R029_rep01/model_calls/0004.request.json": "809259f4a1893899d5e26ae030766626b059b618477d990e26d0e2b17366990d",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R029_rep01/model_calls/0004.response.txt": "145357d57bb27c2fa3f6283308452f2eb2a3da37dc7dafb3e68315cbf5498b4d",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R029_rep02/run_log.json": "1a1619696b50a3e16b1e4f6313aa2e3bd585dad068564305acd08cf1fd50c51c",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R029_rep02/model_calls/0004.request.json": "809259f4a1893899d5e26ae030766626b059b618477d990e26d0e2b17366990d",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R029_rep02/model_calls/0004.response.txt": "1d48ef3523aad4d448842a3eb80b1813f95d6d6e0e8fb46e4ea5689bfdba4b01",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R029_rep03/run_log.json": "42e6edad9c1d694dae13261dafe6cf9ef55e1499aabd8bb68ba98db5e426b440",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R029_rep03/model_calls/0004.request.json": "809259f4a1893899d5e26ae030766626b059b618477d990e26d0e2b17366990d",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R029_rep03/model_calls/0004.response.txt": "86b4f54b3b671b1888fc46b645be5f3ae641390faf43bb730cb78c5bebaba25b",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R029_rep04/run_log.json": "6fa1beb74f8bf8692f2f1e3f37f9db9343b1ffe8a5cca8e10cc29549d8c37f2c",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R029_rep04/model_calls/0004.request.json": "809259f4a1893899d5e26ae030766626b059b618477d990e26d0e2b17366990d",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R029_rep04/model_calls/0004.response.txt": "60a0686b50bf189a0ca863e49eb7c5c6c17348f29b60f2a8eec93354d309f019",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R030_rep00/run_log.json": "70fb014da023bd0ab7336b81ea0b9083826a766e6358b1ea410abce2de7b85f8",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R030_rep00/model_calls/0003.request.json": "1bf2fcfee8d63fbea814077bbacf7a9a378be89bedaa11d05ba0b0760ad161e8",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R030_rep00/model_calls/0003.response.txt": "694483b66ddfc924bea1a2fbb5f7c707df4796285f5dbda05486c0193282587e",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R030_rep01/run_log.json": "3cfed33e9b96643be5524714802d8814c8933de20d4b96469bef9a5dabc7773d",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R030_rep01/model_calls/0003.request.json": "1bf2fcfee8d63fbea814077bbacf7a9a378be89bedaa11d05ba0b0760ad161e8",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R030_rep01/model_calls/0003.response.txt": "5fcea1aef3a5702ba3f36d5cd4f51119eb80a43a53363e03f182b81c9f4d3928",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R030_rep02/run_log.json": "06b84965f15e8a3e8430dfd25e04d5159e5665cafa3b0142c9057aab23c949d4",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R030_rep02/model_calls/0003.request.json": "1bf2fcfee8d63fbea814077bbacf7a9a378be89bedaa11d05ba0b0760ad161e8",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R030_rep02/model_calls/0003.response.txt": "73e35915ce6a7068c3b78d0eaf9829844b38c0343626b8725395d1d87496c321",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R030_rep03/run_log.json": "f18c8a8b4a057e424cfc0c15c1dab760fb7caaa71a4d1de097ddbfec9c181c68",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R030_rep03/model_calls/0003.request.json": "1bf2fcfee8d63fbea814077bbacf7a9a378be89bedaa11d05ba0b0760ad161e8",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R030_rep03/model_calls/0003.response.txt": "81e49764ac4bc0681cb8ba1398a049627f539b552150d8993a0e480b61d01c7e",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R030_rep04/run_log.json": "868021af774f6711cbb453acea94e29f8bb24bb305aaba0f7c9af1c775f96c36",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R030_rep04/model_calls/0003.request.json": "1bf2fcfee8d63fbea814077bbacf7a9a378be89bedaa11d05ba0b0760ad161e8",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R030_rep04/model_calls/0003.response.txt": "3e149e5b4e3cd064e83577cd1b5aadbc3ec4d9dce292f053369e3ad685e122fa"
+  },
+  "runs": [
+    {
+      "task_id": "V4_R002_rep00",
+      "request_id": "R002",
+      "repetition_index": 0,
+      "proposed_tool": "aggregate_data",
+      "proposed_arguments": {
+        "data_id": "$previous_result",
+        "group_by": [
+          "category"
+        ],
+        "metrics": [
+          "revenue",
+          "units_sold"
+        ]
+      },
+      "finish_instruction_in_payload": true,
+      "no_repeat_instruction_in_payload": true,
+      "same_tool_seen_before": true,
+      "same_non_reference_arguments_seen_before": true,
+      "reference_kind": "placeholder",
+      "prompt_eval_count": 1770,
+      "eval_count": 71,
+      "raw_response": "{\n  \"finish\": false,\n  \"tool_call\": {\n    \"tool_name\": \"aggregate_data\",\n    \"arguments\": {\n      \"data_id\": \"$previous_result\",\n      \"group_by\": [\n        \"category\"\n      ],\n      \"metrics\": [\n        \"revenue\",\n        \"units_sold\"\n      ]\n    }\n  }\n}",
+      "payload_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R002_rep00/model_calls/0003.request.json",
+      "response_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R002_rep00/model_calls/0003.response.txt"
+    },
+    {
+      "task_id": "V4_R002_rep01",
+      "request_id": "R002",
+      "repetition_index": 1,
+      "proposed_tool": "aggregate_data",
+      "proposed_arguments": {
+        "data_id": "$previous_result",
+        "group_by": [
+          "category"
+        ],
+        "metrics": [
+          "revenue",
+          "units_sold"
+        ]
+      },
+      "finish_instruction_in_payload": true,
+      "no_repeat_instruction_in_payload": true,
+      "same_tool_seen_before": true,
+      "same_non_reference_arguments_seen_before": true,
+      "reference_kind": "placeholder",
+      "prompt_eval_count": 1770,
+      "eval_count": 71,
+      "raw_response": "{\n  \"finish\": false,\n  \"tool_call\": {\n    \"tool_name\": \"aggregate_data\",\n    \"arguments\": {\n      \"data_id\": \"$previous_result\",\n      \"group_by\": [\n        \"category\"\n      ],\n      \"metrics\": [\n        \"revenue\",\n        \"units_sold\"\n      ]\n    }\n  }\n}",
+      "payload_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R002_rep01/model_calls/0003.request.json",
+      "response_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R002_rep01/model_calls/0003.response.txt"
+    },
+    {
+      "task_id": "V4_R002_rep02",
+      "request_id": "R002",
+      "repetition_index": 2,
+      "proposed_tool": "aggregate_data",
+      "proposed_arguments": {
+        "data_id": "$previous_result",
+        "group_by": [
+          "category"
+        ],
+        "metrics": [
+          "revenue",
+          "units_sold"
+        ]
+      },
+      "finish_instruction_in_payload": true,
+      "no_repeat_instruction_in_payload": true,
+      "same_tool_seen_before": true,
+      "same_non_reference_arguments_seen_before": true,
+      "reference_kind": "placeholder",
+      "prompt_eval_count": 1770,
+      "eval_count": 71,
+      "raw_response": "{\n  \"finish\": false,\n  \"tool_call\": {\n    \"tool_name\": \"aggregate_data\",\n    \"arguments\": {\n      \"data_id\": \"$previous_result\",\n      \"group_by\": [\n        \"category\"\n      ],\n      \"metrics\": [\n        \"revenue\",\n        \"units_sold\"\n      ]\n    }\n  }\n}",
+      "payload_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R002_rep02/model_calls/0003.request.json",
+      "response_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R002_rep02/model_calls/0003.response.txt"
+    },
+    {
+      "task_id": "V4_R002_rep03",
+      "request_id": "R002",
+      "repetition_index": 3,
+      "proposed_tool": "aggregate_data",
+      "proposed_arguments": {
+        "data_id": "$previous_result",
+        "group_by": [
+          "category"
+        ],
+        "metrics": [
+          "revenue",
+          "units_sold"
+        ]
+      },
+      "finish_instruction_in_payload": true,
+      "no_repeat_instruction_in_payload": true,
+      "same_tool_seen_before": true,
+      "same_non_reference_arguments_seen_before": true,
+      "reference_kind": "placeholder",
+      "prompt_eval_count": 1770,
+      "eval_count": 71,
+      "raw_response": "{\n  \"finish\": false,\n  \"tool_call\": {\n    \"tool_name\": \"aggregate_data\",\n    \"arguments\": {\n      \"data_id\": \"$previous_result\",\n      \"group_by\": [\n        \"category\"\n      ],\n      \"metrics\": [\n        \"revenue\",\n        \"units_sold\"\n      ]\n    }\n  }\n}",
+      "payload_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R002_rep03/model_calls/0003.request.json",
+      "response_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R002_rep03/model_calls/0003.response.txt"
+    },
+    {
+      "task_id": "V4_R002_rep04",
+      "request_id": "R002",
+      "repetition_index": 4,
+      "proposed_tool": "aggregate_data",
+      "proposed_arguments": {
+        "data_id": "$previous_result",
+        "group_by": [
+          "category"
+        ],
+        "metrics": [
+          "revenue",
+          "units_sold"
+        ]
+      },
+      "finish_instruction_in_payload": true,
+      "no_repeat_instruction_in_payload": true,
+      "same_tool_seen_before": true,
+      "same_non_reference_arguments_seen_before": true,
+      "reference_kind": "placeholder",
+      "prompt_eval_count": 1770,
+      "eval_count": 71,
+      "raw_response": "{\n  \"finish\": false,\n  \"tool_call\": {\n    \"tool_name\": \"aggregate_data\",\n    \"arguments\": {\n      \"data_id\": \"$previous_result\",\n      \"group_by\": [\n        \"category\"\n      ],\n      \"metrics\": [\n        \"revenue\",\n        \"units_sold\"\n      ]\n    }\n  }\n}",
+      "payload_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R002_rep04/model_calls/0003.request.json",
+      "response_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R002_rep04/model_calls/0003.response.txt"
+    },
+    {
+      "task_id": "V4_R007_rep00",
+      "request_id": "R007",
+      "repetition_index": 0,
+      "proposed_tool": "aggregate_data",
+      "proposed_arguments": {
+        "data_id": "$previous_result",
+        "group_by": [
+          "region",
+          "category"
+        ],
+        "metrics": [
+          "revenue"
+        ]
+      },
+      "finish_instruction_in_payload": true,
+      "no_repeat_instruction_in_payload": true,
+      "same_tool_seen_before": true,
+      "same_non_reference_arguments_seen_before": true,
+      "reference_kind": "placeholder",
+      "prompt_eval_count": 1763,
+      "eval_count": 70,
+      "raw_response": "{\n  \"finish\": false,\n  \"tool_call\": {\n    \"tool_name\": \"aggregate_data\",\n    \"arguments\": {\n      \"data_id\": \"$previous_result\",\n      \"group_by\": [\n        \"region\",\n        \"category\"\n      ],\n      \"metrics\": [\n        \"revenue\"\n      ]\n    }\n  }\n}",
+      "payload_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R007_rep00/model_calls/0003.request.json",
+      "response_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R007_rep00/model_calls/0003.response.txt"
+    },
+    {
+      "task_id": "V4_R007_rep01",
+      "request_id": "R007",
+      "repetition_index": 1,
+      "proposed_tool": "aggregate_data",
+      "proposed_arguments": {
+        "data_id": "$previous_result",
+        "group_by": [
+          "region",
+          "category"
+        ],
+        "metrics": [
+          "revenue"
+        ]
+      },
+      "finish_instruction_in_payload": true,
+      "no_repeat_instruction_in_payload": true,
+      "same_tool_seen_before": true,
+      "same_non_reference_arguments_seen_before": true,
+      "reference_kind": "placeholder",
+      "prompt_eval_count": 1763,
+      "eval_count": 70,
+      "raw_response": "{\n  \"finish\": false,\n  \"tool_call\": {\n    \"tool_name\": \"aggregate_data\",\n    \"arguments\": {\n      \"data_id\": \"$previous_result\",\n      \"group_by\": [\n        \"region\",\n        \"category\"\n      ],\n      \"metrics\": [\n        \"revenue\"\n      ]\n    }\n  }\n}",
+      "payload_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R007_rep01/model_calls/0003.request.json",
+      "response_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R007_rep01/model_calls/0003.response.txt"
+    },
+    {
+      "task_id": "V4_R007_rep02",
+      "request_id": "R007",
+      "repetition_index": 2,
+      "proposed_tool": "aggregate_data",
+      "proposed_arguments": {
+        "data_id": "$previous_result",
+        "group_by": [
+          "region",
+          "category"
+        ],
+        "metrics": [
+          "revenue"
+        ]
+      },
+      "finish_instruction_in_payload": true,
+      "no_repeat_instruction_in_payload": true,
+      "same_tool_seen_before": true,
+      "same_non_reference_arguments_seen_before": true,
+      "reference_kind": "placeholder",
+      "prompt_eval_count": 1763,
+      "eval_count": 70,
+      "raw_response": "{\n  \"finish\": false,\n  \"tool_call\": {\n    \"tool_name\": \"aggregate_data\",\n    \"arguments\": {\n      \"data_id\": \"$previous_result\",\n      \"group_by\": [\n        \"region\",\n        \"category\"\n      ],\n      \"metrics\": [\n        \"revenue\"\n      ]\n    }\n  }\n}",
+      "payload_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R007_rep02/model_calls/0003.request.json",
+      "response_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R007_rep02/model_calls/0003.response.txt"
+    },
+    {
+      "task_id": "V4_R007_rep03",
+      "request_id": "R007",
+      "repetition_index": 3,
+      "proposed_tool": "aggregate_data",
+      "proposed_arguments": {
+        "data_id": "$previous_result",
+        "group_by": [
+          "region",
+          "category"
+        ],
+        "metrics": [
+          "revenue"
+        ]
+      },
+      "finish_instruction_in_payload": true,
+      "no_repeat_instruction_in_payload": true,
+      "same_tool_seen_before": true,
+      "same_non_reference_arguments_seen_before": true,
+      "reference_kind": "placeholder",
+      "prompt_eval_count": 1763,
+      "eval_count": 70,
+      "raw_response": "{\n  \"finish\": false,\n  \"tool_call\": {\n    \"tool_name\": \"aggregate_data\",\n    \"arguments\": {\n      \"data_id\": \"$previous_result\",\n      \"group_by\": [\n        \"region\",\n        \"category\"\n      ],\n      \"metrics\": [\n        \"revenue\"\n      ]\n    }\n  }\n}",
+      "payload_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R007_rep03/model_calls/0003.request.json",
+      "response_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R007_rep03/model_calls/0003.response.txt"
+    },
+    {
+      "task_id": "V4_R007_rep04",
+      "request_id": "R007",
+      "repetition_index": 4,
+      "proposed_tool": "aggregate_data",
+      "proposed_arguments": {
+        "data_id": "$previous_result",
+        "group_by": [
+          "region",
+          "category"
+        ],
+        "metrics": [
+          "revenue"
+        ]
+      },
+      "finish_instruction_in_payload": true,
+      "no_repeat_instruction_in_payload": true,
+      "same_tool_seen_before": true,
+      "same_non_reference_arguments_seen_before": true,
+      "reference_kind": "placeholder",
+      "prompt_eval_count": 1763,
+      "eval_count": 70,
+      "raw_response": "{\n  \"finish\": false,\n  \"tool_call\": {\n    \"tool_name\": \"aggregate_data\",\n    \"arguments\": {\n      \"data_id\": \"$previous_result\",\n      \"group_by\": [\n        \"region\",\n        \"category\"\n      ],\n      \"metrics\": [\n        \"revenue\"\n      ]\n    }\n  }\n}",
+      "payload_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R007_rep04/model_calls/0003.request.json",
+      "response_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R007_rep04/model_calls/0003.response.txt"
+    },
+    {
+      "task_id": "V4_R009_rep00",
+      "request_id": "R009",
+      "repetition_index": 0,
+      "proposed_tool": "format_report",
+      "proposed_arguments": {
+        "data_id": "aggregate_data:8a5e07e58d5c",
+        "output_format": "markdown"
+      },
+      "finish_instruction_in_payload": true,
+      "no_repeat_instruction_in_payload": true,
+      "same_tool_seen_before": true,
+      "same_non_reference_arguments_seen_before": true,
+      "reference_kind": "earlier_result",
+      "prompt_eval_count": 1771,
+      "eval_count": 63,
+      "raw_response": "{\n  \"finish\": false,\n  \"tool_call\": {\n    \"tool_name\": \"format_report\",\n    \"arguments\": {\n      \"data_id\": \"aggregate_data:8a5e07e58d5c\",\n      \"output_format\": \"markdown\"\n    }\n  }\n}",
+      "payload_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R009_rep00/model_calls/0003.request.json",
+      "response_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R009_rep00/model_calls/0003.response.txt"
+    },
+    {
+      "task_id": "V4_R009_rep01",
+      "request_id": "R009",
+      "repetition_index": 1,
+      "proposed_tool": "format_report",
+      "proposed_arguments": {
+        "data_id": "aggregate_data:8a5e07e58d5c",
+        "output_format": "markdown"
+      },
+      "finish_instruction_in_payload": true,
+      "no_repeat_instruction_in_payload": true,
+      "same_tool_seen_before": true,
+      "same_non_reference_arguments_seen_before": true,
+      "reference_kind": "earlier_result",
+      "prompt_eval_count": 1771,
+      "eval_count": 63,
+      "raw_response": "{\n  \"finish\": false,\n  \"tool_call\": {\n    \"tool_name\": \"format_report\",\n    \"arguments\": {\n      \"data_id\": \"aggregate_data:8a5e07e58d5c\",\n      \"output_format\": \"markdown\"\n    }\n  }\n}",
+      "payload_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R009_rep01/model_calls/0003.request.json",
+      "response_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R009_rep01/model_calls/0003.response.txt"
+    },
+    {
+      "task_id": "V4_R009_rep02",
+      "request_id": "R009",
+      "repetition_index": 2,
+      "proposed_tool": "format_report",
+      "proposed_arguments": {
+        "data_id": "aggregate_data:8a5e07e58d5c",
+        "output_format": "markdown"
+      },
+      "finish_instruction_in_payload": true,
+      "no_repeat_instruction_in_payload": true,
+      "same_tool_seen_before": true,
+      "same_non_reference_arguments_seen_before": true,
+      "reference_kind": "earlier_result",
+      "prompt_eval_count": 1771,
+      "eval_count": 63,
+      "raw_response": "{\n  \"finish\": false,\n  \"tool_call\": {\n    \"tool_name\": \"format_report\",\n    \"arguments\": {\n      \"data_id\": \"aggregate_data:8a5e07e58d5c\",\n      \"output_format\": \"markdown\"\n    }\n  }\n}",
+      "payload_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R009_rep02/model_calls/0003.request.json",
+      "response_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R009_rep02/model_calls/0003.response.txt"
+    },
+    {
+      "task_id": "V4_R009_rep03",
+      "request_id": "R009",
+      "repetition_index": 3,
+      "proposed_tool": "format_report",
+      "proposed_arguments": {
+        "data_id": "aggregate_data:8a5e07e58d5c",
+        "output_format": "markdown"
+      },
+      "finish_instruction_in_payload": true,
+      "no_repeat_instruction_in_payload": true,
+      "same_tool_seen_before": true,
+      "same_non_reference_arguments_seen_before": true,
+      "reference_kind": "earlier_result",
+      "prompt_eval_count": 1771,
+      "eval_count": 63,
+      "raw_response": "{\n  \"finish\": false,\n  \"tool_call\": {\n    \"tool_name\": \"format_report\",\n    \"arguments\": {\n      \"data_id\": \"aggregate_data:8a5e07e58d5c\",\n      \"output_format\": \"markdown\"\n    }\n  }\n}",
+      "payload_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R009_rep03/model_calls/0003.request.json",
+      "response_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R009_rep03/model_calls/0003.response.txt"
+    },
+    {
+      "task_id": "V4_R009_rep04",
+      "request_id": "R009",
+      "repetition_index": 4,
+      "proposed_tool": "format_report",
+      "proposed_arguments": {
+        "data_id": "aggregate_data:8a5e07e58d5c",
+        "output_format": "markdown"
+      },
+      "finish_instruction_in_payload": true,
+      "no_repeat_instruction_in_payload": true,
+      "same_tool_seen_before": true,
+      "same_non_reference_arguments_seen_before": true,
+      "reference_kind": "earlier_result",
+      "prompt_eval_count": 1771,
+      "eval_count": 63,
+      "raw_response": "{\n  \"finish\": false,\n  \"tool_call\": {\n    \"tool_name\": \"format_report\",\n    \"arguments\": {\n      \"data_id\": \"aggregate_data:8a5e07e58d5c\",\n      \"output_format\": \"markdown\"\n    }\n  }\n}",
+      "payload_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R009_rep04/model_calls/0003.request.json",
+      "response_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R009_rep04/model_calls/0003.response.txt"
+    },
+    {
+      "task_id": "V4_R011_rep00",
+      "request_id": "R011",
+      "repetition_index": 0,
+      "proposed_tool": "aggregate_data",
+      "proposed_arguments": {
+        "data_id": "$previous_result",
+        "group_by": [
+          "customer_segment"
+        ],
+        "metrics": [
+          "revenue"
+        ]
+      },
+      "finish_instruction_in_payload": true,
+      "no_repeat_instruction_in_payload": true,
+      "same_tool_seen_before": true,
+      "same_non_reference_arguments_seen_before": true,
+      "reference_kind": "placeholder",
+      "prompt_eval_count": 1763,
+      "eval_count": 67,
+      "raw_response": "{\n  \"finish\": false,\n  \"tool_call\": {\n    \"tool_name\": \"aggregate_data\",\n    \"arguments\": {\n      \"data_id\": \"$previous_result\",\n      \"group_by\": [\n        \"customer_segment\"\n      ],\n      \"metrics\": [\n        \"revenue\"\n      ]\n    }\n  }\n}",
+      "payload_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R011_rep00/model_calls/0003.request.json",
+      "response_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R011_rep00/model_calls/0003.response.txt"
+    },
+    {
+      "task_id": "V4_R011_rep01",
+      "request_id": "R011",
+      "repetition_index": 1,
+      "proposed_tool": "aggregate_data",
+      "proposed_arguments": {
+        "data_id": "$previous_result",
+        "group_by": [
+          "customer_segment"
+        ],
+        "metrics": [
+          "revenue"
+        ]
+      },
+      "finish_instruction_in_payload": true,
+      "no_repeat_instruction_in_payload": true,
+      "same_tool_seen_before": true,
+      "same_non_reference_arguments_seen_before": true,
+      "reference_kind": "placeholder",
+      "prompt_eval_count": 1763,
+      "eval_count": 67,
+      "raw_response": "{\n  \"finish\": false,\n  \"tool_call\": {\n    \"tool_name\": \"aggregate_data\",\n    \"arguments\": {\n      \"data_id\": \"$previous_result\",\n      \"group_by\": [\n        \"customer_segment\"\n      ],\n      \"metrics\": [\n        \"revenue\"\n      ]\n    }\n  }\n}",
+      "payload_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R011_rep01/model_calls/0003.request.json",
+      "response_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R011_rep01/model_calls/0003.response.txt"
+    },
+    {
+      "task_id": "V4_R011_rep02",
+      "request_id": "R011",
+      "repetition_index": 2,
+      "proposed_tool": "aggregate_data",
+      "proposed_arguments": {
+        "data_id": "$previous_result",
+        "group_by": [
+          "customer_segment"
+        ],
+        "metrics": [
+          "revenue"
+        ]
+      },
+      "finish_instruction_in_payload": true,
+      "no_repeat_instruction_in_payload": true,
+      "same_tool_seen_before": true,
+      "same_non_reference_arguments_seen_before": true,
+      "reference_kind": "placeholder",
+      "prompt_eval_count": 1763,
+      "eval_count": 67,
+      "raw_response": "{\n  \"finish\": false,\n  \"tool_call\": {\n    \"tool_name\": \"aggregate_data\",\n    \"arguments\": {\n      \"data_id\": \"$previous_result\",\n      \"group_by\": [\n        \"customer_segment\"\n      ],\n      \"metrics\": [\n        \"revenue\"\n      ]\n    }\n  }\n}",
+      "payload_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R011_rep02/model_calls/0003.request.json",
+      "response_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R011_rep02/model_calls/0003.response.txt"
+    },
+    {
+      "task_id": "V4_R011_rep03",
+      "request_id": "R011",
+      "repetition_index": 3,
+      "proposed_tool": "aggregate_data",
+      "proposed_arguments": {
+        "data_id": "$previous_result",
+        "group_by": [
+          "customer_segment"
+        ],
+        "metrics": [
+          "revenue"
+        ]
+      },
+      "finish_instruction_in_payload": true,
+      "no_repeat_instruction_in_payload": true,
+      "same_tool_seen_before": true,
+      "same_non_reference_arguments_seen_before": true,
+      "reference_kind": "placeholder",
+      "prompt_eval_count": 1763,
+      "eval_count": 67,
+      "raw_response": "{\n  \"finish\": false,\n  \"tool_call\": {\n    \"tool_name\": \"aggregate_data\",\n    \"arguments\": {\n      \"data_id\": \"$previous_result\",\n      \"group_by\": [\n        \"customer_segment\"\n      ],\n      \"metrics\": [\n        \"revenue\"\n      ]\n    }\n  }\n}",
+      "payload_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R011_rep03/model_calls/0003.request.json",
+      "response_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R011_rep03/model_calls/0003.response.txt"
+    },
+    {
+      "task_id": "V4_R011_rep04",
+      "request_id": "R011",
+      "repetition_index": 4,
+      "proposed_tool": "aggregate_data",
+      "proposed_arguments": {
+        "data_id": "$previous_result",
+        "group_by": [
+          "customer_segment"
+        ],
+        "metrics": [
+          "revenue"
+        ]
+      },
+      "finish_instruction_in_payload": true,
+      "no_repeat_instruction_in_payload": true,
+      "same_tool_seen_before": true,
+      "same_non_reference_arguments_seen_before": true,
+      "reference_kind": "placeholder",
+      "prompt_eval_count": 1763,
+      "eval_count": 67,
+      "raw_response": "{\n  \"finish\": false,\n  \"tool_call\": {\n    \"tool_name\": \"aggregate_data\",\n    \"arguments\": {\n      \"data_id\": \"$previous_result\",\n      \"group_by\": [\n        \"customer_segment\"\n      ],\n      \"metrics\": [\n        \"revenue\"\n      ]\n    }\n  }\n}",
+      "payload_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R011_rep04/model_calls/0003.request.json",
+      "response_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R011_rep04/model_calls/0003.response.txt"
+    },
+    {
+      "task_id": "V4_R012_rep00",
+      "request_id": "R012",
+      "repetition_index": 0,
+      "proposed_tool": "aggregate_data",
+      "proposed_arguments": {
+        "data_id": "$previous_result",
+        "group_by": [
+          "sales_channel"
+        ],
+        "metrics": [
+          "revenue",
+          "units_sold",
+          "average_order_value"
+        ]
+      },
+      "finish_instruction_in_payload": true,
+      "no_repeat_instruction_in_payload": true,
+      "same_tool_seen_before": true,
+      "same_non_reference_arguments_seen_before": true,
+      "reference_kind": "placeholder",
+      "prompt_eval_count": 1781,
+      "eval_count": 78,
+      "raw_response": "{\n  \"finish\": false,\n  \"tool_call\": {\n    \"tool_name\": \"aggregate_data\",\n    \"arguments\": {\n      \"data_id\": \"$previous_result\",\n      \"group_by\": [\n        \"sales_channel\"\n      ],\n      \"metrics\": [\n        \"revenue\",\n        \"units_sold\",\n        \"average_order_value\"\n      ]\n    }\n  }\n}",
+      "payload_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R012_rep00/model_calls/0003.request.json",
+      "response_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R012_rep00/model_calls/0003.response.txt"
+    },
+    {
+      "task_id": "V4_R012_rep01",
+      "request_id": "R012",
+      "repetition_index": 1,
+      "proposed_tool": "aggregate_data",
+      "proposed_arguments": {
+        "data_id": "$previous_result",
+        "group_by": [
+          "sales_channel"
+        ],
+        "metrics": [
+          "revenue",
+          "units_sold",
+          "average_order_value"
+        ]
+      },
+      "finish_instruction_in_payload": true,
+      "no_repeat_instruction_in_payload": true,
+      "same_tool_seen_before": true,
+      "same_non_reference_arguments_seen_before": true,
+      "reference_kind": "placeholder",
+      "prompt_eval_count": 1781,
+      "eval_count": 78,
+      "raw_response": "{\n  \"finish\": false,\n  \"tool_call\": {\n    \"tool_name\": \"aggregate_data\",\n    \"arguments\": {\n      \"data_id\": \"$previous_result\",\n      \"group_by\": [\n        \"sales_channel\"\n      ],\n      \"metrics\": [\n        \"revenue\",\n        \"units_sold\",\n        \"average_order_value\"\n      ]\n    }\n  }\n}",
+      "payload_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R012_rep01/model_calls/0003.request.json",
+      "response_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R012_rep01/model_calls/0003.response.txt"
+    },
+    {
+      "task_id": "V4_R012_rep02",
+      "request_id": "R012",
+      "repetition_index": 2,
+      "proposed_tool": "aggregate_data",
+      "proposed_arguments": {
+        "data_id": "$previous_result",
+        "group_by": [
+          "sales_channel"
+        ],
+        "metrics": [
+          "revenue",
+          "units_sold",
+          "average_order_value"
+        ]
+      },
+      "finish_instruction_in_payload": true,
+      "no_repeat_instruction_in_payload": true,
+      "same_tool_seen_before": true,
+      "same_non_reference_arguments_seen_before": true,
+      "reference_kind": "placeholder",
+      "prompt_eval_count": 1781,
+      "eval_count": 78,
+      "raw_response": "{\n  \"finish\": false,\n  \"tool_call\": {\n    \"tool_name\": \"aggregate_data\",\n    \"arguments\": {\n      \"data_id\": \"$previous_result\",\n      \"group_by\": [\n        \"sales_channel\"\n      ],\n      \"metrics\": [\n        \"revenue\",\n        \"units_sold\",\n        \"average_order_value\"\n      ]\n    }\n  }\n}",
+      "payload_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R012_rep02/model_calls/0003.request.json",
+      "response_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R012_rep02/model_calls/0003.response.txt"
+    },
+    {
+      "task_id": "V4_R012_rep03",
+      "request_id": "R012",
+      "repetition_index": 3,
+      "proposed_tool": "aggregate_data",
+      "proposed_arguments": {
+        "data_id": "$previous_result",
+        "group_by": [
+          "sales_channel"
+        ],
+        "metrics": [
+          "revenue",
+          "units_sold",
+          "average_order_value"
+        ]
+      },
+      "finish_instruction_in_payload": true,
+      "no_repeat_instruction_in_payload": true,
+      "same_tool_seen_before": true,
+      "same_non_reference_arguments_seen_before": true,
+      "reference_kind": "placeholder",
+      "prompt_eval_count": 1781,
+      "eval_count": 78,
+      "raw_response": "{\n  \"finish\": false,\n  \"tool_call\": {\n    \"tool_name\": \"aggregate_data\",\n    \"arguments\": {\n      \"data_id\": \"$previous_result\",\n      \"group_by\": [\n        \"sales_channel\"\n      ],\n      \"metrics\": [\n        \"revenue\",\n        \"units_sold\",\n        \"average_order_value\"\n      ]\n    }\n  }\n}",
+      "payload_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R012_rep03/model_calls/0003.request.json",
+      "response_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R012_rep03/model_calls/0003.response.txt"
+    },
+    {
+      "task_id": "V4_R012_rep04",
+      "request_id": "R012",
+      "repetition_index": 4,
+      "proposed_tool": "aggregate_data",
+      "proposed_arguments": {
+        "data_id": "$previous_result",
+        "group_by": [
+          "sales_channel"
+        ],
+        "metrics": [
+          "revenue",
+          "units_sold",
+          "average_order_value"
+        ]
+      },
+      "finish_instruction_in_payload": true,
+      "no_repeat_instruction_in_payload": true,
+      "same_tool_seen_before": true,
+      "same_non_reference_arguments_seen_before": true,
+      "reference_kind": "placeholder",
+      "prompt_eval_count": 1781,
+      "eval_count": 78,
+      "raw_response": "{\n  \"finish\": false,\n  \"tool_call\": {\n    \"tool_name\": \"aggregate_data\",\n    \"arguments\": {\n      \"data_id\": \"$previous_result\",\n      \"group_by\": [\n        \"sales_channel\"\n      ],\n      \"metrics\": [\n        \"revenue\",\n        \"units_sold\",\n        \"average_order_value\"\n      ]\n    }\n  }\n}",
+      "payload_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R012_rep04/model_calls/0003.request.json",
+      "response_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R012_rep04/model_calls/0003.response.txt"
+    },
+    {
+      "task_id": "V4_R013_rep00",
+      "request_id": "R013",
+      "repetition_index": 0,
+      "proposed_tool": "format_report",
+      "proposed_arguments": {
+        "data_id": "aggregate_data:f728620d4c25",
+        "output_format": "json"
+      },
+      "finish_instruction_in_payload": true,
+      "no_repeat_instruction_in_payload": true,
+      "same_tool_seen_before": true,
+      "same_non_reference_arguments_seen_before": true,
+      "reference_kind": "earlier_result",
+      "prompt_eval_count": 1762,
+      "eval_count": 62,
+      "raw_response": "{\n  \"finish\": false,\n  \"tool_call\": {\n    \"tool_name\": \"format_report\",\n    \"arguments\": {\n      \"data_id\": \"aggregate_data:f728620d4c25\",\n      \"output_format\": \"json\"\n    }\n  }\n}",
+      "payload_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R013_rep00/model_calls/0003.request.json",
+      "response_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R013_rep00/model_calls/0003.response.txt"
+    },
+    {
+      "task_id": "V4_R013_rep01",
+      "request_id": "R013",
+      "repetition_index": 1,
+      "proposed_tool": "format_report",
+      "proposed_arguments": {
+        "data_id": "aggregate_data:f728620d4c25",
+        "output_format": "json"
+      },
+      "finish_instruction_in_payload": true,
+      "no_repeat_instruction_in_payload": true,
+      "same_tool_seen_before": true,
+      "same_non_reference_arguments_seen_before": true,
+      "reference_kind": "earlier_result",
+      "prompt_eval_count": 1762,
+      "eval_count": 62,
+      "raw_response": "{\n  \"finish\": false,\n  \"tool_call\": {\n    \"tool_name\": \"format_report\",\n    \"arguments\": {\n      \"data_id\": \"aggregate_data:f728620d4c25\",\n      \"output_format\": \"json\"\n    }\n  }\n}",
+      "payload_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R013_rep01/model_calls/0003.request.json",
+      "response_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R013_rep01/model_calls/0003.response.txt"
+    },
+    {
+      "task_id": "V4_R013_rep02",
+      "request_id": "R013",
+      "repetition_index": 2,
+      "proposed_tool": "format_report",
+      "proposed_arguments": {
+        "data_id": "aggregate_data:f728620d4c25",
+        "output_format": "json"
+      },
+      "finish_instruction_in_payload": true,
+      "no_repeat_instruction_in_payload": true,
+      "same_tool_seen_before": true,
+      "same_non_reference_arguments_seen_before": true,
+      "reference_kind": "earlier_result",
+      "prompt_eval_count": 1762,
+      "eval_count": 62,
+      "raw_response": "{\n  \"finish\": false,\n  \"tool_call\": {\n    \"tool_name\": \"format_report\",\n    \"arguments\": {\n      \"data_id\": \"aggregate_data:f728620d4c25\",\n      \"output_format\": \"json\"\n    }\n  }\n}",
+      "payload_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R013_rep02/model_calls/0003.request.json",
+      "response_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R013_rep02/model_calls/0003.response.txt"
+    },
+    {
+      "task_id": "V4_R013_rep03",
+      "request_id": "R013",
+      "repetition_index": 3,
+      "proposed_tool": "format_report",
+      "proposed_arguments": {
+        "data_id": "aggregate_data:f728620d4c25",
+        "output_format": "json"
+      },
+      "finish_instruction_in_payload": true,
+      "no_repeat_instruction_in_payload": true,
+      "same_tool_seen_before": true,
+      "same_non_reference_arguments_seen_before": true,
+      "reference_kind": "earlier_result",
+      "prompt_eval_count": 1762,
+      "eval_count": 62,
+      "raw_response": "{\n  \"finish\": false,\n  \"tool_call\": {\n    \"tool_name\": \"format_report\",\n    \"arguments\": {\n      \"data_id\": \"aggregate_data:f728620d4c25\",\n      \"output_format\": \"json\"\n    }\n  }\n}",
+      "payload_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R013_rep03/model_calls/0003.request.json",
+      "response_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R013_rep03/model_calls/0003.response.txt"
+    },
+    {
+      "task_id": "V4_R013_rep04",
+      "request_id": "R013",
+      "repetition_index": 4,
+      "proposed_tool": "format_report",
+      "proposed_arguments": {
+        "data_id": "aggregate_data:f728620d4c25",
+        "output_format": "json"
+      },
+      "finish_instruction_in_payload": true,
+      "no_repeat_instruction_in_payload": true,
+      "same_tool_seen_before": true,
+      "same_non_reference_arguments_seen_before": true,
+      "reference_kind": "earlier_result",
+      "prompt_eval_count": 1762,
+      "eval_count": 62,
+      "raw_response": "{\n  \"finish\": false,\n  \"tool_call\": {\n    \"tool_name\": \"format_report\",\n    \"arguments\": {\n      \"data_id\": \"aggregate_data:f728620d4c25\",\n      \"output_format\": \"json\"\n    }\n  }\n}",
+      "payload_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R013_rep04/model_calls/0003.request.json",
+      "response_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R013_rep04/model_calls/0003.response.txt"
+    },
+    {
+      "task_id": "V4_R014_rep00",
+      "request_id": "R014",
+      "repetition_index": 0,
+      "proposed_tool": "format_report",
+      "proposed_arguments": {
+        "data_id": "aggregate_data:ad25bbb174a0",
+        "output_format": "html"
+      },
+      "finish_instruction_in_payload": true,
+      "no_repeat_instruction_in_payload": true,
+      "same_tool_seen_before": true,
+      "same_non_reference_arguments_seen_before": true,
+      "reference_kind": "earlier_result",
+      "prompt_eval_count": 1763,
+      "eval_count": 60,
+      "raw_response": "{\n  \"finish\": false,\n  \"tool_call\": {\n    \"tool_name\": \"format_report\",\n    \"arguments\": {\n      \"data_id\": \"aggregate_data:ad25bbb174a0\",\n      \"output_format\": \"html\"\n    }\n  }\n}",
+      "payload_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R014_rep00/model_calls/0003.request.json",
+      "response_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R014_rep00/model_calls/0003.response.txt"
+    },
+    {
+      "task_id": "V4_R014_rep01",
+      "request_id": "R014",
+      "repetition_index": 1,
+      "proposed_tool": "format_report",
+      "proposed_arguments": {
+        "data_id": "aggregate_data:ad25bbb174a0",
+        "output_format": "html"
+      },
+      "finish_instruction_in_payload": true,
+      "no_repeat_instruction_in_payload": true,
+      "same_tool_seen_before": true,
+      "same_non_reference_arguments_seen_before": true,
+      "reference_kind": "earlier_result",
+      "prompt_eval_count": 1763,
+      "eval_count": 60,
+      "raw_response": "{\n  \"finish\": false,\n  \"tool_call\": {\n    \"tool_name\": \"format_report\",\n    \"arguments\": {\n      \"data_id\": \"aggregate_data:ad25bbb174a0\",\n      \"output_format\": \"html\"\n    }\n  }\n}",
+      "payload_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R014_rep01/model_calls/0003.request.json",
+      "response_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R014_rep01/model_calls/0003.response.txt"
+    },
+    {
+      "task_id": "V4_R014_rep02",
+      "request_id": "R014",
+      "repetition_index": 2,
+      "proposed_tool": "format_report",
+      "proposed_arguments": {
+        "data_id": "aggregate_data:ad25bbb174a0",
+        "output_format": "html"
+      },
+      "finish_instruction_in_payload": true,
+      "no_repeat_instruction_in_payload": true,
+      "same_tool_seen_before": true,
+      "same_non_reference_arguments_seen_before": true,
+      "reference_kind": "earlier_result",
+      "prompt_eval_count": 1763,
+      "eval_count": 60,
+      "raw_response": "{\n  \"finish\": false,\n  \"tool_call\": {\n    \"tool_name\": \"format_report\",\n    \"arguments\": {\n      \"data_id\": \"aggregate_data:ad25bbb174a0\",\n      \"output_format\": \"html\"\n    }\n  }\n}",
+      "payload_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R014_rep02/model_calls/0003.request.json",
+      "response_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R014_rep02/model_calls/0003.response.txt"
+    },
+    {
+      "task_id": "V4_R014_rep03",
+      "request_id": "R014",
+      "repetition_index": 3,
+      "proposed_tool": "format_report",
+      "proposed_arguments": {
+        "data_id": "aggregate_data:ad25bbb174a0",
+        "output_format": "html"
+      },
+      "finish_instruction_in_payload": true,
+      "no_repeat_instruction_in_payload": true,
+      "same_tool_seen_before": true,
+      "same_non_reference_arguments_seen_before": true,
+      "reference_kind": "earlier_result",
+      "prompt_eval_count": 1763,
+      "eval_count": 60,
+      "raw_response": "{\n  \"finish\": false,\n  \"tool_call\": {\n    \"tool_name\": \"format_report\",\n    \"arguments\": {\n      \"data_id\": \"aggregate_data:ad25bbb174a0\",\n      \"output_format\": \"html\"\n    }\n  }\n}",
+      "payload_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R014_rep03/model_calls/0003.request.json",
+      "response_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R014_rep03/model_calls/0003.response.txt"
+    },
+    {
+      "task_id": "V4_R014_rep04",
+      "request_id": "R014",
+      "repetition_index": 4,
+      "proposed_tool": "format_report",
+      "proposed_arguments": {
+        "data_id": "aggregate_data:ad25bbb174a0",
+        "output_format": "html"
+      },
+      "finish_instruction_in_payload": true,
+      "no_repeat_instruction_in_payload": true,
+      "same_tool_seen_before": true,
+      "same_non_reference_arguments_seen_before": true,
+      "reference_kind": "earlier_result",
+      "prompt_eval_count": 1763,
+      "eval_count": 60,
+      "raw_response": "{\n  \"finish\": false,\n  \"tool_call\": {\n    \"tool_name\": \"format_report\",\n    \"arguments\": {\n      \"data_id\": \"aggregate_data:ad25bbb174a0\",\n      \"output_format\": \"html\"\n    }\n  }\n}",
+      "payload_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R014_rep04/model_calls/0003.request.json",
+      "response_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R014_rep04/model_calls/0003.response.txt"
+    },
+    {
+      "task_id": "V4_R019_rep00",
+      "request_id": "R019",
+      "repetition_index": 0,
+      "proposed_tool": "aggregate_data",
+      "proposed_arguments": {
+        "data_id": "$previous_result",
+        "group_by": [
+          "region",
+          "sales_channel",
+          "customer_segment"
+        ],
+        "metrics": [
+          "revenue"
+        ]
+      },
+      "finish_instruction_in_payload": true,
+      "no_repeat_instruction_in_payload": true,
+      "same_tool_seen_before": true,
+      "same_non_reference_arguments_seen_before": true,
+      "reference_kind": "placeholder",
+      "prompt_eval_count": 1788,
+      "eval_count": 76,
+      "raw_response": "{\n  \"finish\": false,\n  \"tool_call\": {\n    \"tool_name\": \"aggregate_data\",\n    \"arguments\": {\n      \"data_id\": \"$previous_result\",\n      \"group_by\": [\n        \"region\",\n        \"sales_channel\",\n        \"customer_segment\"\n      ],\n      \"metrics\": [\n        \"revenue\"\n      ]\n    }\n  }\n}",
+      "payload_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R019_rep00/model_calls/0003.request.json",
+      "response_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R019_rep00/model_calls/0003.response.txt"
+    },
+    {
+      "task_id": "V4_R019_rep01",
+      "request_id": "R019",
+      "repetition_index": 1,
+      "proposed_tool": "aggregate_data",
+      "proposed_arguments": {
+        "data_id": "$previous_result",
+        "group_by": [
+          "region",
+          "sales_channel",
+          "customer_segment"
+        ],
+        "metrics": [
+          "revenue"
+        ]
+      },
+      "finish_instruction_in_payload": true,
+      "no_repeat_instruction_in_payload": true,
+      "same_tool_seen_before": true,
+      "same_non_reference_arguments_seen_before": true,
+      "reference_kind": "placeholder",
+      "prompt_eval_count": 1788,
+      "eval_count": 76,
+      "raw_response": "{\n  \"finish\": false,\n  \"tool_call\": {\n    \"tool_name\": \"aggregate_data\",\n    \"arguments\": {\n      \"data_id\": \"$previous_result\",\n      \"group_by\": [\n        \"region\",\n        \"sales_channel\",\n        \"customer_segment\"\n      ],\n      \"metrics\": [\n        \"revenue\"\n      ]\n    }\n  }\n}",
+      "payload_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R019_rep01/model_calls/0003.request.json",
+      "response_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R019_rep01/model_calls/0003.response.txt"
+    },
+    {
+      "task_id": "V4_R019_rep02",
+      "request_id": "R019",
+      "repetition_index": 2,
+      "proposed_tool": "aggregate_data",
+      "proposed_arguments": {
+        "data_id": "$previous_result",
+        "group_by": [
+          "region",
+          "sales_channel",
+          "customer_segment"
+        ],
+        "metrics": [
+          "revenue"
+        ]
+      },
+      "finish_instruction_in_payload": true,
+      "no_repeat_instruction_in_payload": true,
+      "same_tool_seen_before": true,
+      "same_non_reference_arguments_seen_before": true,
+      "reference_kind": "placeholder",
+      "prompt_eval_count": 1788,
+      "eval_count": 76,
+      "raw_response": "{\n  \"finish\": false,\n  \"tool_call\": {\n    \"tool_name\": \"aggregate_data\",\n    \"arguments\": {\n      \"data_id\": \"$previous_result\",\n      \"group_by\": [\n        \"region\",\n        \"sales_channel\",\n        \"customer_segment\"\n      ],\n      \"metrics\": [\n        \"revenue\"\n      ]\n    }\n  }\n}",
+      "payload_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R019_rep02/model_calls/0003.request.json",
+      "response_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R019_rep02/model_calls/0003.response.txt"
+    },
+    {
+      "task_id": "V4_R019_rep03",
+      "request_id": "R019",
+      "repetition_index": 3,
+      "proposed_tool": "aggregate_data",
+      "proposed_arguments": {
+        "data_id": "$previous_result",
+        "group_by": [
+          "region",
+          "sales_channel",
+          "customer_segment"
+        ],
+        "metrics": [
+          "revenue"
+        ]
+      },
+      "finish_instruction_in_payload": true,
+      "no_repeat_instruction_in_payload": true,
+      "same_tool_seen_before": true,
+      "same_non_reference_arguments_seen_before": true,
+      "reference_kind": "placeholder",
+      "prompt_eval_count": 1788,
+      "eval_count": 76,
+      "raw_response": "{\n  \"finish\": false,\n  \"tool_call\": {\n    \"tool_name\": \"aggregate_data\",\n    \"arguments\": {\n      \"data_id\": \"$previous_result\",\n      \"group_by\": [\n        \"region\",\n        \"sales_channel\",\n        \"customer_segment\"\n      ],\n      \"metrics\": [\n        \"revenue\"\n      ]\n    }\n  }\n}",
+      "payload_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R019_rep03/model_calls/0003.request.json",
+      "response_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R019_rep03/model_calls/0003.response.txt"
+    },
+    {
+      "task_id": "V4_R019_rep04",
+      "request_id": "R019",
+      "repetition_index": 4,
+      "proposed_tool": "aggregate_data",
+      "proposed_arguments": {
+        "data_id": "$previous_result",
+        "group_by": [
+          "region",
+          "sales_channel",
+          "customer_segment"
+        ],
+        "metrics": [
+          "revenue"
+        ]
+      },
+      "finish_instruction_in_payload": true,
+      "no_repeat_instruction_in_payload": true,
+      "same_tool_seen_before": true,
+      "same_non_reference_arguments_seen_before": true,
+      "reference_kind": "placeholder",
+      "prompt_eval_count": 1788,
+      "eval_count": 76,
+      "raw_response": "{\n  \"finish\": false,\n  \"tool_call\": {\n    \"tool_name\": \"aggregate_data\",\n    \"arguments\": {\n      \"data_id\": \"$previous_result\",\n      \"group_by\": [\n        \"region\",\n        \"sales_channel\",\n        \"customer_segment\"\n      ],\n      \"metrics\": [\n        \"revenue\"\n      ]\n    }\n  }\n}",
+      "payload_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R019_rep04/model_calls/0003.request.json",
+      "response_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R019_rep04/model_calls/0003.response.txt"
+    },
+    {
+      "task_id": "V4_R020_rep00",
+      "request_id": "R020",
+      "repetition_index": 0,
+      "proposed_tool": "format_report",
+      "proposed_arguments": {
+        "data_id": "aggregate_data:06b325e958c4",
+        "output_format": "markdown"
+      },
+      "finish_instruction_in_payload": true,
+      "no_repeat_instruction_in_payload": true,
+      "same_tool_seen_before": true,
+      "same_non_reference_arguments_seen_before": true,
+      "reference_kind": "earlier_result",
+      "prompt_eval_count": 1778,
+      "eval_count": 63,
+      "raw_response": "{\n  \"finish\": false,\n  \"tool_call\": {\n    \"tool_name\": \"format_report\",\n    \"arguments\": {\n      \"data_id\": \"aggregate_data:06b325e958c4\",\n      \"output_format\": \"markdown\"\n    }\n  }\n}",
+      "payload_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R020_rep00/model_calls/0003.request.json",
+      "response_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R020_rep00/model_calls/0003.response.txt"
+    },
+    {
+      "task_id": "V4_R020_rep01",
+      "request_id": "R020",
+      "repetition_index": 1,
+      "proposed_tool": "format_report",
+      "proposed_arguments": {
+        "data_id": "aggregate_data:06b325e958c4",
+        "output_format": "markdown"
+      },
+      "finish_instruction_in_payload": true,
+      "no_repeat_instruction_in_payload": true,
+      "same_tool_seen_before": true,
+      "same_non_reference_arguments_seen_before": true,
+      "reference_kind": "earlier_result",
+      "prompt_eval_count": 1778,
+      "eval_count": 63,
+      "raw_response": "{\n  \"finish\": false,\n  \"tool_call\": {\n    \"tool_name\": \"format_report\",\n    \"arguments\": {\n      \"data_id\": \"aggregate_data:06b325e958c4\",\n      \"output_format\": \"markdown\"\n    }\n  }\n}",
+      "payload_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R020_rep01/model_calls/0003.request.json",
+      "response_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R020_rep01/model_calls/0003.response.txt"
+    },
+    {
+      "task_id": "V4_R020_rep02",
+      "request_id": "R020",
+      "repetition_index": 2,
+      "proposed_tool": "format_report",
+      "proposed_arguments": {
+        "data_id": "aggregate_data:06b325e958c4",
+        "output_format": "markdown"
+      },
+      "finish_instruction_in_payload": true,
+      "no_repeat_instruction_in_payload": true,
+      "same_tool_seen_before": true,
+      "same_non_reference_arguments_seen_before": true,
+      "reference_kind": "earlier_result",
+      "prompt_eval_count": 1778,
+      "eval_count": 63,
+      "raw_response": "{\n  \"finish\": false,\n  \"tool_call\": {\n    \"tool_name\": \"format_report\",\n    \"arguments\": {\n      \"data_id\": \"aggregate_data:06b325e958c4\",\n      \"output_format\": \"markdown\"\n    }\n  }\n}",
+      "payload_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R020_rep02/model_calls/0003.request.json",
+      "response_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R020_rep02/model_calls/0003.response.txt"
+    },
+    {
+      "task_id": "V4_R020_rep03",
+      "request_id": "R020",
+      "repetition_index": 3,
+      "proposed_tool": "format_report",
+      "proposed_arguments": {
+        "data_id": "aggregate_data:06b325e958c4",
+        "output_format": "markdown"
+      },
+      "finish_instruction_in_payload": true,
+      "no_repeat_instruction_in_payload": true,
+      "same_tool_seen_before": true,
+      "same_non_reference_arguments_seen_before": true,
+      "reference_kind": "earlier_result",
+      "prompt_eval_count": 1778,
+      "eval_count": 63,
+      "raw_response": "{\n  \"finish\": false,\n  \"tool_call\": {\n    \"tool_name\": \"format_report\",\n    \"arguments\": {\n      \"data_id\": \"aggregate_data:06b325e958c4\",\n      \"output_format\": \"markdown\"\n    }\n  }\n}",
+      "payload_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R020_rep03/model_calls/0003.request.json",
+      "response_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R020_rep03/model_calls/0003.response.txt"
+    },
+    {
+      "task_id": "V4_R020_rep04",
+      "request_id": "R020",
+      "repetition_index": 4,
+      "proposed_tool": "format_report",
+      "proposed_arguments": {
+        "data_id": "aggregate_data:06b325e958c4",
+        "output_format": "markdown"
+      },
+      "finish_instruction_in_payload": true,
+      "no_repeat_instruction_in_payload": true,
+      "same_tool_seen_before": true,
+      "same_non_reference_arguments_seen_before": true,
+      "reference_kind": "earlier_result",
+      "prompt_eval_count": 1778,
+      "eval_count": 63,
+      "raw_response": "{\n  \"finish\": false,\n  \"tool_call\": {\n    \"tool_name\": \"format_report\",\n    \"arguments\": {\n      \"data_id\": \"aggregate_data:06b325e958c4\",\n      \"output_format\": \"markdown\"\n    }\n  }\n}",
+      "payload_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R020_rep04/model_calls/0003.request.json",
+      "response_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R020_rep04/model_calls/0003.response.txt"
+    },
+    {
+      "task_id": "V4_R024_rep00",
+      "request_id": "R024",
+      "repetition_index": 0,
+      "proposed_tool": "format_report",
+      "proposed_arguments": {
+        "data_id": "aggregate_data:c4cb20ccba50",
+        "output_format": "markdown"
+      },
+      "finish_instruction_in_payload": true,
+      "no_repeat_instruction_in_payload": true,
+      "same_tool_seen_before": true,
+      "same_non_reference_arguments_seen_before": true,
+      "reference_kind": "earlier_result",
+      "prompt_eval_count": 1763,
+      "eval_count": 59,
+      "raw_response": "{\n  \"finish\": false,\n  \"tool_call\": {\n    \"tool_name\": \"format_report\",\n    \"arguments\": {\n      \"data_id\": \"aggregate_data:c4cb20ccba50\",\n      \"output_format\": \"markdown\"\n    }\n  }\n}",
+      "payload_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R024_rep00/model_calls/0003.request.json",
+      "response_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R024_rep00/model_calls/0003.response.txt"
+    },
+    {
+      "task_id": "V4_R024_rep01",
+      "request_id": "R024",
+      "repetition_index": 1,
+      "proposed_tool": "format_report",
+      "proposed_arguments": {
+        "data_id": "aggregate_data:c4cb20ccba50",
+        "output_format": "markdown"
+      },
+      "finish_instruction_in_payload": true,
+      "no_repeat_instruction_in_payload": true,
+      "same_tool_seen_before": true,
+      "same_non_reference_arguments_seen_before": true,
+      "reference_kind": "earlier_result",
+      "prompt_eval_count": 1763,
+      "eval_count": 59,
+      "raw_response": "{\n  \"finish\": false,\n  \"tool_call\": {\n    \"tool_name\": \"format_report\",\n    \"arguments\": {\n      \"data_id\": \"aggregate_data:c4cb20ccba50\",\n      \"output_format\": \"markdown\"\n    }\n  }\n}",
+      "payload_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R024_rep01/model_calls/0003.request.json",
+      "response_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R024_rep01/model_calls/0003.response.txt"
+    },
+    {
+      "task_id": "V4_R024_rep02",
+      "request_id": "R024",
+      "repetition_index": 2,
+      "proposed_tool": "format_report",
+      "proposed_arguments": {
+        "data_id": "aggregate_data:c4cb20ccba50",
+        "output_format": "markdown"
+      },
+      "finish_instruction_in_payload": true,
+      "no_repeat_instruction_in_payload": true,
+      "same_tool_seen_before": true,
+      "same_non_reference_arguments_seen_before": true,
+      "reference_kind": "earlier_result",
+      "prompt_eval_count": 1763,
+      "eval_count": 59,
+      "raw_response": "{\n  \"finish\": false,\n  \"tool_call\": {\n    \"tool_name\": \"format_report\",\n    \"arguments\": {\n      \"data_id\": \"aggregate_data:c4cb20ccba50\",\n      \"output_format\": \"markdown\"\n    }\n  }\n}",
+      "payload_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R024_rep02/model_calls/0003.request.json",
+      "response_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R024_rep02/model_calls/0003.response.txt"
+    },
+    {
+      "task_id": "V4_R024_rep03",
+      "request_id": "R024",
+      "repetition_index": 3,
+      "proposed_tool": "format_report",
+      "proposed_arguments": {
+        "data_id": "aggregate_data:c4cb20ccba50",
+        "output_format": "markdown"
+      },
+      "finish_instruction_in_payload": true,
+      "no_repeat_instruction_in_payload": true,
+      "same_tool_seen_before": true,
+      "same_non_reference_arguments_seen_before": true,
+      "reference_kind": "earlier_result",
+      "prompt_eval_count": 1763,
+      "eval_count": 59,
+      "raw_response": "{\n  \"finish\": false,\n  \"tool_call\": {\n    \"tool_name\": \"format_report\",\n    \"arguments\": {\n      \"data_id\": \"aggregate_data:c4cb20ccba50\",\n      \"output_format\": \"markdown\"\n    }\n  }\n}",
+      "payload_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R024_rep03/model_calls/0003.request.json",
+      "response_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R024_rep03/model_calls/0003.response.txt"
+    },
+    {
+      "task_id": "V4_R024_rep04",
+      "request_id": "R024",
+      "repetition_index": 4,
+      "proposed_tool": "format_report",
+      "proposed_arguments": {
+        "data_id": "aggregate_data:c4cb20ccba50",
+        "output_format": "markdown"
+      },
+      "finish_instruction_in_payload": true,
+      "no_repeat_instruction_in_payload": true,
+      "same_tool_seen_before": true,
+      "same_non_reference_arguments_seen_before": true,
+      "reference_kind": "earlier_result",
+      "prompt_eval_count": 1763,
+      "eval_count": 59,
+      "raw_response": "{\n  \"finish\": false,\n  \"tool_call\": {\n    \"tool_name\": \"format_report\",\n    \"arguments\": {\n      \"data_id\": \"aggregate_data:c4cb20ccba50\",\n      \"output_format\": \"markdown\"\n    }\n  }\n}",
+      "payload_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R024_rep04/model_calls/0003.request.json",
+      "response_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R024_rep04/model_calls/0003.response.txt"
+    },
+    {
+      "task_id": "V4_R025_rep00",
+      "request_id": "R025",
+      "repetition_index": 0,
+      "proposed_tool": "format_report",
+      "proposed_arguments": {
+        "data_id": "aggregate_data:4a8824255686",
+        "output_format": "markdown"
+      },
+      "finish_instruction_in_payload": true,
+      "no_repeat_instruction_in_payload": true,
+      "same_tool_seen_before": true,
+      "same_non_reference_arguments_seen_before": true,
+      "reference_kind": "earlier_result",
+      "prompt_eval_count": 1772,
+      "eval_count": 63,
+      "raw_response": "{\n  \"finish\": false,\n  \"tool_call\": {\n    \"tool_name\": \"format_report\",\n    \"arguments\": {\n      \"data_id\": \"aggregate_data:4a8824255686\",\n      \"output_format\": \"markdown\"\n    }\n  }\n}",
+      "payload_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R025_rep00/model_calls/0003.request.json",
+      "response_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R025_rep00/model_calls/0003.response.txt"
+    },
+    {
+      "task_id": "V4_R025_rep01",
+      "request_id": "R025",
+      "repetition_index": 1,
+      "proposed_tool": "format_report",
+      "proposed_arguments": {
+        "data_id": "aggregate_data:4a8824255686",
+        "output_format": "markdown"
+      },
+      "finish_instruction_in_payload": true,
+      "no_repeat_instruction_in_payload": true,
+      "same_tool_seen_before": true,
+      "same_non_reference_arguments_seen_before": true,
+      "reference_kind": "earlier_result",
+      "prompt_eval_count": 1772,
+      "eval_count": 63,
+      "raw_response": "{\n  \"finish\": false,\n  \"tool_call\": {\n    \"tool_name\": \"format_report\",\n    \"arguments\": {\n      \"data_id\": \"aggregate_data:4a8824255686\",\n      \"output_format\": \"markdown\"\n    }\n  }\n}",
+      "payload_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R025_rep01/model_calls/0003.request.json",
+      "response_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R025_rep01/model_calls/0003.response.txt"
+    },
+    {
+      "task_id": "V4_R025_rep02",
+      "request_id": "R025",
+      "repetition_index": 2,
+      "proposed_tool": "format_report",
+      "proposed_arguments": {
+        "data_id": "aggregate_data:4a8824255686",
+        "output_format": "markdown"
+      },
+      "finish_instruction_in_payload": true,
+      "no_repeat_instruction_in_payload": true,
+      "same_tool_seen_before": true,
+      "same_non_reference_arguments_seen_before": true,
+      "reference_kind": "earlier_result",
+      "prompt_eval_count": 1772,
+      "eval_count": 63,
+      "raw_response": "{\n  \"finish\": false,\n  \"tool_call\": {\n    \"tool_name\": \"format_report\",\n    \"arguments\": {\n      \"data_id\": \"aggregate_data:4a8824255686\",\n      \"output_format\": \"markdown\"\n    }\n  }\n}",
+      "payload_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R025_rep02/model_calls/0003.request.json",
+      "response_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R025_rep02/model_calls/0003.response.txt"
+    },
+    {
+      "task_id": "V4_R025_rep03",
+      "request_id": "R025",
+      "repetition_index": 3,
+      "proposed_tool": "format_report",
+      "proposed_arguments": {
+        "data_id": "aggregate_data:4a8824255686",
+        "output_format": "markdown"
+      },
+      "finish_instruction_in_payload": true,
+      "no_repeat_instruction_in_payload": true,
+      "same_tool_seen_before": true,
+      "same_non_reference_arguments_seen_before": true,
+      "reference_kind": "earlier_result",
+      "prompt_eval_count": 1772,
+      "eval_count": 63,
+      "raw_response": "{\n  \"finish\": false,\n  \"tool_call\": {\n    \"tool_name\": \"format_report\",\n    \"arguments\": {\n      \"data_id\": \"aggregate_data:4a8824255686\",\n      \"output_format\": \"markdown\"\n    }\n  }\n}",
+      "payload_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R025_rep03/model_calls/0003.request.json",
+      "response_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R025_rep03/model_calls/0003.response.txt"
+    },
+    {
+      "task_id": "V4_R025_rep04",
+      "request_id": "R025",
+      "repetition_index": 4,
+      "proposed_tool": "format_report",
+      "proposed_arguments": {
+        "data_id": "aggregate_data:4a8824255686",
+        "output_format": "markdown"
+      },
+      "finish_instruction_in_payload": true,
+      "no_repeat_instruction_in_payload": true,
+      "same_tool_seen_before": true,
+      "same_non_reference_arguments_seen_before": true,
+      "reference_kind": "earlier_result",
+      "prompt_eval_count": 1772,
+      "eval_count": 63,
+      "raw_response": "{\n  \"finish\": false,\n  \"tool_call\": {\n    \"tool_name\": \"format_report\",\n    \"arguments\": {\n      \"data_id\": \"aggregate_data:4a8824255686\",\n      \"output_format\": \"markdown\"\n    }\n  }\n}",
+      "payload_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R025_rep04/model_calls/0003.request.json",
+      "response_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R025_rep04/model_calls/0003.response.txt"
+    },
+    {
+      "task_id": "V4_R027_rep00",
+      "request_id": "R027",
+      "repetition_index": 0,
+      "proposed_tool": "aggregate_data",
+      "proposed_arguments": {
+        "data_id": "$previous_result",
+        "group_by": [
+          "region",
+          "sales_channel"
+        ],
+        "metrics": [
+          "units_sold"
+        ]
+      },
+      "finish_instruction_in_payload": true,
+      "no_repeat_instruction_in_payload": true,
+      "same_tool_seen_before": true,
+      "same_non_reference_arguments_seen_before": true,
+      "reference_kind": "placeholder",
+      "prompt_eval_count": 1780,
+      "eval_count": 71,
+      "raw_response": "{\n  \"finish\": false,\n  \"tool_call\": {\n    \"tool_name\": \"aggregate_data\",\n    \"arguments\": {\n      \"data_id\": \"$previous_result\",\n      \"group_by\": [\n        \"region\",\n        \"sales_channel\"\n      ],\n      \"metrics\": [\n        \"units_sold\"\n      ]\n    }\n  }\n}",
+      "payload_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R027_rep00/model_calls/0003.request.json",
+      "response_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R027_rep00/model_calls/0003.response.txt"
+    },
+    {
+      "task_id": "V4_R027_rep01",
+      "request_id": "R027",
+      "repetition_index": 1,
+      "proposed_tool": "aggregate_data",
+      "proposed_arguments": {
+        "data_id": "$previous_result",
+        "group_by": [
+          "region",
+          "sales_channel"
+        ],
+        "metrics": [
+          "units_sold"
+        ]
+      },
+      "finish_instruction_in_payload": true,
+      "no_repeat_instruction_in_payload": true,
+      "same_tool_seen_before": true,
+      "same_non_reference_arguments_seen_before": true,
+      "reference_kind": "placeholder",
+      "prompt_eval_count": 1780,
+      "eval_count": 71,
+      "raw_response": "{\n  \"finish\": false,\n  \"tool_call\": {\n    \"tool_name\": \"aggregate_data\",\n    \"arguments\": {\n      \"data_id\": \"$previous_result\",\n      \"group_by\": [\n        \"region\",\n        \"sales_channel\"\n      ],\n      \"metrics\": [\n        \"units_sold\"\n      ]\n    }\n  }\n}",
+      "payload_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R027_rep01/model_calls/0003.request.json",
+      "response_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R027_rep01/model_calls/0003.response.txt"
+    },
+    {
+      "task_id": "V4_R027_rep02",
+      "request_id": "R027",
+      "repetition_index": 2,
+      "proposed_tool": "aggregate_data",
+      "proposed_arguments": {
+        "data_id": "$previous_result",
+        "group_by": [
+          "region",
+          "sales_channel"
+        ],
+        "metrics": [
+          "units_sold"
+        ]
+      },
+      "finish_instruction_in_payload": true,
+      "no_repeat_instruction_in_payload": true,
+      "same_tool_seen_before": true,
+      "same_non_reference_arguments_seen_before": true,
+      "reference_kind": "placeholder",
+      "prompt_eval_count": 1780,
+      "eval_count": 71,
+      "raw_response": "{\n  \"finish\": false,\n  \"tool_call\": {\n    \"tool_name\": \"aggregate_data\",\n    \"arguments\": {\n      \"data_id\": \"$previous_result\",\n      \"group_by\": [\n        \"region\",\n        \"sales_channel\"\n      ],\n      \"metrics\": [\n        \"units_sold\"\n      ]\n    }\n  }\n}",
+      "payload_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R027_rep02/model_calls/0003.request.json",
+      "response_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R027_rep02/model_calls/0003.response.txt"
+    },
+    {
+      "task_id": "V4_R027_rep03",
+      "request_id": "R027",
+      "repetition_index": 3,
+      "proposed_tool": "aggregate_data",
+      "proposed_arguments": {
+        "data_id": "$previous_result",
+        "group_by": [
+          "region",
+          "sales_channel"
+        ],
+        "metrics": [
+          "units_sold"
+        ]
+      },
+      "finish_instruction_in_payload": true,
+      "no_repeat_instruction_in_payload": true,
+      "same_tool_seen_before": true,
+      "same_non_reference_arguments_seen_before": true,
+      "reference_kind": "placeholder",
+      "prompt_eval_count": 1780,
+      "eval_count": 71,
+      "raw_response": "{\n  \"finish\": false,\n  \"tool_call\": {\n    \"tool_name\": \"aggregate_data\",\n    \"arguments\": {\n      \"data_id\": \"$previous_result\",\n      \"group_by\": [\n        \"region\",\n        \"sales_channel\"\n      ],\n      \"metrics\": [\n        \"units_sold\"\n      ]\n    }\n  }\n}",
+      "payload_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R027_rep03/model_calls/0003.request.json",
+      "response_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R027_rep03/model_calls/0003.response.txt"
+    },
+    {
+      "task_id": "V4_R027_rep04",
+      "request_id": "R027",
+      "repetition_index": 4,
+      "proposed_tool": "aggregate_data",
+      "proposed_arguments": {
+        "data_id": "$previous_result",
+        "group_by": [
+          "region",
+          "sales_channel"
+        ],
+        "metrics": [
+          "units_sold"
+        ]
+      },
+      "finish_instruction_in_payload": true,
+      "no_repeat_instruction_in_payload": true,
+      "same_tool_seen_before": true,
+      "same_non_reference_arguments_seen_before": true,
+      "reference_kind": "placeholder",
+      "prompt_eval_count": 1780,
+      "eval_count": 71,
+      "raw_response": "{\n  \"finish\": false,\n  \"tool_call\": {\n    \"tool_name\": \"aggregate_data\",\n    \"arguments\": {\n      \"data_id\": \"$previous_result\",\n      \"group_by\": [\n        \"region\",\n        \"sales_channel\"\n      ],\n      \"metrics\": [\n        \"units_sold\"\n      ]\n    }\n  }\n}",
+      "payload_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R027_rep04/model_calls/0003.request.json",
+      "response_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R027_rep04/model_calls/0003.response.txt"
+    },
+    {
+      "task_id": "V4_R029_rep00",
+      "request_id": "R029",
+      "repetition_index": 0,
+      "proposed_tool": "compare_previous_period",
+      "proposed_arguments": {
+        "data_id": "detect_anomalies:54a79b5ba28c",
+        "previous_period": "previous_month"
+      },
+      "finish_instruction_in_payload": true,
+      "no_repeat_instruction_in_payload": true,
+      "same_tool_seen_before": false,
+      "same_non_reference_arguments_seen_before": false,
+      "reference_kind": "earlier_result",
+      "prompt_eval_count": 1896,
+      "eval_count": 66,
+      "raw_response": "{\n  \"finish\": false,\n  \"tool_call\": {\n    \"tool_name\": \"compare_previous_period\",\n    \"arguments\": {\n      \"data_id\": \"detect_anomalies:54a79b5ba28c\",\n      \"previous_period\": \"previous_month\"\n    }\n  }\n}",
+      "payload_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R029_rep00/model_calls/0004.request.json",
+      "response_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R029_rep00/model_calls/0004.response.txt"
+    },
+    {
+      "task_id": "V4_R029_rep01",
+      "request_id": "R029",
+      "repetition_index": 1,
+      "proposed_tool": "compare_previous_period",
+      "proposed_arguments": {
+        "data_id": "detect_anomalies:54a79b5ba28c",
+        "previous_period": "previous_month"
+      },
+      "finish_instruction_in_payload": true,
+      "no_repeat_instruction_in_payload": true,
+      "same_tool_seen_before": false,
+      "same_non_reference_arguments_seen_before": false,
+      "reference_kind": "earlier_result",
+      "prompt_eval_count": 1896,
+      "eval_count": 66,
+      "raw_response": "{\n  \"finish\": false,\n  \"tool_call\": {\n    \"tool_name\": \"compare_previous_period\",\n    \"arguments\": {\n      \"data_id\": \"detect_anomalies:54a79b5ba28c\",\n      \"previous_period\": \"previous_month\"\n    }\n  }\n}",
+      "payload_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R029_rep01/model_calls/0004.request.json",
+      "response_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R029_rep01/model_calls/0004.response.txt"
+    },
+    {
+      "task_id": "V4_R029_rep02",
+      "request_id": "R029",
+      "repetition_index": 2,
+      "proposed_tool": "compare_previous_period",
+      "proposed_arguments": {
+        "data_id": "detect_anomalies:54a79b5ba28c",
+        "previous_period": "previous_month"
+      },
+      "finish_instruction_in_payload": true,
+      "no_repeat_instruction_in_payload": true,
+      "same_tool_seen_before": false,
+      "same_non_reference_arguments_seen_before": false,
+      "reference_kind": "earlier_result",
+      "prompt_eval_count": 1896,
+      "eval_count": 66,
+      "raw_response": "{\n  \"finish\": false,\n  \"tool_call\": {\n    \"tool_name\": \"compare_previous_period\",\n    \"arguments\": {\n      \"data_id\": \"detect_anomalies:54a79b5ba28c\",\n      \"previous_period\": \"previous_month\"\n    }\n  }\n}",
+      "payload_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R029_rep02/model_calls/0004.request.json",
+      "response_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R029_rep02/model_calls/0004.response.txt"
+    },
+    {
+      "task_id": "V4_R029_rep03",
+      "request_id": "R029",
+      "repetition_index": 3,
+      "proposed_tool": "compare_previous_period",
+      "proposed_arguments": {
+        "data_id": "detect_anomalies:54a79b5ba28c",
+        "previous_period": "previous_month"
+      },
+      "finish_instruction_in_payload": true,
+      "no_repeat_instruction_in_payload": true,
+      "same_tool_seen_before": false,
+      "same_non_reference_arguments_seen_before": false,
+      "reference_kind": "earlier_result",
+      "prompt_eval_count": 1896,
+      "eval_count": 66,
+      "raw_response": "{\n  \"finish\": false,\n  \"tool_call\": {\n    \"tool_name\": \"compare_previous_period\",\n    \"arguments\": {\n      \"data_id\": \"detect_anomalies:54a79b5ba28c\",\n      \"previous_period\": \"previous_month\"\n    }\n  }\n}",
+      "payload_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R029_rep03/model_calls/0004.request.json",
+      "response_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R029_rep03/model_calls/0004.response.txt"
+    },
+    {
+      "task_id": "V4_R029_rep04",
+      "request_id": "R029",
+      "repetition_index": 4,
+      "proposed_tool": "compare_previous_period",
+      "proposed_arguments": {
+        "data_id": "detect_anomalies:54a79b5ba28c",
+        "previous_period": "previous_month"
+      },
+      "finish_instruction_in_payload": true,
+      "no_repeat_instruction_in_payload": true,
+      "same_tool_seen_before": false,
+      "same_non_reference_arguments_seen_before": false,
+      "reference_kind": "earlier_result",
+      "prompt_eval_count": 1896,
+      "eval_count": 66,
+      "raw_response": "{\n  \"finish\": false,\n  \"tool_call\": {\n    \"tool_name\": \"compare_previous_period\",\n    \"arguments\": {\n      \"data_id\": \"detect_anomalies:54a79b5ba28c\",\n      \"previous_period\": \"previous_month\"\n    }\n  }\n}",
+      "payload_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R029_rep04/model_calls/0004.request.json",
+      "response_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R029_rep04/model_calls/0004.response.txt"
+    },
+    {
+      "task_id": "V4_R030_rep00",
+      "request_id": "R030",
+      "repetition_index": 0,
+      "proposed_tool": "format_report",
+      "proposed_arguments": {
+        "data_id": "aggregate_data:3653d2c0e07b",
+        "output_format": "markdown"
+      },
+      "finish_instruction_in_payload": true,
+      "no_repeat_instruction_in_payload": true,
+      "same_tool_seen_before": true,
+      "same_non_reference_arguments_seen_before": true,
+      "reference_kind": "earlier_result",
+      "prompt_eval_count": 1790,
+      "eval_count": 63,
+      "raw_response": "{\n  \"finish\": false,\n  \"tool_call\": {\n    \"tool_name\": \"format_report\",\n    \"arguments\": {\n      \"data_id\": \"aggregate_data:3653d2c0e07b\",\n      \"output_format\": \"markdown\"\n    }\n  }\n}",
+      "payload_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R030_rep00/model_calls/0003.request.json",
+      "response_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R030_rep00/model_calls/0003.response.txt"
+    },
+    {
+      "task_id": "V4_R030_rep01",
+      "request_id": "R030",
+      "repetition_index": 1,
+      "proposed_tool": "format_report",
+      "proposed_arguments": {
+        "data_id": "aggregate_data:3653d2c0e07b",
+        "output_format": "markdown"
+      },
+      "finish_instruction_in_payload": true,
+      "no_repeat_instruction_in_payload": true,
+      "same_tool_seen_before": true,
+      "same_non_reference_arguments_seen_before": true,
+      "reference_kind": "earlier_result",
+      "prompt_eval_count": 1790,
+      "eval_count": 63,
+      "raw_response": "{\n  \"finish\": false,\n  \"tool_call\": {\n    \"tool_name\": \"format_report\",\n    \"arguments\": {\n      \"data_id\": \"aggregate_data:3653d2c0e07b\",\n      \"output_format\": \"markdown\"\n    }\n  }\n}",
+      "payload_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R030_rep01/model_calls/0003.request.json",
+      "response_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R030_rep01/model_calls/0003.response.txt"
+    },
+    {
+      "task_id": "V4_R030_rep02",
+      "request_id": "R030",
+      "repetition_index": 2,
+      "proposed_tool": "format_report",
+      "proposed_arguments": {
+        "data_id": "aggregate_data:3653d2c0e07b",
+        "output_format": "markdown"
+      },
+      "finish_instruction_in_payload": true,
+      "no_repeat_instruction_in_payload": true,
+      "same_tool_seen_before": true,
+      "same_non_reference_arguments_seen_before": true,
+      "reference_kind": "earlier_result",
+      "prompt_eval_count": 1790,
+      "eval_count": 63,
+      "raw_response": "{\n  \"finish\": false,\n  \"tool_call\": {\n    \"tool_name\": \"format_report\",\n    \"arguments\": {\n      \"data_id\": \"aggregate_data:3653d2c0e07b\",\n      \"output_format\": \"markdown\"\n    }\n  }\n}",
+      "payload_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R030_rep02/model_calls/0003.request.json",
+      "response_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R030_rep02/model_calls/0003.response.txt"
+    },
+    {
+      "task_id": "V4_R030_rep03",
+      "request_id": "R030",
+      "repetition_index": 3,
+      "proposed_tool": "format_report",
+      "proposed_arguments": {
+        "data_id": "aggregate_data:3653d2c0e07b",
+        "output_format": "markdown"
+      },
+      "finish_instruction_in_payload": true,
+      "no_repeat_instruction_in_payload": true,
+      "same_tool_seen_before": true,
+      "same_non_reference_arguments_seen_before": true,
+      "reference_kind": "earlier_result",
+      "prompt_eval_count": 1790,
+      "eval_count": 63,
+      "raw_response": "{\n  \"finish\": false,\n  \"tool_call\": {\n    \"tool_name\": \"format_report\",\n    \"arguments\": {\n      \"data_id\": \"aggregate_data:3653d2c0e07b\",\n      \"output_format\": \"markdown\"\n    }\n  }\n}",
+      "payload_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R030_rep03/model_calls/0003.request.json",
+      "response_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R030_rep03/model_calls/0003.response.txt"
+    },
+    {
+      "task_id": "V4_R030_rep04",
+      "request_id": "R030",
+      "repetition_index": 4,
+      "proposed_tool": "format_report",
+      "proposed_arguments": {
+        "data_id": "aggregate_data:3653d2c0e07b",
+        "output_format": "markdown"
+      },
+      "finish_instruction_in_payload": true,
+      "no_repeat_instruction_in_payload": true,
+      "same_tool_seen_before": true,
+      "same_non_reference_arguments_seen_before": true,
+      "reference_kind": "earlier_result",
+      "prompt_eval_count": 1790,
+      "eval_count": 63,
+      "raw_response": "{\n  \"finish\": false,\n  \"tool_call\": {\n    \"tool_name\": \"format_report\",\n    \"arguments\": {\n      \"data_id\": \"aggregate_data:3653d2c0e07b\",\n      \"output_format\": \"markdown\"\n    }\n  }\n}",
+      "payload_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R030_rep04/model_calls/0003.request.json",
+      "response_path": "evaluation/experiments/2026-10-09_matched/runs/V4_R030_rep04/model_calls/0003.response.txt"
+    }
+  ]
+}

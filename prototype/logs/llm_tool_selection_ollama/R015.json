@@ -1,0 +1,76 @@
+{
+  "completed_at": "2026-07-23T16:31:43.809547Z",
+  "errors": [
+    {
+      "code": "E2",
+      "description": "The planner omitted at least one required tool call."
+    }
+  ],
+  "input": {
+    "expected_tool_sequence": [
+      "get_sales_data",
+      "aggregate_data",
+      "compare_previous_period",
+      "format_report"
+    ],
+    "user_request": "Compare the previous quarter's gross margin with the quarter before it."
+  },
+  "latency_ms": 3459,
+  "metrics": {
+    "fallback_count": 0,
+    "retry_count": 0,
+    "schema_validation_failures": 0,
+    "task_success": false,
+    "tool_execution_failures": 0
+  },
+  "model": {
+    "name": "qwen2.5:7b-instruct",
+    "provider": "ollama",
+    "seed": 0,
+    "temperature": 0.0
+  },
+  "output": {
+    "final_response": "R015 completed by LLM tool selection with result None.",
+    "output_hash": "format_report:41f9512f9ac4"
+  },
+  "repetition_index": 0,
+  "request_id": "R015",
+  "run_id": "8f37a60f-11b5-43c4-b29b-4cc6a51699c6",
+  "schema_version": "0.1.0",
+  "started_at": "2026-07-23T16:31:40.350420Z",
+  "status": "rejected",
+  "tool_calls": [
+    {
+      "arguments": {
+        "dimensions": [
+          "gross_margin"
+        ],
+        "timeframe": "previous_quarter"
+      },
+      "index": 0,
+      "latency_ms": 0,
+      "source": "llm",
+      "status": "proposed",
+      "tool_name": "get_sales_data"
+    },
+    {
+      "arguments": {
+        "data_id": "$previous_result",
+        "previous_period": "previous_quarter"
+      },
+      "index": 1,
+      "latency_ms": 0,
+      "source": "llm",
+      "status": "proposed",
+      "tool_name": "compare_previous_period"
+    }
+  ],
+  "validation_events": [
+    {
+      "event_type": "semantic_validation_failed",
+      "index": 0,
+      "message": "Planned tool sequence omits required calls: planned=['get_sales_data', 'compare_previous_period'], expected=['get_sales_data', 'aggregate_data', 'compare_previous_period', 'format_report']"
+    }
+  ],
+  "variant": "llm_tool_selection"
+}

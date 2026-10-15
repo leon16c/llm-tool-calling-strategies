@@ -1,0 +1,85 @@
+{
+  "completed_at": "2026-07-23T16:30:00.101969Z",
+  "errors": [],
+  "input": {
+    "expected_tool_sequence": [
+      "get_sales_data",
+      "aggregate_data",
+      "format_report"
+    ],
+    "user_request": "For the last 7 days, summarize revenue, units sold, and average order value by sales channel."
+  },
+  "latency_ms": 0,
+  "metrics": {
+    "fallback_count": 0,
+    "retry_count": 0,
+    "schema_validation_failures": 0,
+    "task_success": true,
+    "tool_execution_failures": 0
+  },
+  "model": {
+    "name": "oracle_backed_tool_call_planner",
+    "provider": "local",
+    "seed": 0,
+    "temperature": 0.0
+  },
+  "output": {
+    "final_response": "R012 completed by LLM tool selection with result format_report:327d220c6cdc.",
+    "output_hash": "format_report:6d0b2093b7a5"
+  },
+  "repetition_index": 0,
+  "request_id": "R012",
+  "run_id": "a829f94b-8718-4b2b-ad64-5882068306f9",
+  "schema_version": "0.1.0",
+  "started_at": "2026-07-23T16:30:00.101845Z",
+  "status": "success",
+  "tool_calls": [
+    {
+      "arguments": {
+        "dimensions": [
+          "sales_channel"
+        ],
+        "timeframe": "last_7_days"
+      },
+      "index": 0,
+      "latency_ms": 0,
+      "result_ref": "get_sales_data:c4da4d31ebd3",
+      "source": "llm",
+      "status": "executed",
+      "tool_name": "get_sales_data"
+    },
+    {
+      "arguments": {
+        "data_id": "get_sales_data:c4da4d31ebd3",
+        "group_by": [
+          "sales_channel"
+        ],
+        "metrics": [
+          "revenue",
+          "units_sold",
+          "average_order_value"
+        ]
+      },
+      "index": 1,
+      "latency_ms": 0,
+      "result_ref": "aggregate_data:ccfb6dae04c8",
+      "source": "llm",
+      "status": "executed",
+      "tool_name": "aggregate_data"
+    },
+    {
+      "arguments": {
+        "data_id": "aggregate_data:ccfb6dae04c8",
+        "output_format": "markdown"
+      },
+      "index": 2,
+      "latency_ms": 0,
+      "result_ref": "format_report:327d220c6cdc",
+      "source": "llm",
+      "status": "executed",
+      "tool_name": "format_report"
+    }
+  ],
+  "validation_events": [],
+  "variant": "llm_tool_selection"
+}

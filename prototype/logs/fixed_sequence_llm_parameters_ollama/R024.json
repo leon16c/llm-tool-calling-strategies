@@ -1,0 +1,83 @@
+{
+  "completed_at": "2026-07-19T08:57:03.100716Z",
+  "errors": [],
+  "input": {
+    "expected_tool_sequence": [
+      "get_sales_data",
+      "aggregate_data",
+      "format_report"
+    ],
+    "user_request": "Summarize current quarter average order value by region without comparisons."
+  },
+  "latency_ms": 7732,
+  "metrics": {
+    "fallback_count": 0,
+    "retry_count": 0,
+    "schema_validation_failures": 0,
+    "task_success": true,
+    "tool_execution_failures": 0
+  },
+  "model": {
+    "name": "qwen2.5:7b-instruct",
+    "provider": "ollama",
+    "seed": 0,
+    "temperature": 0.0
+  },
+  "output": {
+    "final_response": "R024 completed by fixed-sequence LLM parameter mapping with result format_report:b322b06eeb00.",
+    "output_hash": "format_report:1f9d3939000d"
+  },
+  "repetition_index": 0,
+  "request_id": "R024",
+  "run_id": "2fc509cc-2e02-4099-9f09-4963b254aa27",
+  "schema_version": "0.1.0",
+  "started_at": "2026-07-19T08:56:55.368207Z",
+  "status": "success",
+  "tool_calls": [
+    {
+      "arguments": {
+        "dimensions": [
+          "region"
+        ],
+        "timeframe": "current_quarter"
+      },
+      "index": 0,
+      "latency_ms": 0,
+      "result_ref": "get_sales_data:9787141fcf1d",
+      "source": "llm",
+      "status": "executed",
+      "tool_name": "get_sales_data"
+    },
+    {
+      "arguments": {
+        "data_id": "get_sales_data:9787141fcf1d",
+        "group_by": [
+          "region"
+        ],
+        "metrics": [
+          "average_order_value"
+        ]
+      },
+      "index": 1,
+      "latency_ms": 0,
+      "result_ref": "aggregate_data:c4cb20ccba50",
+      "source": "llm",
+      "status": "executed",
+      "tool_name": "aggregate_data"
+    },
+    {
+      "arguments": {
+        "data_id": "aggregate_data:c4cb20ccba50",
+        "output_format": "json"
+      },
+      "index": 2,
+      "latency_ms": 0,
+      "result_ref": "format_report:b322b06eeb00",
+      "source": "llm",
+      "status": "executed",
+      "tool_name": "format_report"
+    }
+  ],
+  "validation_events": [],
+  "variant": "fixed_sequence_llm_parameters"
+}

@@ -1,0 +1,77 @@
+{
+  "completed_at": "2026-07-10T12:11:53.051043Z",
+  "errors": [],
+  "input": {
+    "expected_tool_sequence": [
+      "get_sales_data",
+      "aggregate_data",
+      "format_report"
+    ],
+    "user_request": "Give me only a simple daily revenue summary for the last 7 days."
+  },
+  "latency_ms": 0,
+  "metrics": {
+    "fallback_count": 0,
+    "retry_count": 0,
+    "schema_validation_failures": 0,
+    "task_success": true,
+    "tool_execution_failures": 0
+  },
+  "output": {
+    "final_response": "R023 completed by deterministic workflow with result format_report:7dd4f96c0795.",
+    "output_hash": "format_report:b4196fae5d30"
+  },
+  "repetition_index": 0,
+  "request_id": "R023",
+  "run_id": "0578693c-cb36-4c3d-bb5b-45cea7d35cc7",
+  "schema_version": "0.1.0",
+  "started_at": "2026-07-10T12:11:53.050934Z",
+  "status": "success",
+  "tool_calls": [
+    {
+      "arguments": {
+        "dimensions": [
+          "date"
+        ],
+        "timeframe": "last_7_days"
+      },
+      "index": 0,
+      "latency_ms": 0,
+      "result_ref": "get_sales_data:932645a6f575",
+      "source": "deterministic",
+      "status": "executed",
+      "tool_name": "get_sales_data"
+    },
+    {
+      "arguments": {
+        "data_id": "get_sales_data:932645a6f575",
+        "group_by": [
+          "date"
+        ],
+        "metrics": [
+          "revenue"
+        ]
+      },
+      "index": 1,
+      "latency_ms": 0,
+      "result_ref": "aggregate_data:a0a512453704",
+      "source": "deterministic",
+      "status": "executed",
+      "tool_name": "aggregate_data"
+    },
+    {
+      "arguments": {
+        "data_id": "aggregate_data:a0a512453704",
+        "output_format": "markdown"
+      },
+      "index": 2,
+      "latency_ms": 0,
+      "result_ref": "format_report:7dd4f96c0795",
+      "source": "deterministic",
+      "status": "executed",
+      "tool_name": "format_report"
+    }
+  ],
+  "validation_events": [],
+  "variant": "deterministic_workflow"
+}

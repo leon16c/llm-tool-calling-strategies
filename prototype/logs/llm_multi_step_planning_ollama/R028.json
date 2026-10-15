@@ -1,0 +1,79 @@
+{
+  "completed_at": "2026-07-26T07:32:30.581729Z",
+  "errors": [
+    {
+      "code": "E7",
+      "description": "The planner selected the right tool in the wrong order.",
+      "tool_call_index": 1
+    }
+  ],
+  "input": {
+    "expected_tool_sequence": [
+      "get_sales_data",
+      "aggregate_data",
+      "compare_previous_period",
+      "format_report"
+    ],
+    "user_request": "Compare current quarter revenue by region with the previous quarter."
+  },
+  "latency_ms": 6076,
+  "metrics": {
+    "fallback_count": 0,
+    "retry_count": 0,
+    "schema_validation_failures": 0,
+    "task_success": false,
+    "tool_execution_failures": 0
+  },
+  "model": {
+    "name": "qwen2.5:7b-instruct",
+    "provider": "ollama",
+    "seed": 0,
+    "temperature": 0.0
+  },
+  "output": {
+    "final_response": "R028 completed by LLM multi-step planning with result get_sales_data:9787141fcf1d.",
+    "output_hash": "format_report:768504f3f90b"
+  },
+  "repetition_index": 0,
+  "request_id": "R028",
+  "run_id": "da933098-5755-48d5-a425-e58dee8c6237",
+  "schema_version": "0.1.0",
+  "started_at": "2026-07-26T07:32:24.505621Z",
+  "status": "rejected",
+  "tool_calls": [
+    {
+      "arguments": {
+        "dimensions": [
+          "region"
+        ],
+        "timeframe": "current_quarter"
+      },
+      "index": 0,
+      "latency_ms": 0,
+      "result_ref": "get_sales_data:9787141fcf1d",
+      "source": "llm",
+      "status": "executed",
+      "tool_name": "get_sales_data"
+    },
+    {
+      "arguments": {
+        "data_id": "$previous_result",
+        "previous_period": "previous_quarter"
+      },
+      "index": 1,
+      "latency_ms": 0,
+      "source": "llm",
+      "status": "proposed",
+      "tool_name": "compare_previous_period"
+    }
+  ],
+  "validation_events": [
+    {
+      "event_type": "semantic_validation_failed",
+      "index": 0,
+      "message": "Planner selected an invalid next tool: planned=compare_previous_period, expected=aggregate_data",
+      "tool_call_index": 1
+    }
+  ],
+  "variant": "llm_multi_step_planning"
+}

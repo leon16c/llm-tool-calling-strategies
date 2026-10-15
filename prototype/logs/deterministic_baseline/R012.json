@@ -1,0 +1,79 @@
+{
+  "completed_at": "2026-07-10T12:11:53.043647Z",
+  "errors": [],
+  "input": {
+    "expected_tool_sequence": [
+      "get_sales_data",
+      "aggregate_data",
+      "format_report"
+    ],
+    "user_request": "For the last 7 days, summarize revenue, units sold, and average order value by sales channel."
+  },
+  "latency_ms": 0,
+  "metrics": {
+    "fallback_count": 0,
+    "retry_count": 0,
+    "schema_validation_failures": 0,
+    "task_success": true,
+    "tool_execution_failures": 0
+  },
+  "output": {
+    "final_response": "R012 completed by deterministic workflow with result format_report:327d220c6cdc.",
+    "output_hash": "format_report:b808c038ecf1"
+  },
+  "repetition_index": 0,
+  "request_id": "R012",
+  "run_id": "76ce41ec-e273-4739-93be-9a0b7db8f2bb",
+  "schema_version": "0.1.0",
+  "started_at": "2026-07-10T12:11:53.043439Z",
+  "status": "success",
+  "tool_calls": [
+    {
+      "arguments": {
+        "dimensions": [
+          "sales_channel"
+        ],
+        "timeframe": "last_7_days"
+      },
+      "index": 0,
+      "latency_ms": 0,
+      "result_ref": "get_sales_data:c4da4d31ebd3",
+      "source": "deterministic",
+      "status": "executed",
+      "tool_name": "get_sales_data"
+    },
+    {
+      "arguments": {
+        "data_id": "get_sales_data:c4da4d31ebd3",
+        "group_by": [
+          "sales_channel"
+        ],
+        "metrics": [
+          "revenue",
+          "units_sold",
+          "average_order_value"
+        ]
+      },
+      "index": 1,
+      "latency_ms": 0,
+      "result_ref": "aggregate_data:ccfb6dae04c8",
+      "source": "deterministic",
+      "status": "executed",
+      "tool_name": "aggregate_data"
+    },
+    {
+      "arguments": {
+        "data_id": "aggregate_data:ccfb6dae04c8",
+        "output_format": "markdown"
+      },
+      "index": 2,
+      "latency_ms": 0,
+      "result_ref": "format_report:327d220c6cdc",
+      "source": "deterministic",
+      "status": "executed",
+      "tool_name": "format_report"
+    }
+  ],
+  "validation_events": [],
+  "variant": "deterministic_workflow"
+}

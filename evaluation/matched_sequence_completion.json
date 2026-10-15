@@ -1,0 +1,4107 @@
+{
+  "definition": "The executed tool names start with the entire prescribed sequence in order. Proposed or blocked calls do not count. Arguments and business-output correctness are not assessed.",
+  "session": "evaluation/experiments/2026-10-09_matched",
+  "verified_runs": 450,
+  "saved_analysis_reproduced": true,
+  "saved_analysis_sha256": "6b639ee8bb06db1c498245c13ba23177fd8a282631794dd2ed2091b430f9f39d",
+  "analysis_source_sha256": "19c9adba7d01d18d93138697008dbf60ddeca8125a3d21ebe3b2d94b1a7ec7a8",
+  "input_sha256": {
+    "evaluation/experiments/2026-10-09_matched/artifacts/evaluation/requests/initial_requests.json": "d037616c8d9db806dc875dff343eebba0d12c57e63b221419f2b1ae798bd4326",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R001_rep00/run_log.json": "86e2f968b85b8b04bfd30a0e8b72a893e9818be67129c1e9aea18ee4f30302f5",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R001_rep00/run_log.json": "d84ac8e5a8f398794723c46f741fcd3ea7f0be03e9ef33d2fcf5ada4c1edf18c",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R001_rep00/run_log.json": "c865ca5105533b290a055f2bd2b6d1ef80386c0cfbd6e4b5d46254ea46fa7c68",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R002_rep00/run_log.json": "5d24bfa5b958d5a3cec6c5a1116c02d62fccc703dc04589e50808079a38f48af",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R002_rep00/run_log.json": "374690723244e2baa2e58a7f3da6c55276896da7f49bf51d25ac73e5efd90163",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R002_rep00/run_log.json": "39ed469abcfd1fd785814f53590bf79411d8adde8c0c08b220fdda0c671fc339",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R003_rep00/run_log.json": "c7c4995a35207d4cc4e6b7e9fd2ea4d7579683f321e7eb9a7af36cbd6ec0c676",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R003_rep00/run_log.json": "486a9ea61f722dc1ba862078c11a9893c7e54cf8f3a0902c849e2ba6727aff13",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R003_rep00/run_log.json": "c2b94440a24a55097efe29eb2dd9c47403635e54c904d18bfcc663d1b3baaa98",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R004_rep00/run_log.json": "57bbe81fab2034bce9fd5b7e3ae3cb995133ad3ad240b4c6fedff2b19653acfe",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R004_rep00/run_log.json": "24ed1edaf41bfbf53391f3b76726fc05fa7a835448d053107fd3b6e7867931ff",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R004_rep00/run_log.json": "22b618199cbd0e51ecf9711214051ad9d8c7905d863b588e08a3d257ee45a17f",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R005_rep00/run_log.json": "ea46c6f0759094bc14bda238d24b2ee350799d65e623dad6b00f5a625af59cd8",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R005_rep00/run_log.json": "1ec0d7f946c81d93f12bd58c680b1dd6144f0642ab1a77b53c1207074195d5ce",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R005_rep00/run_log.json": "8a040678e59c5f79acaa61950f6a359f6b8aa1d4654b18b8077d511d09079135",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R006_rep00/run_log.json": "a7d995ca09e8300a4e20f24f548dfbc55ebfed649eecdb5a568a5bcebd17c5e7",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R006_rep00/run_log.json": "692a17c3fbcb62f7fe948d56759c806b872ebc5df02c88b037c6a14533033152",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R006_rep00/run_log.json": "407157f4ff043a50116d3f55b8e80f074125d3ee4aa0c874ce4ccfd6b577f795",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R007_rep00/run_log.json": "b6dd98264bf2c917a55e90240bd20aa836dbf5fd3449352d4f41fd64c24e0b7f",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R007_rep00/run_log.json": "16488590f9453f434878845908385f318b57c86daca452a5f1bf91171e5ebc61",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R007_rep00/run_log.json": "0df915e07184266356f21ab61147d7b95524e6153cbdb8f9a040621a624725ce",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R008_rep00/run_log.json": "07e6e8f84d2872e6008eb7e40b9919b9f3074e7efeec7d4a620a3f62c26a4d2e",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R008_rep00/run_log.json": "052e6bcb11c19ae989e856c5166b30e37710ecdac36eeb33844e513763644bc1",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R008_rep00/run_log.json": "d3f95c19d545359bd677b23a43e1c21936e23df13bbb305e531e292ce6cdd02d",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R009_rep00/run_log.json": "560c2ddc8bc8ed4af5847bdf1b773f2c13e29b41c891dbed4f80971223b51888",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R009_rep00/run_log.json": "16ede12c940ae2e28f3aa48e330223e1fc6d0bc31c398d0d8aeb3e4c71ef9089",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R009_rep00/run_log.json": "7e3cca863dcd518b0a9d72c94ea0136d2617d1ee7c4878ebaec559540955d4cf",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R010_rep00/run_log.json": "3534efebbfb75ac5f3d3dd65802ee25c5dfb992bba7927825a962d622df50ee6",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R010_rep00/run_log.json": "b8cf3e29b383d452a52ff3c1cf9d0c6142ed81cc97a47079900fb3ce590c6372",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R010_rep00/run_log.json": "bc8886ae938d7de48b0616e2428a45cdda20af615dd4f54762f9ba03783e6551",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R011_rep00/run_log.json": "c92ab1d1a8ce92efd3e41ab82cfc698e9df9f3ad11549031d2e09f3d642e7593",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R011_rep00/run_log.json": "81275af5fa59e181deb72459e7a070f5cf742f24b316554fa2a3ec716b19ae9a",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R011_rep00/run_log.json": "ca1f3bac27a7b1a0cf4a5d8d03414024f92c446c2c04927841c772003e39119e",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R012_rep00/run_log.json": "a2b870e43882b407564303cf6af55fb6d4a17fca24f01c354227d26a863e048d",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R012_rep00/run_log.json": "a46f9485b726ee48ed98e472e837a5237f56e9ce4acea01eac348c22765d291c",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R012_rep00/run_log.json": "3177970be4602ddbdcfea879ef71d43e754a3ec893b55b6e70cf3b19cfcd3dfe",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R013_rep00/run_log.json": "d43e576a386272d185f732f370c92b564306992b471205cd36c48ca4006bb575",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R013_rep00/run_log.json": "00ce36d7fa0d8e2b6b5918bdda1e0fa685cba95f3161c4e418a6d4e18c99eebe",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R013_rep00/run_log.json": "ed2eeba584983dbf341f3b6b37b5f8e95058a8c1d403e27048a1899bde0067ec",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R014_rep00/run_log.json": "a2aae9fd0ea72f3ffb6dac991958f4aa5e74af79412a15515a2d26d935fa2cb3",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R014_rep00/run_log.json": "b0c7c5d68f4b7e3ae4f8392208f2e069bac24e67a4542aeddd35535c3e09df7b",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R014_rep00/run_log.json": "953af61e28f923712e1453126557a803554afe6fbf4e919afa63ee3fa21a4405",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R015_rep00/run_log.json": "55e42f9cd95eb8749619804e1f0c60f4d4d99b88c1e6db7f8e8ae1f26ec1df98",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R015_rep00/run_log.json": "91f7e49a4f4a74e8c318a0c0d0b19594eacd99f0c555872e20adaf5a84e79806",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R015_rep00/run_log.json": "2f46afbc08e393f448a761b97dfd337a0969e74eec4cfea06dadbf6e0b138a69",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R016_rep00/run_log.json": "9b75b8b5e4e2aaf78bfde229161a6481ca575693d06ce7f09f6bbb1c0b394dd9",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R016_rep00/run_log.json": "32e054f98a41faf88cc8f0d4b49091ed716372f8d646021b690a868ac2d52aa1",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R016_rep00/run_log.json": "36c1d67034a1aed4388adc227c38ed701f9083d2f663ab0abd0c33c2b05b733f",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R017_rep00/run_log.json": "d205c72ceaa123b00ba35b2b3ffdd3f80aac6d298e482de5f241b790047513ff",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R017_rep00/run_log.json": "ceb8ebe96826e0e09f0fc8ea4d5b8b8db8661fd26c24c71deb803fb8f7b165e5",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R017_rep00/run_log.json": "683cdc8db75278519f086b8c998740344d2a3c9c749ad7d9546e44c91573e533",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R018_rep00/run_log.json": "2f353938608ef1cc2a57cc02dc475cb9ebc39158bfee17a719c5ef76821aff0b",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R018_rep00/run_log.json": "aae499693dd02709035d99bd12da48f188b1125a072a6b144c5876ff99c0d41b",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R018_rep00/run_log.json": "c29c4d0b68699cb2ceaaffd0198456f67a8cd68e8eefebe3f0a9f5c92eeb9f80",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R019_rep00/run_log.json": "1773ea7aa278973b28ee3947d14527d4aa0c77d724e8b02527988fdf799417be",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R019_rep00/run_log.json": "1c88e47f64d461391ff70f02ab6246d54c06031986c80275ae05dda0b67180d6",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R019_rep00/run_log.json": "23ea1292b35326c7e30eeb1d63439c509c1d47f1dbd9a17e613f53e849a13a95",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R020_rep00/run_log.json": "f9599078e21f4b5b4f979baaf88793382ae49952a7c950d747cf6fac0995ed03",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R020_rep00/run_log.json": "824a8aa13a9892b372fc6937c5097699d2f451f5bd2932e69b9419aaaef7190a",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R020_rep00/run_log.json": "3eeb0723a03035d94436e85c53b73bcf4fbc5b0b2b53b00d17b3b86200514506",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R021_rep00/run_log.json": "58b0b6092655f3aa1308edd52a0ad47313e545ed644912f6b8d4ce6ca3565644",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R021_rep00/run_log.json": "ffe454088641f041c62be1c605e980a3671f8ec7514dc9dc65498d55c171f98d",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R021_rep00/run_log.json": "b5a5a61170e1fd877ad44dad193446085bfc02e4ae4aea8d079fa9cd3120b5d4",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R022_rep00/run_log.json": "bef6319d1c78cd5e81d114913475de99cef039cd5e15dcaeccdc9b8176853ff7",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R022_rep00/run_log.json": "5fd8b74a4764993ecd72db0753adf7df3d14cc8ce75a5f13105de374faacf95c",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R022_rep00/run_log.json": "1967b1e825104a7bf837577867f6ed806b0be61f1b262dcab5437dac34e5bfdc",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R023_rep00/run_log.json": "e10db5f63b3756ead57935f90d3eb79fed4474fd8d1481a5d7eff422080d9bc8",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R023_rep00/run_log.json": "86cdf73d7d90c4e667b5b3dcae35ea6c86b173735a2d1703346aff8ebad6055b",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R023_rep00/run_log.json": "e5c217b18411a2b4b636bf4401af7ef591a4183faf0c7eec0d1fa424f17ef6a8",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R024_rep00/run_log.json": "1e36aff114f520ba80165bacfa73756fa4134b41d1f3ded5ad4896bdc192f8ec",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R024_rep00/run_log.json": "e8a1ccf08fc8728280f0754a6b4df8530081ef6eab20f2f2508e251827cb9cef",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R024_rep00/run_log.json": "235df1f255fdaf17b64bc5bc04546efa20495c63291f74952fe708a087d7f35e",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R025_rep00/run_log.json": "d7aeeeec958d845f41e821e6e864fd7dea86c7adbcf30fc21270eaf3851f6748",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R025_rep00/run_log.json": "9ec2acf4177a9ff28cd19a0fd5c7ea7278b16b8835d85d8b552f3418e1209996",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R025_rep00/run_log.json": "daf54b7127ce089a4eba5d5cbad8c3a1801d8f8582908860611e084efff5700a",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R026_rep00/run_log.json": "d302aa079637d5461ff094a80d84a54c3b9a2814ff964935ba0dd873b18a0b8d",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R026_rep00/run_log.json": "c94f1c2fe1aff3faf71e4ba5123ebea2de0c6336b60777602df30175614a0803",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R026_rep00/run_log.json": "4d1dfdf7d6c18f91d51e0ca7867cf67641b67444131438d551a13d00044ba5a7",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R027_rep00/run_log.json": "043280d0e0748618b58bc3abe6e69e45250252b9fc6c05eba61035ebf3197497",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R027_rep00/run_log.json": "03721db6e952b8a2a8e6551e0e6a9dbf9d7d51f0fe4f402bbddd2fa3724057f9",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R027_rep00/run_log.json": "27966bb2df6db5383d411a0d1ed09731bd7b31c62fc46317516414083c685a6d",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R028_rep00/run_log.json": "747cd7c38497913e310ece23c28d6473e879dc331aad914a7bd90c2ec47c6b39",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R028_rep00/run_log.json": "f02a40d2148280e38754100959177aa962155a612ff49a3adedc2e7402d650e8",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R028_rep00/run_log.json": "22c2256dfea2703ed78876c8cf640286775b488f61bf61ebcb7a1b8ff88a30c1",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R029_rep00/run_log.json": "777d746d65a2a88e948818db248913c831cfa0dae6e11ff03f1c65087f6124ce",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R029_rep00/run_log.json": "e1e6fabecd708366e55d5b9096d6a140d817132cd858afde06541bfaa1b2b9fe",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R029_rep00/run_log.json": "15c314b620ec71f53fa197cac197292103ab0de7ccef4e50e76e76c139f01c45",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R030_rep00/run_log.json": "70fb014da023bd0ab7336b81ea0b9083826a766e6358b1ea410abce2de7b85f8",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R030_rep00/run_log.json": "621e433a1501e367ce34d596b661e39da236edc3ddb3517922716f18ed42cc8d",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R030_rep00/run_log.json": "aa33603840be0aeee2ad5890393971ecdc9e5ffdd4e3fafe27cd73bcdba333a2",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R001_rep01/run_log.json": "8f52b23595cefe692ab96d0f63497afae5b3000d723c85753634512ee9cbf364",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R001_rep01/run_log.json": "e12a971a742dfe4bd7001e6cca5cf37dd5b0b7ed9d2b7ad2ef6870ade46ae5d5",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R001_rep01/run_log.json": "0204b919524f24502aa4b5a85e6483dacca4e5462c1a95b4f453a7060a23c06f",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R002_rep01/run_log.json": "21ac6640ac523333e43bf705c4bb9f2664c446777c15a0499e2ab7ee0a78c449",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R002_rep01/run_log.json": "adc28137104ca0957fc95baad29c719aa2867802730a3870c17fd2827d6e6684",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R002_rep01/run_log.json": "4ad3bec56da324cea89f44170a0dcbc9a1ba2bf40d25658505faa2c3bb248726",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R003_rep01/run_log.json": "e95a6f7794bb1a5e36885b3fedaacdfbfff31cfd744fe8f0ab0f30782960c5ea",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R003_rep01/run_log.json": "613a809f0b61cc135ef7fb0da9019a1d527805e40370e73bec973cb352429d2d",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R003_rep01/run_log.json": "1c6f4127828c1dda9469b76ed9ba73716924829e79440ce36f69cbf486badc41",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R004_rep01/run_log.json": "50373e5b0c5f9ebd04f9c881641589e79bdae96e2019b4912418fe437f8fa114",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R004_rep01/run_log.json": "142cf5878a27535f2cbe0d13c2c5949f8f353e0fd7192431852989836e2ff87e",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R004_rep01/run_log.json": "f4654dbd633a9e5c22b66e78f41e9836dc8e562827b19be1947f13fc4c931ede",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R005_rep01/run_log.json": "49e662e2bc96ef8d4842a732cc478a6e7f366412c4059034736cfd061e27be08",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R005_rep01/run_log.json": "2c35fbdb8b0c4dada96560b60da65d0bc09c0ab820d3a5291197ed69ef29795c",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R005_rep01/run_log.json": "ef32d92d6e02703ca363211e615ee7f02cf02c61a6b048053409ec54f1b31f19",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R006_rep01/run_log.json": "3bbee3455a0a455cd8d49d559130f88a9d9eff9cbf75207de570e76ab0ef3d2e",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R006_rep01/run_log.json": "c8f222984097c3fc6c8545060207f1928e14fa0bc58070b4baac5a53aa408edd",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R006_rep01/run_log.json": "1482c1c423ad56cb692ee56faca9bc420919b687be30f3621944772414bc0dba",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R007_rep01/run_log.json": "5bccac338d399b73203e8c6985d729fd0040b641ec15f37ce51751340f142223",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R007_rep01/run_log.json": "832e40204c2d94b7fbc217f34c900a7b0e458f8eb9738c91882b43caea41a405",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R007_rep01/run_log.json": "cfa38a7b52d1e8e99a129751d6e4efc4e7593a6358378f13c4425035c3c35c82",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R008_rep01/run_log.json": "a987dd028e77ca06819cfa643aaffbf03c55857c03abb0be53340d2bc34f7a82",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R008_rep01/run_log.json": "ae8620cde09d68f9363a97c20e63ca224cbc4d7579bc8d9eb7ce82d5d8de3ffd",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R008_rep01/run_log.json": "1e3e75e8ad313b45438075bb81abdc3a4d0c3f71c5f1562b8d9e1729139d1211",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R009_rep01/run_log.json": "da0af1a5efe8b74d2c9117a611627452001d01dbefb2a83c4aa44391c1ed4795",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R009_rep01/run_log.json": "f7f55f8615ad81afdf4214eafc0bc37de8c4ce4486fced38be7ceb650bd779e2",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R009_rep01/run_log.json": "ff06145a1af3f3321bb738f2135b50564bf8762e37e6b8d1f5d936a4e1f4839d",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R010_rep01/run_log.json": "c3ccf8bf57ec980dbcf778016b4a20ab34ecb88c201489e43f1e338e40dd9b66",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R010_rep01/run_log.json": "5dc763a3a41612f5d0207969acdf1438d542a6c2e3d89b9a12d3fa7825738664",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R010_rep01/run_log.json": "77fe37bdda61610670b650752508efaf73355674897ee7878db12b8601cbc9e6",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R011_rep01/run_log.json": "707f999aebdc2c6ea637ae36b0bebc6dd38391e1b47e13d01d4e5f78e0e3daa0",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R011_rep01/run_log.json": "ff1c4d656a93c13577365e8c2fb3244e1423c8d723b897c734e3f44458ffb934",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R011_rep01/run_log.json": "b52ecde746360dcd33eeb73083f87d794134b0c1d65f48400a50f1cb2f4fe82f",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R012_rep01/run_log.json": "8e99815a6e939efc85869d17446470be91ab49c3eee4b3bc85b407b3a2074152",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R012_rep01/run_log.json": "7a9a621d17c8d107b8777078a54e113b7129b6090ac68e5afafa3d7189d5e10a",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R012_rep01/run_log.json": "bd2d6c254b8f79d6a16a7f39b2a1512239cd64c2464418c29591788bd1c86321",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R013_rep01/run_log.json": "d4fc755a0b20bd36d93aed6d82dda12da94b7658d23861d6b05972c3cb5d9210",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R013_rep01/run_log.json": "a7d172af5b27e252013268fc1976aff2f18a7fe81ab2555ebc1dac5f564cd128",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R013_rep01/run_log.json": "5afd5e9009fc3710ebcea52e465b6f00c323286e5bda824cbc5f79b81848eef8",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R014_rep01/run_log.json": "0bfd7718557533dffa16753b2d138e8cd222b1db20167e59cfcfb568a2473f75",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R014_rep01/run_log.json": "07f52148de250c3f4d49124107515ccb5d0b6ab705280a6d267f02b9281b90cc",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R014_rep01/run_log.json": "96e9283584349cad2c64b5b6bf6ad70438ff0cfc9afca2cb291d76b47aaba0c3",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R015_rep01/run_log.json": "eae8f9ebdddb8e9975d1adbc848eb506d7e189724fc54f5bb1b13b4e6b44e31e",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R015_rep01/run_log.json": "4b702fe380a36d19a885f7b5074ac56c7f440e16005a981dacb632361843666f",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R015_rep01/run_log.json": "4392b91664fe8b5d995e93b3e94b9d83322730657902f7964c36276ae90c117a",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R016_rep01/run_log.json": "847fb24756784b152921fcc5b7cb2a0ca4d34b35c513261917bbfa6d62418ef6",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R016_rep01/run_log.json": "388311bc005bf7469ae26d129a7af5023b37b27766ade89fd2a4fe43df6692b2",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R016_rep01/run_log.json": "42ed42acc59fce0c27dcb77106fb57806ba5be1105ff4c0fdbd026a2e0fcb41e",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R017_rep01/run_log.json": "93a3a8ee1539c8700cc6130716aee1f34fc115031cca269572d91b0d8ffdabb5",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R017_rep01/run_log.json": "b68776d866e4e6d311d571c9be7b486a4160254ba98f6c67b9844126d0d82218",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R017_rep01/run_log.json": "b20d118e497fa038501f2cd23d8204bbf1a19c26b88d65a4bd1d057ab035c2bf",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R018_rep01/run_log.json": "531eb1466d965d98486ba31409bf190cefb207bbbd5a3f45b5e3810e2d1df58a",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R018_rep01/run_log.json": "fe85c1f3ed9287e534591d005bf960c179706d430ec069feb326f2b246348967",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R018_rep01/run_log.json": "efa2fea8ecda269cbbb1a806a583215e16234e8cb4042bb5a9a13065c956cf25",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R019_rep01/run_log.json": "39df911226077bfe69c03bdbef23e403c91d9045d29b09a5f315803428d858db",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R019_rep01/run_log.json": "7a2f1fdc7f50b03713b5a3e2d731d0bc597e60762e5a1e4d53795ab809ebd355",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R019_rep01/run_log.json": "08b7f3769059a7722b72437308bee98bfd439c4e00b90692487b08f6d14ac601",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R020_rep01/run_log.json": "19ea83ff92fa6d8b880a8074c91f24b66fed28581022b4322efc5036dedfb60c",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R020_rep01/run_log.json": "0a17c5dbd375355ef8da4365f49a7f676a2b0987c4ccd4c9ed846cbc8f1d52a4",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R020_rep01/run_log.json": "5c86d17bc604ffb44b0e1f52e3829105b0e23eefbc8f6e266b47a70066d609b7",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R021_rep01/run_log.json": "54037ce4b5d4d53030e7a3d50ac36fb991f80c52244f8d208283b234525b0524",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R021_rep01/run_log.json": "1aa603643955b80e32f31c64b243a901a5c6fa46589aab17b64ee94ea66e0ead",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R021_rep01/run_log.json": "f2ca8ed99a04e01614aa555a140de2996dd8ecb64e0df21589e9095cb8386a73",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R022_rep01/run_log.json": "d8566071f5ca18840cd534d0f186e22f435adb3f7b12fbcc73193c2d89ca3a71",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R022_rep01/run_log.json": "ac5d21cc42d58741a7e96d13bd5d8170873e9210e9e233710e5949ef0920afcd",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R022_rep01/run_log.json": "da0939595bc9db7b27d8914922f6229dc79b30b469c15aa17d9d36e8e6b5f654",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R023_rep01/run_log.json": "4f609b29d7cb67b6ce91253477010f5ffe67f0812895502d1131a8012103c384",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R023_rep01/run_log.json": "1bce6c165f957f3b88f665a4791456fcb73245217160e356515f8539177cfa6f",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R023_rep01/run_log.json": "dcf06754d6bd00cc196364afe7853afd30ec650b45b80cc9c4758ce75b59db58",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R024_rep01/run_log.json": "48e4b3451bce80f479159e2e887b71cc1f79318b7eb7e74d27a57f234d3f5c65",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R024_rep01/run_log.json": "30e9f6a194c0ba9d83ffd3a9261bf4d97d413880c9fcd1230266d2ae76e994c8",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R024_rep01/run_log.json": "dc34a648291d177e62d3c07dd169b27bde46d0e985c79530d73d1bd98bfb61b6",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R025_rep01/run_log.json": "df65a016b76fb06d8d4a099786226cb6dd4a25e9668dc62bd0279618194e76cc",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R025_rep01/run_log.json": "a30f9730948a218f7de4394b36bcbafee2ce90cc932a7c8359b5cdfc70af1f8f",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R025_rep01/run_log.json": "294a9f8d928a8307475ca32c5c802de47847fc66513e051c084122b8f6dc653e",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R026_rep01/run_log.json": "eb3847634e113b6ed11eb7e33845d03ca325ea28611acbd44eff13dbbcd4bfe8",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R026_rep01/run_log.json": "992a551af20dbb699cad9a27eb44c484995542d7faf08df379478b7ca30258f2",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R026_rep01/run_log.json": "b0f746f99cfbe76df3bf5ec99786eb161cabab91658207686332511cc38eb230",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R027_rep01/run_log.json": "837d39a1beb2af4b70d4c0ccd3b051b0442b452c4a1382f7010c18789004a9a5",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R027_rep01/run_log.json": "f73ed4995cedc33f8fb6413b13313b6d35f61723164ec482d2562d78b0f8c0d7",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R027_rep01/run_log.json": "155485b026fa15f8ccf2d963c6666c1eac5448ae24e99caed498a703a0fd1133",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R028_rep01/run_log.json": "bb27ac9e9dfe1d30a15caca169da1a1668f96951cb68ccb9c97b25c85d5cadac",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R028_rep01/run_log.json": "650419611cfcf6ff34c69d338ab596962539ac713cd47f5b11d0401139391e61",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R028_rep01/run_log.json": "197294f838b001122f80829567f9587d7a2fffa98d6adc62a5f2569243575e06",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R029_rep01/run_log.json": "163528aa3047045fc57baa05c68ba26df98af924f6883516897d955324ca3edc",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R029_rep01/run_log.json": "84ae76d7cf455a7484d469cdf6aa67fec6bdd876098d636b86a83a8052e4cc3d",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R029_rep01/run_log.json": "51da57eb6096e2327eb9a605806b9716e9958757bcb2c2dbeae8a67fa1595bc4",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R030_rep01/run_log.json": "d0857b4f3688a035cb8b94e8f853d3afbbb2e31e716d9a4a3db4365ff1099efe",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R030_rep01/run_log.json": "3c5f5bd249919373d6482eb451cf236953f2394afaf1a1df1000dca4f900501b",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R030_rep01/run_log.json": "3cfed33e9b96643be5524714802d8814c8933de20d4b96469bef9a5dabc7773d",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R001_rep02/run_log.json": "142db32248e32af604359464c4b7c08312a1a6624a233514d0e781cff9032472",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R001_rep02/run_log.json": "3530dd3445936bb0ce0f64e568dc02d5b42d177b14d335d2c1ade185d3d987ec",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R001_rep02/run_log.json": "7f3c3b67739f150e8b75cded18b5fc031e99eea73b81833fc0d9184ae24d69f9",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R002_rep02/run_log.json": "72a77cdc5acdc387d0182a415f3c1225c9cc90955ed196fe55a4c122a83d7d36",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R002_rep02/run_log.json": "270b5059219602996aae9000518f8d8499b9b6f925cfa36a34141f641b6836c9",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R002_rep02/run_log.json": "4e73663fdfc525505fc0290e6d264626150b2a6dfc6d8d7971c9d9268d376891",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R003_rep02/run_log.json": "9e41201a6c61b9e13d9b680d99d536f2dc953487f754e69b5e87d2a799203977",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R003_rep02/run_log.json": "0a5a4235494494d79d3cf518169780e9cb5a416d733c618224f3bd6f18f6b685",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R003_rep02/run_log.json": "8b4e806346fe6f8534a74a6b0491e462c4d2ece881c6b367c9fff301602bc9c8",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R004_rep02/run_log.json": "6e13d33e32bbfeb6da67c7f2cc1acfb98dd313facc0be0dca46d28c7ae29321c",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R004_rep02/run_log.json": "ce8a6260426eda96e7c3f90155bff49146a41144facaa9f6988f07edbd3b058b",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R004_rep02/run_log.json": "2f1ff2b9569dda007413da9190ebfa00f4ad97d943d4e9aa0d22e0b7d74144b8",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R005_rep02/run_log.json": "6c337bda4b586a4132cef101c1cfc8729e596633aa17d94bb77f0edfd6a8b5a7",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R005_rep02/run_log.json": "44b85b495d92b9ac5d5a5c33ac5475e3206849040d215ebf80e36337bcad82ba",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R005_rep02/run_log.json": "9a6a65c7a2f08ea73a3b0aab36a1cb0b1ffbc6120d8447575704b2b67fc433de",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R006_rep02/run_log.json": "6e35d421272f5dd5b5ac6b576e95bab0c70632e8f294718a9f658e25cf14df4e",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R006_rep02/run_log.json": "1a901c2406b62f72a47a2872488bf6476951f49132801bda136d5681630593fd",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R006_rep02/run_log.json": "f8cafc1415486139d659a3567e9a32a8416bb1c65ea942b19014c8b0a454c8b0",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R007_rep02/run_log.json": "e210d32afc5133344fe858f7d4c39a5bb7cd2799abd92bbe18c391f1ab41b087",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R007_rep02/run_log.json": "2c1397660f88b2cd87499e6e0d4ec20573686d81a8612d07bdae8a8862dedf56",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R007_rep02/run_log.json": "8278376a4e938d6a215b904f29034a6b55cdb5de85a2d8f8d2869e3e0160abd6",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R008_rep02/run_log.json": "41d802a4d4dff9256838797f794b54d0b0f6a0e57ff8cab13091387ba1210334",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R008_rep02/run_log.json": "fd3f86749bac3aa4e30e75949b6026e1f330e325848e6a631e7a4374458ae928",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R008_rep02/run_log.json": "3e18979f0775b6444948ea722494b89336fff0e87644e2a7b87608b0f63dd9e3",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R009_rep02/run_log.json": "d6149f558d6472662642982e11ff65fd66b6fe3bc3c0d32708874820fbab4074",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R009_rep02/run_log.json": "7c8f22c5cc0d6f2a3c432a58199832d30d523fddc7e10006ad131b7761532d50",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R009_rep02/run_log.json": "58397cf62afcb034f0679243a5ffed22108668047aedc3253ce00d8bc47ab3b2",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R010_rep02/run_log.json": "6cbc72d545fd1fc1d42dac02e475cdba4f5721393fa0004aa788da2aa594558b",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R010_rep02/run_log.json": "bbbb7e969368f5ce74c9e7d39c13a1ec2204c8c91f104af2eddefdbd9a009b6d",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R010_rep02/run_log.json": "e738911b8a4972f6adf82f89964c65e3510abe4893f5c5bcf81462145986b222",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R011_rep02/run_log.json": "e283de9a29d4e67995c5de94f2ab5fb20b4b7fb1f70dc977216b553316e701e0",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R011_rep02/run_log.json": "24f4784c98cb50e49b3444c3176a33e1dc4a497a98bcf3a909b3bc08fb7a4c10",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R011_rep02/run_log.json": "3a2c6f02bb7244b8e61ae87a563ebac3193520ed6cb9e3ec4724cb6079467c80",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R012_rep02/run_log.json": "091159cc31cc7437d2fc8c93d36a213e754d7befcdb0cb0fc6197ed8b51f82fd",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R012_rep02/run_log.json": "622819a3bcb350b05fdce47398b9f12d54908143de0679e755623b66605a43f5",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R012_rep02/run_log.json": "3bf87330ca4e2dfd8969a64d939ef060f3a293825befc3fe3fb1de949abf8f7c",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R013_rep02/run_log.json": "72a6b75eaf58d11207c4b1ac0039ff1985fa995b4d24606583b802f7192c5f49",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R013_rep02/run_log.json": "bfc4065e867a08122e82aae1cd1f4f4e334d7f500378136b435137318b306fec",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R013_rep02/run_log.json": "172421ec5b819e7d6443cdedbd961b767d74e3224595e4510c13dca137e083cf",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R014_rep02/run_log.json": "41709d1c4b640206e3b66225940889a25f57b05e5413fc57880e3510795739b7",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R014_rep02/run_log.json": "979c13ab950f6f052ff7552132a2987febe6414a68287575171f77008e7ac49b",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R014_rep02/run_log.json": "e1d80b8ff4ff9ed9985a5dbbc5c2fea46e94cabdf45b427aa57a01ec59bc5073",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R015_rep02/run_log.json": "a77bd13dfd04e7f62606d3cf6a7ea174ad5830915eeeff350deb249fb4cda688",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R015_rep02/run_log.json": "4def6a9537d3ba9342cd97e335fde313eba44edec9f14064fb4f3b3f1d2151ae",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R015_rep02/run_log.json": "a2f24234a9b0a88ddd880d33d1ec4c8725d1a1a0d739e11480bfb605ad6df627",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R016_rep02/run_log.json": "0f17878082b53e7d6aaf82da69d5f66ad5785309eada3796ea9536139079ca59",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R016_rep02/run_log.json": "c8787d392d4a3d6cee3cb1de09c963a00abe08252635c92d94a21c9bf78ac861",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R016_rep02/run_log.json": "6a61ea9ce89cdfe2799c618d4f65931c3fd956560d2d8862cb708d1c0979eda8",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R017_rep02/run_log.json": "16f5eea3c77b09e3bd45cc8950529f975d22d09eb4d31af429e000927a630b27",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R017_rep02/run_log.json": "ab193d7f5679132e28dae823100e835529de074cf154d525f9e1dad42142946b",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R017_rep02/run_log.json": "fe42ca7414155e766603945c26df0f6d4859c2b97fc90b99240d0f8c727ce440",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R018_rep02/run_log.json": "8a5f60d3fc76138c6a8431f3b6472c19bab4f0fd694257d516e02c822f361661",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R018_rep02/run_log.json": "3eccf51e059e6a3b0247c1faa84821820a8ccce46c15c375549558c6d849b79f",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R018_rep02/run_log.json": "41f94d9f6c3bb4536447b871c2dda2d7a1a1acac6397a0bfff2525d1c4f26ddd",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R019_rep02/run_log.json": "8fbfe9cf4afd0ba8e68941bcb12a843b562ef44a030db558d002daec3e85e7e7",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R019_rep02/run_log.json": "5391778a8989ae74e8b8af8db384a21a830954e34705599797afd81468672f0f",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R019_rep02/run_log.json": "6e29ccceb5c3d1b6f1bd25741e6e302d959167c72b9acdb011f651d4de4558b5",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R020_rep02/run_log.json": "ca3e43166317c5699a5ed0c3ccfcfa848424883d3d0b1aa8050cd13fb291a44f",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R020_rep02/run_log.json": "e8214daa92d1f226add4c2fcb06d2292bf8ba2696a88eb50fb8e8f41822058d3",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R020_rep02/run_log.json": "69737d415456b7d7675f81012f8a97a44d2542a5118353b251b0df1e658305ef",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R021_rep02/run_log.json": "4dfe89c19cccf04c5d14e81c77b9ef70ce9f2d1e202b564a3fcbb3261fb8de1f",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R021_rep02/run_log.json": "b842887efbe4d87234c5df741a00c492da0a234b593293d1a2f554c081ec8778",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R021_rep02/run_log.json": "aeeb9fba757eebda982b01586644c8d923054df174da40da4fc70d66d6ba7370",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R022_rep02/run_log.json": "86fb97f50290205fa480c4ba0f6e89b3a2ccd6ce78cf2d3bddbe11a71dc526a5",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R022_rep02/run_log.json": "33211a7ef71278b1af11f7730b56bffb3835097fd5e357a0bf4a7691a7cc5109",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R022_rep02/run_log.json": "8633c64e43f906558844954dcb299b69c70c779c905f36c8451b37a67b8354b2",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R023_rep02/run_log.json": "5bc09277b6f9b0b3c1ec7d2d89f0f29d31c131b1bb6b1a3b1aba09ee002b6f83",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R023_rep02/run_log.json": "56e698ce2038c36100d5a3cfd37d7b0d26ba223db3778f172c0281984c0b3703",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R023_rep02/run_log.json": "0314a1eea7903b9d8adf2c38cb4212a501b3702b4ab0f5f547de4ac477f98a75",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R024_rep02/run_log.json": "9c1995c431eca64ccb94f7786ca03d0f46d157c4cb25e6370f2deba68cdc7566",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R024_rep02/run_log.json": "1a925dead65c79ab847be8ec2bc9b66dfb0dc455fb73a451a358299d0ecb6718",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R024_rep02/run_log.json": "049d6185fa7efe552366f6bcec510a2e71cd8c3944f9c1091ffc573630bccfd6",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R025_rep02/run_log.json": "8bbcc542d636c52cc31a58bdc162c646de37f6087b3ea9833bdb8527b83cef1c",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R025_rep02/run_log.json": "d46df54211dbc52919aa47f167045851b8f2b1cfa78001b71988e91e2569f6bb",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R025_rep02/run_log.json": "c4e1ed677da5e914014e62318449a7bebac1f757cc77ceb03d911992592750f3",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R026_rep02/run_log.json": "c1bddb73b64f161641faafe7e89a747ad1d5465e0a7356ff433ae078acfba5e7",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R026_rep02/run_log.json": "45716a0048670275809b81bb84406c5a952e1de07aa590f81382353692728a92",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R026_rep02/run_log.json": "8a7c6c94d8dc8cc82cdf04f2a36633cd8b9014c94a45b5f82c8d74b741509afe",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R027_rep02/run_log.json": "1e587652890a33c3023a8127f414f09009203d795b90084aae3b3a591664c743",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R027_rep02/run_log.json": "92b9b1bdd831a54afcb64714ac33100e3ef0a2c21bd853a417d1274cb37d9152",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R027_rep02/run_log.json": "b12d2181a37c5c70c37bbedbeb9a21d9e4f72e9ae2640f512d0e919bab2a9c25",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R028_rep02/run_log.json": "a0502244ac4b392377b531b5b6e481460a6c4889a5ff834444c19fe8c00e477b",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R028_rep02/run_log.json": "5be0df9ce59610a381ab2f84f6013e980c2da8cac1541b11224022867fcdd345",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R028_rep02/run_log.json": "573015148d06b69f59c89ad11bd5fe92443e728e16a5c3fc129535c7b5cceda1",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R029_rep02/run_log.json": "f246929627834df9614e71bf3d623ba4b01eb0c9c28882dc8e0fe42df72b1362",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R029_rep02/run_log.json": "c6560f02e6f6930177a33b49bfa860b42b0b18fa10b07b85ee0fca0e45ceae8f",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R029_rep02/run_log.json": "1a1619696b50a3e16b1e4f6313aa2e3bd585dad068564305acd08cf1fd50c51c",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R030_rep02/run_log.json": "96b0a6dd5f2c43f5175c67bc88a64768e81dc4190ab9349ee13f6f47d6bd72ca",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R030_rep02/run_log.json": "06b84965f15e8a3e8430dfd25e04d5159e5665cafa3b0142c9057aab23c949d4",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R030_rep02/run_log.json": "196e812147c68d03aa379e603aebdf2c9d3a59839a4d78aa95da4821a0f24e3c",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R001_rep03/run_log.json": "b4fd1f44e2835d0560abd8d7900f0c16a84d099fdf4900ce35b286c6b89de282",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R001_rep03/run_log.json": "01d13a12d7d07775d31643c635bd50f0de6a608e65fa8191f27f2d2380aced98",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R001_rep03/run_log.json": "a6ca79c276c062b7c98a475e6b8dfb17a37393a817150d4efd149c4fda2346a1",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R002_rep03/run_log.json": "8a7f2c88ec67db9617033137145ddcf0a089087fdd8823c0ea9c00b0af4205fd",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R002_rep03/run_log.json": "d6124bb4f0fd2f04ec3534b0c62d57cbe5ca1c979b5641caeb672a0f97c53014",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R002_rep03/run_log.json": "0f5a025931f3dd9857fdc4c0e7121dcd29f067f29d3a3f0035b708d13e742487",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R003_rep03/run_log.json": "e1063ee779ae84f94fc25da0e85cf40e12e91b4780fb357127ff9362ece5e077",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R003_rep03/run_log.json": "5b75166bdd5dd6ceef18ccd401645df3665fe5a54ef67e65336eb5bcce6c8378",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R003_rep03/run_log.json": "b8ed92d9ecc3f279b740017757b8b4179bb8f5eceb7b290030f71d9e35bcd228",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R004_rep03/run_log.json": "3cc777520197cf654435654c4d2114f704d9836d6046b28f6942d3865ac34434",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R004_rep03/run_log.json": "246d88e0cef017f478e731e389a7d33320f0fd585ae30be2c134f6d1cd0b618f",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R004_rep03/run_log.json": "69d6d6de6a3c047f14c44a28ed24184fc38597f9cf8d2c15dbe8ed5124442448",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R005_rep03/run_log.json": "01a8b7fd55a5f6946dfa193ecd41ed53caeba79b530e1f8cf917b650604380d3",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R005_rep03/run_log.json": "6dbded29cb15ddaa1f14b5bc514d4cd8d3166d9728dddd8456ef16dcb04f6d0d",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R005_rep03/run_log.json": "8d56b80a73ff0f97f157cffa54a57808588bffe0ef6de7b1a0a5cea2c8ba981d",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R006_rep03/run_log.json": "37998bd9fd05a12615426e41775417a3fd357560627411eabc3c2bf7965e0a3e",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R006_rep03/run_log.json": "30b2a0fd0e901dd962e2b529886589da26896a40a190ab8b0ae3eebaa194255c",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R006_rep03/run_log.json": "9d9309ad25434838160c6ceab33374d7320603b783c9e4dddb18fa375bcc2017",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R007_rep03/run_log.json": "51f5bcc17456dcc48363b499a6d1832d8e46107d2d6ddfeeaac2be49164d3ccb",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R007_rep03/run_log.json": "bc1ae21772436d22e58ecf651b2de8501d498cbb91f08730bf92e4f87a17944a",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R007_rep03/run_log.json": "b3c5fb510ed2720c70910649363fd6837d7b374e694cf557bbde6d3e43cee1ed",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R008_rep03/run_log.json": "8bbaeab4600c83d33aec620fdd3ea520421fa539cbafc238828b0913f99b3a75",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R008_rep03/run_log.json": "fbbf2bba2803bb31d18088a36d9dd2091e9a7ae4c3881664620abff92014e7fe",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R008_rep03/run_log.json": "25a3e1dfaf4d513d1f116292234043f4ac477522c073022728a4468a18038890",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R009_rep03/run_log.json": "35fa77dc77b34f5611e1862d91da7a03c8ca82bd69fe844869e3575b382cf3d6",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R009_rep03/run_log.json": "4f2db72d8e046f603bbccfbefcfbf93ba40ba0f9c32b554578e0f55dfe6c95da",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R009_rep03/run_log.json": "595eed40b84dc9c32f88b8a927f5f286eb30decac01a8a68edb2fa0e4edbf6e1",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R010_rep03/run_log.json": "bd4569b5e212c4c0947cf8956b4f217eac0eb282757ac2c66d92880955865683",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R010_rep03/run_log.json": "ed7e63f61a0c0d898ac56296ec5c21d2225973a806fc8ffe3039ce450df97cd6",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R010_rep03/run_log.json": "16a8e0ce3bb9e76158195854054f62391f4926512f80a11ba5a47011d5269977",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R011_rep03/run_log.json": "6dc8c5b5413c666ed8368d5ce22f199c4ad530af5445f99306cb16cda9723f34",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R011_rep03/run_log.json": "c7f06cfe2f445358c5f13718266574382f1247d81788ba847c01c39f87c26488",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R011_rep03/run_log.json": "25141f74148db5f554294e9001953d9c5acab3e5f5770574bb887f4a1a4a7071",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R012_rep03/run_log.json": "d0dcf0134611721cc696195e976f48d3daf920c061d4fd68acdbfb7060081c2e",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R012_rep03/run_log.json": "15200745b15cd58fb52d2e36ac8e71f15b336afd9da812673523b00854437993",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R012_rep03/run_log.json": "1eaef28dae9960109674f63eb3126e29e8183d708cb502cc51f5826f9fa2f180",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R013_rep03/run_log.json": "9796d465f4eab66336c6fb0cc9f686d1946d5552e09f99d11e9be82c2fe2c75b",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R013_rep03/run_log.json": "e492bae7177ef5c734572425963a5329fdc18fb40b7fe40ce595837a751fe74f",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R013_rep03/run_log.json": "553f4e7b0d7feb77722f21a4349d254a47c69b324bcd334a8c515c8b7b6265fe",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R014_rep03/run_log.json": "5f6a5f63d34c36dfc11d31d99f67cbcb5230e2065c41f4d337d24344de92f7f2",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R014_rep03/run_log.json": "78766a23c10d9bf40fe67281d3a93f1a2964b2a290cc34aa8216ae52436dd3af",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R014_rep03/run_log.json": "5830c66e27eb68997321129c58423093b0b840dbec3b98e1db8a1cf8aace09c8",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R015_rep03/run_log.json": "59766c0002e50389e62c80128bc1f8a5927c3484d9f3887582e919e6abaa4a84",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R015_rep03/run_log.json": "dd9d96b8d799c9074e00e35ce3404f44fa688737949bafa3f7a4c715e029f60a",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R015_rep03/run_log.json": "6a27d082e843c76fe4794436387d16709d610e0e98732802e8319182475abc22",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R016_rep03/run_log.json": "e3e2600871cc52a16d5f00684c514730a34f08bd3928954e8052cb8382fa0d1a",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R016_rep03/run_log.json": "a7d078566d0c583b484c613f08b918984dc545f3f9e6e578efcfa6e2395cc07b",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R016_rep03/run_log.json": "96764e247170481634a243fff379d2e91b41570d75084097432dc968227bbdf2",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R017_rep03/run_log.json": "a910236fa226ec5945daa388fe6c06b97c318dda2bbb00f3e9398eea50ad2aa0",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R017_rep03/run_log.json": "87aeabb1197afac984920a75db5bd4952bbc4e441b548467b838c7e9df20aa7a",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R017_rep03/run_log.json": "138bad3d70b3f25cf3336f3bfff5fc597e57f7da51823717f5a341c927c2b530",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R018_rep03/run_log.json": "01c30a6c296c1c2c2cf611fc69bb246c225cfcf1a61c66b8b710810a085a83c8",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R018_rep03/run_log.json": "19c0257b31bfa2397c274cf545e2da1f71263764966f6b7d4c443b080424d6a5",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R018_rep03/run_log.json": "d2c0605938124b420e28b38b09def0d718a5eb8d0cb7a8062096cef31b5749e0",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R019_rep03/run_log.json": "49ebe95615609b3fdbc5daeaaa6d6e58be643167e027f9068ffd756e2a7b6b5d",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R019_rep03/run_log.json": "9a7b31fd3db9214a411e5806cec3591c24ebfe16135c00a6b41ccfbe33ee65e4",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R019_rep03/run_log.json": "3adf1408e7c48153d3c990b4f06256916fa4c4a38b84a3f5fd092b2962d6977b",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R020_rep03/run_log.json": "fc684898126ba04f3de5c3ea29f66b038f5a55c0b9cff5bd612dc4b9e7535389",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R020_rep03/run_log.json": "768920056e8695182a2eed379e443dd05f5243e0267dd47d4db79c103f50b091",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R020_rep03/run_log.json": "b72e92a80563f29dc7ca7efc33e96f9b352111bc740cfa8ccea293c691b5b855",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R021_rep03/run_log.json": "0253a570f07f9986b6b807a27ec7a77ca325755220b00adc656bdf7d541b8ace",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R021_rep03/run_log.json": "d4fd233d0a18e4832e922d53c9116f7cf0f0d176ceda162ac06fdffe4ee085a5",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R021_rep03/run_log.json": "2fa9e692c561b55e29bebe7b2ce0d55acb9aedbbbdb026fb367ca7d63aed10ca",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R022_rep03/run_log.json": "fe7b4ff62b2c2d064f529b99318cbccba917c2354eaf94d13d48e6db30659718",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R022_rep03/run_log.json": "9dc8a8ccd618d1abfdfeb5288222abd9bfe626ab122e374cbb0d334c19ddcfee",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R022_rep03/run_log.json": "db00448f00f2d1a9b4898b9181d466d156adc1aec9769a1df71dba28e4abb124",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R023_rep03/run_log.json": "a7600249ac4d0e068ebab0281fb396ac4b764f218e45445629ec388935c7be35",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R023_rep03/run_log.json": "0990faab36b95cd74addc392b8720f963c04da7212d1f131b58b9934e4349e55",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R023_rep03/run_log.json": "37b5686da5b66060238983dd01bd514f4c8c15bf5e3135b642c6e011cee7daeb",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R024_rep03/run_log.json": "64fba80e1e67ff222cdce009d14655a6461e3cf2f4dc06db5104f3dbf04420ea",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R024_rep03/run_log.json": "d3cc4c06ec96652e4f685288fe6b753647a84ffa8b0af318abd48cb8736eb06c",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R024_rep03/run_log.json": "f4ee31bad68018bbe22dcde4955982501d0000c2cab7f8c92007a19696eeef2f",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R025_rep03/run_log.json": "6b9e9fa19c3f54ad4b7f0f30f0d030f392c2657838a81962e8add1475a851132",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R025_rep03/run_log.json": "c794f267f5f986873509ec56e872b11788335325e853aff998f3a8aa5113c141",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R025_rep03/run_log.json": "314f9228175a364218c30eb4fa0a25611b19db9c9a15b1c8dcad5d46317bf257",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R026_rep03/run_log.json": "309e0d50ec1112ced1ccd2d6bba935b74077e970137c35ccdf6cd498aefd261d",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R026_rep03/run_log.json": "62935b1534b22396e5bfb69636dbc36c2fed2b61a036b4e02344d324848d8211",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R026_rep03/run_log.json": "40eab642ca44f71493a1bce427f99826f01b1af9e636785a180ccb3a3ffe5174",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R027_rep03/run_log.json": "dc6def87136156636d0fe8db1fa63236b0d2626b378081aecd4d84ebfed5e2a2",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R027_rep03/run_log.json": "442413f8e7231eb60a030b1184ddcc4539767bd05635129ca499ab70c87ffde0",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R027_rep03/run_log.json": "7c0921e562f4905919c32db782359f4cb81c36db782912a77d3b249d24a69a5d",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R028_rep03/run_log.json": "c0ca53ce027fd6a9cfb7bc7a3cae0b9b70b61aaacea6a32b1156cea8541c4cd6",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R028_rep03/run_log.json": "10c4b822eb22a4e4f2219d61d30b0ed5a517037456bb5ec3eb38ae2c42f50e36",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R028_rep03/run_log.json": "0a5442def881da8242ccf6ffdebf4f96c533e690328bbbe004daa15fb507e427",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R029_rep03/run_log.json": "b2ddc87174eb240a6dac5c7ef2a82f93b771c790583126e27d13bcd245992ad1",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R029_rep03/run_log.json": "42e6edad9c1d694dae13261dafe6cf9ef55e1499aabd8bb68ba98db5e426b440",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R029_rep03/run_log.json": "19e19b2f0f84de61a585133aeb56514a2a3917ac7c719d878f1b0cce3bc75a3e",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R030_rep03/run_log.json": "f18c8a8b4a057e424cfc0c15c1dab760fb7caaa71a4d1de097ddbfec9c181c68",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R030_rep03/run_log.json": "96f531293d472a3f20e42f47b76073291e5aba42f525da2ad22c26ca4ba83434",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R030_rep03/run_log.json": "06d2ff366225917f01840632fceffffaaffa06bd47b9db18ee4d6b2614cbe71b",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R001_rep04/run_log.json": "96f2c8b7808b94df3bf295aca7b410a0fbf0d3b5918be1a132b4082c3f6d0be4",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R001_rep04/run_log.json": "9cb3a35a4e5e3308bf03496f3a628ffa0cbe3a443342432d1400ce380ec00272",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R001_rep04/run_log.json": "64d3bece37f8a8a8d14db428c767b947da08b2492c6e86b1dd2ccc99bbdeea5a",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R002_rep04/run_log.json": "8e3cef0871611d4e6baee1ef2960b54aa620db01416d360a7479083a6e74c8ca",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R002_rep04/run_log.json": "9358309044a76fad5e935d8cb7f4cb00854373e6e96f32eb2313ad06028366ff",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R002_rep04/run_log.json": "9d2c27cd512379c75655e773ea02e379eba6531af890682b5158386d2dd6a0eb",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R003_rep04/run_log.json": "4161ad51b8ff910ef4b424d9b919b84b683c0564fac6c623cbd6fa13b0399123",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R003_rep04/run_log.json": "43a75c799bac20ed850a08cfd693bd22a4a8bbf111eb167443fbab9df9cad3e6",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R003_rep04/run_log.json": "0ab5108bbf910547c585b146517ce0c58789ce5a6d302fdced6f982e3bbdf985",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R004_rep04/run_log.json": "e9a739c37c4e3ecbc2de8350f56d274e0a01d3c3275e3721f5f2cfea3f526a2c",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R004_rep04/run_log.json": "ff734da0ff91ecde4def26e770c052a54fe5b819997c46c8d7ac5600fc28fad9",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R004_rep04/run_log.json": "f97b905baaacbceffb825e65e64d2c32c2460dc2c07581dd8e02bbe369498c1a",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R005_rep04/run_log.json": "c9c581badb2e86592c0f3fb28679d829614ceb7ced8632ce75b9fac3628bfb77",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R005_rep04/run_log.json": "869e6edb19bf9cc8b76722bfd290ad25164b550087e75d656ad17f710b630634",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R005_rep04/run_log.json": "1ea9251fdd18cc32b2522e7c29128c64854dcf490975d44ce0518b2208fa84db",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R006_rep04/run_log.json": "2740077aa260efccba529da33dbfb41da638837b19c91ce9bfb07c49c17ea0fb",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R006_rep04/run_log.json": "d56070a10978cee08bc816b5b57caabd5433066f2f221c42eaa79c3a8e845dcc",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R006_rep04/run_log.json": "645644cf234a31092729e528e8d321bd26699ef053318d6541b4b1ad054e72a3",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R007_rep04/run_log.json": "94c38b810458e45f084c0c16744bf9808111e6d6db7fd00e58cf926b1b1e6a0e",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R007_rep04/run_log.json": "ec96a7038f588a0831f12654d0c88fe64ae8fdfa169f79537ceb51a585b6f9e3",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R007_rep04/run_log.json": "f6f461195bfae69da477e24f53877f3d66fbb42d4324fb8dd2d6e1cfc3692c8a",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R008_rep04/run_log.json": "797430a1d3f1e5d089d1824b55c0e9414b9cd94a57d83277e210b0eb3caee7ca",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R008_rep04/run_log.json": "3c7274de5b513408f277162435caee4644a64a49717205827482321cda2c0d94",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R008_rep04/run_log.json": "22579babffe7d5b948e181579c0b03166fd5897fc92a1e7954855d4ac13ef9a6",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R009_rep04/run_log.json": "2960ae32c62b25fb854ed436fd12c94fd3b3b47c657d86296bbc55a54c28254e",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R009_rep04/run_log.json": "d4c694693b3b5d1151b4b4ca160522a3bc8e165baff830052856d284c150c3d9",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R009_rep04/run_log.json": "d1f255794254a407871da4467f2c03f4184a73813aa87c9f82be9e26ef985a1e",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R010_rep04/run_log.json": "085bf848d74ff12ac377390347a9af3e033c7e77467fba64e64c2f359e45c3dc",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R010_rep04/run_log.json": "f528c9115003fc77d98bf97eb7b0978950204c8632c821a80ef48917011a242e",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R010_rep04/run_log.json": "62c58e6a3d5f09c1a780f7b4cd2c154533a374c9092a0fa7f9128c6c8f546c32",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R011_rep04/run_log.json": "75a9b5c24f50fb627b6002b6994265b82395ce94776bbe46d99186888808bae2",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R011_rep04/run_log.json": "c5cb562b84a7bc9927aa4e972cf20e68bb25ad74c44601c742a04e2884f62c61",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R011_rep04/run_log.json": "17d4edcb3cb7a2bfef789d27e53a04116f4fa584c436f709ac844d4b66581f71",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R012_rep04/run_log.json": "a010948bfef42d1f38c554d347233417bc3b9686bd37ace989c134960daf2bc6",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R012_rep04/run_log.json": "daab865b177e9fcb8a1b7fd4a4c97d2d4a2ea69074235ef5cb30e22ba4ecc46c",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R012_rep04/run_log.json": "83e11011df2f029c3bb87779ee62f90d44819b2d6a82349d091f3b0b23edb1c1",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R013_rep04/run_log.json": "acc1dbaf7d218798bd091b6cc411d00fe43f96bdb2f931cabbdf764339b979e2",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R013_rep04/run_log.json": "503c096261d88b4c96670982320bf1875ec6966e6177e590f07c7dd762b97452",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R013_rep04/run_log.json": "70d096e612f5de3688a24e00b538c64e8be09de4da04dbc02634cdb25895f943",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R014_rep04/run_log.json": "ac9ed3aaa3792d34d57f625a684455f244289ed75baa0080d6f1e788ce4feebc",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R014_rep04/run_log.json": "030e9ebfdf79d87cfe0024b4c92c216fdce9f1b4bad1e3da89bbbe0843c1364a",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R014_rep04/run_log.json": "917c862a7df0a02d7044c027033bbe0650ccc6d4aa8e4c1084b450be29902b78",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R015_rep04/run_log.json": "2ed073fa760fb259d3f023b87173642301c726a42a794b8eca97e3a03284e49d",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R015_rep04/run_log.json": "ea04852b773f34f0c904d9f16c5563c28080932824cc11c9addee57884212546",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R015_rep04/run_log.json": "ce1fc2eba18287b54d5529e6bbf107026ef3f156a60eac96d8ba3cc12663cc9d",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R016_rep04/run_log.json": "c8a8b22682a206668e407191e75b78b53a258860192902084bb74254b542fc1d",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R016_rep04/run_log.json": "f967883e0a83b0b1b74e82108b26ca79efaba3caee12bd63b872c56337ec75ca",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R016_rep04/run_log.json": "d2972eaa9df3099e72a447141691e82e2da0f9480f8c1cc4fbc6a95e9e66b8ac",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R017_rep04/run_log.json": "1ed4ddd95e6f248f5eaf03bda38b59136b6d4d076c37bb3bfc725c4f3d96ed33",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R017_rep04/run_log.json": "76d26dc900725a3d411d77fc00f0d2ee13333c1dfae8ba0597cc6321a28b124e",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R017_rep04/run_log.json": "8b69ab68b1be4e10efa23645f02cb06d25bb7c811e21715a6bfecad9fde1f5b7",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R018_rep04/run_log.json": "54f3a2750837657b7ced37bca0652ef4e4b70b093631ed98a23c8d00f04cdb16",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R018_rep04/run_log.json": "ad2fb24e8bd3c1cf2aa2e631889ffe0555305355b14883b5990b76e85268dec9",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R018_rep04/run_log.json": "3489010abb6bbf5253fe764b30dec02db7a6857522c490ba52fe66e3ab878fc4",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R019_rep04/run_log.json": "06b79d071bf11c89b0da093f10c1a450f89691ceb42cf07278fdfdd987111a16",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R019_rep04/run_log.json": "735b7f47ba0ac75e13738b73430a8bba722d90eb54b86bcc97a85e4b37d86998",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R019_rep04/run_log.json": "86f67631e3cf3834498488fe73ebb3281b365f90964dc3e3bd197295a57345bc",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R020_rep04/run_log.json": "8892e2c9da9922826a000ddc352be94ae14d5d06059e4905f8a8d480b2e3978b",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R020_rep04/run_log.json": "8104982f5c098c48e3f9b25ce29283c6383fd29de1f45b1414d41340288c0d7a",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R020_rep04/run_log.json": "23d84d859745abbea4f1cead878f0c3c8625e9a2412363cd432ee5003ded8cc3",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R021_rep04/run_log.json": "2c4a8d0a3930b48eab690188f72b3ad7af864de0dd7cea3b9854bf2192480a89",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R021_rep04/run_log.json": "231f610c86c04deab054bddd6ca08bc0cbc9e4c4987c3248f743dd66c53d5f75",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R021_rep04/run_log.json": "f9025989f7aecd746d65a6788a0593c7931e004b848a38ba41aa521bb5a928ec",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R022_rep04/run_log.json": "41acf56ba5e5efbeb55e3a7924ef425bb1885ba831feded6ae5e159c6e33c501",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R022_rep04/run_log.json": "71514ba5df959ee22925c9534f64df83cad43d85f0de4ffb379c18a9d1e790c6",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R022_rep04/run_log.json": "4b2b5be7e87808906539962968c7bb73deed26565e53b42480ecc67322ddbf00",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R023_rep04/run_log.json": "51490c727b45a4235c464906813c86b05737410a4c97b870517683c814cefdfa",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R023_rep04/run_log.json": "dbb84f69db9e99ebc15dc1a6798bc733343992333f8fe1efcd721b4404b30386",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R023_rep04/run_log.json": "38f313a86203740f2848cac32358c28f874b56b2f9cd2a48dc5f9d820db51a0f",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R024_rep04/run_log.json": "c6b6d054999c22f57bc50bb0da02b96685500bb1a3b79a06e3191132fb89ac24",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R024_rep04/run_log.json": "175047daf17e1613628795ab084a06d7de2ae0944de75ff64dd81fe2a296a237",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R024_rep04/run_log.json": "2a944db6b78700be083394d52651e3069243ed432e338a12c5a956a98a4dbc63",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R025_rep04/run_log.json": "09e281568ab9d90e3c7daebe85096a5989953d2323b9f00ad439ba108a22e183",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R025_rep04/run_log.json": "aa1ed1b1a2960a781bf933615ee71e130fec56df71fe02ba81bd1e2e5a0c3283",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R025_rep04/run_log.json": "6bd385fa2d81e23966215024ff24e99aef473375eb9b6abcd16c4b809ba5a8d9",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R026_rep04/run_log.json": "84f4c52d25be66e2eb2cf6fc4a6aa16d65921cfe52d8448bae23ee942036f15c",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R026_rep04/run_log.json": "b93eb36eeec9cee8ba2bb2565be73b5f943edf8712e59586a4684169e218e0d7",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R026_rep04/run_log.json": "b68246471497e643ff9e322b745f3a9011a3069e560e4a47a7480c722410eabd",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R027_rep04/run_log.json": "d1f35986fa5130a0aa06af5e4aed14d81e5d008e1ed072e85c8e33c9ec61f72e",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R027_rep04/run_log.json": "00edfa7c235923fe5aebad9726c182866f2eaaf676c4198e956d5ebf6d8fda7a",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R027_rep04/run_log.json": "4717ca6ed7865a5e2e280f611b4a9025776333cb6a36c4afa324a2effad7d08e",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R028_rep04/run_log.json": "453489bc81487fc1a235b0da9630be3b3d2fa553bdec17fff99887da5f68a78a",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R028_rep04/run_log.json": "8b6506becd4334cc75967b4d38a71b3104d9b8de3fbf9a8105ab9da70479e31a",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R028_rep04/run_log.json": "7d929438e1273fe0a2a797b798d51361576982857d008f862de9d301eb54ab53",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R029_rep04/run_log.json": "6fa1beb74f8bf8692f2f1e3f37f9db9343b1ffe8a5cca8e10cc29549d8c37f2c",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R029_rep04/run_log.json": "581689ca2094558ca5be957e3d6b6852ceabfd29767642432170c6bab5623a1d",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R029_rep04/run_log.json": "b372130e39fbb5545a1e1bcb281d38c0d0aacb9b4d806374f122155497a64724",
+    "evaluation/experiments/2026-10-09_matched/runs/V2_R030_rep04/run_log.json": "856a4d70a3d9e94578d6dd1f37a5f1d167cb4208478f94f474233c2cdacb7c8b",
+    "evaluation/experiments/2026-10-09_matched/runs/V3_R030_rep04/run_log.json": "48a82804a2e3a3a91bc4a54a0453c4f310d4da3c83957c48296aecfd927cfc47",
+    "evaluation/experiments/2026-10-09_matched/runs/V4_R030_rep04/run_log.json": "868021af774f6711cbb453acea94e29f8bb24bb305aaba0f7c9af1c775f96c36"
+  },
+  "variants": {
+    "V2": {
+      "runs": 150,
+      "requests": 30,
+      "accepted_runs": 145,
+      "completed_sequence_runs": 145,
+      "completed_sequence_requests": 29,
+      "completed_but_rejected_runs": 0,
+      "completed_but_rejected_request_ids": []
+    },
+    "V3": {
+      "runs": 150,
+      "requests": 30,
+      "accepted_runs": 15,
+      "completed_sequence_runs": 15,
+      "completed_sequence_requests": 3,
+      "completed_but_rejected_runs": 0,
+      "completed_but_rejected_request_ids": []
+    },
+    "V4": {
+      "runs": 150,
+      "requests": 30,
+      "accepted_runs": 5,
+      "completed_sequence_runs": 75,
+      "completed_sequence_requests": 15,
+      "completed_but_rejected_runs": 70,
+      "completed_but_rejected_request_ids": [
+        "R002",
+        "R007",
+        "R009",
+        "R011",
+        "R012",
+        "R013",
+        "R014",
+        "R019",
+        "R020",
+        "R024",
+        "R025",
+        "R027",
+        "R029",
+        "R030"
+      ]
+    }
+  },
+  "runs": [
+    {
+      "task_id": "V2_R001_rep00",
+      "variant": "V2",
+      "request_id": "R001",
+      "repetition_index": 0,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R001_rep00",
+      "variant": "V3",
+      "request_id": "R001",
+      "repetition_index": 0,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R001_rep00",
+      "variant": "V4",
+      "request_id": "R001",
+      "repetition_index": 0,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V3_R002_rep00",
+      "variant": "V3",
+      "request_id": "R002",
+      "repetition_index": 0,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R002_rep00",
+      "variant": "V4",
+      "request_id": "R002",
+      "repetition_index": 0,
+      "status": "rejected",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V2_R002_rep00",
+      "variant": "V2",
+      "request_id": "R002",
+      "repetition_index": 0,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V4_R003_rep00",
+      "variant": "V4",
+      "request_id": "R003",
+      "repetition_index": 0,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R003_rep00",
+      "variant": "V2",
+      "request_id": "R003",
+      "repetition_index": 0,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R003_rep00",
+      "variant": "V3",
+      "request_id": "R003",
+      "repetition_index": 0,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R004_rep00",
+      "variant": "V2",
+      "request_id": "R004",
+      "repetition_index": 0,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R004_rep00",
+      "variant": "V3",
+      "request_id": "R004",
+      "repetition_index": 0,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R004_rep00",
+      "variant": "V4",
+      "request_id": "R004",
+      "repetition_index": 0,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V3_R005_rep00",
+      "variant": "V3",
+      "request_id": "R005",
+      "repetition_index": 0,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V4_R005_rep00",
+      "variant": "V4",
+      "request_id": "R005",
+      "repetition_index": 0,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R005_rep00",
+      "variant": "V2",
+      "request_id": "R005",
+      "repetition_index": 0,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V4_R006_rep00",
+      "variant": "V4",
+      "request_id": "R006",
+      "repetition_index": 0,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R006_rep00",
+      "variant": "V2",
+      "request_id": "R006",
+      "repetition_index": 0,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R006_rep00",
+      "variant": "V3",
+      "request_id": "R006",
+      "repetition_index": 0,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R007_rep00",
+      "variant": "V2",
+      "request_id": "R007",
+      "repetition_index": 0,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R007_rep00",
+      "variant": "V3",
+      "request_id": "R007",
+      "repetition_index": 0,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R007_rep00",
+      "variant": "V4",
+      "request_id": "R007",
+      "repetition_index": 0,
+      "status": "rejected",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R008_rep00",
+      "variant": "V3",
+      "request_id": "R008",
+      "repetition_index": 0,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R008_rep00",
+      "variant": "V4",
+      "request_id": "R008",
+      "repetition_index": 0,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R008_rep00",
+      "variant": "V2",
+      "request_id": "R008",
+      "repetition_index": 0,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V4_R009_rep00",
+      "variant": "V4",
+      "request_id": "R009",
+      "repetition_index": 0,
+      "status": "rejected",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V2_R009_rep00",
+      "variant": "V2",
+      "request_id": "R009",
+      "repetition_index": 0,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R009_rep00",
+      "variant": "V3",
+      "request_id": "R009",
+      "repetition_index": 0,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R010_rep00",
+      "variant": "V2",
+      "request_id": "R010",
+      "repetition_index": 0,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R010_rep00",
+      "variant": "V3",
+      "request_id": "R010",
+      "repetition_index": 0,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R010_rep00",
+      "variant": "V4",
+      "request_id": "R010",
+      "repetition_index": 0,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V3_R011_rep00",
+      "variant": "V3",
+      "request_id": "R011",
+      "repetition_index": 0,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R011_rep00",
+      "variant": "V4",
+      "request_id": "R011",
+      "repetition_index": 0,
+      "status": "rejected",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V2_R011_rep00",
+      "variant": "V2",
+      "request_id": "R011",
+      "repetition_index": 0,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V4_R012_rep00",
+      "variant": "V4",
+      "request_id": "R012",
+      "repetition_index": 0,
+      "status": "rejected",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V2_R012_rep00",
+      "variant": "V2",
+      "request_id": "R012",
+      "repetition_index": 0,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R012_rep00",
+      "variant": "V3",
+      "request_id": "R012",
+      "repetition_index": 0,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R013_rep00",
+      "variant": "V2",
+      "request_id": "R013",
+      "repetition_index": 0,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R013_rep00",
+      "variant": "V3",
+      "request_id": "R013",
+      "repetition_index": 0,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R013_rep00",
+      "variant": "V4",
+      "request_id": "R013",
+      "repetition_index": 0,
+      "status": "rejected",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R014_rep00",
+      "variant": "V3",
+      "request_id": "R014",
+      "repetition_index": 0,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R014_rep00",
+      "variant": "V4",
+      "request_id": "R014",
+      "repetition_index": 0,
+      "status": "rejected",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V2_R014_rep00",
+      "variant": "V2",
+      "request_id": "R014",
+      "repetition_index": 0,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V4_R015_rep00",
+      "variant": "V4",
+      "request_id": "R015",
+      "repetition_index": 0,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R015_rep00",
+      "variant": "V2",
+      "request_id": "R015",
+      "repetition_index": 0,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V3_R015_rep00",
+      "variant": "V3",
+      "request_id": "R015",
+      "repetition_index": 0,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R016_rep00",
+      "variant": "V2",
+      "request_id": "R016",
+      "repetition_index": 0,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R016_rep00",
+      "variant": "V3",
+      "request_id": "R016",
+      "repetition_index": 0,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R016_rep00",
+      "variant": "V4",
+      "request_id": "R016",
+      "repetition_index": 0,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V3_R017_rep00",
+      "variant": "V3",
+      "request_id": "R017",
+      "repetition_index": 0,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R017_rep00",
+      "variant": "V4",
+      "request_id": "R017",
+      "repetition_index": 0,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R017_rep00",
+      "variant": "V2",
+      "request_id": "R017",
+      "repetition_index": 0,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V4_R018_rep00",
+      "variant": "V4",
+      "request_id": "R018",
+      "repetition_index": 0,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R018_rep00",
+      "variant": "V2",
+      "request_id": "R018",
+      "repetition_index": 0,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R018_rep00",
+      "variant": "V3",
+      "request_id": "R018",
+      "repetition_index": 0,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R019_rep00",
+      "variant": "V2",
+      "request_id": "R019",
+      "repetition_index": 0,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R019_rep00",
+      "variant": "V3",
+      "request_id": "R019",
+      "repetition_index": 0,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R019_rep00",
+      "variant": "V4",
+      "request_id": "R019",
+      "repetition_index": 0,
+      "status": "rejected",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R020_rep00",
+      "variant": "V3",
+      "request_id": "R020",
+      "repetition_index": 0,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R020_rep00",
+      "variant": "V4",
+      "request_id": "R020",
+      "repetition_index": 0,
+      "status": "rejected",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V2_R020_rep00",
+      "variant": "V2",
+      "request_id": "R020",
+      "repetition_index": 0,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V4_R021_rep00",
+      "variant": "V4",
+      "request_id": "R021",
+      "repetition_index": 0,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R021_rep00",
+      "variant": "V2",
+      "request_id": "R021",
+      "repetition_index": 0,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R021_rep00",
+      "variant": "V3",
+      "request_id": "R021",
+      "repetition_index": 0,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R022_rep00",
+      "variant": "V2",
+      "request_id": "R022",
+      "repetition_index": 0,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R022_rep00",
+      "variant": "V3",
+      "request_id": "R022",
+      "repetition_index": 0,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R022_rep00",
+      "variant": "V4",
+      "request_id": "R022",
+      "repetition_index": 0,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V3_R023_rep00",
+      "variant": "V3",
+      "request_id": "R023",
+      "repetition_index": 0,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R023_rep00",
+      "variant": "V4",
+      "request_id": "R023",
+      "repetition_index": 0,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V2_R023_rep00",
+      "variant": "V2",
+      "request_id": "R023",
+      "repetition_index": 0,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V4_R024_rep00",
+      "variant": "V4",
+      "request_id": "R024",
+      "repetition_index": 0,
+      "status": "rejected",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V2_R024_rep00",
+      "variant": "V2",
+      "request_id": "R024",
+      "repetition_index": 0,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R024_rep00",
+      "variant": "V3",
+      "request_id": "R024",
+      "repetition_index": 0,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V2_R025_rep00",
+      "variant": "V2",
+      "request_id": "R025",
+      "repetition_index": 0,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R025_rep00",
+      "variant": "V3",
+      "request_id": "R025",
+      "repetition_index": 0,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R025_rep00",
+      "variant": "V4",
+      "request_id": "R025",
+      "repetition_index": 0,
+      "status": "rejected",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R026_rep00",
+      "variant": "V3",
+      "request_id": "R026",
+      "repetition_index": 0,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R026_rep00",
+      "variant": "V4",
+      "request_id": "R026",
+      "repetition_index": 0,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R026_rep00",
+      "variant": "V2",
+      "request_id": "R026",
+      "repetition_index": 0,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V4_R027_rep00",
+      "variant": "V4",
+      "request_id": "R027",
+      "repetition_index": 0,
+      "status": "rejected",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V2_R027_rep00",
+      "variant": "V2",
+      "request_id": "R027",
+      "repetition_index": 0,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R027_rep00",
+      "variant": "V3",
+      "request_id": "R027",
+      "repetition_index": 0,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R028_rep00",
+      "variant": "V2",
+      "request_id": "R028",
+      "repetition_index": 0,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R028_rep00",
+      "variant": "V3",
+      "request_id": "R028",
+      "repetition_index": 0,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R028_rep00",
+      "variant": "V4",
+      "request_id": "R028",
+      "repetition_index": 0,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V3_R029_rep00",
+      "variant": "V3",
+      "request_id": "R029",
+      "repetition_index": 0,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V4_R029_rep00",
+      "variant": "V4",
+      "request_id": "R029",
+      "repetition_index": 0,
+      "status": "rejected",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V2_R029_rep00",
+      "variant": "V2",
+      "request_id": "R029",
+      "repetition_index": 0,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V4_R030_rep00",
+      "variant": "V4",
+      "request_id": "R030",
+      "repetition_index": 0,
+      "status": "rejected",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V2_R030_rep00",
+      "variant": "V2",
+      "request_id": "R030",
+      "repetition_index": 0,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R030_rep00",
+      "variant": "V3",
+      "request_id": "R030",
+      "repetition_index": 0,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V3_R001_rep01",
+      "variant": "V3",
+      "request_id": "R001",
+      "repetition_index": 1,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R001_rep01",
+      "variant": "V4",
+      "request_id": "R001",
+      "repetition_index": 1,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R001_rep01",
+      "variant": "V2",
+      "request_id": "R001",
+      "repetition_index": 1,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V4_R002_rep01",
+      "variant": "V4",
+      "request_id": "R002",
+      "repetition_index": 1,
+      "status": "rejected",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V2_R002_rep01",
+      "variant": "V2",
+      "request_id": "R002",
+      "repetition_index": 1,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R002_rep01",
+      "variant": "V3",
+      "request_id": "R002",
+      "repetition_index": 1,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R003_rep01",
+      "variant": "V2",
+      "request_id": "R003",
+      "repetition_index": 1,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R003_rep01",
+      "variant": "V3",
+      "request_id": "R003",
+      "repetition_index": 1,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R003_rep01",
+      "variant": "V4",
+      "request_id": "R003",
+      "repetition_index": 1,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V3_R004_rep01",
+      "variant": "V3",
+      "request_id": "R004",
+      "repetition_index": 1,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R004_rep01",
+      "variant": "V4",
+      "request_id": "R004",
+      "repetition_index": 1,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R004_rep01",
+      "variant": "V2",
+      "request_id": "R004",
+      "repetition_index": 1,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V4_R005_rep01",
+      "variant": "V4",
+      "request_id": "R005",
+      "repetition_index": 1,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R005_rep01",
+      "variant": "V2",
+      "request_id": "R005",
+      "repetition_index": 1,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R005_rep01",
+      "variant": "V3",
+      "request_id": "R005",
+      "repetition_index": 1,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V2_R006_rep01",
+      "variant": "V2",
+      "request_id": "R006",
+      "repetition_index": 1,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R006_rep01",
+      "variant": "V3",
+      "request_id": "R006",
+      "repetition_index": 1,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R006_rep01",
+      "variant": "V4",
+      "request_id": "R006",
+      "repetition_index": 1,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V3_R007_rep01",
+      "variant": "V3",
+      "request_id": "R007",
+      "repetition_index": 1,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R007_rep01",
+      "variant": "V4",
+      "request_id": "R007",
+      "repetition_index": 1,
+      "status": "rejected",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V2_R007_rep01",
+      "variant": "V2",
+      "request_id": "R007",
+      "repetition_index": 1,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V4_R008_rep01",
+      "variant": "V4",
+      "request_id": "R008",
+      "repetition_index": 1,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R008_rep01",
+      "variant": "V2",
+      "request_id": "R008",
+      "repetition_index": 1,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R008_rep01",
+      "variant": "V3",
+      "request_id": "R008",
+      "repetition_index": 1,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R009_rep01",
+      "variant": "V2",
+      "request_id": "R009",
+      "repetition_index": 1,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R009_rep01",
+      "variant": "V3",
+      "request_id": "R009",
+      "repetition_index": 1,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R009_rep01",
+      "variant": "V4",
+      "request_id": "R009",
+      "repetition_index": 1,
+      "status": "rejected",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R010_rep01",
+      "variant": "V3",
+      "request_id": "R010",
+      "repetition_index": 1,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R010_rep01",
+      "variant": "V4",
+      "request_id": "R010",
+      "repetition_index": 1,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R010_rep01",
+      "variant": "V2",
+      "request_id": "R010",
+      "repetition_index": 1,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V4_R011_rep01",
+      "variant": "V4",
+      "request_id": "R011",
+      "repetition_index": 1,
+      "status": "rejected",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V2_R011_rep01",
+      "variant": "V2",
+      "request_id": "R011",
+      "repetition_index": 1,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R011_rep01",
+      "variant": "V3",
+      "request_id": "R011",
+      "repetition_index": 1,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R012_rep01",
+      "variant": "V2",
+      "request_id": "R012",
+      "repetition_index": 1,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R012_rep01",
+      "variant": "V3",
+      "request_id": "R012",
+      "repetition_index": 1,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R012_rep01",
+      "variant": "V4",
+      "request_id": "R012",
+      "repetition_index": 1,
+      "status": "rejected",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R013_rep01",
+      "variant": "V3",
+      "request_id": "R013",
+      "repetition_index": 1,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R013_rep01",
+      "variant": "V4",
+      "request_id": "R013",
+      "repetition_index": 1,
+      "status": "rejected",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V2_R013_rep01",
+      "variant": "V2",
+      "request_id": "R013",
+      "repetition_index": 1,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V4_R014_rep01",
+      "variant": "V4",
+      "request_id": "R014",
+      "repetition_index": 1,
+      "status": "rejected",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V2_R014_rep01",
+      "variant": "V2",
+      "request_id": "R014",
+      "repetition_index": 1,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R014_rep01",
+      "variant": "V3",
+      "request_id": "R014",
+      "repetition_index": 1,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R015_rep01",
+      "variant": "V2",
+      "request_id": "R015",
+      "repetition_index": 1,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V3_R015_rep01",
+      "variant": "V3",
+      "request_id": "R015",
+      "repetition_index": 1,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R015_rep01",
+      "variant": "V4",
+      "request_id": "R015",
+      "repetition_index": 1,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V3_R016_rep01",
+      "variant": "V3",
+      "request_id": "R016",
+      "repetition_index": 1,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R016_rep01",
+      "variant": "V4",
+      "request_id": "R016",
+      "repetition_index": 1,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R016_rep01",
+      "variant": "V2",
+      "request_id": "R016",
+      "repetition_index": 1,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V4_R017_rep01",
+      "variant": "V4",
+      "request_id": "R017",
+      "repetition_index": 1,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R017_rep01",
+      "variant": "V2",
+      "request_id": "R017",
+      "repetition_index": 1,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R017_rep01",
+      "variant": "V3",
+      "request_id": "R017",
+      "repetition_index": 1,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R018_rep01",
+      "variant": "V2",
+      "request_id": "R018",
+      "repetition_index": 1,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R018_rep01",
+      "variant": "V3",
+      "request_id": "R018",
+      "repetition_index": 1,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R018_rep01",
+      "variant": "V4",
+      "request_id": "R018",
+      "repetition_index": 1,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V3_R019_rep01",
+      "variant": "V3",
+      "request_id": "R019",
+      "repetition_index": 1,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R019_rep01",
+      "variant": "V4",
+      "request_id": "R019",
+      "repetition_index": 1,
+      "status": "rejected",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V2_R019_rep01",
+      "variant": "V2",
+      "request_id": "R019",
+      "repetition_index": 1,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V4_R020_rep01",
+      "variant": "V4",
+      "request_id": "R020",
+      "repetition_index": 1,
+      "status": "rejected",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V2_R020_rep01",
+      "variant": "V2",
+      "request_id": "R020",
+      "repetition_index": 1,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R020_rep01",
+      "variant": "V3",
+      "request_id": "R020",
+      "repetition_index": 1,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R021_rep01",
+      "variant": "V2",
+      "request_id": "R021",
+      "repetition_index": 1,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R021_rep01",
+      "variant": "V3",
+      "request_id": "R021",
+      "repetition_index": 1,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R021_rep01",
+      "variant": "V4",
+      "request_id": "R021",
+      "repetition_index": 1,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V3_R022_rep01",
+      "variant": "V3",
+      "request_id": "R022",
+      "repetition_index": 1,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R022_rep01",
+      "variant": "V4",
+      "request_id": "R022",
+      "repetition_index": 1,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R022_rep01",
+      "variant": "V2",
+      "request_id": "R022",
+      "repetition_index": 1,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V4_R023_rep01",
+      "variant": "V4",
+      "request_id": "R023",
+      "repetition_index": 1,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V2_R023_rep01",
+      "variant": "V2",
+      "request_id": "R023",
+      "repetition_index": 1,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R023_rep01",
+      "variant": "V3",
+      "request_id": "R023",
+      "repetition_index": 1,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R024_rep01",
+      "variant": "V2",
+      "request_id": "R024",
+      "repetition_index": 1,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R024_rep01",
+      "variant": "V3",
+      "request_id": "R024",
+      "repetition_index": 1,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V4_R024_rep01",
+      "variant": "V4",
+      "request_id": "R024",
+      "repetition_index": 1,
+      "status": "rejected",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R025_rep01",
+      "variant": "V3",
+      "request_id": "R025",
+      "repetition_index": 1,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R025_rep01",
+      "variant": "V4",
+      "request_id": "R025",
+      "repetition_index": 1,
+      "status": "rejected",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V2_R025_rep01",
+      "variant": "V2",
+      "request_id": "R025",
+      "repetition_index": 1,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V4_R026_rep01",
+      "variant": "V4",
+      "request_id": "R026",
+      "repetition_index": 1,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R026_rep01",
+      "variant": "V2",
+      "request_id": "R026",
+      "repetition_index": 1,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R026_rep01",
+      "variant": "V3",
+      "request_id": "R026",
+      "repetition_index": 1,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R027_rep01",
+      "variant": "V2",
+      "request_id": "R027",
+      "repetition_index": 1,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R027_rep01",
+      "variant": "V3",
+      "request_id": "R027",
+      "repetition_index": 1,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R027_rep01",
+      "variant": "V4",
+      "request_id": "R027",
+      "repetition_index": 1,
+      "status": "rejected",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R028_rep01",
+      "variant": "V3",
+      "request_id": "R028",
+      "repetition_index": 1,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R028_rep01",
+      "variant": "V4",
+      "request_id": "R028",
+      "repetition_index": 1,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R028_rep01",
+      "variant": "V2",
+      "request_id": "R028",
+      "repetition_index": 1,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V4_R029_rep01",
+      "variant": "V4",
+      "request_id": "R029",
+      "repetition_index": 1,
+      "status": "rejected",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V2_R029_rep01",
+      "variant": "V2",
+      "request_id": "R029",
+      "repetition_index": 1,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R029_rep01",
+      "variant": "V3",
+      "request_id": "R029",
+      "repetition_index": 1,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V2_R030_rep01",
+      "variant": "V2",
+      "request_id": "R030",
+      "repetition_index": 1,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R030_rep01",
+      "variant": "V3",
+      "request_id": "R030",
+      "repetition_index": 1,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R030_rep01",
+      "variant": "V4",
+      "request_id": "R030",
+      "repetition_index": 1,
+      "status": "rejected",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V4_R001_rep02",
+      "variant": "V4",
+      "request_id": "R001",
+      "repetition_index": 2,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R001_rep02",
+      "variant": "V2",
+      "request_id": "R001",
+      "repetition_index": 2,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R001_rep02",
+      "variant": "V3",
+      "request_id": "R001",
+      "repetition_index": 2,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R002_rep02",
+      "variant": "V2",
+      "request_id": "R002",
+      "repetition_index": 2,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R002_rep02",
+      "variant": "V3",
+      "request_id": "R002",
+      "repetition_index": 2,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R002_rep02",
+      "variant": "V4",
+      "request_id": "R002",
+      "repetition_index": 2,
+      "status": "rejected",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R003_rep02",
+      "variant": "V3",
+      "request_id": "R003",
+      "repetition_index": 2,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R003_rep02",
+      "variant": "V4",
+      "request_id": "R003",
+      "repetition_index": 2,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R003_rep02",
+      "variant": "V2",
+      "request_id": "R003",
+      "repetition_index": 2,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V4_R004_rep02",
+      "variant": "V4",
+      "request_id": "R004",
+      "repetition_index": 2,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R004_rep02",
+      "variant": "V2",
+      "request_id": "R004",
+      "repetition_index": 2,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R004_rep02",
+      "variant": "V3",
+      "request_id": "R004",
+      "repetition_index": 2,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R005_rep02",
+      "variant": "V2",
+      "request_id": "R005",
+      "repetition_index": 2,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R005_rep02",
+      "variant": "V3",
+      "request_id": "R005",
+      "repetition_index": 2,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V4_R005_rep02",
+      "variant": "V4",
+      "request_id": "R005",
+      "repetition_index": 2,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V3_R006_rep02",
+      "variant": "V3",
+      "request_id": "R006",
+      "repetition_index": 2,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R006_rep02",
+      "variant": "V4",
+      "request_id": "R006",
+      "repetition_index": 2,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R006_rep02",
+      "variant": "V2",
+      "request_id": "R006",
+      "repetition_index": 2,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V4_R007_rep02",
+      "variant": "V4",
+      "request_id": "R007",
+      "repetition_index": 2,
+      "status": "rejected",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V2_R007_rep02",
+      "variant": "V2",
+      "request_id": "R007",
+      "repetition_index": 2,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R007_rep02",
+      "variant": "V3",
+      "request_id": "R007",
+      "repetition_index": 2,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R008_rep02",
+      "variant": "V2",
+      "request_id": "R008",
+      "repetition_index": 2,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R008_rep02",
+      "variant": "V3",
+      "request_id": "R008",
+      "repetition_index": 2,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R008_rep02",
+      "variant": "V4",
+      "request_id": "R008",
+      "repetition_index": 2,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V3_R009_rep02",
+      "variant": "V3",
+      "request_id": "R009",
+      "repetition_index": 2,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R009_rep02",
+      "variant": "V4",
+      "request_id": "R009",
+      "repetition_index": 2,
+      "status": "rejected",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V2_R009_rep02",
+      "variant": "V2",
+      "request_id": "R009",
+      "repetition_index": 2,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V4_R010_rep02",
+      "variant": "V4",
+      "request_id": "R010",
+      "repetition_index": 2,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R010_rep02",
+      "variant": "V2",
+      "request_id": "R010",
+      "repetition_index": 2,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R010_rep02",
+      "variant": "V3",
+      "request_id": "R010",
+      "repetition_index": 2,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R011_rep02",
+      "variant": "V2",
+      "request_id": "R011",
+      "repetition_index": 2,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R011_rep02",
+      "variant": "V3",
+      "request_id": "R011",
+      "repetition_index": 2,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R011_rep02",
+      "variant": "V4",
+      "request_id": "R011",
+      "repetition_index": 2,
+      "status": "rejected",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R012_rep02",
+      "variant": "V3",
+      "request_id": "R012",
+      "repetition_index": 2,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R012_rep02",
+      "variant": "V4",
+      "request_id": "R012",
+      "repetition_index": 2,
+      "status": "rejected",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V2_R012_rep02",
+      "variant": "V2",
+      "request_id": "R012",
+      "repetition_index": 2,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V4_R013_rep02",
+      "variant": "V4",
+      "request_id": "R013",
+      "repetition_index": 2,
+      "status": "rejected",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V2_R013_rep02",
+      "variant": "V2",
+      "request_id": "R013",
+      "repetition_index": 2,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R013_rep02",
+      "variant": "V3",
+      "request_id": "R013",
+      "repetition_index": 2,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R014_rep02",
+      "variant": "V2",
+      "request_id": "R014",
+      "repetition_index": 2,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R014_rep02",
+      "variant": "V3",
+      "request_id": "R014",
+      "repetition_index": 2,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R014_rep02",
+      "variant": "V4",
+      "request_id": "R014",
+      "repetition_index": 2,
+      "status": "rejected",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R015_rep02",
+      "variant": "V3",
+      "request_id": "R015",
+      "repetition_index": 2,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R015_rep02",
+      "variant": "V4",
+      "request_id": "R015",
+      "repetition_index": 2,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R015_rep02",
+      "variant": "V2",
+      "request_id": "R015",
+      "repetition_index": 2,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R016_rep02",
+      "variant": "V4",
+      "request_id": "R016",
+      "repetition_index": 2,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R016_rep02",
+      "variant": "V2",
+      "request_id": "R016",
+      "repetition_index": 2,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R016_rep02",
+      "variant": "V3",
+      "request_id": "R016",
+      "repetition_index": 2,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R017_rep02",
+      "variant": "V2",
+      "request_id": "R017",
+      "repetition_index": 2,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R017_rep02",
+      "variant": "V3",
+      "request_id": "R017",
+      "repetition_index": 2,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R017_rep02",
+      "variant": "V4",
+      "request_id": "R017",
+      "repetition_index": 2,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V3_R018_rep02",
+      "variant": "V3",
+      "request_id": "R018",
+      "repetition_index": 2,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R018_rep02",
+      "variant": "V4",
+      "request_id": "R018",
+      "repetition_index": 2,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R018_rep02",
+      "variant": "V2",
+      "request_id": "R018",
+      "repetition_index": 2,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V4_R019_rep02",
+      "variant": "V4",
+      "request_id": "R019",
+      "repetition_index": 2,
+      "status": "rejected",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V2_R019_rep02",
+      "variant": "V2",
+      "request_id": "R019",
+      "repetition_index": 2,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R019_rep02",
+      "variant": "V3",
+      "request_id": "R019",
+      "repetition_index": 2,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R020_rep02",
+      "variant": "V2",
+      "request_id": "R020",
+      "repetition_index": 2,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R020_rep02",
+      "variant": "V3",
+      "request_id": "R020",
+      "repetition_index": 2,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R020_rep02",
+      "variant": "V4",
+      "request_id": "R020",
+      "repetition_index": 2,
+      "status": "rejected",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R021_rep02",
+      "variant": "V3",
+      "request_id": "R021",
+      "repetition_index": 2,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R021_rep02",
+      "variant": "V4",
+      "request_id": "R021",
+      "repetition_index": 2,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R021_rep02",
+      "variant": "V2",
+      "request_id": "R021",
+      "repetition_index": 2,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V4_R022_rep02",
+      "variant": "V4",
+      "request_id": "R022",
+      "repetition_index": 2,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R022_rep02",
+      "variant": "V2",
+      "request_id": "R022",
+      "repetition_index": 2,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R022_rep02",
+      "variant": "V3",
+      "request_id": "R022",
+      "repetition_index": 2,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R023_rep02",
+      "variant": "V2",
+      "request_id": "R023",
+      "repetition_index": 2,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R023_rep02",
+      "variant": "V3",
+      "request_id": "R023",
+      "repetition_index": 2,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R023_rep02",
+      "variant": "V4",
+      "request_id": "R023",
+      "repetition_index": 2,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R024_rep02",
+      "variant": "V3",
+      "request_id": "R024",
+      "repetition_index": 2,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V4_R024_rep02",
+      "variant": "V4",
+      "request_id": "R024",
+      "repetition_index": 2,
+      "status": "rejected",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V2_R024_rep02",
+      "variant": "V2",
+      "request_id": "R024",
+      "repetition_index": 2,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V4_R025_rep02",
+      "variant": "V4",
+      "request_id": "R025",
+      "repetition_index": 2,
+      "status": "rejected",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V2_R025_rep02",
+      "variant": "V2",
+      "request_id": "R025",
+      "repetition_index": 2,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R025_rep02",
+      "variant": "V3",
+      "request_id": "R025",
+      "repetition_index": 2,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R026_rep02",
+      "variant": "V2",
+      "request_id": "R026",
+      "repetition_index": 2,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R026_rep02",
+      "variant": "V3",
+      "request_id": "R026",
+      "repetition_index": 2,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R026_rep02",
+      "variant": "V4",
+      "request_id": "R026",
+      "repetition_index": 2,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V3_R027_rep02",
+      "variant": "V3",
+      "request_id": "R027",
+      "repetition_index": 2,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R027_rep02",
+      "variant": "V4",
+      "request_id": "R027",
+      "repetition_index": 2,
+      "status": "rejected",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V2_R027_rep02",
+      "variant": "V2",
+      "request_id": "R027",
+      "repetition_index": 2,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V4_R028_rep02",
+      "variant": "V4",
+      "request_id": "R028",
+      "repetition_index": 2,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R028_rep02",
+      "variant": "V2",
+      "request_id": "R028",
+      "repetition_index": 2,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R028_rep02",
+      "variant": "V3",
+      "request_id": "R028",
+      "repetition_index": 2,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R029_rep02",
+      "variant": "V2",
+      "request_id": "R029",
+      "repetition_index": 2,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R029_rep02",
+      "variant": "V3",
+      "request_id": "R029",
+      "repetition_index": 2,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V4_R029_rep02",
+      "variant": "V4",
+      "request_id": "R029",
+      "repetition_index": 2,
+      "status": "rejected",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R030_rep02",
+      "variant": "V3",
+      "request_id": "R030",
+      "repetition_index": 2,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R030_rep02",
+      "variant": "V4",
+      "request_id": "R030",
+      "repetition_index": 2,
+      "status": "rejected",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V2_R030_rep02",
+      "variant": "V2",
+      "request_id": "R030",
+      "repetition_index": 2,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V2_R001_rep03",
+      "variant": "V2",
+      "request_id": "R001",
+      "repetition_index": 3,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R001_rep03",
+      "variant": "V3",
+      "request_id": "R001",
+      "repetition_index": 3,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R001_rep03",
+      "variant": "V4",
+      "request_id": "R001",
+      "repetition_index": 3,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V3_R002_rep03",
+      "variant": "V3",
+      "request_id": "R002",
+      "repetition_index": 3,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R002_rep03",
+      "variant": "V4",
+      "request_id": "R002",
+      "repetition_index": 3,
+      "status": "rejected",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V2_R002_rep03",
+      "variant": "V2",
+      "request_id": "R002",
+      "repetition_index": 3,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V4_R003_rep03",
+      "variant": "V4",
+      "request_id": "R003",
+      "repetition_index": 3,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R003_rep03",
+      "variant": "V2",
+      "request_id": "R003",
+      "repetition_index": 3,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R003_rep03",
+      "variant": "V3",
+      "request_id": "R003",
+      "repetition_index": 3,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R004_rep03",
+      "variant": "V2",
+      "request_id": "R004",
+      "repetition_index": 3,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R004_rep03",
+      "variant": "V3",
+      "request_id": "R004",
+      "repetition_index": 3,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R004_rep03",
+      "variant": "V4",
+      "request_id": "R004",
+      "repetition_index": 3,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V3_R005_rep03",
+      "variant": "V3",
+      "request_id": "R005",
+      "repetition_index": 3,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V4_R005_rep03",
+      "variant": "V4",
+      "request_id": "R005",
+      "repetition_index": 3,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R005_rep03",
+      "variant": "V2",
+      "request_id": "R005",
+      "repetition_index": 3,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V4_R006_rep03",
+      "variant": "V4",
+      "request_id": "R006",
+      "repetition_index": 3,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R006_rep03",
+      "variant": "V2",
+      "request_id": "R006",
+      "repetition_index": 3,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R006_rep03",
+      "variant": "V3",
+      "request_id": "R006",
+      "repetition_index": 3,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R007_rep03",
+      "variant": "V2",
+      "request_id": "R007",
+      "repetition_index": 3,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R007_rep03",
+      "variant": "V3",
+      "request_id": "R007",
+      "repetition_index": 3,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R007_rep03",
+      "variant": "V4",
+      "request_id": "R007",
+      "repetition_index": 3,
+      "status": "rejected",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R008_rep03",
+      "variant": "V3",
+      "request_id": "R008",
+      "repetition_index": 3,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R008_rep03",
+      "variant": "V4",
+      "request_id": "R008",
+      "repetition_index": 3,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R008_rep03",
+      "variant": "V2",
+      "request_id": "R008",
+      "repetition_index": 3,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V4_R009_rep03",
+      "variant": "V4",
+      "request_id": "R009",
+      "repetition_index": 3,
+      "status": "rejected",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V2_R009_rep03",
+      "variant": "V2",
+      "request_id": "R009",
+      "repetition_index": 3,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R009_rep03",
+      "variant": "V3",
+      "request_id": "R009",
+      "repetition_index": 3,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R010_rep03",
+      "variant": "V2",
+      "request_id": "R010",
+      "repetition_index": 3,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R010_rep03",
+      "variant": "V3",
+      "request_id": "R010",
+      "repetition_index": 3,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R010_rep03",
+      "variant": "V4",
+      "request_id": "R010",
+      "repetition_index": 3,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V3_R011_rep03",
+      "variant": "V3",
+      "request_id": "R011",
+      "repetition_index": 3,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R011_rep03",
+      "variant": "V4",
+      "request_id": "R011",
+      "repetition_index": 3,
+      "status": "rejected",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V2_R011_rep03",
+      "variant": "V2",
+      "request_id": "R011",
+      "repetition_index": 3,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V4_R012_rep03",
+      "variant": "V4",
+      "request_id": "R012",
+      "repetition_index": 3,
+      "status": "rejected",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V2_R012_rep03",
+      "variant": "V2",
+      "request_id": "R012",
+      "repetition_index": 3,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R012_rep03",
+      "variant": "V3",
+      "request_id": "R012",
+      "repetition_index": 3,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R013_rep03",
+      "variant": "V2",
+      "request_id": "R013",
+      "repetition_index": 3,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R013_rep03",
+      "variant": "V3",
+      "request_id": "R013",
+      "repetition_index": 3,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R013_rep03",
+      "variant": "V4",
+      "request_id": "R013",
+      "repetition_index": 3,
+      "status": "rejected",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R014_rep03",
+      "variant": "V3",
+      "request_id": "R014",
+      "repetition_index": 3,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R014_rep03",
+      "variant": "V4",
+      "request_id": "R014",
+      "repetition_index": 3,
+      "status": "rejected",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V2_R014_rep03",
+      "variant": "V2",
+      "request_id": "R014",
+      "repetition_index": 3,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V4_R015_rep03",
+      "variant": "V4",
+      "request_id": "R015",
+      "repetition_index": 3,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R015_rep03",
+      "variant": "V2",
+      "request_id": "R015",
+      "repetition_index": 3,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V3_R015_rep03",
+      "variant": "V3",
+      "request_id": "R015",
+      "repetition_index": 3,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R016_rep03",
+      "variant": "V2",
+      "request_id": "R016",
+      "repetition_index": 3,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R016_rep03",
+      "variant": "V3",
+      "request_id": "R016",
+      "repetition_index": 3,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R016_rep03",
+      "variant": "V4",
+      "request_id": "R016",
+      "repetition_index": 3,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V3_R017_rep03",
+      "variant": "V3",
+      "request_id": "R017",
+      "repetition_index": 3,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R017_rep03",
+      "variant": "V4",
+      "request_id": "R017",
+      "repetition_index": 3,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R017_rep03",
+      "variant": "V2",
+      "request_id": "R017",
+      "repetition_index": 3,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V4_R018_rep03",
+      "variant": "V4",
+      "request_id": "R018",
+      "repetition_index": 3,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R018_rep03",
+      "variant": "V2",
+      "request_id": "R018",
+      "repetition_index": 3,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R018_rep03",
+      "variant": "V3",
+      "request_id": "R018",
+      "repetition_index": 3,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R019_rep03",
+      "variant": "V2",
+      "request_id": "R019",
+      "repetition_index": 3,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R019_rep03",
+      "variant": "V3",
+      "request_id": "R019",
+      "repetition_index": 3,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R019_rep03",
+      "variant": "V4",
+      "request_id": "R019",
+      "repetition_index": 3,
+      "status": "rejected",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R020_rep03",
+      "variant": "V3",
+      "request_id": "R020",
+      "repetition_index": 3,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R020_rep03",
+      "variant": "V4",
+      "request_id": "R020",
+      "repetition_index": 3,
+      "status": "rejected",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V2_R020_rep03",
+      "variant": "V2",
+      "request_id": "R020",
+      "repetition_index": 3,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V4_R021_rep03",
+      "variant": "V4",
+      "request_id": "R021",
+      "repetition_index": 3,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R021_rep03",
+      "variant": "V2",
+      "request_id": "R021",
+      "repetition_index": 3,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R021_rep03",
+      "variant": "V3",
+      "request_id": "R021",
+      "repetition_index": 3,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R022_rep03",
+      "variant": "V2",
+      "request_id": "R022",
+      "repetition_index": 3,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R022_rep03",
+      "variant": "V3",
+      "request_id": "R022",
+      "repetition_index": 3,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R022_rep03",
+      "variant": "V4",
+      "request_id": "R022",
+      "repetition_index": 3,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V3_R023_rep03",
+      "variant": "V3",
+      "request_id": "R023",
+      "repetition_index": 3,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R023_rep03",
+      "variant": "V4",
+      "request_id": "R023",
+      "repetition_index": 3,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V2_R023_rep03",
+      "variant": "V2",
+      "request_id": "R023",
+      "repetition_index": 3,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V4_R024_rep03",
+      "variant": "V4",
+      "request_id": "R024",
+      "repetition_index": 3,
+      "status": "rejected",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V2_R024_rep03",
+      "variant": "V2",
+      "request_id": "R024",
+      "repetition_index": 3,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R024_rep03",
+      "variant": "V3",
+      "request_id": "R024",
+      "repetition_index": 3,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V2_R025_rep03",
+      "variant": "V2",
+      "request_id": "R025",
+      "repetition_index": 3,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R025_rep03",
+      "variant": "V3",
+      "request_id": "R025",
+      "repetition_index": 3,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R025_rep03",
+      "variant": "V4",
+      "request_id": "R025",
+      "repetition_index": 3,
+      "status": "rejected",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R026_rep03",
+      "variant": "V3",
+      "request_id": "R026",
+      "repetition_index": 3,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R026_rep03",
+      "variant": "V4",
+      "request_id": "R026",
+      "repetition_index": 3,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R026_rep03",
+      "variant": "V2",
+      "request_id": "R026",
+      "repetition_index": 3,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V4_R027_rep03",
+      "variant": "V4",
+      "request_id": "R027",
+      "repetition_index": 3,
+      "status": "rejected",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V2_R027_rep03",
+      "variant": "V2",
+      "request_id": "R027",
+      "repetition_index": 3,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R027_rep03",
+      "variant": "V3",
+      "request_id": "R027",
+      "repetition_index": 3,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R028_rep03",
+      "variant": "V2",
+      "request_id": "R028",
+      "repetition_index": 3,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R028_rep03",
+      "variant": "V3",
+      "request_id": "R028",
+      "repetition_index": 3,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R028_rep03",
+      "variant": "V4",
+      "request_id": "R028",
+      "repetition_index": 3,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V3_R029_rep03",
+      "variant": "V3",
+      "request_id": "R029",
+      "repetition_index": 3,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V4_R029_rep03",
+      "variant": "V4",
+      "request_id": "R029",
+      "repetition_index": 3,
+      "status": "rejected",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V2_R029_rep03",
+      "variant": "V2",
+      "request_id": "R029",
+      "repetition_index": 3,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V4_R030_rep03",
+      "variant": "V4",
+      "request_id": "R030",
+      "repetition_index": 3,
+      "status": "rejected",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V2_R030_rep03",
+      "variant": "V2",
+      "request_id": "R030",
+      "repetition_index": 3,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R030_rep03",
+      "variant": "V3",
+      "request_id": "R030",
+      "repetition_index": 3,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V3_R001_rep04",
+      "variant": "V3",
+      "request_id": "R001",
+      "repetition_index": 4,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R001_rep04",
+      "variant": "V4",
+      "request_id": "R001",
+      "repetition_index": 4,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R001_rep04",
+      "variant": "V2",
+      "request_id": "R001",
+      "repetition_index": 4,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V4_R002_rep04",
+      "variant": "V4",
+      "request_id": "R002",
+      "repetition_index": 4,
+      "status": "rejected",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V2_R002_rep04",
+      "variant": "V2",
+      "request_id": "R002",
+      "repetition_index": 4,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R002_rep04",
+      "variant": "V3",
+      "request_id": "R002",
+      "repetition_index": 4,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R003_rep04",
+      "variant": "V2",
+      "request_id": "R003",
+      "repetition_index": 4,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R003_rep04",
+      "variant": "V3",
+      "request_id": "R003",
+      "repetition_index": 4,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R003_rep04",
+      "variant": "V4",
+      "request_id": "R003",
+      "repetition_index": 4,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V3_R004_rep04",
+      "variant": "V3",
+      "request_id": "R004",
+      "repetition_index": 4,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R004_rep04",
+      "variant": "V4",
+      "request_id": "R004",
+      "repetition_index": 4,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R004_rep04",
+      "variant": "V2",
+      "request_id": "R004",
+      "repetition_index": 4,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V4_R005_rep04",
+      "variant": "V4",
+      "request_id": "R005",
+      "repetition_index": 4,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R005_rep04",
+      "variant": "V2",
+      "request_id": "R005",
+      "repetition_index": 4,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R005_rep04",
+      "variant": "V3",
+      "request_id": "R005",
+      "repetition_index": 4,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V2_R006_rep04",
+      "variant": "V2",
+      "request_id": "R006",
+      "repetition_index": 4,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R006_rep04",
+      "variant": "V3",
+      "request_id": "R006",
+      "repetition_index": 4,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R006_rep04",
+      "variant": "V4",
+      "request_id": "R006",
+      "repetition_index": 4,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V3_R007_rep04",
+      "variant": "V3",
+      "request_id": "R007",
+      "repetition_index": 4,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R007_rep04",
+      "variant": "V4",
+      "request_id": "R007",
+      "repetition_index": 4,
+      "status": "rejected",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V2_R007_rep04",
+      "variant": "V2",
+      "request_id": "R007",
+      "repetition_index": 4,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V4_R008_rep04",
+      "variant": "V4",
+      "request_id": "R008",
+      "repetition_index": 4,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R008_rep04",
+      "variant": "V2",
+      "request_id": "R008",
+      "repetition_index": 4,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R008_rep04",
+      "variant": "V3",
+      "request_id": "R008",
+      "repetition_index": 4,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R009_rep04",
+      "variant": "V2",
+      "request_id": "R009",
+      "repetition_index": 4,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R009_rep04",
+      "variant": "V3",
+      "request_id": "R009",
+      "repetition_index": 4,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R009_rep04",
+      "variant": "V4",
+      "request_id": "R009",
+      "repetition_index": 4,
+      "status": "rejected",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R010_rep04",
+      "variant": "V3",
+      "request_id": "R010",
+      "repetition_index": 4,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R010_rep04",
+      "variant": "V4",
+      "request_id": "R010",
+      "repetition_index": 4,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R010_rep04",
+      "variant": "V2",
+      "request_id": "R010",
+      "repetition_index": 4,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V4_R011_rep04",
+      "variant": "V4",
+      "request_id": "R011",
+      "repetition_index": 4,
+      "status": "rejected",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V2_R011_rep04",
+      "variant": "V2",
+      "request_id": "R011",
+      "repetition_index": 4,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R011_rep04",
+      "variant": "V3",
+      "request_id": "R011",
+      "repetition_index": 4,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R012_rep04",
+      "variant": "V2",
+      "request_id": "R012",
+      "repetition_index": 4,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R012_rep04",
+      "variant": "V3",
+      "request_id": "R012",
+      "repetition_index": 4,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R012_rep04",
+      "variant": "V4",
+      "request_id": "R012",
+      "repetition_index": 4,
+      "status": "rejected",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R013_rep04",
+      "variant": "V3",
+      "request_id": "R013",
+      "repetition_index": 4,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R013_rep04",
+      "variant": "V4",
+      "request_id": "R013",
+      "repetition_index": 4,
+      "status": "rejected",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V2_R013_rep04",
+      "variant": "V2",
+      "request_id": "R013",
+      "repetition_index": 4,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V4_R014_rep04",
+      "variant": "V4",
+      "request_id": "R014",
+      "repetition_index": 4,
+      "status": "rejected",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V2_R014_rep04",
+      "variant": "V2",
+      "request_id": "R014",
+      "repetition_index": 4,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R014_rep04",
+      "variant": "V3",
+      "request_id": "R014",
+      "repetition_index": 4,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R015_rep04",
+      "variant": "V2",
+      "request_id": "R015",
+      "repetition_index": 4,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V3_R015_rep04",
+      "variant": "V3",
+      "request_id": "R015",
+      "repetition_index": 4,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R015_rep04",
+      "variant": "V4",
+      "request_id": "R015",
+      "repetition_index": 4,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V3_R016_rep04",
+      "variant": "V3",
+      "request_id": "R016",
+      "repetition_index": 4,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R016_rep04",
+      "variant": "V4",
+      "request_id": "R016",
+      "repetition_index": 4,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R016_rep04",
+      "variant": "V2",
+      "request_id": "R016",
+      "repetition_index": 4,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V4_R017_rep04",
+      "variant": "V4",
+      "request_id": "R017",
+      "repetition_index": 4,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R017_rep04",
+      "variant": "V2",
+      "request_id": "R017",
+      "repetition_index": 4,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R017_rep04",
+      "variant": "V3",
+      "request_id": "R017",
+      "repetition_index": 4,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R018_rep04",
+      "variant": "V2",
+      "request_id": "R018",
+      "repetition_index": 4,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R018_rep04",
+      "variant": "V3",
+      "request_id": "R018",
+      "repetition_index": 4,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R018_rep04",
+      "variant": "V4",
+      "request_id": "R018",
+      "repetition_index": 4,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V3_R019_rep04",
+      "variant": "V3",
+      "request_id": "R019",
+      "repetition_index": 4,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R019_rep04",
+      "variant": "V4",
+      "request_id": "R019",
+      "repetition_index": 4,
+      "status": "rejected",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V2_R019_rep04",
+      "variant": "V2",
+      "request_id": "R019",
+      "repetition_index": 4,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V4_R020_rep04",
+      "variant": "V4",
+      "request_id": "R020",
+      "repetition_index": 4,
+      "status": "rejected",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V2_R020_rep04",
+      "variant": "V2",
+      "request_id": "R020",
+      "repetition_index": 4,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R020_rep04",
+      "variant": "V3",
+      "request_id": "R020",
+      "repetition_index": 4,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R021_rep04",
+      "variant": "V2",
+      "request_id": "R021",
+      "repetition_index": 4,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R021_rep04",
+      "variant": "V3",
+      "request_id": "R021",
+      "repetition_index": 4,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R021_rep04",
+      "variant": "V4",
+      "request_id": "R021",
+      "repetition_index": 4,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V3_R022_rep04",
+      "variant": "V3",
+      "request_id": "R022",
+      "repetition_index": 4,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R022_rep04",
+      "variant": "V4",
+      "request_id": "R022",
+      "repetition_index": 4,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R022_rep04",
+      "variant": "V2",
+      "request_id": "R022",
+      "repetition_index": 4,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V4_R023_rep04",
+      "variant": "V4",
+      "request_id": "R023",
+      "repetition_index": 4,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V2_R023_rep04",
+      "variant": "V2",
+      "request_id": "R023",
+      "repetition_index": 4,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R023_rep04",
+      "variant": "V3",
+      "request_id": "R023",
+      "repetition_index": 4,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R024_rep04",
+      "variant": "V2",
+      "request_id": "R024",
+      "repetition_index": 4,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R024_rep04",
+      "variant": "V3",
+      "request_id": "R024",
+      "repetition_index": 4,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V4_R024_rep04",
+      "variant": "V4",
+      "request_id": "R024",
+      "repetition_index": 4,
+      "status": "rejected",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R025_rep04",
+      "variant": "V3",
+      "request_id": "R025",
+      "repetition_index": 4,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R025_rep04",
+      "variant": "V4",
+      "request_id": "R025",
+      "repetition_index": 4,
+      "status": "rejected",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V2_R025_rep04",
+      "variant": "V2",
+      "request_id": "R025",
+      "repetition_index": 4,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V4_R026_rep04",
+      "variant": "V4",
+      "request_id": "R026",
+      "repetition_index": 4,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R026_rep04",
+      "variant": "V2",
+      "request_id": "R026",
+      "repetition_index": 4,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R026_rep04",
+      "variant": "V3",
+      "request_id": "R026",
+      "repetition_index": 4,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R027_rep04",
+      "variant": "V2",
+      "request_id": "R027",
+      "repetition_index": 4,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R027_rep04",
+      "variant": "V3",
+      "request_id": "R027",
+      "repetition_index": 4,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R027_rep04",
+      "variant": "V4",
+      "request_id": "R027",
+      "repetition_index": 4,
+      "status": "rejected",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R028_rep04",
+      "variant": "V3",
+      "request_id": "R028",
+      "repetition_index": 4,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R028_rep04",
+      "variant": "V4",
+      "request_id": "R028",
+      "repetition_index": 4,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V2_R028_rep04",
+      "variant": "V2",
+      "request_id": "R028",
+      "repetition_index": 4,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V4_R029_rep04",
+      "variant": "V4",
+      "request_id": "R029",
+      "repetition_index": 4,
+      "status": "rejected",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V2_R029_rep04",
+      "variant": "V2",
+      "request_id": "R029",
+      "repetition_index": 4,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R029_rep04",
+      "variant": "V3",
+      "request_id": "R029",
+      "repetition_index": 4,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V2_R030_rep04",
+      "variant": "V2",
+      "request_id": "R030",
+      "repetition_index": 4,
+      "status": "success",
+      "prescribed_sequence_completed": true
+    },
+    {
+      "task_id": "V3_R030_rep04",
+      "variant": "V3",
+      "request_id": "R030",
+      "repetition_index": 4,
+      "status": "rejected",
+      "prescribed_sequence_completed": false
+    },
+    {
+      "task_id": "V4_R030_rep04",
+      "variant": "V4",
+      "request_id": "R030",
+      "repetition_index": 4,
+      "status": "rejected",
+      "prescribed_sequence_completed": true
+    }
+  ]
+}

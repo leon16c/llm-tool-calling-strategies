@@ -1,0 +1,88 @@
+{
+  "completed_at": "2026-07-23T16:31:10.436873Z",
+  "errors": [
+    {
+      "code": "E1",
+      "description": "The planner selected an incorrect tool sequence."
+    }
+  ],
+  "input": {
+    "expected_tool_sequence": [
+      "get_sales_data",
+      "aggregate_data",
+      "detect_anomalies",
+      "format_report"
+    ],
+    "user_request": "Analyze whether any product categories had unusual revenue changes in the last 7 days."
+  },
+  "latency_ms": 4008,
+  "metrics": {
+    "fallback_count": 0,
+    "retry_count": 0,
+    "schema_validation_failures": 0,
+    "task_success": false,
+    "tool_execution_failures": 0
+  },
+  "model": {
+    "name": "qwen2.5:7b-instruct",
+    "provider": "ollama",
+    "seed": 0,
+    "temperature": 0.0
+  },
+  "output": {
+    "final_response": "R006 completed by LLM tool selection with result None.",
+    "output_hash": "format_report:1c5522f7ddeb"
+  },
+  "repetition_index": 0,
+  "request_id": "R006",
+  "run_id": "e8eee4ce-7b9e-4428-9f9b-27a9a46193b9",
+  "schema_version": "0.1.0",
+  "started_at": "2026-07-23T16:31:06.428098Z",
+  "status": "rejected",
+  "tool_calls": [
+    {
+      "arguments": {
+        "dimensions": [
+          "category"
+        ],
+        "timeframe": "last_7_days"
+      },
+      "index": 0,
+      "latency_ms": 0,
+      "source": "llm",
+      "status": "proposed",
+      "tool_name": "get_sales_data"
+    },
+    {
+      "arguments": {
+        "data_id": "$previous_result",
+        "previous_period": "same_period_previous_year"
+      },
+      "index": 1,
+      "latency_ms": 0,
+      "source": "llm",
+      "status": "proposed",
+      "tool_name": "compare_previous_period"
+    },
+    {
+      "arguments": {
+        "data_id": "$previous_result",
+        "method": "z_score",
+        "threshold": 3
+      },
+      "index": 2,
+      "latency_ms": 0,
+      "source": "llm",
+      "status": "proposed",
+      "tool_name": "detect_anomalies"
+    }
+  ],
+  "validation_events": [
+    {
+      "event_type": "semantic_validation_failed",
+      "index": 0,
+      "message": "Planned tool sequence differs from the expected sequence: planned=['get_sales_data', 'compare_previous_period', 'detect_anomalies'], expected=['get_sales_data', 'aggregate_data', 'detect_anomalies', 'format_report']"
+    }
+  ],
+  "variant": "llm_tool_selection"
+}

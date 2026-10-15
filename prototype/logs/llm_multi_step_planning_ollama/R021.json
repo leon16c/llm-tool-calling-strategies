@@ -1,0 +1,95 @@
+{
+  "completed_at": "2026-07-26T07:31:23.120076Z",
+  "errors": [
+    {
+      "code": "E1",
+      "description": "The planner selected an incorrect tool.",
+      "tool_call_index": 2
+    }
+  ],
+  "input": {
+    "expected_tool_sequence": [
+      "get_sales_data",
+      "aggregate_data",
+      "format_report"
+    ],
+    "user_request": "List previous year's revenue by product."
+  },
+  "latency_ms": 9179,
+  "metrics": {
+    "fallback_count": 0,
+    "retry_count": 0,
+    "schema_validation_failures": 0,
+    "task_success": false,
+    "tool_execution_failures": 0
+  },
+  "model": {
+    "name": "qwen2.5:7b-instruct",
+    "provider": "ollama",
+    "seed": 0,
+    "temperature": 0.0
+  },
+  "output": {
+    "final_response": "R021 completed by LLM multi-step planning with result aggregate_data:972135afeb84.",
+    "output_hash": "format_report:7ea2e7da1b6a"
+  },
+  "repetition_index": 0,
+  "request_id": "R021",
+  "run_id": "caaa1c27-b50d-4ef8-a49e-028dab4d28cd",
+  "schema_version": "0.1.0",
+  "started_at": "2026-07-26T07:31:13.941057Z",
+  "status": "rejected",
+  "tool_calls": [
+    {
+      "arguments": {
+        "dimensions": [
+          "product"
+        ],
+        "timeframe": "previous_year"
+      },
+      "index": 0,
+      "latency_ms": 0,
+      "result_ref": "get_sales_data:c577593c463e",
+      "source": "llm",
+      "status": "executed",
+      "tool_name": "get_sales_data"
+    },
+    {
+      "arguments": {
+        "data_id": "get_sales_data:c577593c463e",
+        "group_by": [
+          "product"
+        ],
+        "metrics": [
+          "revenue"
+        ]
+      },
+      "index": 1,
+      "latency_ms": 0,
+      "result_ref": "aggregate_data:972135afeb84",
+      "source": "llm",
+      "status": "executed",
+      "tool_name": "aggregate_data"
+    },
+    {
+      "arguments": {
+        "data_id": "$previous_result",
+        "previous_period": "previous_year"
+      },
+      "index": 2,
+      "latency_ms": 0,
+      "source": "llm",
+      "status": "proposed",
+      "tool_name": "compare_previous_period"
+    }
+  ],
+  "validation_events": [
+    {
+      "event_type": "tool_call_rejected",
+      "index": 0,
+      "message": "Planner selected a tool that is not required for the request: planned=compare_previous_period, expected=format_report",
+      "tool_call_index": 2
+    }
+  ],
+  "variant": "llm_multi_step_planning"
+}

@@ -1,0 +1,87 @@
+{
+  "completed_at": "2026-07-17T12:59:13.830224Z",
+  "errors": [],
+  "input": {
+    "expected_tool_sequence": [
+      "get_sales_data",
+      "aggregate_data",
+      "format_report"
+    ],
+    "user_request": "Break down year-to-date revenue by region, sales channel, and customer segment."
+  },
+  "latency_ms": 0,
+  "metrics": {
+    "fallback_count": 0,
+    "retry_count": 0,
+    "schema_validation_failures": 0,
+    "task_success": true,
+    "tool_execution_failures": 0
+  },
+  "model": {
+    "name": "oracle_backed_parameter_mapper",
+    "provider": "local",
+    "seed": 0,
+    "temperature": 0.0
+  },
+  "output": {
+    "final_response": "R019 completed by fixed-sequence LLM parameter mapping with result format_report:8ebf8de7fbe4.",
+    "output_hash": "format_report:57682dfee0c7"
+  },
+  "repetition_index": 0,
+  "request_id": "R019",
+  "run_id": "51e4d424-a72d-4d5f-9720-6a17c8b738df",
+  "schema_version": "0.1.0",
+  "started_at": "2026-07-17T12:59:13.830105Z",
+  "status": "success",
+  "tool_calls": [
+    {
+      "arguments": {
+        "dimensions": [
+          "region",
+          "sales_channel",
+          "customer_segment"
+        ],
+        "timeframe": "year_to_date"
+      },
+      "index": 0,
+      "latency_ms": 0,
+      "result_ref": "get_sales_data:e7bf394e1cfa",
+      "source": "llm",
+      "status": "executed",
+      "tool_name": "get_sales_data"
+    },
+    {
+      "arguments": {
+        "data_id": "get_sales_data:e7bf394e1cfa",
+        "group_by": [
+          "region",
+          "sales_channel",
+          "customer_segment"
+        ],
+        "metrics": [
+          "revenue"
+        ]
+      },
+      "index": 1,
+      "latency_ms": 0,
+      "result_ref": "aggregate_data:9e6b79815f42",
+      "source": "llm",
+      "status": "executed",
+      "tool_name": "aggregate_data"
+    },
+    {
+      "arguments": {
+        "data_id": "aggregate_data:9e6b79815f42",
+        "output_format": "markdown"
+      },
+      "index": 2,
+      "latency_ms": 0,
+      "result_ref": "format_report:8ebf8de7fbe4",
+      "source": "llm",
+      "status": "executed",
+      "tool_name": "format_report"
+    }
+  ],
+  "validation_events": [],
+  "variant": "fixed_sequence_llm_parameters"
+}

@@ -1,0 +1,108 @@
+{
+  "completed_at": "2026-07-26T07:31:13.940154Z",
+  "errors": [
+    {
+      "code": "E3",
+      "description": "The planner added at least one unnecessary tool call.",
+      "tool_call_index": 3
+    }
+  ],
+  "input": {
+    "expected_tool_sequence": [
+      "get_sales_data",
+      "aggregate_data",
+      "format_report"
+    ],
+    "user_request": "For the current month, report revenue and gross margin by product category."
+  },
+  "latency_ms": 12433,
+  "metrics": {
+    "fallback_count": 0,
+    "retry_count": 0,
+    "schema_validation_failures": 0,
+    "task_success": false,
+    "tool_execution_failures": 0
+  },
+  "model": {
+    "name": "qwen2.5:7b-instruct",
+    "provider": "ollama",
+    "seed": 0,
+    "temperature": 0.0
+  },
+  "output": {
+    "final_response": "R020 completed by LLM multi-step planning with result format_report:1f0211e5fced.",
+    "output_hash": "format_report:d167826b0c5d"
+  },
+  "repetition_index": 0,
+  "request_id": "R020",
+  "run_id": "239b004c-564e-4b30-b530-7b747c1e69aa",
+  "schema_version": "0.1.0",
+  "started_at": "2026-07-26T07:31:01.506644Z",
+  "status": "rejected",
+  "tool_calls": [
+    {
+      "arguments": {
+        "dimensions": [
+          "category"
+        ],
+        "timeframe": "current_month"
+      },
+      "index": 0,
+      "latency_ms": 0,
+      "result_ref": "get_sales_data:5795b4b1606e",
+      "source": "llm",
+      "status": "executed",
+      "tool_name": "get_sales_data"
+    },
+    {
+      "arguments": {
+        "data_id": "get_sales_data:5795b4b1606e",
+        "group_by": [
+          "category"
+        ],
+        "metrics": [
+          "revenue",
+          "gross_margin"
+        ]
+      },
+      "index": 1,
+      "latency_ms": 0,
+      "result_ref": "aggregate_data:06b325e958c4",
+      "source": "llm",
+      "status": "executed",
+      "tool_name": "aggregate_data"
+    },
+    {
+      "arguments": {
+        "data_id": "aggregate_data:06b325e958c4",
+        "output_format": "markdown"
+      },
+      "index": 2,
+      "latency_ms": 0,
+      "result_ref": "format_report:1f0211e5fced",
+      "source": "llm",
+      "status": "executed",
+      "tool_name": "format_report"
+    },
+    {
+      "arguments": {
+        "data_id": "$previous_result",
+        "output_format": "markdown"
+      },
+      "index": 3,
+      "latency_ms": 0,
+      "source": "llm",
+      "status": "proposed",
+      "tool_name": "format_report"
+    }
+  ],
+  "validation_events": [
+    {
+      "event_type": "semantic_validation_failed",
+      "index": 0,
+      "message": "Planner selected unnecessary tool after completion: format_report",
+      "tool_call_index": 3
+    }
+  ],
+  "variant": "llm_multi_step_planning"
+}
